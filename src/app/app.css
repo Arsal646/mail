@@ -1,0 +1,44 @@
+.container {
+    @media (width >= 96rem) {
+        max-width: 1000px !important;
+    }
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+}
+
+.split-layout {
+  height: calc(100vh - 60px);
+  
+  @media (max-width: 768px) {
+    height: auto;
+    flex-direction: column;
+  }
+}
+
+.refresh-animate {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.email-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  
+  &.expanded {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1000px !important;
+  }
+}

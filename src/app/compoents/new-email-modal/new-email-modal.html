@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>Create Custom Email</h2>
+<mat-dialog-content>
+  <form (submit)="usernameControl.valid && dialogRef.close(username)">
+    <mat-form-field appearance="fill" class="w-full">
+      <mat-label>Username</mat-label>
+      <input matInput  [formControl]="usernameControl" name="username">
+      <mat-error *ngIf="usernameControl.hasError('required')">
+        Username is required
+      </mat-error>
+      <mat-error *ngIf="usernameControl.hasError('pattern')">
+        Only letters and numbers allowed
+      </mat-error>
+    </mat-form-field>
+    
+    <div class="flex items-center mb-4">
+      <span class="font-mono bg-gray-100 px-3 py-2 rounded">{{username}}{{data.domain}}</span>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="generateRandom()">
+    <mat-icon>autorenew</mat-icon> Generate Random
+  </button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-raised-button color="primary" 
+          [disabled]="!usernameControl.valid"
+          (click)="dialogRef.close(username)">
+    Create
+  </button>
+</mat-dialog-actions>

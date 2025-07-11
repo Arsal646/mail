@@ -25,6 +25,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "server": "src/main.server.ts",
@@ -87,11 +88,15 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "15bb4970-3ca9-4c94-be50-d6863094bbc5"
   }
 }

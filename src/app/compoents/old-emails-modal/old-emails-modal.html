@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Select Previous Email</h2>
+<mat-dialog-content>
+  <mat-nav-list>
+    <mat-list-item *ngFor="let account of data.accounts" (click)="selectEmail(account.address)">
+      <mat-icon mat-list-icon>email</mat-icon>
+      <div mat-line>{{account.address}}</div>
+      <div mat-line class="text-xs text-gray-500">
+        Created {{account.createdAt}}
+      </div>
+    </mat-list-item>
+    
+    <mat-list-item *ngIf="data.accounts.length === 0" class="text-center">
+      <div mat-line>No previous emails found</div>
+    </mat-list-item>
+  </mat-nav-list>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onNoClick()">Close</button>
+</mat-dialog-actions>

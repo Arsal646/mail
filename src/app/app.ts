@@ -7,6 +7,7 @@ import { EmailViewDialog } from './compoents/email-view-dialog/email-view-dialog
 import { MatDialog } from '@angular/material/dialog';
 import { NewEmailModalComponent } from './compoents/new-email-modal/new-email-modal';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,7 +16,7 @@ import { NewEmailModalComponent } from './compoents/new-email-modal/new-email-mo
   imports: [CommonModule],
 })
 export class App implements OnInit, OnDestroy {
-  countdown = signal(15);
+  countdown = signal(30);
   private countdownSub?: Subscription;
 
   currentEmail = '';
@@ -30,12 +31,28 @@ export class App implements OnInit, OnDestroy {
 
   constructor(private emailService: EmailService, @Inject(PLATFORM_ID) private platformId: Object) {
     this.isBrowser = isPlatformBrowser(this.platformId);
+
+    effect(() => {
+      console.log('Countdown:', this.countdown());
+
+      if(this.countdown()===0){
+        this.reload()
+      }
+    });
+  }
+  
+
+  reload(){
+     this.refreshEmails()
+     this.startCountdown();
   }
 
   ngOnInit(): void {
+    if(!this.isBrowser) return
     this.generateNewEmail();
-    this.refreshEmails()
-    //this.startCountdown();
+    this.reload()
+
+
   }
 
   ngOnDestroy(): void {
@@ -43,11 +60,12 @@ export class App implements OnInit, OnDestroy {
   }
 
   startCountdown(): void {
-    this.countdown.set(15);
+    this.countdownSub?.unsubscribe();
+    this.countdown.set(30);
 
     // Emits every second for 15 ticks
-    this.countdownSub = interval(1000).pipe(take(16)).subscribe((i) => {
-      this.countdown.set(15 - i);
+    this.countdownSub = interval(1000).pipe(take(31)).subscribe((i) => {
+      this.countdown.set(30 - i);
     });
   }
 
@@ -94,15 +112,19 @@ export class App implements OnInit, OnDestroy {
     };
   }
 
+  getLocalStorageData() {
+    if (!this.isBrowser) return
+    const stored = localStorage.getItem('tempMailAccounts');
+    const accounts = stored ? JSON.parse(stored) : [];
+    return accounts;
+  }
+
   autoGenerateEmail(email_prefix = ''): void {
-    if (!this.isBrowser) return;
 
     this.emailGenerating = true;
     this.currentEmail = '';
-
     const domain = this.domain;
-    const stored = localStorage.getItem('tempMailAccounts');
-    const accounts = stored ? JSON.parse(stored) : [];
+    const accounts = this.getLocalStorageData()
 
     // ❌ Mark all old as inactive
     for (const acc of accounts) {
@@ -123,25 +145,51 @@ export class App implements OnInit, OnDestroy {
 
 
 
-  refreshEmails(): void {
-    if (!this.currentEmail) return;
+refreshEmails(): void {
+  if (!this.currentEmail) return;
 
-    this.loading = true;
-    this.refreshing = true;
+  this.loading = true;
+  this.refreshing = true;
 
-    this.emailService.fetchEmails().subscribe({
-      next: (res: any) => {
-        this.emails = res;
+  this.emailService.fetchEmails(this.currentEmail).subscribe({
+    next: (res: any) => {
+
+      //   const fetchedEmails: any[] = res.data || res; // Adjust this line based on your actual API response
+
+      // const existingAddresses = new Set(this.emails.map(email => email.dummy_id));
+      // const newEmails = fetchedEmails.filter(email => !existingAddresses.has(email.dummy_id));
+
+
+
+      const fetchedEmails: any[] = res.data || res; // Adjust this line based on your actual API response
+
+      const existingAddresses = new Set(this.emails.map(email => email.address));
+      const newEmails = fetchedEmails.filter(email => !existingAddresses.has(email.address));
+
+      if (newEmails.length > 0) {
+        newEmails.forEach(email => email.new_added = true);
+        this.emails = [...newEmails, ...this.emails];
+      }
+
+      setTimeout(() => {
         this.loading = false;
-        this.refreshing = false;
-      },
-      error: (err) => {
-        console.error('Error fetching emails:', err);
+      }, 1000);
+
+      this.refreshing = false;
+      this.startCountdown();
+    },
+    error: (err) => {
+      console.error('Error fetching emails:', err);
+      setTimeout(() => {
         this.loading = false;
-        this.refreshing = false;
-      },
-    });
-  }
+      }, 400);
+
+      this.refreshing = false;
+    },
+  });
+}
+
+
 
   copyEmail(): void {
     if (!this.currentEmail) return;
@@ -163,7 +211,7 @@ export class App implements OnInit, OnDestroy {
       width: '80vw',
       maxWidth: '800px',
       maxHeight: '90vh',
-      panelClass: 'email-dialog',
+      panelClass: 'custom-dialog',
       data: { ...email } // Pass the email data to the dialog
     });
 
@@ -197,9 +245,7 @@ export class App implements OnInit, OnDestroy {
   }
 
   openHistoryDialog() {
-    if (!this.isBrowser) return;
-    const stored = localStorage.getItem('tempMailAccounts');
-    const accounts = stored ? JSON.parse(stored) : [];
+    const accounts = this.getLocalStorageData();
     const historyEmails = accounts.filter((acc: any) => acc.active === false);
 
 
@@ -211,32 +257,36 @@ export class App implements OnInit, OnDestroy {
       }
     });
 
-    // dialogRef.afterClosed().subscribe(selectedEmail => {
-    //   // if (selectedEmail) {
-    //   //   // Extract username from full email address
-    //   //   const username = selectedEmail.split('@')[0];
-    //   //   this.usernameControl.setValue(username);
-    //   //   this.username = username;
-    //   // }
-    // });
-
     dialogRef.afterClosed().subscribe(res => {
       console.log(res)
-      // if (res === 'random') {
-      //   this.autoGenerateEmail();
-      // }
+      if (res) {
+        if (res.address) {
+          const accounts = this.getLocalStorageData()
+          // ❌ Mark all old as inactive
+          for (const acc of accounts) {
+            acc.active = false;
+          }
+          const index = accounts.findIndex((acc: any) => acc.address === res.address);
+          if (index !== -1) {
+            accounts[index].active = true;
+          }
 
-       if(res){
-        this.autoGenerateEmail(res);
-       }
+          localStorage.setItem('tempMailAccounts', JSON.stringify(accounts));
+          this.generateNewEmail()
+
+        } else {
+          this.autoGenerateEmail(res);
+        }
+
+      }
     })
   }
 
   viewEmailDetails(email: any) {
-  // Your detail view logic
-}
+    this.openHistoryDialog();
+  }
 
-confirmDelete(email: any) {
-  // Your delete confirmation logic
-}
+  confirmDelete(email: any) {
+    // Your delete confirmation logic
+  }
 }

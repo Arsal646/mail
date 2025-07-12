@@ -37,7 +37,6 @@
           <input 
             type="text" 
             [formControl]="usernameControl" 
-            [(ngModel)]="username" 
             name="username"
             [class.invalid]="usernameControl.invalid && submitted"
             class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-l-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
@@ -52,12 +51,12 @@
       </div>
 
       <!-- Preview Section -->
-      <div class="p-4 mb-6 bg-gray-50 rounded-lg border border-gray-200">
+      <!-- <div class="p-4 mb-6 bg-gray-50 rounded-lg border border-gray-200">
         <h3 class="text-xs font-medium text-gray-500 uppercase tracking-wider">Preview</h3>
         <p class="mt-1 font-medium text-gray-900">
           <span class="font-mono text-blue-600">{{usernameControl.value || 'yourname'}}{{data.domain}}</span>
         </p>
-      </div>
+      </div> -->
 
       <!-- Spacer -->
       <div class="flex-grow"></div>

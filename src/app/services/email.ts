@@ -17,8 +17,8 @@ export class EmailService {
   }
 
   // Simple API call that returns observable
-  fetchEmails() {
-    return this.http.get(`http://127.0.0.1:8000/api/fakeemails`);
+  fetchEmails(emailAddress: string) {
+    return this.http.get(`http://127.0.0.1:8000/api/fakeemails/?email=${emailAddress}`);
   }
 
   // fetchEmails(): Observable<any[]> {

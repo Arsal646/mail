@@ -155,10 +155,12 @@ export class NewEmailModalComponent {
 
   selectHistoryEmail(email: any) {
     // Extract username from email address
-    const username = email.address.split('@')[0];
-    this.usernameControl.setValue(username);
-    this.username = username;
-    this.showHistory = false;
+    // const username = email.address.split('@')[0];
+    // this.usernameControl.setValue(username);
+    // this.username = username;
+    // this.showHistory = false;
+
+    this.dialogRef.close(email);
   }
 
 

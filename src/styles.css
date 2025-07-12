@@ -1,4 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";/* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Apply to entire page or specific container */
+::-webkit-scrollbar {
+  width: 6px; /* Thin width */
+  height: 6px; /* For horizontal scroll */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Optional: or use #f1f1f1 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Soft thumb */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.35); /* Slightly darker on hover */
+}
+
+
+.custom-dialog .mat-mdc-dialog-surface{
+    border-radius: 5px !important;
+}

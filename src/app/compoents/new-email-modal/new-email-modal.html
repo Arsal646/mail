@@ -1,30 +1,134 @@
-<h2 mat-dialog-title>Create Custom Email</h2>
-<mat-dialog-content>
-  <form (submit)="usernameControl.valid && dialogRef.close(username)">
-    <mat-form-field appearance="fill" class="w-full">
-      <mat-label>Username</mat-label>
-      <input matInput  [formControl]="usernameControl" name="username">
-      <mat-error *ngIf="usernameControl.hasError('required')">
-        Username is required
-      </mat-error>
-      <mat-error *ngIf="usernameControl.hasError('pattern')">
-        Only letters and numbers allowed
-      </mat-error>
-    </mat-form-field>
-    
-    <div class="flex items-center mb-4">
-      <span class="font-mono bg-gray-100 px-3 py-2 rounded">{{username}}{{data.domain}}</span>
+<div class="flex flex-col h-full">
+  <!-- Dialog Header -->
+  <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-gray-50">
+    <div>
+      <h2 class="text-lg font-semibold text-gray-900">
+        {{showHistory ? 'Previously Used Emails' : 'Create Professional Email'}}
+      </h2>
+      <p class="mt-1 text-sm text-gray-500">
+        {{showHistory ? 'Select one of your previous emails' : 'Enter your preferred username'}}
+      </p>
     </div>
-  </form>
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button (click)="generateRandom()">
-    <mat-icon>autorenew</mat-icon> Generate Random
-  </button>
-  <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-raised-button color="primary" 
-          [disabled]="!usernameControl.valid"
-          (click)="dialogRef.close(username)">
-    Create
-  </button>
-</mat-dialog-actions>
+    <button mat-dialog-close (click)="dialogRef.close()" class="text-gray-400 hover:text-gray-500 focus:outline-none">
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="flex-grow overflow-auto px-6 py-4">
+    <!-- Create Email View -->
+    <form *ngIf="!showHistory" (ngSubmit)="usernameControl.valid && dialogRef.close(usernameControl.value)" 
+          class="h-full flex flex-col space-y-5">
+      
+      <div class="mb-4 text-sm text-gray-600">
+        <span>Want to use a previous email? </span>
+        <button type="button" (click)="showHistory = true" 
+                class="text-blue-600 hover:text-blue-800 hover:underline focus:outline-none">
+          View your email history
+        </button>
+      </div>
+
+      <!-- Email Input Group -->
+      <div class="mb-6">
+        <label class="block mb-2 text-sm font-medium text-gray-700">Email Address</label>
+        <div class="flex rounded-md shadow-sm">
+          <input 
+            type="text" 
+            [formControl]="usernameControl" 
+            [(ngModel)]="username" 
+            name="username"
+            [class.invalid]="usernameControl.invalid && submitted"
+            class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-l-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            placeholder="yourname">
+          <span class="inline-flex items-center px-3 text-sm text-gray-500 bg-gray-50 border border-l-0 border-gray-300 rounded-r-md">
+            {{data.domain}}
+          </span>
+        </div>
+        <p class="mt-2 text-xs text-gray-500">
+          Use 4-24 characters with letters and numbers only
+        </p>
+      </div>
+
+      <!-- Preview Section -->
+      <div class="p-4 mb-6 bg-gray-50 rounded-lg border border-gray-200">
+        <h3 class="text-xs font-medium text-gray-500 uppercase tracking-wider">Preview</h3>
+        <p class="mt-1 font-medium text-gray-900">
+          <span class="font-mono text-blue-600">{{usernameControl.value || 'yourname'}}{{data.domain}}</span>
+        </p>
+      </div>
+
+      <!-- Spacer -->
+      <div class="flex-grow"></div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+        <button 
+          type="button"
+          (click)="generateRandom()"
+          class="inline-flex items-center px-3 py-2 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+          <svg class="w-4 h-4 mr-1.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+          Generate Random
+        </button>
+        
+        <div class="flex space-x-3">
+          <button 
+            type="button"
+            (click)="onNoClick()"
+            class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            Cancel
+          </button>
+          <button (click)="submit()"
+            type="submit"
+            class="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-70 disabled:cursor-not-allowed">
+            Create Email
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Email History View -->
+    <div *ngIf="showHistory" class="h-full flex flex-col">
+      <div class="mb-4">
+        <button type="button" (click)="showHistory = false" 
+                class="flex items-center text-sm text-blue-600 hover:text-blue-800 focus:outline-none">
+          <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+          Back to create new email
+        </button>
+      </div>
+
+      <div *ngIf="data.historyEmails.length === 0" class="text-center py-8 text-gray-500">
+        No previous emails found
+      </div>
+
+      <ul class="divide-y divide-gray-200">
+        <li *ngFor="let email of data.historyEmails" class="py-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-mono text-gray-900">{{email.address}}</p>
+              <p class="text-xs text-gray-500 mt-1">
+                {{email.active ? 'Active until' : 'Expired on'}} 
+                {{email.expiresAt | date:'mediumDate'}}
+              </p>
+            </div>
+                 <div class="flex space-x-2 ml-4">
+            <button (click)="selectHistoryEmail(email)" 
+                    class="px-3 py-1.5 text-xs font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              Use This
+            </button>
+            <button 
+                    class="px-3 py-1.5 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              Delete
+            </button>
+          </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

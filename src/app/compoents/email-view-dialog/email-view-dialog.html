@@ -1,0 +1,68 @@
+<div class="flex flex-col h-full bg-white">
+  <!-- Compact Header -->
+  <div class="flex items-center justify-between px-5 py-3 border-b border-gray-100">
+    <div class="min-w-0">
+      <h2 class="text-lg font-semibold text-gray-900 truncate">
+        {{email.subject || '(No subject)'}}
+      </h2>
+      <p class="mt-0.5 text-xs text-gray-500">
+        {{email.created_at | date:'mediumDate'}}
+      </p>
+    </div>
+    <button mat-dialog-close (click)="dialogRef.close()" class="p-1 text-gray-400 hover:text-gray-600">
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Tight Metadata -->
+  <div class="px-5 py-3 space-y-2 border-b border-gray-100 text-sm">
+    <div class="flex items-center">
+      <span class="w-12 flex-shrink-0 text-gray-500">From:</span>
+      <div class="flex items-center min-w-0">
+        <span class="truncate text-gray-800">{{email.from_email}}</span>
+        <button (click)="copyEmail(email.from_email, 'from')" 
+                class="ml-1 p-0.5 text-gray-400 hover:text-blue-500"
+                [class.text-green-500]="copiedAddress === 'from'">
+        </button>
+      </div>
+    </div>
+    
+    <div class="flex items-center">
+      <span class="w-12 flex-shrink-0 text-gray-500">To:</span>
+      <div class="flex items-center min-w-0">
+        <span class="truncate text-gray-800">{{email.to_email}}</span>
+        <button (click)="copyEmail(email.to_email, 'to')" 
+                class="ml-1 p-0.5 text-gray-400 hover:text-blue-500"
+                [class.text-green-500]="copiedAddress === 'to'">
+                </button>
+        </div>
+    </div>
+  </div>
+
+  <!-- Email Content -->
+  <div class="flex-1 overflow-auto px-5 py-3 prose prose-sm max-w-none text-gray-800" style="padding: 35px;" [innerHTML]="email.body_html"></div>
+
+  <!-- Minimal Footer -->
+  <div class="flex items-center justify-between px-5 py-2 border-t border-gray-100 bg-gray-50 text-xs">
+    <span class="text-gray-500">{{email.created_at | date:'shortTime'}}</span>
+    <div class="flex space-x-2">
+      <button 
+              class="flex items-center px-2.5 py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded">
+        <svg class="mr-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/>
+        </svg>
+        Reply
+      </button>
+      <button (click)="copyEmail(email.body_text, 'body')" 
+              class="flex items-center px-2.5 py-1 text-white bg-blue-500 hover:bg-blue-600 rounded"
+              [class.bg-green-500]="copiedAddress === 'body'"
+              [class.hover:bg-green-600]="copiedAddress === 'body'">
+        <i class="fas mr-1 text-[0.65rem]" [class.fa-copy]="copiedAddress !== 'body'" [class.fa-check]="copiedAddress === 'body'">
+        Copy
+        </i>
+      </button>
+    </div>
+  </div>
+</div>

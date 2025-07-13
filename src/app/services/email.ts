@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { concat, of, timer, Observable } from 'rxjs';
 import { delay, map, mergeMap, scan, startWith, take } from 'rxjs/operators';
 
@@ -17,9 +17,16 @@ export class EmailService {
   }
 
   // Simple API call that returns observable
-  fetchEmails(emailAddress: string) {
-    return this.http.get(`http://127.0.0.1:8000/api/fakeemails/?email=${emailAddress}`);
-  }
+  // fetchEmails(emailAddress: string) {
+  //  // return this.http.get(`http://127.0.0.1:8000/api/fakeemails/?email=${emailAddress}`);
+  //    return this.http.get(`https://mailboxhub.fun/api/fakeemails/?email=${emailAddress}`);
+  // }
+
+fetchEmails(emailAddress: string) {
+  return this.http.get(
+    `https://mailboxhub.fun/api/fakeemails/?email=${emailAddress}`,
+  );
+}
 
   // fetchEmails(): Observable<any[]> {
   //   const realEmails$ = this.http.get<any[]>('http://127.0.0.1:8000/api/fakeemails');

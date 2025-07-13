@@ -33,7 +33,6 @@ export class App implements OnInit, OnDestroy {
     this.isBrowser = isPlatformBrowser(this.platformId);
 
     effect(() => {
-      console.log('Countdown:', this.countdown());
 
       if(this.countdown()===0){
         this.reload()
@@ -258,7 +257,6 @@ refreshEmails(): void {
     });
 
     dialogRef.afterClosed().subscribe(res => {
-      console.log(res)
       if (res) {
         if (res.address) {
           const accounts = this.getLocalStorageData()

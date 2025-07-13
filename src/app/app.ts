@@ -208,7 +208,7 @@ refreshEmails(): void {
 
   viewEmail(email: any): void {
     const dialogRef = this.dialog.open(EmailViewDialog, {
-      width: '80vw',
+      width: '90vw',
       maxWidth: '800px',
       maxHeight: '90vh',
       panelClass: 'custom-dialog',

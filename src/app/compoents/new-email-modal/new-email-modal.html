@@ -1,15 +1,17 @@
-<div class="flex flex-col h-full">
+<div class="flex flex-col h-full bg-white rounded-lg overflow-hidden">
   <!-- Dialog Header -->
-  <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-gray-50">
+  <div class="flex items-center justify-between px-6 py-5 bg-white border-b border-gray-200">
     <div>
-      <h2 class="text-lg font-semibold text-gray-900">
-        {{showHistory ? 'Previously Used Emails' : 'Create Professional Email'}}
+      <h2 class="text-xl font-semibold text-gray-900">
+        {{showHistory ? 'Your Email History' : 'Create New Email'}}
       </h2>
       <p class="mt-1 text-sm text-gray-500">
-        {{showHistory ? 'Select one of your previous emails' : 'Enter your preferred username'}}
+        {{showHistory ? 'Select from your previously used addresses' : 'Choose a custom username'}}
       </p>
     </div>
-    <button mat-dialog-close (click)="dialogRef.close()" class="text-gray-400 hover:text-gray-500 focus:outline-none">
+    <button mat-dialog-close (click)="dialogRef.close()" 
+            class="p-1 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors"
+            aria-label="Close dialog">
       <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
@@ -20,111 +22,113 @@
   <div class="flex-grow overflow-auto px-6 py-4">
     <!-- Create Email View -->
     <form *ngIf="!showHistory" (ngSubmit)="usernameControl.valid && dialogRef.close(usernameControl.value)" 
-          class="h-full flex flex-col space-y-5">
+          class="h-full flex flex-col">
       
-      <div class="mb-4 text-sm text-gray-600">
-        <span>Want to use a previous email? </span>
+      <div class="mb-6 text-sm text-gray-600 bg-blue-50 p-3 rounded-lg">
+        <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+        Want to use a previous email? 
         <button type="button" (click)="showHistory = true" 
-                class="text-blue-600 hover:text-blue-800 hover:underline focus:outline-none">
-          View your email history
+                class="text-blue-600 font-medium hover:text-blue-800 hover:underline ml-1 focus:outline-none">
+          View email history →
         </button>
       </div>
 
       <!-- Email Input Group -->
       <div class="mb-6">
-        <label class="block mb-2 text-sm font-medium text-gray-700">Email Address</label>
-        <div class="flex rounded-md shadow-sm">
-          <input 
-            type="text" 
-            [formControl]="usernameControl" 
-            name="username"
-            [class.invalid]="usernameControl.invalid && submitted"
-            class="flex-1 min-w-0 block w-full px-3 py-2 rounded-none rounded-l-md border border-gray-300 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-            placeholder="yourname">
-          <span class="inline-flex items-center px-3 text-sm text-gray-500 bg-gray-50 border border-l-0 border-gray-300 rounded-r-md">
+        <div class="flex items-center justify-between mb-3">
+          <label class="block text-sm font-medium text-gray-700">Custom Email Address</label>
+          <button type="button" (click)="generateRandom()"
+                  class="inline-flex items-center px-3 py-1.5 text-xs font-medium text-blue-600 bg-blue-50 rounded-md hover:bg-blue-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            Generate Random
+          </button>
+        </div>
+        
+        <div class="flex rounded-lg shadow-sm ring-1 ring-gray-300 focus-within:ring-2 focus-within:ring-blue-500">
+          <input type="text" 
+                 [formControl]="usernameControl" 
+                 name="username"
+                 [class.ring-red-500]="usernameControl.invalid && submitted"
+                 class="flex-1 min-w-0 block w-full px-4 py-2.5 rounded-l-lg border-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm"
+                 placeholder="yourname">
+          <span class="inline-flex items-center px-4 text-sm text-gray-500 bg-gray-50 border-l border-gray-300 rounded-r-lg">
             {{data.domain}}
           </span>
         </div>
+        
         <p class="mt-2 text-xs text-gray-500">
+          <i class="fas fa-check-circle text-green-500 mr-1" *ngIf="usernameControl.valid"></i>
           Use 4-24 characters with letters and numbers only
         </p>
       </div>
-
-      <!-- Preview Section -->
-      <!-- <div class="p-4 mb-6 bg-gray-50 rounded-lg border border-gray-200">
-        <h3 class="text-xs font-medium text-gray-500 uppercase tracking-wider">Preview</h3>
-        <p class="mt-1 font-medium text-gray-900">
-          <span class="font-mono text-blue-600">{{usernameControl.value || 'yourname'}}{{data.domain}}</span>
-        </p>
-      </div> -->
 
       <!-- Spacer -->
       <div class="flex-grow"></div>
 
       <!-- Action Buttons -->
-      <div class="flex items-center justify-between pt-4 border-t border-gray-200">
-        <button 
-          type="button"
-          (click)="generateRandom()"
-          class="inline-flex items-center px-3 py-2 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-          <svg class="w-4 h-4 mr-1.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-          </svg>
-          Generate Random
+      <div class="flex items-center justify-between pt-5 border-t border-gray-200">
+        <button type="button" (click)="onNoClick()"
+                class="px-4 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+          Cancel
         </button>
-        
-        <div class="flex space-x-3">
-          <button 
-            type="button"
-            (click)="onNoClick()"
-            class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-            Cancel
-          </button>
-          <button (click)="submit()"
-            type="submit"
-            class="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-70 disabled:cursor-not-allowed">
-            Create Email
-          </button>
-        </div>
+        <button type="submit"
+                [disabled]="usernameControl.invalid"
+                class="px-6 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-lg shadow-sm hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-70 disabled:cursor-not-allowed">
+          Create Email Address
+        </button>
       </div>
     </form>
 
     <!-- Email History View -->
     <div *ngIf="showHistory" class="h-full flex flex-col">
-      <div class="mb-4">
+      <div class="mb-5">
         <button type="button" (click)="showHistory = false" 
-                class="flex items-center text-sm text-blue-600 hover:text-blue-800 focus:outline-none">
-          <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                class="flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 focus:outline-none">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
           </svg>
-          Back to create new email
+          Back to new email
         </button>
       </div>
 
-      <div *ngIf="data.historyEmails.length === 0" class="text-center py-8 text-gray-500">
-        No previous emails found
+      <div *ngIf="data.historyEmails.length === 0" class="text-center py-10">
+        <div class="mx-auto w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+          <i class="fas fa-inbox text-gray-400 text-xl"></i>
+        </div>
+        <p class="text-gray-500">No previous emails found</p>
+        <p class="text-sm text-gray-400 mt-1">Your created emails will appear here</p>
       </div>
 
-      <ul class="divide-y divide-gray-200">
+      <ul class="divide-y divide-gray-200 max-h-[300px] overflow-y-auto">
         <li *ngFor="let email of data.historyEmails" class="py-4">
           <div class="flex items-center justify-between">
-            <div>
-              <p class="font-mono text-gray-900">{{email.address}}</p>
-              <p class="text-xs text-gray-500 mt-1">
-                {{email.active ? 'Active until' : 'Expired on'}} 
-                {{email.expiresAt | date:'mediumDate'}}
-              </p>
+            <div class="min-w-0">
+              <p class="font-mono text-gray-900 text-sm sm:text-base truncate">{{email.address}}</p>
+              <div class="flex items-center mt-1.5">
+                <span class="text-xs px-2 py-0.5 rounded-full"
+                      [class.bg-green-100]="email.active" 
+                      [class.text-green-800]="email.active"
+                      [class.bg-gray-100]="!email.active"
+                      [class.text-gray-500]="!email.active">
+                  {{email.active ? 'Active' : 'Expired'}}
+                </span>
+                <span class="text-xs text-gray-500 ml-2">
+                  {{email.expiresAt | date:'MMM d, y'}}
+                </span>
+              </div>
             </div>
-                 <div class="flex space-x-2 ml-4">
-            <button (click)="selectHistoryEmail(email)" 
-                    class="px-3 py-1.5 text-xs font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              Use This
-            </button>
-            <button 
-                    class="px-3 py-1.5 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              Delete
-            </button>
-          </div>
+            <div class="flex space-x-2 ml-4">
+              <button (click)="selectHistoryEmail(email)" 
+                      class="px-3 py-1.5 text-xs font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Use
+              </button>
+              <button
+                      class="px-3 py-1.5 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Delete
+              </button>
+            </div>
           </div>
         </li>
       </ul>

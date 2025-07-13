@@ -86,7 +86,7 @@ button, a{
   width: 100%;
   background-color: rgba(0, 0, 0, 0.1); /* Visible track */
   overflow: hidden;
-  z-index: 9999; /* Maximum priority */
+  z-index: 1; /* Maximum priority */
 }
 
 .loader-bar::before {

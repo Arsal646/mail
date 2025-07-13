@@ -24,6 +24,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 
-.custom-dialog .mat-mdc-dialog-surface{
+/* .custom-dialog .mat-mdc-dialog-surface{
     border-radius: 5px !important;
-}
+} */

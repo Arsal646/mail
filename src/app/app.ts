@@ -162,8 +162,8 @@ refreshEmails(): void {
 
       const fetchedEmails: any[] = res.data || res; // Adjust this line based on your actual API response
 
-      const existingAddresses = new Set(this.emails.map(email => email.address));
-      const newEmails = fetchedEmails.filter(email => !existingAddresses.has(email.address));
+      const existingAddresses = new Set(this.emails.map(email => email.id));
+      const newEmails = fetchedEmails.filter(email => !existingAddresses.has(email.id));
 
       if (newEmails.length > 0) {
         newEmails.forEach(email => email.new_added = true);

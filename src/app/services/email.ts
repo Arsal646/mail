@@ -23,8 +23,10 @@ export class EmailService {
   // }
 
 fetchEmails(emailAddress: string) {
-  return this.http.get(
-    `https://mailboxhub.fun/api/fakeemails/?email=${emailAddress}`,
+  return this.http.get<any[]>(
+    `https://mailboxhub.fun/api/fakeemails/?email=${emailAddress}`
+  ).pipe(
+    map(emails => emails.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()))
   );
 }
 

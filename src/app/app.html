@@ -99,7 +99,7 @@
       <div *ngIf="emails.length > 0" class="space-y-2 max-h-[500px] overflow-y-auto">
         <div *ngFor="let email of emails"
           class="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
-          [class.bg-blue-50]="!email.read" (click)="viewEmail(email)">
+          [class.bg-blue-50]="!email.read" [class.new]="email.new_added" (click)="viewEmail(email)">
           <div class="flex items-start">
             <div class="mr-3">
               <div class="w-10 h-10 rounded-full flex items-center justify-center" 

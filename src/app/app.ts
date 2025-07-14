@@ -144,49 +144,55 @@ export class App implements OnInit, OnDestroy {
 
 
 
-refreshEmails(): void {
-  if (!this.currentEmail) return;
+  refreshEmails(): void {
+    if (!this.currentEmail) return;
 
-  this.loading = true;
-  this.refreshing = true;
+    this.loading = true;
+    this.refreshing = true;
 
-  this.emailService.fetchEmails(this.currentEmail).subscribe({
-    next: (res: any) => {
+    this.emailService.fetchEmails(this.currentEmail).subscribe({
+      next: (res: any) => {
 
-      //   const fetchedEmails: any[] = res.data || res; // Adjust this line based on your actual API response
+        //   const fetchedEmails: any[] = res.data || res; // Adjust this line based on your actual API response
 
-      // const existingAddresses = new Set(this.emails.map(email => email.dummy_id));
-      // const newEmails = fetchedEmails.filter(email => !existingAddresses.has(email.dummy_id));
+        // const existingAddresses = new Set(this.emails.map(email => email.dummy_id));
+        // const newEmails = fetchedEmails.filter(email => !existingAddresses.has(email.dummy_id));
 
 
 
-      const fetchedEmails: any[] = res.data || res; // Adjust this line based on your actual API response
+        // const fetchedEmails: any[] = res.data || res; // Adjust this line based on your actual API response
 
-      const existingAddresses = new Set(this.emails.map(email => email.id));
-      const newEmails = fetchedEmails.filter(email => !existingAddresses.has(email.id));
 
-      if (newEmails.length > 0) {
-        newEmails.forEach(email => email.new_added = true);
-        this.emails = [...newEmails, ...this.emails];
-      }
 
-      setTimeout(() => {
-        this.loading = false;
-      }, 1000);
+        // const existingAddresses = new Set(this.emails.map(email => email.id));
+        // const newEmails = fetchedEmails.filter(email => !existingAddresses.has(email.id));
 
-      this.refreshing = false;
-      this.startCountdown();
-    },
-    error: (err) => {
-      console.error('Error fetching emails:', err);
-      setTimeout(() => {
-        this.loading = false;
-      }, 400);
+        // if (newEmails.length > 0) {
+        //   newEmails.forEach(email => email.new_added = true);
+        //   this.emails = [...newEmails, ...this.emails];
+        // }
 
-      this.refreshing = false;
-    },
-  });
-}
+        this.emails = [];
+
+        this.emails = [...res];
+
+        setTimeout(() => {
+          this.loading = false;
+        }, 1000);
+
+        this.refreshing = false;
+        this.startCountdown();
+      },
+      error: (err) => {
+        console.error('Error fetching emails:', err);
+        setTimeout(() => {
+          this.loading = false;
+        }, 400);
+
+        this.refreshing = false;
+      },
+    });
+  }
 
 
 

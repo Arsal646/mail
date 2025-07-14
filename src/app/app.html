@@ -46,7 +46,7 @@
     <!-- Email Address Section -->
     <div class="bg-white rounded-lg shadow-sm p-5 mb-6">
       <div class="flex justify-between mb-2">
-        <h2 class="text-lg font-semibold text-gray-800">Your Temporary Email</h2>
+        <h2 class="text-lg font-semibold ">Your Temporary Email</h2>
         <button (click)="openHistoryDialog()"
           class="px-4 py-2 border border-blue-600 animate-pulse transition duration-300 rounded-lg hover:bg-blue-600 hover:text-white text-sm">
           New Email
@@ -106,11 +106,11 @@
               </circle>
             </svg>
           </div>
-          <p class="text-gray-500 mb-1">Checking for new messages...</p>
-          <p class="text-sm text-gray-400">Waiting for incoming messages for {{currentEmail}}</p>
-          <div class="mt-4 text-xs text-gray-400">
+          <!-- <p class="text-gray-500 mb-1">Checking for new messages...</p> -->
+          <p class="text-sm ">Waiting for incoming messages for {{currentEmail}}</p>
+          <!-- <div class="mt-4 text-xs text-gray-400">
             <i class="fas fa-info-circle mr-1"></i> New messages will appear automatically
-          </div>
+          </div> -->
                     <button (click)="refreshEmails()"
             class="mt-4 px-4 py-2 text-sm bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-colors flex items-center">
             <i class="fas fa-sync-alt mr-2" [class.animate-spin]="refreshing"></i>

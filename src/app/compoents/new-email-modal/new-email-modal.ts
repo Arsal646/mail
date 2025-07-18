@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EmailService } from '../../services/email';
+import {LucideAngularModule} from "lucide-angular";
 
 @Component({
   selector: 'app-new-email-modal',
@@ -16,7 +17,8 @@ import { EmailService } from '../../services/email';
     MatInputModule,
     ReactiveFormsModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    LucideAngularModule
   ],
   templateUrl: './new-email-modal.html',
   styleUrl: './new-email-modal.css'

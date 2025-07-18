@@ -1,6 +1,5 @@
 <div class="min-h-screen bg-gray-100 font-sans">
 
-
   <!-- Header with Online Status -->
   <header class="bg-white shadow-sm">
     <div class="container mx-auto px-4 py-3">
@@ -19,12 +18,11 @@
           </div>
         </div>
         <button (click)="refreshEmails()" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-full">
-          <i class="fas fa-sync-alt" [class.animate-spin]="refreshing"></i>
+          <lucide-icon name="refresh-cw" [size]="18" [class.animate-spin]="refreshing"></lucide-icon>
         </button>
       </div>
     </div>
   </header>
-
 
   <!-- Main Content -->
   <main class="container mx-auto px-4 py-6 max-w-5xl">
@@ -35,7 +33,6 @@
         help you avoid spam and maintain online security. Get a free temporary email address in seconds with no
         registration required.</p>
     </div>
-
 
     <!-- Email Address Section -->
     <div class="bg-white p-5 relative">
@@ -58,10 +55,14 @@
         </div>
         <div class="flex space-x-2 ml-4">
           <button (click)="copyEmail()" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-full">
-            <i class="fas" [class.fa-copy]="!copied" [class.fa-check]="copied"></i>
+            @if (!copied) {
+              <lucide-icon name="copy" [size]="16"></lucide-icon>
+            } @else {
+              <lucide-icon name="check" [size]="16"></lucide-icon>
+            }
           </button>
           <button (click)="saveEmail()" class="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-full">
-            <i class="fas fa-bookmark"></i>
+            <lucide-icon name="bookmark" [size]="16"></lucide-icon>
           </button>
         </div>
       </div>
@@ -73,7 +74,6 @@
     </div>
 
     <!-- Inbox Section -->
-  
     <div class="px-5 pb-5 bg-white rounded-lg">
       <div class=" border px-4 pt-4 border-gray-200 rounded-lg">
         <div class="flex items-center justify-between mb-4">
@@ -81,7 +81,7 @@
           <div class="flex items-center text-sm text-gray-600">
             <span class="mr-2">Auto-refresh in {{ countdown() }}s</span>
             <button (click)="reload()" class="p-1 text-gray-600 hover:text-gray-900">
-              <i class="fas fa-sync-alt" [class.animate-spin]="refreshing"></i>
+              <lucide-icon name="refresh-cw" [size]="16" [class.animate-spin]="refreshing"></lucide-icon>
             </button>
           </div>
         </div>
@@ -91,7 +91,7 @@
             <div *ngIf="true" class="flex flex-col items-center animate-pulse">
               <div class="relative w-16 h-16 mb-4">
                 <div class="absolute inset-0 flex items-center justify-center">
-                  <i class="fas fa-envelope text-gray-400 text-3xl animate-bounce" style="animation-duration: 2s;"></i>
+                  <lucide-icon name="mail" [size]="24" class="text-gray-400 animate-bounce" style="animation-duration: 2s;"></lucide-icon>
                 </div>
                 <svg class="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                   <circle cx="50" cy="50" r="40" stroke="rgba(209, 213, 219, 0.5)" stroke-width="8" fill="none"></circle>
@@ -103,7 +103,7 @@
               <p class="text-sm text-gray-600">Waiting for incoming messages for {{currentEmail}}</p>
               <button (click)="refreshEmails()"
                 class="mt-4 px-4 py-2 text-sm bg-gray-100 text-gray-900 rounded-lg hover:bg-gray-200 transition-colors flex items-center">
-                <i class="fas fa-sync-alt mr-2" [class.animate-spin]="refreshing"></i>
+                <lucide-icon name="refresh-cw" [size]="14" [class.animate-spin]="refreshing"></lucide-icon>
                 Check Again
               </button>
             </div>
@@ -118,8 +118,11 @@
                 <div class="mr-3">
                   <div class="w-10 h-10 rounded-full flex items-center justify-center" [class.bg-gray-200]="!email.read"
                     [class.bg-gray-100]="email.read">
-                    <i class="fas" [class.fa-envelope]="!email.read" [class.fa-envelope-open]="email.read"
-                      [class.text-gray-900]="!email.read" [class.text-gray-600]="email.read"></i>
+                    @if (!email.read) {
+                      <lucide-icon name="mail" [size]="18" class="text-gray-900"></lucide-icon>
+                    } @else {
+                      <lucide-icon name="mail-open" [size]="18" class="text-gray-600"></lucide-icon>
+                    }
                   </div>
                 </div>
                 <div class="flex-1 min-w-0">
@@ -135,16 +138,9 @@
               </div>
             </div>
           </div>
-
         </div>
-  
       </div>
     </div>
-
-
-    <!-- SEO Content (visible but subtle) -->
-
-
 
     <!-- How It Works Section -->
     <div class="bg-white rounded-lg shadow-sm p-5 mt-6">
@@ -159,15 +155,15 @@
           </h3>
           <ol class="space-y-2 text-sm text-gray-600 pl-8">
             <li class="flex items-start">
-              <span class="bg-gray-200 w-4 h-4 rounded-full mt-1 mr-2 flex-shrink-0"></span>
+              <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
               <span>Click "New Email" to generate a disposable address</span>
             </li>
             <li class="flex items-start">
-              <span class="bg-gray-200 w-4 h-4 rounded-full mt-1 mr-2 flex-shrink-0"></span>
+              <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
               <span>Use this email for website registrations or verifications</span>
             </li>
             <li class="flex items-start">
-              <span class="bg-gray-200 w-4 h-4 rounded-full mt-1 mr-2 flex-shrink-0"></span>
+              <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
               <span>Received emails will appear in your temporary inbox</span>
             </li>
           </ol>
@@ -176,26 +172,25 @@
         <!-- Saving for 7-Day Access -->
         <div class="border border-gray-200 rounded-lg p-4">
           <h3 class="font-medium text-gray-900 mb-3 flex items-center">
-            <span
-              class="bg-green-100 text-green-800 w-6 h-6 rounded-full flex items-center justify-center mr-2">2</span>
+            <span class="bg-green-100 text-green-800 w-6 h-6 rounded-full flex items-center justify-center mr-2">2</span>
             Saving for 7-Day Access
           </h3>
           <ol class="space-y-2 text-sm text-gray-600 pl-8">
             <li class="flex items-start">
-              <span class="bg-gray-200 w-4 h-4 rounded-full mt-1 mr-2 flex-shrink-0"></span>
-              <span>Click the <i class="fas fa-bookmark text-gray-500 mx-1"></i> bookmark icon next to your email</span>
+              <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
+              <span>Click the <lucide-icon name="bookmark" [size]="14" class="text-gray-500 mx-1 inline"></lucide-icon> bookmark icon next to your email</span>
             </li>
             <li class="flex items-start">
-              <span class="bg-gray-200 w-4 h-4 rounded-full mt-1 mr-2 flex-shrink-0"></span>
+              <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
               <span>Copy the unique access link provided</span>
             </li>
             <li class="flex items-start">
-              <span class="bg-gray-200 w-4 h-4 rounded-full mt-1 mr-2 flex-shrink-0"></span>
+              <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
               <span>Use this link to return to your inbox anytime within 7 days</span>
             </li>
           </ol>
           <div class="mt-3 bg-gray-50 p-3 rounded text-xs text-gray-600 flex items-start">
-            <i class="fas fa-exclamation-circle text-yellow-500 mr-2 mt-0.5"></i>
+            <lucide-icon name="alert-circle" [size]="14" class="text-yellow-500 mr-2 mt-0.5 flex-shrink-0"></lucide-icon>
             <span>Without saving, your temporary email will expire in 1 hour when you close the browser.</span>
           </div>
         </div>
@@ -203,15 +198,24 @@
         <!-- Key Features -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
           <div class="bg-gray-50 p-3 rounded border border-gray-200">
-            <h4 class="font-medium text-gray-900 text-sm mb-1">No Registration</h4>
+            <div class="flex items-center gap-2 mb-1">
+              <lucide-icon name="user" [size]="16" class="text-blue-500"></lucide-icon>
+              <h4 class="font-medium text-gray-900 text-sm">No Registration</h4>
+            </div>
             <p class="text-xs text-gray-600">Start using immediately without signing up</p>
           </div>
           <div class="bg-gray-50 p-3 rounded border border-gray-200">
-            <h4 class="font-medium text-gray-900 text-sm mb-1">7-Day Access</h4>
+            <div class="flex items-center gap-2 mb-1">
+              <lucide-icon name="calendar" [size]="16" class="text-green-500"></lucide-icon>
+              <h4 class="font-medium text-gray-900 text-sm">7-Day Access</h4>
+            </div>
             <p class="text-xs text-gray-600">Return to your saved emails for a full week</p>
           </div>
           <div class="bg-gray-50 p-3 rounded border border-gray-200">
-            <h4 class="font-medium text-gray-900 text-sm mb-1">Spam Protection</h4>
+            <div class="flex items-center gap-2 mb-1">
+              <lucide-icon name="shield" [size]="16" class="text-purple-500"></lucide-icon>
+              <h4 class="font-medium text-gray-900 text-sm">Spam Protection</h4>
+            </div>
             <p class="text-xs text-gray-600">Keep your personal inbox clean</p>
           </div>
         </div>

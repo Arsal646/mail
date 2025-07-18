@@ -1,10 +1,10 @@
-<div class="flex flex-col h-full bg-white rounded-lg overflow-hidden shadow-lg w-full ">
+<div class="flex flex-col h-full bg-white rounded-lg overflow-hidden shadow-lg w-full">
   <!-- Header with App-style Navigation -->
   <div class="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 bg-white border-b border-gray-300">
     <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
-      <button  (click)="dialogRef.close()" 
+      <button (click)="dialogRef.close()" 
               class="p-1 sm:p-2 text-gray-500 hover:bg-gray-100 rounded-full">
-        <i class="fas fa-chevron-left text-sm sm:text-base"></i>
+        <lucide-icon name="chevron-left" [size]="24"></lucide-icon>
       </button>
       <h2 class="text-base sm:text-lg font-medium text-gray-800 truncate">
         {{email.subject || '(No subject)'}}
@@ -12,7 +12,7 @@
     </div>
     <button (click)="dialogRef.close()" 
             class="p-1 sm:p-2 text-gray-500 hover:bg-red-100 w-8 h-8 sm:w-10 sm:h-10 rounded-full">
-      <i class="fas fa-x text-sm sm:text-base"></i>
+      <lucide-icon name="x" [size]="20"></lucide-icon>
     </button>
   </div>
 
@@ -22,7 +22,7 @@
     <div class="px-4 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-4">
       <div class="flex items-start space-x-3 sm:space-x-4">
         <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0">
-          <i class="fas fa-envelope text-gray-900 text-sm sm:text-base"></i>
+          <lucide-icon name="mail" [size]="16" class="text-gray-900"></lucide-icon>
         </div>
         <div class="min-w-0">
           <div class="flex flex-col sm:flex-row sm:items-baseline sm:space-x-2">
@@ -34,7 +34,7 @@
             </p>
           </div>
           <p class="text-xs sm:text-sm text-gray-500 mt-1">
-            <i class="far fa-clock mr-1"></i>
+            <lucide-icon name="clock" [size]="14" class="mr-1"></lucide-icon>
             {{email.created_at | date:'mediumDate'}} at {{email.created_at | date:'shortTime'}}
           </p>
         </div>
@@ -42,18 +42,18 @@
     </div>
 
     <!-- Email Body - Fixed horizontal scrolling -->
-<div
-  class="flex-1 overflow-y-auto overflow-x-hidden px-5 py-3 max-w-full text-gray-800 text-sm break-words"
-  style="max-height: 300px; padding: 35px; word-break: break-word;"
-  [innerHTML]="email.body_html">
-</div>
+    <div
+      class="flex-1 overflow-y-auto overflow-x-hidden px-5 py-3 max-w-full text-gray-800 text-sm break-words"
+      style="max-height: 300px; padding: 35px; word-break: break-word;"
+      [innerHTML]="email.body_html">
+    </div>
   </div>
 
   <!-- Footer Actions -->
   <div class="px-4 py-3 sm:px-6 sm:py-4 border-t border-gray-300 bg-gray-50">
     <div class="flex justify-between items-center">
       <div class="text-xs text-gray-500 flex items-center">
-        <i class="fas fa-info-circle mr-1"></i>
+        <lucide-icon name="info" [size]="14" class="mr-1"></lucide-icon>
         Temporary email
       </div>
     </div>

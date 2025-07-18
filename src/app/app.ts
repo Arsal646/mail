@@ -6,6 +6,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { EmailViewDialog } from './compoents/email-view-dialog/email-view-dialog';
 import { MatDialog } from '@angular/material/dialog';
 import { NewEmailModalComponent } from './compoents/new-email-modal/new-email-modal';
+import {LucideAngularModule} from "lucide-angular";
 
 
 @Component({
@@ -13,7 +14,7 @@ import { NewEmailModalComponent } from './compoents/new-email-modal/new-email-mo
   standalone: true,
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports: [CommonModule],
+  imports: [CommonModule,LucideAngularModule],
 })
 export class App implements OnInit, OnDestroy {
   countdown = signal(30);

@@ -10,7 +10,7 @@
       </p>
     </div>
     <button mat-dialog-close (click)="dialogRef.close()" 
-            class="p-1 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors"
+            class="p-1 text-gray-400 hover:text-gray-700 hover:bg-gray-100 rounded-full transition-colors"
             aria-label="Close dialog">
       <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -24,11 +24,11 @@
     <form *ngIf="!showHistory" (ngSubmit)="usernameControl.valid && dialogRef.close(usernameControl.value)" 
           class="h-full flex flex-col">
       
-      <div class="mb-6 text-sm text-gray-600 bg-blue-50 p-3 rounded-lg">
-        <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+      <div class="mb-6 text-sm text-gray-600 bg-gray-100 p-3 rounded-lg">
+        <i class="fas fa-info-circle text-gray-600 mr-2"></i>
         Want to use a previous email? 
         <button type="button" (click)="showHistory = true" 
-                class="text-blue-600 font-medium hover:text-blue-800 hover:underline ml-1 focus:outline-none">
+                class="text-blue-600 font-medium hover:text-gray-700 hover:underline ml-1 focus:outline-none">
           View email history →
         </button>
       </div>
@@ -38,7 +38,7 @@
         <div class="flex items-center justify-between mb-3">
           <label class="block text-sm font-medium text-gray-700">Custom Email Address</label>
           <button type="button" (click)="generateRandom()"
-                  class="inline-flex items-center px-3 py-1.5 text-xs font-medium text-blue-600 bg-blue-50 rounded-md hover:bg-blue-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  class="inline-flex items-center px-3 py-1.5 text-xs font-medium text-blue-500 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400">
             <svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
             </svg>
@@ -46,7 +46,7 @@
           </button>
         </div>
         
-        <div class="flex rounded-lg shadow-sm ring-1 ring-gray-300 focus-within:ring-2 focus-within:ring-blue-500">
+        <div class="flex rounded-lg shadow-sm ring-1 ring-gray-300 focus-within:ring-2 focus-within:ring-gray-500">
           <input type="text" 
                  [formControl]="usernameControl" 
                  name="username"
@@ -59,7 +59,7 @@
         </div>
         
         <p class="mt-2 text-xs text-gray-500">
-          <i class="fas fa-check-circle text-green-500 mr-1" *ngIf="usernameControl.valid"></i>
+          <i class="fas fa-check-circle text-green-600 mr-1" *ngIf="usernameControl.valid"></i>
           Use 4-24 characters with letters and numbers only
         </p>
       </div>
@@ -70,12 +70,12 @@
       <!-- Action Buttons -->
       <div class="flex items-center justify-between pt-5 border-t border-gray-200">
         <button type="button" (click)="onNoClick()"
-                class="px-4 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+                class="px-4 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400">
           Cancel
         </button>
         <button type="submit"
                 [disabled]="usernameControl.invalid"
-                class="px-6 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-lg shadow-sm hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-70 disabled:cursor-not-allowed">
+                class="px-6 py-2.5 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm hover:bg-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 disabled:opacity-70 disabled:cursor-not-allowed">
           Create Email Address
         </button>
       </div>
@@ -85,7 +85,7 @@
     <div *ngIf="showHistory" class="h-full flex flex-col">
       <div class="mb-5">
         <button type="button" (click)="showHistory = false" 
-                class="flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 focus:outline-none">
+                class="flex items-center text-sm font-medium text-blue-600 hover:text-gray-700 focus:outline-none">
           <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
           </svg>
@@ -108,8 +108,8 @@
               <p class="font-mono text-gray-900 text-sm sm:text-base truncate">{{email.address}}</p>
               <div class="flex items-center mt-1.5">
                 <span class="text-xs px-2 py-0.5 rounded-full"
-                      [class.bg-green-100]="email.active" 
-                      [class.text-green-800]="email.active"
+                      [class.bg-gray-200]="email.active" 
+                      [class.text-gray-900]="email.active"
                       [class.bg-gray-100]="!email.active"
                       [class.text-gray-500]="!email.active">
                   {{email.active ? 'Active' : 'Expired'}}
@@ -121,11 +121,11 @@
             </div>
             <div class="flex space-x-2 ml-4">
               <button (click)="selectHistoryEmail(email)" 
-                      class="px-3 py-1.5 text-xs font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+                      class="px-3 py-1.5 text-xs font-medium text-white bg-gray-800 rounded-lg hover:bg-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400">
                 Use
               </button>
               <button
-                      class="px-3 py-1.5 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+                      class="px-3 py-1.5 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400">
                 Delete
               </button>
             </div>

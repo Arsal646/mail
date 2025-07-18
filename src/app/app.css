@@ -95,13 +95,13 @@ button, a{
   height: 100%;
   width: 25%; /* Shorter bar for more motion */
   background: linear-gradient(90deg, 
-             #3b82f6, 
-             #2563eb, 
-             #3b82f6); /* Deeper blue gradient */
+             #000, 
+             #787878, 
+             #000); /* Deeper blue gradient */
   animation: 
     loaderSlide 1.2s infinite ease-in-out,
     pulseColor 2.4s infinite ease-in-out; /* Added color pulse */
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.7); /* Glow effect */
+  box-shadow: 0 0 10px rgba(234, 237, 244, 0.7); /* Glow effect */
 }
 
 @keyframes loaderSlide {
@@ -120,9 +120,9 @@ button, a{
   50% {
     opacity: 0.8;
     background: linear-gradient(90deg, 
-               #3b82f6, 
-               #1d4ed8, 
-               #3b82f6); /* Darker mid-animation */
+               #252525, 
+               #444444, 
+               #212121); /* Darker mid-animation */
   }
 }
 

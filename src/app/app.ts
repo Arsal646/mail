@@ -293,4 +293,9 @@ export class App implements OnInit, OnDestroy {
   confirmDelete(email: any) {
     // Your delete confirmation logic
   }
+
+
+  saveEmail(){
+    
+  }
 }

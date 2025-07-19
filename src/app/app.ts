@@ -6,7 +6,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { EmailViewDialog } from './compoents/email-view-dialog/email-view-dialog';
 import { MatDialog } from '@angular/material/dialog';
 import { NewEmailModalComponent } from './compoents/new-email-modal/new-email-modal';
-import {LucideAngularModule} from "lucide-angular";
+import { LucideAngularModule } from "lucide-angular";
 
 
 @Component({
@@ -14,7 +14,7 @@ import {LucideAngularModule} from "lucide-angular";
   standalone: true,
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports: [CommonModule,LucideAngularModule],
+  imports: [CommonModule, LucideAngularModule],
 })
 export class App implements OnInit, OnDestroy {
   countdown = signal(30);
@@ -35,20 +35,20 @@ export class App implements OnInit, OnDestroy {
 
     effect(() => {
 
-      if(this.countdown()===0){
+      if (this.countdown() === 0) {
         this.reload()
       }
     });
   }
-  
 
-  reload(){
-     this.refreshEmails()
-     this.startCountdown();
+
+  reload() {
+    this.refreshEmails()
+    this.startCountdown();
   }
 
   ngOnInit(): void {
-    if(!this.isBrowser) return
+    if (!this.isBrowser) return
     this.generateNewEmail();
     this.reload()
 
@@ -63,9 +63,14 @@ export class App implements OnInit, OnDestroy {
     this.countdownSub?.unsubscribe();
     this.countdown.set(30);
 
-    // Emits every second for 15 ticks
+    // Emits every second for 31 ticks
     this.countdownSub = interval(1000).pipe(take(31)).subscribe((i) => {
-      this.countdown.set(30 - i);
+      // Keep countdown at 30 when loading is true
+      if (this.loading) {
+        this.countdown.set(30);
+      } else {
+        this.countdown.set(30 - i);
+      }
     });
   }
 
@@ -186,11 +191,11 @@ export class App implements OnInit, OnDestroy {
       },
       error: (err) => {
         console.error('Error fetching emails:', err);
-        setTimeout(() => {
-          this.loading = false;
-        }, 400);
+        // setTimeout(() => {
+        //   this.loading = false;
+        // }, 400);
 
-        this.refreshing = false;
+        // this.refreshing = false;
       },
     });
   }
@@ -296,7 +301,7 @@ export class App implements OnInit, OnDestroy {
   }
 
 
-  saveEmail(){
-    
+  saveEmail() {
+
   }
 }

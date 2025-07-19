@@ -8,6 +8,7 @@ import { delay, map, mergeMap, scan, startWith, take } from 'rxjs/operators';
 })
 export class EmailService {
   domain = '@tempmails.online';
+  apiUrl = 'https://mailboxhub.fun/api'
 
   constructor(private http: HttpClient) { }
 
@@ -24,7 +25,7 @@ export class EmailService {
 
   fetchEmails(emailAddress: string) {
     return this.http.get<any[]>(
-      `http://localhost:8000/api/fakeemails/?email=${emailAddress}`
+      `${this.apiUrl}fakeemails/?email=${emailAddress}`
     ).pipe(
       map(emails => emails.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()))
     );
@@ -55,7 +56,7 @@ export class EmailService {
 
   // src/app/services/email.ts - Add these methods
 
-  apiUrl = 'http://localhost:8000/api'
+
   
   saveEmailToBackend(email: string): Observable<any> {
     return this.http.post(`${this.apiUrl}/save-email`, { email });

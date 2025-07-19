@@ -25,7 +25,7 @@ export class EmailService {
 
   fetchEmails(emailAddress: string) {
     return this.http.get<any[]>(
-      `${this.apiUrl}fakeemails/?email=${emailAddress}`
+      `${this.apiUrl}/fakeemails/?email=${emailAddress}`
     ).pipe(
       map(emails => emails.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()))
     );

@@ -8,7 +8,9 @@ import { delay, map, mergeMap, scan, startWith, take } from 'rxjs/operators';
 })
 export class EmailService {
   domain = '@tempmails.online';
-  apiUrl = 'https://mailboxhub.fun/api'
+   apiUrl = 'https://mailboxhub.fun/api'
+  //apiUrl = 'http://127.0.0.1:8000/api'
+
 
   constructor(private http: HttpClient) { }
 

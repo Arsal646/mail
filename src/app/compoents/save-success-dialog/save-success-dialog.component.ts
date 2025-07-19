@@ -49,7 +49,7 @@ export interface SaveSuccessData {
         <div class="flex items-center justify-between mb-2">
           <span class="text-sm font-medium text-gray-700">7-Day Access Link:</span>
           <button (click)="copyLink()" 
-                  class="text-blue-600 hover:text-blue-800 text-xs flex items-center space-x-1"
+                  class="text-blue-600 cursor-pointer hover:text-blue-800 text-xs flex items-center space-x-1"
                   [class.text-green-600]="linkCopied">
             <lucide-icon [name]="linkCopied ? 'check' : 'copy'" [size]="12"></lucide-icon>
             <span>{{linkCopied ? 'Copied!' : 'Copy'}}</span>

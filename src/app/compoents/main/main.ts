@@ -334,7 +334,7 @@ export class Main implements OnInit, OnDestroy {
 
           // Show success dialog with guidance
           this.dialog.open(SaveSuccessDialogComponent, {
-            width: '500px',
+            width: '520px',
             maxWidth: '90vw',
             disableClose: false,
             data: {

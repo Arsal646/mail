@@ -6,8 +6,8 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { 
   Mail, MailOpen, RefreshCw, Plus, Copy, Check, Bookmark, 
-  AlertCircle, User, Calendar, Shield, Circle,  X, Info, CheckCircle, Clock,
-  ChevronLeft, Inbox,
+  AlertCircle, User, Calendar, Shield, Circle, X, Info, CheckCircle, Clock,
+  ChevronLeft, Inbox, Loader2, XCircle,
   LucideAngularModule
 } from 'lucide-angular';
 
@@ -20,8 +20,8 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(    LucideAngularModule.pick({
       Mail, MailOpen, RefreshCw, Plus, 
       Copy, Check, Bookmark, AlertCircle,
-      User, Calendar, Shield, Circle,  X, Info, CheckCircle,Clock,
-      ChevronLeft, Inbox
+      User, Calendar, Shield, Circle, X, Info, CheckCircle, Clock,
+      ChevronLeft, Inbox, Loader2, XCircle
     }))
   ]
 };

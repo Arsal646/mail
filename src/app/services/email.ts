@@ -8,8 +8,8 @@ import { delay, map, mergeMap, scan, startWith, take } from 'rxjs/operators';
 })
 export class EmailService {
   domain = '@tempmails.online';
-  
-  constructor(private http: HttpClient) {}
+
+  constructor(private http: HttpClient) { }
 
   generateEmail(username?: string): string {
     const prefix = username || Math.random().toString(36).substring(2, 10);
@@ -22,13 +22,13 @@ export class EmailService {
   //    return this.http.get(`https://mailboxhub.fun/api/fakeemails/?email=${emailAddress}`);
   // }
 
-fetchEmails(emailAddress: string) {
-  return this.http.get<any[]>(
-    `https://mailboxhub.fun/api/fakeemails/?email=${emailAddress}`
-  ).pipe(
-    map(emails => emails.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()))
-  );
-}
+  fetchEmails(emailAddress: string) {
+    return this.http.get<any[]>(
+      `http://localhost:8000/api/fakeemails/?email=${emailAddress}`
+    ).pipe(
+      map(emails => emails.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()))
+    );
+  }
 
   // fetchEmails(): Observable<any[]> {
   //   const realEmails$ = this.http.get<any[]>('http://127.0.0.1:8000/api/fakeemails');
@@ -49,4 +49,24 @@ fetchEmails(emailAddress: string) {
   //   // Combine real emails first, then stream new emails every 5s
   //   return concat(realEmails$, newEmails$);
   // }
+
+
+
+
+  // src/app/services/email.ts - Add these methods
+
+  apiUrl = 'http://localhost:8000/api'
+  
+  saveEmailToBackend(email: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/save-email`, { email });
+  }
+
+  getSavedEmail(token: string): Observable<any> {
+    return this.http.get(`${this.apiUrl}/saved/${token}`);
+  }
+
+  checkIfSaved(email: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/check-saved`, { email });
+  }
+
 }

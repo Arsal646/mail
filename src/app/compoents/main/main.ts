@@ -234,6 +234,7 @@ export class Main implements OnInit, OnDestroy {
     const dialogRef = this.dialog.open(EmailViewDialog, {
       width: '90vw',
       maxWidth: '800px',
+      height:'90vh',
       maxHeight: '90vh',
       panelClass: 'custom-dialog',
       data: { ...email } // Pass the email data to the dialog

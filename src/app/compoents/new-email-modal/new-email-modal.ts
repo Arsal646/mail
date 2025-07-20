@@ -1,4 +1,4 @@
-import { Component, inject, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, inject, Inject, PLATFORM_ID, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
@@ -23,7 +23,9 @@ import {LucideAngularModule} from "lucide-angular";
   templateUrl: './new-email-modal.html',
   styleUrl: './new-email-modal.css'
 })
-export class NewEmailModalComponent {
+export class NewEmailModalComponent implements AfterViewInit {
+  @ViewChild('usernameInput') usernameInput!: ElementRef<HTMLInputElement>;
+  
   public emailService = inject(EmailService)
   submitted = false;
   username = '';
@@ -40,6 +42,15 @@ export class NewEmailModalComponent {
     @Inject(MAT_DIALOG_DATA) public data: { domain: string, historyEmails:any[] }
   ) { 
     this.isBrowser = isPlatformBrowser(this.platformId);
+  }
+
+  ngAfterViewInit(): void {
+    // Auto focus on the input field when modal opens
+    if (this.isBrowser && this.usernameInput) {
+      setTimeout(() => {
+        this.usernameInput.nativeElement.focus();
+      }, 100);
+    }
   }
 
   onNoClick(): void {

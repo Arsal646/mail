@@ -39,8 +39,16 @@ app.use(
  * Handle all other requests by rendering the Angular application.
  */
 app.use((req, res, next) => {
+  // Extract language from URL (e.g., /ar, /fr, /es, /de)
+  const langMatch = req.url.match(/^\/(en|ar|fr|es|de)(\/|$)/);
+  const lang = langMatch ? langMatch[1] : 'en';
+
   angularApp
-    .handle(req)
+    .handle(req, {
+      providers: [
+        { provide: 'APP_LANGUAGE', useValue: lang }
+      ]
+    })
     .then((response) =>
       response ? writeResponseToNodeResponse(response, res) : next(),
     )

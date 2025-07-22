@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, signal, effect, Inject, PLATFORM_ID, inject } from '@angular/core';
+import { Component, OnInit, OnDestroy, signal, effect, Inject, PLATFORM_ID, inject, InjectionToken } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
@@ -9,13 +9,40 @@ import { EmailService } from '../../services/email';
 import { EmailViewDialog } from '../email-view-dialog/email-view-dialog';
 import { NewEmailModalComponent } from '../new-email-modal/new-email-modal';
 import { SaveSuccessDialogComponent } from '../save-success-dialog/save-success-dialog.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Title, Meta } from '@angular/platform-browser';
+
+const SUPPORTED_LANGS = [
+  { code: 'en', name: 'English', dir: 'ltr' },
+  { code: 'ar', name: 'العربية', dir: 'rtl' },
+  { code: 'fr', name: 'Français', dir: 'ltr' },
+  { code: 'es', name: 'Español', dir: 'ltr' },
+  { code: 'de', name: 'Deutsch', dir: 'ltr' },
+  { code: 'zh', name: '中文', dir: 'ltr' },
+  { code: 'ru', name: 'Русский', dir: 'ltr' },
+  { code: 'hi', name: 'हिन्दी', dir: 'ltr' },
+  { code: 'pt', name: 'Português', dir: 'ltr' },
+  { code: 'ja', name: '日本語', dir: 'ltr' },
+  { code: 'tr', name: 'Türkçe', dir: 'ltr' },
+  { code: 'it', name: 'Italiano', dir: 'ltr' },
+  { code: 'ko', name: '한국어', dir: 'ltr' },
+  { code: 'fa', name: 'فارسی', dir: 'rtl' },
+  { code: 'pl', name: 'Polski', dir: 'ltr' },
+  { code: 'uk', name: 'Українська', dir: 'ltr' },
+  { code: 'nl', name: 'Nederlands', dir: 'ltr' },
+  { code: 'sv', name: 'Svenska', dir: 'ltr' },
+  { code: 'id', name: 'Bahasa Indonesia', dir: 'ltr' },
+  { code: 'th', name: 'ไทย', dir: 'ltr' }
+];
+
+const APP_LANGUAGE = new InjectionToken<string>('APP_LANGUAGE');
 
 @Component({
   selector: 'app-main',
   standalone: true,
   templateUrl: './main.html',
   styleUrl: './main.css',
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule, LucideAngularModule, TranslateModule],
 })
 export class Main implements OnInit, OnDestroy {
   countdown = signal(10);
@@ -29,16 +56,35 @@ export class Main implements OnInit, OnDestroy {
   saved = false;
   emailGenerating = false;
   isBrowser = false;
+  selectedLang = 'en';
+  supportedLangs = SUPPORTED_LANGS;
+  activeLangs = SUPPORTED_LANGS.filter(l => ['en', 'ar', 'fr', 'es', 'de'].includes(l.code));
 
   private domain = '@tempmails.online';
+  seoMetaTitle = '';
+  seoMetaDescription = '';
 
   constructor(
     private emailService: EmailService, 
     @Inject(PLATFORM_ID) private platformId: Object,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private translate: TranslateService,
+    private titleService: Title,
+    private metaService: Meta
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
-
+    this.translate.addLangs(this.supportedLangs.map(l => l.code));
+    this.translate.setDefaultLang('en');
+    // SSR: Use APP_LANGUAGE provider if present
+    let initialLang = 'en';
+    try {
+      const ssrLang = inject(APP_LANGUAGE, { optional: true });
+      if (ssrLang) initialLang = ssrLang;
+    } catch {}
+    this.selectedLang = initialLang;
+    this.translate.use(initialLang);
+    this.setDirection(initialLang);
+    this.updateMetaTags(initialLang);
     effect(() => {
       if (this.countdown() === 0) {
         this.reload()
@@ -46,6 +92,32 @@ export class Main implements OnInit, OnDestroy {
     });
   }
 
+  switchLanguage(event: Event) {
+    const lang = (event.target as HTMLSelectElement).value;
+    this.selectedLang = lang;
+    this.translate.use(lang);
+    this.setDirection(lang);
+    this.updateMetaTags(lang);
+    // Change route to match language
+    const currentPath = window.location.pathname.split('/').filter(Boolean);
+    if (lang === 'en') {
+      if (currentPath[0] && this.supportedLangs.find(l => l.code === currentPath[0])) {
+        window.location.pathname = '/';
+      }
+    } else {
+      if (currentPath[0] !== lang) {
+        window.location.pathname = '/' + lang + (currentPath.length > 1 ? '/' + currentPath.slice(1).join('/') : '');
+      }
+    }
+  }
+
+  setDirection(lang: string) {
+    if (!this.isBrowser) return;
+    const langObj = this.supportedLangs.find(l => l.code === lang);
+    const dir = langObj && langObj.dir === 'rtl' ? 'rtl' : 'ltr';
+    document.documentElement.dir = dir;
+    document.documentElement.lang = lang;
+  }
 
   reload() {
     this.refreshEmails()
@@ -54,6 +126,13 @@ export class Main implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     if (!this.isBrowser) return;
+    // Detect language from route
+    const path = window.location.pathname.split('/')[1];
+    const lang = this.supportedLangs.find(l => l.code === path) ? path : 'en';
+    this.selectedLang = lang;
+    this.translate.use(lang);
+    this.setDirection(lang);
+    this.updateMetaTags(lang);
     
     // Check if there's a saved email in query params
     this.route.queryParams.subscribe(params => {
@@ -355,6 +434,34 @@ export class Main implements OnInit, OnDestroy {
         console.error('Error saving email:', error);
         alert('Failed to save email. Please try again.');
       }
+    });
+  }
+
+  updateMetaTags(lang: string) {
+    this.translate.get(['META_TITLE', 'META_DESCRIPTION']).subscribe(translations => {
+      let title = translations['META_TITLE'] || 'TempMail - Free Temporary Email Service';
+      let desc = translations['META_DESCRIPTION'] || 'Get free temporary email addresses instantly. Our disposable email service protects your privacy and keeps your inbox spam-free. No registration required.';
+      // Google SEO best practices
+      if (title.length > 60) title = title.slice(0, 57) + '...';
+      if (desc.length > 160) desc = desc.slice(0, 157) + '...';
+      this.seoMetaTitle = title;
+      this.seoMetaDescription = desc;
+      // Add relevant keywords for each language
+      const keywordsMap: { [key: string]: string } = {
+        en: 'temporary email, disposable email, free email, anonymous email, spam protection, fake email, burner email',
+        ar: 'بريد مؤقت, بريد إلكتروني مؤقت, بريد مجاني, بريد مجهول, حماية من الرسائل المزعجة, بريد وهمي',
+        fr: 'email temporaire, email jetable, email gratuit, email anonyme, protection anti-spam, email faux',
+        es: 'correo temporal, correo desechable, correo gratis, correo anónimo, protección contra spam, correo falso',
+        de: 'temporäre E-Mail, Wegwerf-E-Mail, kostenlose E-Mail, anonyme E-Mail, Spam-Schutz, Fake-E-Mail',
+      };
+      const keywords = keywordsMap[lang] || keywordsMap['en'];
+      this.titleService.setTitle(this.seoMetaTitle);
+      this.metaService.updateTag({ name: 'description', content: this.seoMetaDescription });
+      this.metaService.updateTag({ name: 'keywords', content: keywords });
+      this.metaService.updateTag({ property: 'og:title', content: this.seoMetaTitle });
+      this.metaService.updateTag({ property: 'og:description', content: this.seoMetaDescription });
+      this.metaService.updateTag({ name: 'twitter:title', content: this.seoMetaTitle });
+      this.metaService.updateTag({ name: 'twitter:description', content: this.seoMetaDescription });
     });
   }
 }

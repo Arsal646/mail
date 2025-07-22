@@ -4,11 +4,12 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 import { log } from 'console';
 import { EmailService } from '../../services/email';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-saved-email',
   standalone: true,
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule, LucideAngularModule, TranslateModule],
   template: `
     <div class="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full text-center">
@@ -16,29 +17,29 @@ import { EmailService } from '../../services/email';
         <!-- Loading State -->
         <div *ngIf="loading" class="space-y-4">
           <lucide-icon name="loader-2" [size]="48" class="text-blue-600 animate-spin mx-auto"></lucide-icon>
-          <h2 class="text-xl font-semibold text-gray-900">Verifying Access Link...</h2>
-          <p class="text-gray-600">Please wait while we verify your saved email.</p>
+          <h2 class="text-xl font-semibold text-gray-900">{{ 'VERIFYING_ACCESS_LINK' | translate }}</h2>
+          <p class="text-gray-600">{{ 'PLEASE_WAIT_VERIFY' | translate }}</p>
         </div>
 
         <!-- Success State -->
         <div *ngIf="!loading && emailData" class="space-y-4">
           <lucide-icon name="check-circle" [size]="48" class="text-green-600 mx-auto"></lucide-icon>
-          <h2 class="text-xl font-semibold text-gray-900">Access Verified!</h2>
-          <p class="text-gray-600">Redirecting to your saved email inbox...</p>
+          <h2 class="text-xl font-semibold text-gray-900">{{ 'ACCESS_VERIFIED' | translate }}</h2>
+          <p class="text-gray-600">{{ 'REDIRECTING_TO_INBOX' | translate }}</p>
           <div class="bg-gray-50 p-3 rounded-lg">
             <p class="text-sm font-mono text-gray-800">{{emailData.email_address}}</p>
-            <p class="text-xs text-gray-500 mt-1">{{emailData.days_remaining}} days remaining</p>
+            <p class="text-xs text-gray-500 mt-1">{{emailData.days_remaining}} {{ 'DAYS_REMAINING' | translate }}</p>
           </div>
         </div>
 
         <!-- Error State -->
         <div *ngIf="!loading && error" class="space-y-4">
           <lucide-icon name="x-circle" [size]="48" class="text-red-600 mx-auto"></lucide-icon>
-          <h2 class="text-xl font-semibold text-gray-900">Access Link Invalid</h2>
+          <h2 class="text-xl font-semibold text-gray-900">{{ 'ACCESS_LINK_INVALID' | translate }}</h2>
           <p class="text-gray-600">{{error}}</p>
           <button (click)="goHome()" 
                   class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Generate New Email
+            {{ 'GENERATE_NEW_EMAIL' | translate }}
           </button>
         </div>
 

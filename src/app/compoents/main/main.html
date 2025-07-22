@@ -12,7 +12,7 @@
                     </div>
                     <div>
                         <div class="flex items-center">
-                            <span class="text-xs text-green-700">Online</span>
+                            <span class="text-xs text-green-700">{{ 'ONLINE' | translate }}</span>
                             <span class="ml-1 w-2 h-2 bg-green-700 rounded-full animate-pulse"></span>
                         </div>
                     </div>
@@ -29,11 +29,8 @@
     <main class="container mx-auto px-4 py-6 max-w-5xl">
 
         <div class=" mb-6 text-center">
-            <h1 class="text-xl font-semibold text-gray-900 mb-3">Free Temporary Email Service</h1>
-            <p class="text-sm text-gray-600 mb-4">Our disposable email service provides instant, anonymous email
-                addresses to
-                help you avoid spam and maintain online security. Get a free temporary email address in seconds with no
-                registration required.</p>
+            <h1 class="text-xl font-semibold text-gray-900 mb-3">{{ 'TITLE' | translate }}</h1>
+            <p class="text-sm text-gray-600 mb-4">{{ 'DESCRIPTION' | translate }}</p>
         </div>
 
 
@@ -46,7 +43,7 @@
             <!-- Email Address Section -->
             <div class="bg-white p-5 relative rounded-lg">
                 <div class="flex justify-between mb-2">
-                    <h2 class="text-lg font-semibold text-gray-900">Your Temporary Email</h2>
+                    <h2 class="text-lg font-semibold text-gray-900">{{ 'YOUR_TEMP_EMAIL' | translate }}</h2>
                     <!-- <button (click)="openHistoryDialog()"
                         class="hidden md:flex items-center space-x-1 px-4 border border-gray-800 animate-pulse transition duration-300 rounded-lg hover:bg-gray-800 hover:text-white text-sm">
                         <lucide-icon name="refresh-cw" [size]="14"></lucide-icon>
@@ -57,7 +54,7 @@
                         <button (click)="openHistoryDialog()"
                             class="px-4 hidden md:flex py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-lg transition-all duration-200 text-sm font-medium border border-gray-300 items-center space-x-2">
                             <lucide-icon name="refresh-cw" [size]="16"></lucide-icon>
-                            <span>New Email</span>
+                            <span>{{ 'NEW_EMAIL' | translate }}</span>
                         </button>
                     </div>
                 </div>
@@ -67,7 +64,7 @@
                         <div class="flex-1 min-w-0">
                             <div class="font-mono text-gray-900 truncate text-sm md:text-base">
                                 @if (emailGenerating) {
-                                Generating email...
+                                {{ 'GENERATING_EMAIL' | translate }}
                                 } @else {
                                 {{currentEmail}}
                                 }
@@ -87,13 +84,13 @@
                                     <lucide-icon name="bookmark" [size]="14"></lucide-icon>
                                     }
                                     <span class="inline-block w-[52px] text-left">
-                                        {{saved ? 'Saved!' : 'Save'}}
+                                        {{ saved ? ('SAVED' | translate) : ('SAVE' | translate) }}
                                     </span>
                                 </button>
                                 <!-- Save Tooltip -->
                                 <div
                                     class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-20">
-                                    {{saved ? 'Email saved!' : 'Save for 7 days'}}
+                                    {{ saved ? ('EMAIL_SAVED' | translate) : ('SAVE_FOR_7_DAYS' | translate) }}
                                     <div
                                         class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-gray-800">
                                     </div>
@@ -111,13 +108,13 @@
                                     <lucide-icon name="check" [size]="14"></lucide-icon>
                                     }
                                     <span class="inline-block w-[52px] text-left">
-                                        {{copied ? 'Copied!' : 'Copy'}}
+                                        {{ copied ? ('COPIED' | translate) : ('COPY' | translate) }}
                                     </span>
                                 </button>
                                 <!-- Copy Tooltip -->
                                 <div
                                     class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-20">
-                                    {{copied ? 'Copied!' : 'Copy email address'}}
+                                    {{ copied ? ('COPIED' | translate) : ('COPY_EMAIL_ADDRESS' | translate) }}
                                     <div
                                         class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-gray-800">
                                     </div>
@@ -140,7 +137,7 @@
                             } @else {
                             <lucide-icon name="bookmark" [size]="16"></lucide-icon>
                             }
-                            <span>{{saved ? 'Saved!' : 'Save'}}</span>
+                            <span>{{ saved ? ('SAVED' | translate) : ('SAVE' | translate) }}</span>
                         </button>
                     </div>
 
@@ -149,7 +146,7 @@
                         <button (click)="openHistoryDialog()"
                             class="w-full px-2 text-xs py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-lg transition-all duration-200 font-medium border border-gray-300 flex items-center justify-center space-x-1">
                             <lucide-icon name="refresh-cw" [size]="16"></lucide-icon>
-                            <span>New Email</span>
+                            <span>{{ 'NEW_EMAIL' | translate }}</span>
                         </button>
                     </div>
 
@@ -164,7 +161,7 @@
                             } @else {
                             <lucide-icon name="check" [size]="16"></lucide-icon>
                             }
-                            <span>{{copied ? 'Copied!' : 'Copy'}}</span>
+                            <span>{{ copied ? ('COPIED' | translate) : ('COPY' | translate) }}</span>
                         </button>
                     </div>
                 </div>
@@ -177,7 +174,7 @@
             <div class="px-5 pb-5 bg-white rounded-lg">
                 <div class=" border px-4 pt-4 border-gray-200 rounded-lg">
                     <div class="flex items-center justify-between mb-4">
-                        <h2 class="text-lg font-semibold text-gray-900">Inbox</h2>
+                        <h2 class="text-lg font-semibold text-gray-900">{{ 'INBOX' | translate }}</h2>
                         <div class="flex items-center text-sm text-gray-600">
                             <span class="mr-2">Auto-refresh in {{ countdown() }}s</span>
                             <button (click)="reload()" class="p-1 text-gray-600 hover:text-gray-900">
@@ -206,13 +203,13 @@
                                         </circle>
                                     </svg>
                                 </div>
-                                <p class="text-sm text-gray-600">Waiting for incoming messages for <span
+                                <p class="text-sm text-gray-600">{{ 'WAITING_FOR_MESSAGES' | translate }} <span
                                         class="font-bold text-dark">{{currentEmail}}</span></p>
                                 <button (click)="refreshEmails()"
                                     class="mt-4 px-4 py-2 text-sm bg-gray-100 text-gray-900 rounded-lg hover:bg-gray-200 transition-colors flex items-center">
                                     <lucide-icon name="refresh-cw" [size]="14"
                                         [class.animate-spin]="refreshing"></lucide-icon>
-                                    Check Again
+                                    {{ 'CHECK_AGAIN' | translate }}
                                 </button>
                             </div>
                         </div>
@@ -257,7 +254,7 @@
 
         <!-- How It Works Section -->
         <div class="bg-white rounded-lg shadow-sm p-5 mt-6">
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">How to Use & Save Your Temporary Email</h2>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">{{ 'HOW_IT_WORKS' | translate }}</h2>
 
             <div class="space-y-6">
                 <!-- Using Temporary Email -->
@@ -266,36 +263,33 @@
                     <h3 class="font-medium text-gray-900 mb-3 flex items-center">
                         <span
                             class="bg-blue-100 text-blue-800 w-6 h-6 rounded-full flex items-center justify-center mr-2">1</span>
-                        Using Your Temporary Email
+                        {{ 'USING_TEMP_EMAIL' | translate }}
                     </h3>
                     <ol class="space-y-2 text-sm text-gray-600 pl-8">
                         <li class="flex items-start">
                             <lucide-icon name="circle" [size]="14"
                                 class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
-                            <span>Get a random temporary email automatically when you visit - or click "New Email" to
-                                generate a different disposable address (random or custom)</span>
+                            <span>{{ 'GET_RANDOM_EMAIL' | translate }}</span>
                         </li>
                         <li class="flex items-start">
                             <lucide-icon name="circle" [size]="14"
                                 class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
-                            <span>Access "Email History" from the "New Email" menu to view, reuse, or delete any of your
-                                recent temporary addresses</span>
+                            <span>{{ 'ACCESS_HISTORY' | translate }}</span>
                         </li>
                         <li class="flex items-start">
                             <lucide-icon name="circle" [size]="14"
                                 class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
-                            <span>Use these emails for website registrations or verifications</span>
+                            <span>{{ 'USE_FOR_REGISTRATIONS' | translate }}</span>
                         </li>
                         <li class="flex items-start">
                             <lucide-icon name="circle" [size]="14"
                                 class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
-                            <span>All received emails appear in your temporary inbox</span>
+                            <span>{{ 'ALL_RECEIVED_EMAILS' | translate }}</span>
                         </li>
                         <li class="flex items-start">
                             <lucide-icon name="circle" [size]="14"
                                 class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
-                            <span>We securely store your emails in browser for 24 hours - access all generated addresses
-                                during this period</span>
+                            <span>{{ 'SECURE_STORAGE' | translate }}</span>
                         </li>
                     </ol>
                 </div>
@@ -305,32 +299,29 @@
                     <h3 class="font-medium text-gray-900 mb-3 flex items-center">
                         <span
                             class="bg-green-100 text-green-800 w-6 h-6 rounded-full flex items-center justify-center mr-2">2</span>
-                        Saving for 7-Day Access
+                        {{ 'SAVING_FOR_7_DAY_ACCESS' | translate }}
                     </h3>
                     <ol class="space-y-2 text-sm text-gray-600 pl-8">
                         <li class="flex items-start">
                             <lucide-icon name="circle" [size]="14"
                                 class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
-                            <span>Click the <lucide-icon name="bookmark" [size]="14"
-                                    class="text-gray-500 mx-1 inline"></lucide-icon>
-                                bookmark icon next to your email</span>
+                            <span>{{ 'CLICK_SAVE_ICON' | translate }}</span>
                         </li>
                         <li class="flex items-start">
                             <lucide-icon name="circle" [size]="14"
                                 class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
-                            <span>Copy the unique access link provided</span>
+                            <span>{{ 'COPY_ACCESS_LINK' | translate }}</span>
                         </li>
                         <li class="flex items-start">
                             <lucide-icon name="circle" [size]="14"
                                 class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
-                            <span>Use this link to return to your inbox anytime within 7 days</span>
+                            <span>{{ 'USE_LINK_TO_RETURN' | translate }}</span>
                         </li>
                     </ol>
                     <div class="mt-3 bg-gray-50 p-3 rounded text-xs text-gray-600 flex items-start">
                         <lucide-icon name="alert-circle" [size]="14"
                             class="text-yellow-500 mr-2 mt-0.5 flex-shrink-0"></lucide-icon>
-                        <span>Without saving, your temporary email will expire in 24 hour when you close the
-                            browser.</span>
+                        <span>{{ 'NO_SAVING_EXPIRATION' | translate }}</span>
                     </div>
                 </div>
 
@@ -339,23 +330,23 @@
                     <div class="bg-gray-50 p-3 rounded border border-gray-200">
                         <div class="flex items-center gap-2 mb-1">
                             <lucide-icon name="user" [size]="16" class="text-blue-500"></lucide-icon>
-                            <h4 class="font-medium text-gray-900 text-sm">No Registration</h4>
+                            <h4 class="font-medium text-gray-900 text-sm">{{ 'NO_REGISTRATION' | translate }}</h4>
                         </div>
-                        <p class="text-xs text-gray-600">Start using immediately without signing up</p>
+                        <p class="text-xs text-gray-600">{{ 'START_USING_NO_REG' | translate }}</p>
                     </div>
                     <div class="bg-gray-50 p-3 rounded border border-gray-200">
                         <div class="flex items-center gap-2 mb-1">
                             <lucide-icon name="calendar" [size]="16" class="text-green-500"></lucide-icon>
-                            <h4 class="font-medium text-gray-900 text-sm">7-Day Access</h4>
+                            <h4 class="font-medium text-gray-900 text-sm">{{ '7_DAY_ACCESS' | translate }}</h4>
                         </div>
-                        <p class="text-xs text-gray-600">Return to your saved emails for a full week</p>
+                        <p class="text-xs text-gray-600">{{ 'RETURN_TO_SAVED_EMAILS' | translate }}</p>
                     </div>
                     <div class="bg-gray-50 p-3 rounded border border-gray-200">
                         <div class="flex items-center gap-2 mb-1">
                             <lucide-icon name="shield" [size]="16" class="text-purple-500"></lucide-icon>
-                            <h4 class="font-medium text-gray-900 text-sm">Spam Protection</h4>
+                            <h4 class="font-medium text-gray-900 text-sm">{{ 'SPAM_PROTECTION' | translate }}</h4>
                         </div>
-                        <p class="text-xs text-gray-600">Keep your personal inbox clean</p>
+                        <p class="text-xs text-gray-600">{{ 'KEEP_PERSONAL_INBOX_CLEAN' | translate }}</p>
                     </div>
                 </div>
             </div>
@@ -363,104 +354,86 @@
 
    
         <div class="bg-white rounded-lg shadow-sm p-5 mt-6">
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">About Our Temporary Email Service</h2>
+            <h2 class="text-lg font-semibold text-gray-900 mb-4">{{ 'ABOUT' | translate }}</h2>
             <div class="text-sm text-gray-600 space-y-4">
-                <p>Our <strong>free disposable email service</strong> provides users with temporary email addresses that
-                    help
-                    protect privacy and prevent spam. Whether you need to sign up for a new service, verify an account,
-                    or test a
-                    website, our temporary emails offer a secure way to maintain your online anonymity.</p>
+                <p>{{ 'ABOUT_DESCRIPTION' | translate }}</p>
 
-                <p>Unlike other disposable email services, we offer <strong>7-day access</strong> to your temporary
-                    inbox when
-                    you save your session. This extended access period makes it easier to complete verification
-                    processes or
-                    retrieve important information without rushing.</p>
+                <p>{{ 'ABOUT_7_DAY_ACCESS' | translate }}</p>
 
-                <h3 class="font-semibold text-lg text-gray-900 mt-4">Common Uses for Temporary Emails:</h3>
+                <h3 class="font-semibold text-lg text-gray-900 mt-4">{{ 'COMMON_USES' | translate }}</h3>
                 <ul class="list-disc pl-5 space-y-2">
-                    <li>Website registrations and sign-ups</li>
-                    <li>App testing and development</li>
-                    <li>Online shopping from new retailers</li>
-                    <li>Accessing free trials without commitment</li>
-                    <li>Protecting your primary email from spam</li>
+                    <li>{{ 'WEBSITE_REGISTRATIONS' | translate }}</li>
+                    <li>{{ 'APP_TESTING' | translate }}</li>
+                    <li>{{ 'ONLINE_SHOPPING' | translate }}</li>
+                    <li>{{ 'ACCESSING_FREE_TRIALS' | translate }}</li>
+                    <li>{{ 'PROTECTING_PRIMARY_EMAIL' | translate }}</li>
                 </ul>
 
                 <div class="bg-gray-50 p-4 rounded mt-4">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Frequently Asked Questions</h3>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ 'FAQ' | translate }}</h3>
                     <div class="space-y-3">
                         <div>
-                            <h4 class="text-base font-medium text-gray-800">How do I get started with a temporary email?
-                            </h4>
-                            <p class="text-sm text-gray-600 mt-1">You automatically receive a random temporary email
-                                when you visit our site. No registration required - just start using it immediately.</p>
+                            <h4 class="text-base font-medium text-gray-800">{{ 'HOW_TO_START' | translate }}</h4>
+                            <p class="text-sm text-gray-600 mt-1">{{ 'HOW_TO_START_DESCRIPTION' | translate }}</p>
                         </div>
 
                         <div>
-                            <h4 class="text-base font-medium text-gray-800">Can I create a custom temporary email address?
-                            </h4>
-                            <p class="text-sm text-gray-600 mt-1">Yes! Click "New Email" to generate either a random
-                                address or create one with your preferred username.</p>
+                            <h4 class="text-base font-medium text-gray-800">{{ 'CUSTOM_EMAIL_ADDRESS' | translate }}</h4>
+                            <p class="text-sm text-gray-600 mt-1">{{ 'CUSTOM_EMAIL_DESCRIPTION' | translate }}</p>
                         </div>
 
                         <div>
-                            <h4 class="text-base font-medium text-gray-800">How long do temporary emails last?</h4>
-                            <p class="text-sm text-gray-600 mt-1">By default, emails expire after 24 hours. However, you
-                                can save any email for 7-day access by bookmarking it and using the unique access link
-                                provided.</p>
+                            <h4 class="text-base font-medium text-gray-800">{{ 'EMAIL_EXPIRATION' | translate }}</h4>
+                            <p class="text-sm text-gray-600 mt-1">{{ 'EMAIL_EXPIRATION_DESCRIPTION' | translate }}</p>
                         </div>
 
                         <div>
-                            <h4 class="text-base font-medium text-gray-800">Can I send emails from my temporary address?
-                            </h4>
-                            <p class="text-sm text-gray-600 mt-1">No, this is a receive-only service designed for
-                                verification and spam protection.</p>
+                            <h4 class="text-base font-medium text-gray-800">{{ 'SEND_EMAILS' | translate }}</h4>
+                            <p class="text-sm text-gray-600 mt-1">{{ 'SEND_EMAILS_DESCRIPTION' | translate }}</p>
                         </div>
 
                         <div>
-                            <h4 class="text-base font-medium text-gray-800">How do I access my saved temporary emails?
-                            </h4>
-                            <p class="text-sm text-gray-600 mt-1">Bookmark any email to get a unique link that remains
-                                active for 7 days. You can also view recent addresses in your Email History.</p>
+                            <h4 class="text-base font-medium text-gray-800">{{ 'ACCESS_SAVED_EMAILS' | translate }}</h4>
+                            <p class="text-sm text-gray-600 mt-1">{{ 'ACCESS_SAVED_EMAILS_DESCRIPTION' | translate }}</p>
                         </div>
 
                         <div>
-                            <h4 class="text-base font-medium text-gray-800">What happens if I don't save my temporary
-                                email?</h4>
-                            <p class="text-sm text-gray-600 mt-1">Unsaved emails will expire when you close your browser
-                                or after 24 hours. We recommend bookmarking important emails to extend access.</p>
+                            <h4 class="text-base font-medium text-gray-800">{{ 'NO_SAVING_EMAIL' | translate }}</h4>
+                            <p class="text-sm text-gray-600 mt-1">{{ 'NO_SAVING_EMAIL_DESCRIPTION' | translate }}</p>
                         </div>
 
                         <div>
-                            <h4 class="text-base font-medium text-gray-800">Is there a limit to how many temporary emails
-                                I can create?</h4>
-                            <p class="text-sm text-gray-600 mt-1">You can generate unlimited temporary emails, though we
-                                recommend bookmarking important ones to maintain access.</p>
+                            <h4 class="text-base font-medium text-gray-800">{{ 'EMAIL_LIMIT' | translate }}</h4>
+                            <p class="text-sm text-gray-600 mt-1">{{ 'EMAIL_LIMIT_DESCRIPTION' | translate }}</p>
                         </div>
 
                         <div>
-                            <h4 class="text-base font-medium text-gray-800">What are common uses for temporary emails?
-                            </h4>
-                            <p class="text-sm text-gray-600 mt-1">They're perfect for website registrations, app
-                                testing, online shopping from new retailers, accessing free trials, and protecting your
-                                primary email from spam.</p>
+                            <h4 class="text-base font-medium text-gray-800">{{ 'WHAT_ARE_TEMP_EMAILS' | translate }}</h4>
+                            <p class="text-sm text-gray-600 mt-1">{{ 'WHAT_ARE_TEMP_EMAILS_DESCRIPTION' | translate }}</p>
                         </div>
 
                         <div>
-                            <h4 class="text-base font-medium text-gray-800">Is my temporary email data secure?</h4>
-                            <p class="text-sm text-gray-600 mt-1">All emails are stored locally in your browser and
-                                automatically cleared after their expiration period. We don't permanently store your
-                                data.</p>
+                            <h4 class="text-base font-medium text-gray-800">{{ 'IS_DATA_SECURE' | translate }}</h4>
+                            <p class="text-sm text-gray-600 mt-1">{{ 'IS_DATA_SECURE_DESCRIPTION' | translate }}</p>
                         </div>
 
                         <div>
-                            <h4 class="text-base font-medium text-gray-800">Can I extend access beyond 7 days?</h4>
-                            <p class="text-sm text-gray-600 mt-1">Currently, the maximum access period is 7 days for
-                                saved emails. For longer-term needs, we recommend using your personal email.</p>
+                            <h4 class="text-base font-medium text-gray-800">{{ 'EXTEND_ACCESS' | translate }}</h4>
+                            <p class="text-sm text-gray-600 mt-1">{{ 'EXTEND_ACCESS_DESCRIPTION' | translate }}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+<footer class="bg-gray-100 border-t border-gray-200 py-4 mt-8">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+    <div class="text-xs text-gray-500 mb-2 md:mb-0">&copy; {{ '2025' }} Temp Mail. All rights reserved.</div>
+    <div>
+      <select class="border rounded px-2 py-1 text-sm" [value]="selectedLang" (change)="switchLanguage($event)">
+        <option *ngFor="let lang of activeLangs" [value]="lang.code">{{ lang.name }}</option>
+      </select>
+    </div>
+  </div>
+</footer>
 </div>

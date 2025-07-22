@@ -8,6 +8,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { EmailService } from '../../services/email';
 import {LucideAngularModule} from "lucide-angular";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-new-email-modal',
@@ -18,7 +19,8 @@ import {LucideAngularModule} from "lucide-angular";
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
-    LucideAngularModule
+    LucideAngularModule,
+    TranslateModule
   ],
   templateUrl: './new-email-modal.html',
   styleUrl: './new-email-modal.css'

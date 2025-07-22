@@ -3,10 +3,12 @@
   <div class="flex items-center justify-between px-6 py-5 bg-white border-b border-gray-200">
     <div>
       <h2 class="text-xl font-semibold text-gray-900">
-        {{showHistory ? 'Your Email History' : 'Create New Email'}}
+        <span *ngIf="showHistory" i18n="@@yourEmailHistory">Your Email History</span>
+        <span *ngIf="!showHistory" i18n="@@createNewEmail">Create New Email</span>
       </h2>
       <p class="mt-1 text-sm text-gray-500">
-        {{showHistory ? 'Select from your previously used addresses' : 'Choose a custom username'}}
+        <span *ngIf="showHistory" i18n="@@selectPrevious">Select from your previously used addresses</span>
+        <span *ngIf="!showHistory" i18n="@@chooseCustomUsername">Choose a custom username</span>
       </p>
     </div>
     <button mat-dialog-close (click)="dialogRef.close()" 
@@ -25,11 +27,8 @@
       <div class="mb-6 text-sm text-gray-600 bg-gray-100 p-3 rounded-lg">
         <div class="flex items-center flex-wrap">
           <lucide-icon name="info" [size]="16" class="text-gray-600 mr-1"></lucide-icon>
-        <span class="mr-1">Want to use a previous email? </span>
-        <button type="button" (click)="showHistory = true" 
-        class="text-blue-600 font-medium hover:text-gray-700 hover:underline ml-1 focus:outline-none">
-  View email history →
-</button>
+        <span class="mr-1" i18n="@@wantToUsePrevious">Want to use a previous email? </span>
+        <button type="button" (click)="showHistory = true" class="text-blue-600 font-medium hover:text-gray-700 hover:underline ml-1 focus:outline-none" i18n="@@viewEmailHistory">View email history →</button>
         </div>
     
       </div>
@@ -37,9 +36,9 @@
       <!-- Email Input Group -->
       <div class="mb-6">
         <div class="flex items-center justify-between mb-3">
-          <label class="block text-sm font-medium text-gray-700">Custom Email Address</label>
+          <label class="block text-sm font-medium text-gray-700" i18n="@@customEmailAddress">Custom Email Address</label>
           <button type="button" (click)="generateRandom()"
-                  class="inline-flex items-center px-3 py-1.5 text-xs font-medium text-blue-500 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400">
+                  class="inline-flex items-center px-3 py-1.5 text-xs font-medium text-blue-500 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400" i18n="@@generateRandom">
             <lucide-icon name="refresh-cw" [size]="14" class="mr-1.5"></lucide-icon>
             Generate Random
           </button>
@@ -51,13 +50,13 @@
                  name="username"
                  [class.ring-red-500]="usernameControl.invalid && submitted"
                  class="flex-1 min-w-0 block w-full px-4 py-2.5 rounded-l-lg border-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm"
-                 placeholder="Type here">
+                 placeholder="Type here" i18n-placeholder="@@typeHere">
           <span class="inline-flex items-center px-4 text-sm text-gray-500 bg-gray-50 border-l border-gray-300 rounded-r-lg">
             {{data.domain}}
           </span>
         </div>
         
-        <p class="mt-2 text-xs text-gray-500 flex">
+        <p class="mt-2 text-xs text-gray-500 flex" i18n="@@use4_24Chars">
           <lucide-icon name="check-circle" [size]="14" class="text-green-600 mr-1" *ngIf="usernameControl.valid"></lucide-icon>
           Use 4-24 characters with letters and numbers only
         </p>
@@ -69,12 +68,12 @@
       <!-- Action Buttons -->
       <div class="flex items-center justify-between pt-5 border-t border-gray-200">
         <button type="button" (click)="onNoClick()"
-                class="px-4 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400">
+                class="px-4 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400" i18n="@@cancel">
           Cancel
         </button>
         <button type="submit"
                 [disabled]="usernameControl.invalid"
-                class="px-6 py-2.5 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm hover:bg-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 disabled:opacity-70 disabled:cursor-not-allowed">
+                class="px-6 py-2.5 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm hover:bg-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 disabled:opacity-70 disabled:cursor-not-allowed" i18n="@@createEmailAddress">
           Create Email Address
         </button>
       </div>
@@ -84,7 +83,7 @@
     <div *ngIf="showHistory" class="h-full flex flex-col">
       <div class="mb-5">
         <button type="button" (click)="showHistory = false" 
-                class="flex items-center text-sm font-medium text-blue-600 hover:text-gray-700 focus:outline-none">
+                class="flex items-center text-sm font-medium text-blue-600 hover:text-gray-700 focus:outline-none" i18n="@@backToNewEmail">
           <lucide-icon name="chevron-left" [size]="16" class="mr-1"></lucide-icon>
           Back to new email
         </button>
@@ -94,8 +93,8 @@
         <div class="mx-auto w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4">
           <lucide-icon name="inbox" [size]="20" class="text-gray-400"></lucide-icon>
         </div>
-        <p class="text-gray-500">No previous emails found</p>
-        <p class="text-sm text-gray-400 mt-1">Your created emails will appear here</p>
+        <p class="text-gray-500" i18n="@@noPreviousEmails">No previous emails found</p>
+        <p class="text-sm text-gray-400 mt-1" i18n="@@yourCreatedEmails">Your created emails will appear here</p>
       </div>
 
       <ul class="divide-y divide-gray-200 max-h-[300px] overflow-y-auto">
@@ -104,12 +103,9 @@
             <div class="min-w-0">
               <p class="font-mono text-gray-900 text-sm sm:text-base truncate">{{email.address}}</p>
               <div class="flex items-center mt-1.5">
-                <span class="text-xs px-2 py-0.5 rounded-full"
-                      [class.bg-gray-200]="email.active" 
-                      [class.text-gray-900]="email.active"
-                      [class.bg-gray-100]="!email.active"
-                      [class.text-gray-500]="!email.active">
-                  {{email.active ? 'Active' : 'Expired'}}
+                <span class="text-xs px-2 py-0.5 rounded-full">
+                  <span *ngIf="email.active" i18n="@@active">Active</span>
+                  <span *ngIf="!email.active" i18n="@@expired">Expired</span>
                 </span>
                 <span class="text-xs text-gray-500 ml-2">
                   {{email.expiresAt | date:'MMM d, y'}}
@@ -118,11 +114,11 @@
             </div>
             <div class="flex space-x-2 ml-4">
               <button (click)="selectHistoryEmail(email)" 
-                      class="px-3 py-1.5 text-xs font-medium text-white bg-gray-800 rounded-lg hover:bg-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400">
+                      class="px-3 py-1.5 text-xs font-medium text-white bg-gray-800 rounded-lg hover:bg-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400" i18n="@@use">
                 Use
               </button>
               <button
-                      class="px-3 py-1.5 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400">
+                      class="px-3 py-1.5 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400" i18n="@@delete">
                 Delete
               </button>
             </div>

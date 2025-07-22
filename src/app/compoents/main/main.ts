@@ -18,7 +18,7 @@ import { SaveSuccessDialogComponent } from '../save-success-dialog/save-success-
   imports: [CommonModule, LucideAngularModule],
 })
 export class Main implements OnInit, OnDestroy {
-  countdown = signal(10);
+  countdown: number = 10;
   private countdownSub?: Subscription;
 
   currentEmail = '';
@@ -40,7 +40,7 @@ export class Main implements OnInit, OnDestroy {
     this.isBrowser = isPlatformBrowser(this.platformId);
 
     effect(() => {
-      if (this.countdown() === 0) {
+      if (this.countdown === 0) {
         this.reload()
       }
     });
@@ -74,15 +74,15 @@ export class Main implements OnInit, OnDestroy {
 
   startCountdown(): void {
     this.countdownSub?.unsubscribe();
-    this.countdown.set(10);
+    this.countdown = 10;
 
     // Emits every second for 31 ticks
     this.countdownSub = interval(1000).pipe(take(11)).subscribe((i) => {
       // Keep countdown at 30 when loading is true
       if (this.loading) {
-        this.countdown.set(10);
+        this.countdown = 10;
       } else {
-        this.countdown.set(10 - i);
+        this.countdown = 10 - i;
       }
     });
   }

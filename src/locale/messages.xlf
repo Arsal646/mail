@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="noSubject" datatype="html">
+        <source>(No subject)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/email-view-dialog/email-view-dialog.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="temporaryEmail" datatype="html">
+        <source>Temporary email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/email-view-dialog/email-view-dialog.html</context>
+          <context context-type="linenumber">61,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="onlineStatus" datatype="html">
+        <source>Online</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="mainTitle" datatype="html">
+        <source>Free Temporary Email Service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="mainDesc" datatype="html">
+        <source>Our disposable email service provides instant, anonymous email addresses to help you avoid spam and maintain online security. Get a free temporary email address in seconds with no registration required.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">33,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="yourTempEmail" datatype="html">
+        <source>Your Temporary Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="newEmail" datatype="html">
+        <source>New Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="saved" datatype="html">
+        <source>Saved!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="save" datatype="html">
+        <source>Save</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">91,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="copied" datatype="html">
+        <source>Copied!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">115,116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="copy" datatype="html">
+        <source>Copy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">116,117</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="inbox" datatype="html">
+        <source>Inbox</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">182,183</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="autoRefresh" datatype="html">
+        <source>Auto-refresh in <x id="INTERPOLATION" equiv-text="{{ countdown() }}"/>s</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">184,185</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="waitingForMessages" datatype="html">
+        <source>Waiting for incoming messages for <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span
+                                        class=&quot;font-bold text-dark&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{currentEmail}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">211,213</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="checkAgain" datatype="html">
+        <source><x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;refresh-cw&quot; [size]=&quot;14&quot;
+                                        [class.animate-spin]=&quot;refreshing&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/> Check Again </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">215,217</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="howItWorks" datatype="html">
+        <source>How to Use &amp; Save Your Temporary Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">262,264</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="usingTempEmail" datatype="html">
+        <source>Using Your Temporary Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">268,269</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="getRandomEmail" datatype="html">
+        <source>Get a random temporary email automatically when you visit - or click &quot;New Email&quot; to generate a different disposable address (random or custom)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">273,274</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="accessHistory" datatype="html">
+        <source>Access &quot;Email History&quot; from the &quot;New Email&quot; menu to view, reuse, or delete any of your recent temporary addresses</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">278,279</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="useForRegistrations" datatype="html">
+        <source>Use these emails for website registrations or verifications</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">283,284</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="allReceivedEmails" datatype="html">
+        <source>All received emails appear in your temporary inbox</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">288,289</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="secureStorage" datatype="html">
+        <source>We securely store your emails in browser for 24 hours - access all generated addresses during this period</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">293,294</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="savingFor7DayAccess" datatype="html">
+        <source>Saving for 7-Day Access</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">300,301</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="clickSaveIcon" datatype="html">
+        <source>Click the <x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;bookmark&quot; [size]=&quot;14&quot;
+                                    class=&quot;text-gray-500 mx-1 inline&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/> bookmark icon next to your email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">305,307</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="copyAccessLink" datatype="html">
+        <source>Copy the unique access link provided</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">312,313</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="useLinkToReturn" datatype="html">
+        <source>Use this link to return to your inbox anytime within 7 days</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">317,318</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="noSavingExpiration" datatype="html">
+        <source>Without saving, your temporary email will expire in 24 hour when you close the browser.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">323,324</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="noRegistration" datatype="html">
+        <source>No Registration</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">332,333</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="startUsingNoReg" datatype="html">
+        <source>Start using immediately without signing up</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">334,335</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7DayAccess" datatype="html">
+        <source>7-Day Access</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">339,340</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="returnToSavedEmails" datatype="html">
+        <source>Return to your saved emails for a full week</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">341,343</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="spamProtection" datatype="html">
+        <source>Spam Protection</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">346,347</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="keepPersonalInboxClean" datatype="html">
+        <source>Keep your personal inbox clean</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">348,350</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about" datatype="html">
+        <source>About Our Temporary Email Service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">356,357</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutDescription" datatype="html">
+        <source>Our <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>free disposable email service<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> provides users with temporary email addresses that help protect privacy and prevent spam. Whether you need to sign up for a new service, verify an account, or test a website, our temporary emails offer a secure way to maintain your online anonymity.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">358,362</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="about7DayAccess" datatype="html">
+        <source>Unlike other disposable email services, we offer <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>7-day access<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> to your temporary inbox when you save your session. This extended access period makes it easier to complete verification processes or retrieve important information without rushing.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">364,368</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="commonUses" datatype="html">
+        <source>Common Uses for Temporary Emails:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">370,371</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="websiteRegistrations" datatype="html">
+        <source>Website registrations and sign-ups</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">372,373</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appTesting" datatype="html">
+        <source>App testing and development</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">373,374</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="onlineShopping" datatype="html">
+        <source>Online shopping from new retailers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">374,375</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="accessingFreeTrials" datatype="html">
+        <source>Accessing free trials without commitment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">375,376</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="protectingPrimaryEmail" datatype="html">
+        <source>Protecting your primary email from spam</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">376,379</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="faq" datatype="html">
+        <source>Frequently Asked Questions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">380,381</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="howToStart" datatype="html">
+        <source>How do I get started with a temporary email?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">383,384</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="howToStartDescription" datatype="html">
+        <source>You automatically receive a random temporary email when you visit our site. No registration required - just start using it immediately.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">384,385</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customEmailAddress" datatype="html">
+        <source>Can I create a custom temporary email address?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">388,389</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="customEmailDescription" datatype="html">
+        <source>Yes! Click &quot;New Email&quot; to generate either a random address or create one with your preferred username.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">389,390</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailExpiration" datatype="html">
+        <source>How long do temporary emails last?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">393,394</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailExpirationDescription" datatype="html">
+        <source>By default, emails expire after 24 hours. However, you can save any email for 7-day access by bookmarking it and using the unique access link provided.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">394,397</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sendEmails" datatype="html">
+        <source>Can I send emails from my temporary address?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">398,399</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="sendEmailsDescription" datatype="html">
+        <source>No, this is a receive-only service designed for verification and spam protection.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">399,400</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="accessSavedEmails" datatype="html">
+        <source>How do I access my saved temporary emails?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">403,404</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="accessSavedEmailsDescription" datatype="html">
+        <source>Bookmark any email to get a unique link that remains active for 7 days. You can also view recent addresses in your Email History.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">404,407</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="noSavingEmail" datatype="html">
+        <source>What happens if I don&apos;t save my temporary email?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">408,409</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="noSavingEmailDescription" datatype="html">
+        <source>Unsaved emails will expire when you close your browser or after 24 hours. We recommend bookmarking important emails to extend access.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">409,411</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailLimit" datatype="html">
+        <source>Is there a limit to how many temporary emails I can create?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">413,414</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailLimitDescription" datatype="html">
+        <source>You can generate unlimited temporary emails, though we recommend bookmarking important ones to maintain access.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">414,415</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whatAreTempEmails" datatype="html">
+        <source>What are common uses for temporary emails?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">418,419</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="whatAreTempEmailsDescription" datatype="html">
+        <source>They&apos;re perfect for website registrations, app testing, online shopping from new retailers, accessing free trials, and protecting your primary email from spam.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">419,422</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="isDataSecure" datatype="html">
+        <source>Is my temporary email data secure?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">423,424</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="isDataSecureDescription" datatype="html">
+        <source>All emails are stored locally in your browser and automatically cleared after their expiration period. We don&apos;t permanently store your data.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">424,426</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="extendAccess" datatype="html">
+        <source>Can I extend access beyond 7 days?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">428,429</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="extendAccessDescription" datatype="html">
+        <source>Currently, the maximum access period is 7 days for saved emails. For longer-term needs, we recommend using your personal email.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main/main.html</context>
+          <context context-type="linenumber">429,431</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="yourEmailHistory" datatype="html">
+        <source>Your Email History</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="createNewEmail" datatype="html">
+        <source>Create New Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="selectPrevious" datatype="html">
+        <source>Select from your previously used addresses</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="chooseCustomUsername" datatype="html">
+        <source>Choose a custom username</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">11,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wantToUsePrevious" datatype="html">
+        <source>Want to use a previous email? </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="viewEmailHistory" datatype="html">
+        <source>View email history →</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">31,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="generateRandom" datatype="html">
+        <source><x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;refresh-cw&quot; [size]=&quot;14&quot; class=&quot;mr-1.5&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/> Generate Random </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">42,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="typeHere" datatype="html">
+        <source>Type here</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="use4_24Chars" datatype="html">
+        <source><x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;check-circle&quot; [size]=&quot;14&quot; class=&quot;text-green-600 mr-1&quot; *ngIf=&quot;usernameControl.valid&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/> Use 4-24 characters with letters and numbers only </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">60,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cancel" datatype="html">
+        <source> Cancel </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">72,73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="createEmailAddress" datatype="html">
+        <source> Create Email Address </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">77,79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="backToNewEmail" datatype="html">
+        <source><x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;chevron-left&quot; [size]=&quot;16&quot; class=&quot;mr-1&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/> Back to new email </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">87,89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="noPreviousEmails" datatype="html">
+        <source>No previous emails found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">96,97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="yourCreatedEmails" datatype="html">
+        <source>Your created emails will appear here</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">97,100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="active" datatype="html">
+        <source>Active</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">107,108</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="expired" datatype="html">
+        <source>Expired</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">108,109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="use" datatype="html">
+        <source> Use </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">118,119</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="delete" datatype="html">
+        <source> Delete </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/new-email-modal/new-email-modal.html</context>
+          <context context-type="linenumber">122,123</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

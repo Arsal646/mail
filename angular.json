@@ -15,7 +15,8 @@
           "options": {
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -66,6 +67,9 @@
             },
             "development": {
               "buildTarget": "temp-mail:build:development"
+            },
+            "ar": {
+              "buildTarget": "temp-mail:build:ar"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +82,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
@@ -93,7 +98,17 @@
             ]
           }
         }
-      }
+      },
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "ar": "src/locale/messages.ar.xlf",
+          "fr": "src/locale/messages.fr.xlf",
+          "de": "src/locale/messages.de.xlf",
+          "it": "src/locale/messages.it.xlf"
+        }
+      },
+      "localize": ["en", "ar", "fr", "de", "it"]
     }
   },
   "cli": {

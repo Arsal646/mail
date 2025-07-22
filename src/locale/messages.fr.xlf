@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="htmlLang" datatype="html">
+        <source>en</source>
+        <target>fr</target>
+      </trans-unit>
+      <trans-unit id="htmlDir" datatype="html">
+        <source>ltr</source>
+        <target>ltr</target>
+      </trans-unit>
+      <trans-unit id="mainTitle" datatype="html">
+        <source>Free Temporary Email Service</source>
+        <target>Service d'e-mail temporaire gratuit</target>
+      </trans-unit>
+      <trans-unit id="mainDesc" datatype="html">
+        <source>Our disposable email service provides instant, anonymous email addresses to help you avoid spam and maintain online security. Get a free temporary email address in seconds with no registration required.</source>
+        <target>Notre service d'e-mail jetable fournit des adresses e-mail instantanées et anonymes pour vous aider à éviter le spam et à maintenir votre sécurité en ligne. Obtenez une adresse e-mail temporaire gratuite en quelques secondes sans inscription.</target>
+      </trans-unit>
+      <trans-unit id="onlineStatus"><source>Online</source><target>En ligne</target></trans-unit>
+      <trans-unit id="yourTempEmail"><source>Your Temporary Email</source><target>Votre e-mail temporaire</target></trans-unit>
+      <trans-unit id="newEmail"><source>New Email</source><target>Nouvel e-mail</target></trans-unit>
+      <trans-unit id="copied"><source>Copied!</source><target>Copié !</target></trans-unit>
+      <trans-unit id="copy"><source>Copy</source><target>Copier</target></trans-unit>
+      <trans-unit id="inbox"><source>Inbox</source><target>Boîte de réception</target></trans-unit>
+      <trans-unit id="autoRefresh"><source>Auto-refresh in {{countdown}}s</source><target>Rafraîchissement automatique dans {{countdown}}</target></trans-unit>
+      <trans-unit id="howItWorks"><source>How to Use & Save Your Temporary Email</source><target>Comment utiliser et sauvegarder votre e-mail temporaire</target></trans-unit>
+      <trans-unit id="usingTempEmail"><source>Using Your Temporary Email</source><target>Utiliser votre e-mail temporaire</target></trans-unit>
+      <trans-unit id="getRandomEmail"><source>Get a random temporary email automatically when you visit - or click "New Email" to generate a different disposable address (random or custom)</source><target>Obtenez automatiquement un e-mail temporaire aléatoire lors de votre visite - ou cliquez sur "Nouvel e-mail" pour générer une adresse différente (aléatoire ou personnalisée)</target></trans-unit>
+      <trans-unit id="accessHistory"><source>Access "Email History" from the "New Email" menu to view, reuse, or delete any of your recent temporary addresses</source><target>Accédez à "Historique des e-mails" depuis le menu "Nouvel e-mail" pour voir, réutiliser ou supprimer vos adresses temporaires récentes</target></trans-unit>
+      <trans-unit id="useForRegistrations"><source>Use these emails for website registrations or verifications</source><target>Utilisez ces e-mails pour les inscriptions ou vérifications sur les sites web</target></trans-unit>
+      <trans-unit id="allReceivedEmails"><source>All received emails appear in your temporary inbox</source><target>Tous les e-mails reçus apparaissent dans votre boîte temporaire</target></trans-unit>
+      <trans-unit id="secureStorage"><source>We securely store your emails in browser for 24 hours - access all generated addresses during this period</source><target>Nous stockons vos e-mails en toute sécurité dans le navigateur pendant 24 heures - accédez à toutes les adresses générées pendant cette période</target></trans-unit>
+      <trans-unit id="savingFor7DayAccess"><source>Saving for 7-Day Access</source><target>Sauvegarde pour un accès de 7 jours</target></trans-unit>
+      <trans-unit id="clickSaveIcon"><source>Click the <x id="START_TAG_LUCIDE_ICON"/> bookmark icon next to your email</source><target>Cliquez sur l'icône <x id="START_TAG_LUCIDE_ICON"/> à côté de votre e-mail</target></trans-unit>
+      <trans-unit id="copyAccessLink"><source>Copy the unique access link provided</source><target>Copiez le lien d'accès unique fourni</target></trans-unit>
+      <trans-unit id="useLinkToReturn"><source>Use this link to return to your inbox anytime within 7 days</source><target>Utilisez ce lien pour revenir à votre boîte de réception à tout moment dans les 7 jours</target></trans-unit>
+      <trans-unit id="noSavingExpiration"><source>Without saving, your temporary email will expire in 24 hour when you close the browser.</source><target>Sans sauvegarde, votre e-mail temporaire expirera dans 24 heures ou à la fermeture du navigateur.</target></trans-unit>
+      <trans-unit id="noRegistration"><source>No Registration</source><target>Pas d'inscription</target></trans-unit>
+      <trans-unit id="startUsingNoReg"><source>Start using immediately without signing up</source><target>Commencez à utiliser immédiatement sans inscription</target></trans-unit>
+      <trans-unit id="7DayAccess"><source>7-Day Access</source><target>Accès 7 jours</target></trans-unit>
+      <trans-unit id="returnToSavedEmails"><source>Return to your saved emails for a full week</source><target>Revenez à vos e-mails sauvegardés pendant une semaine complète</target></trans-unit>
+      <trans-unit id="spamProtection"><source>Spam Protection</source><target>Protection contre le spam</target></trans-unit>
+      <trans-unit id="keepPersonalInboxClean"><source>Keep your personal inbox clean</source><target>Gardez votre boîte personnelle propre</target></trans-unit>
+      <trans-unit id="about"><source>About Our Temporary Email Service</source><target>À propos de notre service d'e-mail temporaire</target></trans-unit>
+      <trans-unit id="aboutDescription"><source>Our <x id="START_TAG_STRONG"/>free disposable email service<x id="CLOSE_TAG_STRONG"/> provides users with temporary email addresses that help protect privacy and prevent spam. Whether you need to sign up for a new service, verify an account, or test a website, our temporary emails offer a secure way to maintain your online anonymity.</source><target>Notre <x id="START_TAG_STRONG"/>service d'e-mail jetable gratuit<x id="CLOSE_TAG_STRONG"/> fournit des adresses e-mail temporaires qui aident à protéger la vie privée et à éviter le spam. Que vous ayez besoin de vous inscrire à un nouveau service, de vérifier un compte ou de tester un site web, nos e-mails temporaires offrent un moyen sûr de préserver votre anonymat en ligne.</target></trans-unit>
+      <trans-unit id="about7DayAccess"><source>Unlike other disposable email services, we offer <x id="START_TAG_STRONG"/>7-day access<x id="CLOSE_TAG_STRONG"/> to your temporary inbox when you save your session. This extended access period makes it easier to complete verification processes or retrieve important information without rushing.</source><target>Contrairement à d'autres services d'e-mails jetables, nous offrons <x id="START_TAG_STRONG"/>un accès de 7 jours<x id="CLOSE_TAG_STRONG"/> à votre boîte temporaire lorsque vous sauvegardez votre session. Cette période prolongée facilite la vérification ou la récupération d'informations importantes sans se presser.</target></trans-unit>
+      <trans-unit id="commonUses"><source>Common Uses for Temporary Emails:</source><target>Utilisations courantes des e-mails temporaires :</target></trans-unit>
+      <trans-unit id="websiteRegistrations"><source>Website registrations and sign-ups</source><target>Inscriptions et enregistrements sur les sites web</target></trans-unit>
+      <trans-unit id="appTesting"><source>App testing and development</source><target>Tests et développement d'applications</target></trans-unit>
+      <trans-unit id="onlineShopping"><source>Online shopping from new retailers</source><target>Achat en ligne auprès de nouveaux commerçants</target></trans-unit>
+      <trans-unit id="accessingFreeTrials"><source>Accessing free trials without commitment</source><target>Accès à des essais gratuits sans engagement</target></trans-unit>
+      <trans-unit id="protectingPrimaryEmail"><source>Protecting your primary email from spam</source><target>Protéger votre e-mail principal du spam</target></trans-unit>
+      <trans-unit id="faq"><source>Frequently Asked Questions</source><target>Questions fréquemment posées</target></trans-unit>
+      <trans-unit id="howToStart"><source>How do I get started with a temporary email?</source><target>Comment commencer avec un e-mail temporaire ?</target></trans-unit>
+      <trans-unit id="howToStartDescription"><source>You automatically receive a random temporary email when you visit our site. No registration required - just start using it immediately.</source><target>Vous recevez automatiquement un e-mail temporaire aléatoire lors de votre visite sur notre site. Aucune inscription requise - commencez à l'utiliser immédiatement.</target></trans-unit>
+      <trans-unit id="customEmailAddress"><source>Can I create a custom temporary email address?</source><target>Puis-je créer une adresse e-mail temporaire personnalisée ?</target></trans-unit>
+      <trans-unit id="customEmailDescription"><source>Yes! Click "New Email" to generate either a random address or create one with your preferred username.</source><target>Oui ! Cliquez sur "Nouvel e-mail" pour générer une adresse aléatoire ou en créer une avec le nom d'utilisateur de votre choix.</target></trans-unit>
+      <trans-unit id="emailExpiration"><source>How long do temporary emails last?</source><target>Combien de temps durent les e-mails temporaires ?</target></trans-unit>
+      <trans-unit id="emailExpirationDescription"><source>By default, emails expire after 24 hours. However, you can save any email for 7-day access by bookmarking it and using the unique access link provided.</source><target>Par défaut, les e-mails expirent après 24 heures. Cependant, vous pouvez sauvegarder n'importe quel e-mail pour un accès de 7 jours en l'ajoutant aux favoris et en utilisant le lien d'accès unique fourni.</target></trans-unit>
+      <trans-unit id="sendEmails"><source>Can I send emails from my temporary address?</source><target>Puis-je envoyer des e-mails depuis mon adresse temporaire ?</target></trans-unit>
+      <trans-unit id="sendEmailsDescription"><source>No, this is a receive-only service designed for verification and spam protection.</source><target>Non, ce service est réservé à la réception pour la vérification et la protection contre le spam.</target></trans-unit>
+      <trans-unit id="accessSavedEmails"><source>How do I access my saved temporary emails?</source><target>Comment accéder à mes e-mails temporaires sauvegardés ?</target></trans-unit>
+      <trans-unit id="accessSavedEmailsDescription"><source>Bookmark any email to get a unique link that remains active for 7 days. You can also view recent addresses in your Email History.</source><target>Ajoutez n'importe quel e-mail aux favoris pour obtenir un lien unique valable 7 jours. Vous pouvez également voir les adresses récentes dans l'historique des e-mails.</target></trans-unit>
+      <trans-unit id="noSavingEmail"><source>What happens if I don't save my temporary email?</source><target>Que se passe-t-il si je ne sauvegarde pas mon e-mail temporaire ?</target></trans-unit>
+      <trans-unit id="noSavingEmailDescription"><source>Unsaved emails will expire when you close your browser or after 24 hours. We recommend bookmarking important emails to extend access.</source><target>Les e-mails non sauvegardés expireront à la fermeture du navigateur ou après 24 heures. Nous recommandons d'ajouter les e-mails importants aux favoris pour prolonger l'accès.</target></trans-unit>
+      <trans-unit id="emailLimit"><source>Is there a limit to how many temporary emails I can create?</source><target>Y a-t-il une limite au nombre d'e-mails temporaires que je peux créer ?</target></trans-unit>
+      <trans-unit id="emailLimitDescription"><source>You can generate unlimited temporary emails, though we recommend bookmarking important ones to maintain access.</source><target>Vous pouvez générer un nombre illimité d'e-mails temporaires, mais nous recommandons d'ajouter les plus importants aux favoris pour conserver l'accès.</target></trans-unit>
+      <trans-unit id="whatAreTempEmails"><source>What are common uses for temporary emails?</source><target>Quelles sont les utilisations courantes des e-mails temporaires ?</target></trans-unit>
+      <trans-unit id="whatAreTempEmailsDescription"><source>They're perfect for website registrations, app testing, online shopping from new retailers, accessing free trials, and protecting your primary email from spam.</source><target>Ils sont parfaits pour les inscriptions sur les sites web, les tests d'applications, les achats en ligne auprès de nouveaux commerçants, l'accès à des essais gratuits et la protection de votre e-mail principal contre le spam.</target></trans-unit>
+      <trans-unit id="isDataSecure"><source>Is my temporary email data secure?</source><target>Mes données d'e-mail temporaire sont-elles sécurisées ?</target></trans-unit>
+      <trans-unit id="isDataSecureDescription"><source>All emails are stored locally in your browser and automatically cleared after their expiration period. We don't permanently store your data.</source><target>Tous les e-mails sont stockés localement dans votre navigateur et supprimés automatiquement après expiration. Nous ne stockons pas vos données de façon permanente.</target></trans-unit>
+      <trans-unit id="yourEmailHistory"><source>Your Email History</source><target>Historique de vos e-mails</target></trans-unit>
+      <trans-unit id="createNewEmail"><source>Create New Email</source><target>Créer un nouvel e-mail</target></trans-unit>
+      <trans-unit id="selectPrevious"><source>Select from your previously used addresses</source><target>Sélectionnez parmi vos adresses précédemment utilisées</target></trans-unit>
+      <trans-unit id="chooseCustomUsername"><source>Choose a custom username</source><target>Choisissez un nom d'utilisateur personnalisé</target></trans-unit>
+      <trans-unit id="wantToUsePrevious"><source>Want to use a previous email? </source><target>Vous souhaitez utiliser un e-mail précédent ?</target></trans-unit>
+      <trans-unit id="viewEmailHistory"><source>View email history →</source><target>Voir l'historique des e-mails →</target></trans-unit>
+      <trans-unit id="customEmailAddress"><source>Custom Email Address</source><target>Adresse e-mail personnalisée</target></trans-unit>
+      <trans-unit id="generateRandom"><source><x id="START_TAG_LUCIDE_ICON"/> Generate Random </source><target><x id="START_TAG_LUCIDE_ICON"/> Générer aléatoirement </target></trans-unit>
+      <trans-unit id="typeHere"><source>Type here</source><target>Tapez ici</target></trans-unit>
+      <trans-unit id="use4_24Chars"><source><x id="START_TAG_LUCIDE_ICON"/> Use 4-24 characters with letters and numbers only </source><target><x id="START_TAG_LUCIDE_ICON"/> Utilisez 4 à 24 caractères, lettres et chiffres uniquement </target></trans-unit>
+      <trans-unit id="cancel"><source> Cancel </source><target> Annuler </target></trans-unit>
+      <trans-unit id="createEmailAddress"><source> Create Email Address </source><target> Créer une adresse e-mail </target></trans-unit>
+      <trans-unit id="backToNewEmail"><source><x id="START_TAG_LUCIDE_ICON"/> Back to new email </source><target><x id="START_TAG_LUCIDE_ICON"/> Retour au nouvel e-mail </target></trans-unit>
+      <trans-unit id="noPreviousEmails"><source>No previous emails found</source><target>Aucun e-mail précédent trouvé</target></trans-unit>
+      <trans-unit id="yourCreatedEmails"><source>Your created emails will appear here</source><target>Vos e-mails créés apparaîtront ici</target></trans-unit>
+      <trans-unit id="active"><source>Active</source><target>Actif</target></trans-unit>
+      <trans-unit id="expired"><source>Expired</source><target>Expiré</target></trans-unit>
+      <trans-unit id="use"><source> Use </source><target> Utiliser </target></trans-unit>
+      <trans-unit id="delete"><source> Delete </source><target> Supprimer </target></trans-unit>
+      <trans-unit id="noSubject"><source>(No subject)</source><target>(Pas d'objet)</target></trans-unit>
+      <trans-unit id="temporaryEmail"><source>Temporary email</source><target>E-mail temporaire</target></trans-unit>
+      <trans-unit id="extendAccess"><source>Can I extend access beyond 7 days?</source><target>Puis-je prolonger l'accès au-delà de 7 jours ?</target></trans-unit>
+      <trans-unit id="extendAccessDescription"><source>Currently, the maximum access period is 7 days for saved emails. For longer-term needs, we recommend using your personal email.</source><target>Actuellement, la période d'accès maximale est de 7 jours pour les e-mails sauvegardés. Pour des besoins à plus long terme, nous recommandons d'utiliser votre e-mail personnel.</target></trans-unit>
+      <trans-unit id="saved"><source>Saved!</source><target>Sauvegardé !</target></trans-unit>
+      <trans-unit id="save"><source>Save</source><target>Sauvegarder</target></trans-unit>
+      <trans-unit id="waitingForMessages"><source>Waiting for incoming messages for <x id="START_TAG_SPAN"/> <x id="INTERPOLATION"/> <x id="CLOSE_TAG_SPAN"/></source><target>En attente de messages entrants pour <x id="START_TAG_SPAN"/> <x id="INTERPOLATION"/> <x id="CLOSE_TAG_SPAN"/></target></trans-unit>
+      <trans-unit id="checkAgain"><source><x id="START_TAG_LUCIDE_ICON"/> <x id="CLOSE_TAG_LUCIDE_ICON"/> Check Again </source><target><x id="START_TAG_LUCIDE_ICON"/> <x id="CLOSE_TAG_LUCIDE_ICON"/> Vérifier à nouveau </target></trans-unit>
+    </body>
+  </file>
+</xliff> 

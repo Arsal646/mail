@@ -16,30 +16,28 @@ import { EmailService } from '../../services/email';
         <!-- Loading State -->
         <div *ngIf="loading" class="space-y-4">
           <lucide-icon name="loader-2" [size]="48" class="text-blue-600 animate-spin mx-auto"></lucide-icon>
-          <h2 class="text-xl font-semibold text-gray-900">Verifying Access Link...</h2>
-          <p class="text-gray-600">Please wait while we verify your saved email.</p>
+          <h2 class="text-xl font-semibold text-gray-900" i18n>Verifying Access Link...</h2>
+          <p class="text-gray-600" i18n>Please wait while we verify your saved email.</p>
         </div>
 
         <!-- Success State -->
         <div *ngIf="!loading && emailData" class="space-y-4">
           <lucide-icon name="check-circle" [size]="48" class="text-green-600 mx-auto"></lucide-icon>
-          <h2 class="text-xl font-semibold text-gray-900">Access Verified!</h2>
-          <p class="text-gray-600">Redirecting to your saved email inbox...</p>
+          <h2 class="text-xl font-semibold text-gray-900" i18n>Access Verified!</h2>
+          <p class="text-gray-600" i18n>Redirecting to your saved email inbox...</p>
           <div class="bg-gray-50 p-3 rounded-lg">
             <p class="text-sm font-mono text-gray-800">{{emailData.email_address}}</p>
-            <p class="text-xs text-gray-500 mt-1">{{emailData.days_remaining}} days remaining</p>
+            <p class="text-xs text-gray-500 mt-1" i18n>{{emailData.days_remaining}} days remaining</p>
           </div>
         </div>
 
         <!-- Error State -->
         <div *ngIf="!loading && error" class="space-y-4">
           <lucide-icon name="x-circle" [size]="48" class="text-red-600 mx-auto"></lucide-icon>
-          <h2 class="text-xl font-semibold text-gray-900">Access Link Invalid</h2>
-          <p class="text-gray-600">{{error}}</p>
+          <h2 class="text-xl font-semibold text-gray-900" i18n>Access Link Invalid</h2>
+          <p class="text-gray-600" i18n>{{error}}</p>
           <button (click)="goHome()" 
-                  class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Generate New Email
-          </button>
+                  class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors" i18n>Generate New Email</button>
         </div>
 
       </div>

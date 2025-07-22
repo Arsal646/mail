@@ -32,13 +32,13 @@ export interface SaveSuccessData {
         <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
           <lucide-icon name="check-circle" [size]="32" class="text-green-600"></lucide-icon>
         </div>
-        <h2 class="text-xl font-bold text-gray-900 mb-2">Email Saved Successfully!</h2>
-        <p class="text-gray-600 text-sm">Your access link has been copied to clipboard</p>
+        <h2 class="text-xl font-bold text-gray-900 mb-2" i18n>Email Saved Successfully!</h2>
+        <p class="text-gray-600 text-sm" i18n>Your access link has been copied to clipboard</p>
       </div>
 
       <!-- Email Info -->
       <div class="bg-gray-50 rounded-lg p-4 mb-4">
-        <div class="text-sm font-medium text-gray-700 mb-2">Your Email:</div>
+        <div class="text-sm font-medium text-gray-700 mb-2" i18n>Your Email:</div>
         <div class="font-mono text-sm text-gray-900 bg-white p-2 rounded border break-all">
           {{data.emailAddress}}
         </div>
@@ -47,7 +47,7 @@ export interface SaveSuccessData {
       <!-- Access Link -->
       <div class="bg-blue-50 rounded-lg p-4 mb-4">
         <div class="flex items-center justify-between mb-2">
-          <span class="text-sm font-medium text-gray-700">7-Day Access Link:</span>
+          <span class="text-sm font-medium text-gray-700" i18n>7-Day Access Link:</span>
           <button (click)="copyLink()" 
                   class="text-blue-600 cursor-pointer hover:text-blue-800 text-xs flex items-center space-x-1"
                   [class.text-green-600]="linkCopied">
@@ -60,7 +60,7 @@ export interface SaveSuccessData {
         </div>
         <div class="mt-2 text-xs text-gray-500 flex items-center">
           <lucide-icon name="calendar" [size]="12" class="mr-1"></lucide-icon>
-          Expires: {{data.expiresAtFormatted}}
+          <span i18n>Expires:</span> {{data.expiresAtFormatted}}
         </div>
       </div>
 
@@ -69,7 +69,7 @@ export interface SaveSuccessData {
         <div class="flex items-start">
           <lucide-icon name="info" [size]="16" class="text-yellow-600 mr-2 mt-0.5 flex-shrink-0"></lucide-icon>
           <div class="text-xs text-yellow-800">
-            <strong>How to use:</strong> Save this link to return to your inbox anytime within 7 days. 
+            <strong i18n>How to use:</strong> Save this link to return to your inbox anytime within 7 days. 
             Share it with others or bookmark it for easy access.
           </div>
         </div>
@@ -85,7 +85,7 @@ export interface SaveSuccessData {
         
         <button (click)="close()" 
                 class="flex-1 bg-gray-100 cursor-pointer text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
-          Got it!
+          <span i18n>Got it!</span>
         </button>
       </div>
     </div>

@@ -2,12 +2,8 @@
   <!-- Dialog Header -->
   <div class="flex items-center justify-between px-6 py-5 bg-white border-b border-gray-200">
     <div>
-      <h2 class="text-xl font-semibold text-gray-900">
-        {{showHistory ? 'Your Email History' : 'Create New Email'}}
-      </h2>
-      <p class="mt-1 text-sm text-gray-500">
-        {{showHistory ? 'Select from your previously used addresses' : 'Choose a custom username'}}
-      </p>
+      <h2 class="text-xl font-semibold text-gray-900" i18n>{{showHistory ? 'Your Email History' : 'Create New Email'}}</h2>
+      <p class="mt-1 text-sm text-gray-500" i18n>{{showHistory ? 'Select from your previously used addresses' : 'Choose a custom username'}}</p>
     </div>
     <button mat-dialog-close (click)="dialogRef.close()" 
             class="p-1 text-gray-400 hover:text-gray-700 hover:bg-gray-100 rounded-full transition-colors"
@@ -25,11 +21,9 @@
       <div class="mb-6 text-sm text-gray-600 bg-gray-100 p-3 rounded-lg">
         <div class="flex items-center flex-wrap">
           <lucide-icon name="info" [size]="16" class="text-gray-600 mr-1"></lucide-icon>
-        <span class="mr-1">Want to use a previous email? </span>
+        <span class="mr-1" i18n>Want to use a previous email?</span>
         <button type="button" (click)="showHistory = true" 
-        class="text-blue-600 font-medium hover:text-gray-700 hover:underline ml-1 focus:outline-none">
-  View email history →
-</button>
+        class="text-blue-600 font-medium hover:text-gray-700 hover:underline ml-1 focus:outline-none" i18n>View email history →</button>
         </div>
     
       </div>
@@ -37,12 +31,9 @@
       <!-- Email Input Group -->
       <div class="mb-6">
         <div class="flex items-center justify-between mb-3">
-          <label class="block text-sm font-medium text-gray-700">Custom Email Address</label>
+          <label class="block text-sm font-medium text-gray-700" i18n>Custom Email Address</label>
           <button type="button" (click)="generateRandom()"
-                  class="inline-flex items-center px-3 py-1.5 text-xs font-medium text-blue-500 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400">
-            <lucide-icon name="refresh-cw" [size]="14" class="mr-1.5"></lucide-icon>
-            Generate Random
-          </button>
+                  class="inline-flex items-center px-3 py-1.5 text-xs font-medium text-blue-500 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400" i18n>Generate Random</button>
         </div>
         
         <div class="flex rounded-lg shadow-sm ring-1 ring-gray-300 focus-within:ring-2 focus-within:ring-gray-500">
@@ -51,16 +42,13 @@
                  name="username"
                  [class.ring-red-500]="usernameControl.invalid && submitted"
                  class="flex-1 min-w-0 block w-full px-4 py-2.5 rounded-l-lg border-0 text-gray-900 placeholder-gray-400 focus:ring-0 sm:text-sm"
-                 placeholder="Type here">
+                 placeholder="Type here" i18n-placeholder>
           <span class="inline-flex items-center px-4 text-sm text-gray-500 bg-gray-50 border-l border-gray-300 rounded-r-lg">
             {{data.domain}}
           </span>
         </div>
         
-        <p class="mt-2 text-xs text-gray-500 flex">
-          <lucide-icon name="check-circle" [size]="14" class="text-green-600 mr-1" *ngIf="usernameControl.valid"></lucide-icon>
-          Use 4-24 characters with letters and numbers only
-        </p>
+        <p class="mt-2 text-xs text-gray-500 flex" i18n>Use 4-24 characters with letters and numbers only</p>
       </div>
 
       <!-- Spacer -->
@@ -69,14 +57,10 @@
       <!-- Action Buttons -->
       <div class="flex items-center justify-between pt-5 border-t border-gray-200">
         <button type="button" (click)="onNoClick()"
-                class="px-4 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400">
-          Cancel
-        </button>
+                class="px-4 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400" i18n>Cancel</button>
         <button type="submit"
                 [disabled]="usernameControl.invalid"
-                class="px-6 py-2.5 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm hover:bg-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 disabled:opacity-70 disabled:cursor-not-allowed">
-          Create Email Address
-        </button>
+                class="px-6 py-2.5 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm hover:bg-gray-900 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 disabled:opacity-70 disabled:cursor-not-allowed" i18n>Create Email Address</button>
       </div>
     </form>
 
@@ -84,18 +68,15 @@
     <div *ngIf="showHistory" class="h-full flex flex-col">
       <div class="mb-5">
         <button type="button" (click)="showHistory = false" 
-                class="flex items-center text-sm font-medium text-blue-600 hover:text-gray-700 focus:outline-none">
-          <lucide-icon name="chevron-left" [size]="16" class="mr-1"></lucide-icon>
-          Back to new email
-        </button>
+                class="flex items-center text-sm font-medium text-blue-600 hover:text-gray-700 focus:outline-none" i18n>Back to new email</button>
       </div>
 
       <div *ngIf="data.historyEmails.length === 0" class="text-center py-10">
         <div class="mx-auto w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4">
           <lucide-icon name="inbox" [size]="20" class="text-gray-400"></lucide-icon>
         </div>
-        <p class="text-gray-500">No previous emails found</p>
-        <p class="text-sm text-gray-400 mt-1">Your created emails will appear here</p>
+        <p class="text-gray-500" i18n>No previous emails found</p>
+        <p class="text-sm text-gray-400 mt-1" i18n>Your created emails will appear here</p>
       </div>
 
       <ul class="divide-y divide-gray-200 max-h-[300px] overflow-y-auto">

@@ -30,6 +30,7 @@ export class Main implements OnInit, OnDestroy {
   emailGenerating = false;
   isBrowser = false;
 
+  noSubjectText = $localize`:@@noSubject:(No subject)`;
   private domain = '@tempmails.online';
 
   constructor(

@@ -4,10 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --localize && powershell -Command \"Copy-Item -Path dist\\temp-mail\\browser\\en\\* -Destination dist\\temp-mail\\browser -Recurse -Force; Remove-Item -Path dist\\temp-mail\\browser\\en -Recurse -Force\"",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:temp-mail": "node dist/temp-mail/server/server.mjs"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +34,7 @@
     "@angular/build": "^20.0.3",
     "@angular/cli": "^20.0.3",
     "@angular/compiler-cli": "^20.0.0",
+    "@angular/localize": "^20.1.0",
     "@types/express": "^5.0.1",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^20.17.19",

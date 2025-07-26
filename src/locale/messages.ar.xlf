@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="ar" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="8870711330013548872" datatype="html">
+        <source>Online</source>
+        <target>متصل</target>
+      </trans-unit>
+      <trans-unit id="1927436067038033228" datatype="html">
+        <source>Free Temporary Email Service</source>
+        <target>خدمة بريد إلكتروني مؤقت مجانية</target>
+      </trans-unit>
+      <trans-unit id="6958639511584446715" datatype="html">
+        <source>Our disposable email service provides instant, anonymous email addresses to help you avoid spam and maintain online security. Get a free temporary email address in seconds with no registration required.</source>
+        <target>توفر خدمة البريد الإلكتروني المؤقتة لدينا عناوين بريد إلكتروني فورية ومجهولة للمساعدة في تجنب البريد العشوائي والحفاظ على الأمان عبر الإنترنت. احصل على عنوان بريد إلكتروني مؤقت مجاني في ثوانٍ دون الحاجة إلى تسجيل.</target>
+      </trans-unit>
+      <trans-unit id="6186005777957513396" datatype="html">
+        <source>Your Temporary Email</source>
+        <target>بريدك الإلكتروني المؤقت</target>
+      </trans-unit>
+      <trans-unit id="187187500641108332" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{saved ? &apos;Saved!&apos; : &apos;Save&apos;}}"/></source>
+        <target><x id="INTERPOLATION" equiv-text="{{saved ? &apos;تم الحفظ!&apos; : &apos;حفظ&apos;}}"/></target>
+      </trans-unit>
+      <trans-unit id="799485662157076328" datatype="html">
+        <source>Inbox</source>
+        <target>صندوق الوارد</target>
+      </trans-unit>
+      <trans-unit id="7634667421735787796" datatype="html">
+        <source>Auto-refresh in <x id="INTERPOLATION" equiv-text="{{ countdown() }}"/>s</source>
+        <target>تحديث تلقائي خلال <x id="INTERPOLATION" equiv-text="{{ countdown() }}"/> ثانية</target>
+      </trans-unit>
+      <trans-unit id="7693366999915845711" datatype="html">
+        <source>Waiting for incoming messages for <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;font-bold text-dark&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{currentEmail}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>في انتظار الرسائل الواردة لـ <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span class=&quot;font-bold text-dark&quot;&gt;"/><x id="INTERPOLATION" equiv-text="{{currentEmail}}"/><x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></target>
+      </trans-unit>
+      <trans-unit id="7644742388144882021" datatype="html">
+        <source>Check Again</source>
+        <target>تحقق مرة أخرى</target>
+      </trans-unit>
+      <trans-unit id="4981654209893011854" datatype="html">
+        <source>How to Use &amp; Save Your Temporary Email</source>
+        <target>كيفية استخدام وحفظ بريدك الإلكتروني المؤقت</target>
+      </trans-unit>
+      <trans-unit id="8254506865833793798" datatype="html">
+        <source>Using Your Temporary Email</source>
+        <target>استخدام بريدك الإلكتروني المؤقت</target>
+      </trans-unit>
+      <trans-unit id="8764434026388493208" datatype="html">
+        <source>Get a random temporary email automatically when you visit - or click &quot;New Email&quot; to generate a different disposable address (random or custom)</source>
+        <target>احصل على بريد إلكتروني مؤقت عشوائي تلقائيًا عند الزيارة - أو انقر فوق &quot;بريد جديد&quot; لإنشاء عنوان مؤقت مختلف (عشوائي أو مخصص)</target>
+      </trans-unit>
+      <trans-unit id="5357179238330051546" datatype="html">
+        <source>Access &quot;Email History&quot; from the &quot;New Email&quot; menu to view, reuse, or delete any of your recent temporary addresses</source>
+        <target>قم بالوصول إلى &quot;سجل البريد&quot; من قائمة &quot;بريد جديد&quot; لعرض أو إعادة استخدام أو حذف أي من عناوينك المؤقتة الحديثة</target>
+      </trans-unit>
+      <trans-unit id="2966073224061616797" datatype="html">
+        <source>Use these emails for website registrations or verifications</source>
+        <target>استخدم هذه عناوين البريد لتسجيلات المواقع أو عمليات التحقق</target>
+      </trans-unit>
+      <trans-unit id="5177974016904549201" datatype="html">
+        <source>All received emails appear in your temporary inbox</source>
+        <target>تظهر جميع رسائل البريد الواردة في صندوق الوارد المؤقت الخاص بك</target>
+      </trans-unit>
+      <trans-unit id="8706674280254385666" datatype="html">
+        <source>We securely store your emails in browser for 24 hours - access all generated addresses during this period</source>
+        <target>نقوم بتخزين رسائل البريد الإلكتروني الخاصة بك بأمان في المتصفح لمدة 24 ساعة - يمكنك الوصول إلى جميع العناوين التي تم إنشاؤها خلال هذه الفترة</target>
+      </trans-unit>
+      <trans-unit id="8095374587912046725" datatype="html">
+        <source>Saving for 7-Day Access</source>
+        <target>الحفظ للوصول لمدة 7 أيام</target>
+      </trans-unit>
+      <trans-unit id="8668940107558778428" datatype="html">
+        <source>Click the <x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;bookmark&quot; [size]=&quot;14&quot; class=&quot;text-gray-500 mx-1 inline&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/> bookmark icon next to your email</source>
+        <target>انقر على أيقونة المرجع <x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;bookmark&quot; [size]=&quot;14&quot; class=&quot;text-gray-500 mx-1 inline&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/> بجوار بريدك الإلكتروني</target>
+      </trans-unit>
+      <trans-unit id="3821550395989368078" datatype="html">
+        <source>Copy the unique access link provided</source>
+        <target>انسخ رابط الوصول الفريد المقدم</target>
+      </trans-unit>
+      <trans-unit id="7331024825204457367" datatype="html">
+        <source>Use this link to return to your inbox anytime within 7 days</source>
+        <target>استخدم هذا الرابط للعودة إلى صندوق الوارد الخاص بك في أي وقت خلال 7 أيام</target>
+      </trans-unit>
+      <trans-unit id="8112662050977557110" datatype="html">
+        <source>Without saving, your temporary email will expire in 24 hour when you close the browser.</source>
+        <target>بدون الحفظ، ستنتهي صلاحية بريدك الإلكتروني المؤقت بعد 24 ساعة عند إغلاق المتصفح.</target>
+      </trans-unit>
+      <trans-unit id="8790471416467232163" datatype="html">
+        <source>No Registration</source>
+        <target>لا يوجد تسجيل</target>
+      </trans-unit>
+      <trans-unit id="3657784810494050719" datatype="html">
+        <source>Start using immediately without signing up</source>
+        <target>ابدأ الاستخدام فورًا دون تسجيل</target>
+      </trans-unit>
+      <trans-unit id="5825139902150176112" datatype="html">
+        <source>7-Day Access</source>
+        <target>وصول لمدة 7 أيام</target>
+      </trans-unit>
+      <trans-unit id="2952879932854895828" datatype="html">
+        <source>Return to your saved emails for a full week</source>
+        <target>عد إلى رسائل البريد المحفوظة لمدة أسبوع كامل</target>
+      </trans-unit>
+      <trans-unit id="7058597929797611112" datatype="html">
+        <source>Spam Protection</source>
+        <target>حماية من البريد العشوائي</target>
+      </trans-unit>
+      <trans-unit id="5467133431463863036" datatype="html">
+        <source>Keep your personal inbox clean</source>
+        <target>احتفظ بصندوق الوارد الشخصي نظيفًا</target>
+      </trans-unit>
+      <trans-unit id="4057046938010009956" datatype="html">
+        <source>About Our Temporary Email Service</source>
+        <target>حول خدمة البريد الإلكتروني المؤقت لدينا</target>
+      </trans-unit>
+      <trans-unit id="288104182810233541" datatype="html">
+        <source>Our <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>free disposable email service<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> provides users with temporary email addresses that help protect privacy and prevent spam. Whether you need to sign up for a new service, verify an account, or test a website, our temporary emails offer a secure way to maintain your online anonymity.</source>
+        <target>توفر خدمة البريد الإلكتروني المؤقت <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>المجانية<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> عناوين بريد إلكتروني مؤقتة تساعد في حماية الخصوصية ومنع البريد العشوائي. سواء كنت بحاجة إلى التسجيل في خدمة جديدة أو التحقق من حساب أو اختبار موقع ويب، توفر عناوين البريد الإلكتروني المؤقتة لدينا طريقة آمنة للحفاظ على عدم الكشف عن هويتك عبر الإنترنت.</target>
+      </trans-unit>
+      <trans-unit id="1504054660914507843" datatype="html">
+        <source>Unlike other disposable email services, we offer <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>7-day access<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> to your temporary inbox when you save your session. This extended access period makes it easier to complete verification processes or retrieve important information without rushing.</source>
+        <target>على عكس خدمات البريد الإلكتروني المؤقت الأخرى، نقدم <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>وصولاً لمدة 7 أيام<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> إلى صندوق الوارد المؤقت الخاص بك عند حفظ الجلسة. تجعل فترة الوصول الممتدة هذه من السهل إكمال عمليات التحقق أو استرداد المعلومات المهمة دون التسرع.</target>
+      </trans-unit>
+      <trans-unit id="9075230829686113071" datatype="html">
+        <source>Common Uses for Temporary Emails:</source>
+        <target>الاستخدامات الشائعة لعناوين البريد الإلكتروني المؤقتة:</target>
+      </trans-unit>
+      <trans-unit id="3336339773365322138" datatype="html">
+        <source>Website registrations and sign-ups</source>
+        <target>تسجيلات المواقع والتسجيلات</target>
+      </trans-unit>
+      <trans-unit id="5579770479598673336" datatype="html">
+        <source>App testing and development</source>
+        <target>اختبار التطبيقات والتطوير</target>
+      </trans-unit>
+      <trans-unit id="3030863781530411171" datatype="html">
+        <source>Online shopping from new retailers</source>
+        <target>التسوق عبر الإنترنت من تجار جدد</target>
+      </trans-unit>
+      <trans-unit id="9055097412418485982" datatype="html">
+        <source>Accessing free trials without commitment</source>
+        <target>الوصول إلى الإصدارات التجريبية المجانية دون التزام</target>
+      </trans-unit>
+      <trans-unit id="1035362479710795462" datatype="html">
+        <source>Protecting your primary email from spam</source>
+        <target>حماية بريدك الإلكتروني الأساسي من البريد العشوائي</target>
+      </trans-unit>
+      <trans-unit id="9221730911539762110" datatype="html">
+        <source>Frequently Asked Questions</source>
+        <target>أسئلة مكررة</target>
+      </trans-unit>
+      <trans-unit id="7262512106391265593" datatype="html">
+        <source>How do I get started with a temporary email?</source>
+        <target>كيف أبدأ باستخدام بريد إلكتروني مؤقت؟</target>
+      </trans-unit>
+      <trans-unit id="28993557990158923" datatype="html">
+        <source>You automatically receive a random temporary email when you visit our site. No registration required - just start using it immediately.</source>
+        <target>ستتلقى تلقائيًا بريدًا إلكترونيًا مؤقتًا عشوائيًا عند زيارة موقعنا. لا يلزم التسجيل - فقط ابدأ في استخدامه على الفور.</target>
+      </trans-unit>
+      <trans-unit id="2053259205079118080" datatype="html">
+        <source>Can I create a custom temporary email address?</source>
+        <target>هل يمكنني إنشاء عنوان بريد إلكتروني مؤقت مخصص؟</target>
+      </trans-unit>
+      <trans-unit id="4960539148851716051" datatype="html">
+        <source>Yes! Click &quot;New Email&quot; to generate either a random address or create one with your preferred username.</source>
+        <target>نعم! انقر فوق &quot;بريد جديد&quot; لإنشاء عنوان عشوائي أو إنشاء عنوان باسم المستخدم الذي تفضله.</target>
+      </trans-unit>
+      <trans-unit id="5717752050983812674" datatype="html">
+        <source>How long do temporary emails last?</source>
+        <target>إلى متى تستمر عناوين البريد الإلكتروني المؤقتة؟</target>
+      </trans-unit>
+      <trans-unit id="5517131217581222236" datatype="html">
+        <source>By default, emails expire after 24 hours. However, you can save any email for 7-day access by bookmarking it and using the unique access link provided.</source>
+        <target>تنتهي صلاحية عناوين البريد الإلكتروني افتراضيًا بعد 24 ساعة. ومع ذلك، يمكنك حفظ أي بريد إلكتروني للوصول لمدة 7 أيام عن طريق وضع إشارة مرجعية عليه واستخدام رابط الوصول الفريد المقدم.</target>
+      </trans-unit>
+      <trans-unit id="1415511381958857187" datatype="html">
+        <source>Can I send emails from my temporary address?</source>
+        <target>هل يمكنني إرسال رسائل بريد إلكتروني من عنواني المؤقت؟</target>
+      </trans-unit>
+      <trans-unit id="5606801365223148551" datatype="html">
+        <source>No, this is a receive-only service designed for verification and spam protection.</source>
+        <target>لا، هذه خدمة استقبال فقط مصممة للتحقق والحماية من البريد العشوائي.</target>
+      </trans-unit>
+      <trans-unit id="957788335719715130" datatype="html">
+        <source>How do I access my saved temporary emails?</source>
+        <target>كيف يمكنني الوصول إلى رسائل البريد الإلكتروني المؤقتة المحفوظة؟</target>
+      </trans-unit>
+      <trans-unit id="5976658476536470007" datatype="html">
+        <source>Bookmark any email to get a unique link that remains active for 7 days. You can also view recent addresses in your Email History.</source>
+        <target>احفظ أي بريد إلكتروني كمرجع للحصول على رابط فريد يظل نشطًا لمدة 7 أيام. يمكنك أيضًا عرض العناوين الحديثة في سجل البريد الإلكتروني الخاص بك.</target>
+      </trans-unit>
+      <trans-unit id="3325911438775796193" datatype="html">
+        <source>What happens if I don&apos;t save my temporary email?</source>
+        <target>ماذا يحدث إذا لم أحفظ بريدي الإلكتروني المؤقت؟</target>
+      </trans-unit>
+      <trans-unit id="8848609936912006905" datatype="html">
+        <source>Unsaved emails will expire when you close your browser or after 24 hours. We recommend bookmarking important emails to extend access.</source>
+        <target>ستنتهي صلاحية رسائل البريد الإلكتروني غير المحفوظة عند إغلاق المتصفح أو بعد 24 ساعة. نوصي بحفظ رسائل البريد الإلكتروني المهمة كمراجع لتمديد فترة الوصول.</target>
+      </trans-unit>
+      <trans-unit id="4056027633609896578" datatype="html">
+        <source>Is there a limit to how many temporary emails I can create?</source>
+        <target>هل هناك حد لعدد عناوين البريد الإلكتروني المؤقتة التي يمكنني إنشاؤها؟</target>
+      </trans-unit>
+      <trans-unit id="1525950049153984173" datatype="html">
+        <source>You can generate unlimited temporary emails, though we recommend bookmarking important ones to maintain access.</source>
+        <target>يمكنك إنشاء عدد غير محدود من عناوين البريد الإلكتروني المؤقتة، على الرغم من أننا نوصي بحفظ العناصر المهمة كمراجع للحفاظ على الوصول.</target>
+      </trans-unit>
+      <trans-unit id="7834616241538261610" datatype="html">
+        <source>What are common uses for temporary emails?</source>
+        <target>ما هي الاستخدامات الشائعة لعناوين البريد الإلكتروني المؤقتة؟</target>
+      </trans-unit>
+      <trans-unit id="3161757933321278543" datatype="html">
+        <source>They&apos;re perfect for website registrations, app testing, online shopping from new retailers, accessing free trials, and protecting your primary email from spam.</source>
+        <target>إنها مثالية لتسجيلات المواقع واختبار التطبيقات والتسوق عبر الإنترنت من تجار جدد والوصول إلى إصدارات تجريبية مجانية وحماية بريدك الإلكتروني الأساسي من البريد العشوائي.</target>
+      </trans-unit>
+      <trans-unit id="2302562355347117341" datatype="html">
+        <source>Is my temporary email data secure?</source>
+        <target>هل بيانات بريدي الإلكتروني المؤقت آمنة؟</target>
+      </trans-unit>
+      <trans-unit id="4607512770855487391" datatype="html">
+        <source>All emails are stored locally in your browser and automatically cleared after their expiration period. We don&apos;t permanently store your data.</source>
+        <target>يتم تخزين جميع رسائل البريد الإلكتروني محليًا في متصفحك ومسحها تلقائيًا بعد انتهاء فترة صلاحيتها. نحن لا نخزن بياناتك بشكل دائم.</target>
+      </trans-unit>
+      <trans-unit id="7464046253944919376" datatype="html">
+        <source>Can I extend access beyond 7 days?</source>
+        <target>هل يمكنني تمديد الوصول لأكثر من 7 أيام؟</target>
+      </trans-unit>
+      <trans-unit id="229315032258109171" datatype="html">
+        <source>Currently, the maximum access period is 7 days for saved emails. For longer-term needs, we recommend using your personal email.</source>
+        <target>حاليًا، الحد الأقصى لفترة الوصول هو 7 أيام للرسائل المحفوظة. بالنسبة للاحتياجات طويلة الأجل، نوصي باستخدام بريدك الإلكتروني الشخصي.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

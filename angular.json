@@ -4,6 +4,15 @@
   "newProjectRoot": "projects",
   "projects": {
     "temp-mail": {
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "ar": {
+            "translation": "src/locale/messages.ar.xlf",
+            "baseHref": "ar/"
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,9 +22,13 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "localize": [
+              "ar"
+            ],
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -78,7 +91,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [

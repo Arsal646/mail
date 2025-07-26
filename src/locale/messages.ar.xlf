@@ -2,9 +2,9 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" target-language="ar" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="8870711330013548872" datatype="html">
-        <source>Online</source>
-        <target>متصل</target>
+      <trans-unit id="1408539028324192457" datatype="html">
+        <source>Online2</source>
+        <target>2متصل</target>
       </trans-unit>
       <trans-unit id="1927436067038033228" datatype="html">
         <source>Free Temporary Email Service</source>

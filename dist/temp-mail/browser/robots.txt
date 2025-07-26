@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://tempmail4u.com//sitemap.xml

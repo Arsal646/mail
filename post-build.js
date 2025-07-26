@@ -1,15 +1,18 @@
-// post-build.js
-const fs = require('fs');
-const path = require('path');
-const fse = require('fs-extra');
+const fs = require("fs");
+const path = require("path");
 
-const sourceDir = path.join(__dirname, 'dist/temp-mail/browser/en');
-const destDir = path.join(__dirname, 'dist/temp-mail/browser');
+// Set paths
+const sourceDir = "dist/temp-mail/browser/en";
+const targetDir = "dist/temp-mail/browser";
 
-if (fs.existsSync(sourceDir)) {
-  fse.copySync(sourceDir, destDir, { overwrite: true });
-  fse.removeSync(sourceDir);
-  console.log('Moved files from /en to root and deleted /en folder');
-} else {
-  console.log('No /en folder found, skipping post-build step.');
-}
+// Copy all files from /en to browser/
+fs.readdirSync(sourceDir).forEach(file => {
+  const src = path.join(sourceDir, file);
+  const dest = path.join(targetDir, file);
+  fs.copyFileSync(src, dest);
+});
+
+// Remove the /en folder
+fs.rmSync(sourceDir, { recursive: true, force: true });
+
+console.log("Moved English files out of /en folder.");

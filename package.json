@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-      "build": "ng build --localize && mkdir -p dist/temp-mail/browser && cp -r dist/temp-mail/browser/en/* dist/temp-mail/browser/ && rm -rf dist/temp-mail/browser/en",
+    "build": "ng build --localize && powershell -Command \"Copy-Item -Path dist\\temp-mail\\browser\\en\\* -Destination dist\\temp-mail\\browser -Recurse -Force; Remove-Item -Path dist\\temp-mail\\browser\\en -Recurse -Force\"",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --localize && node post-build.js",
+    "build": "ng build --localize && cp -r dist/temp-mail/browser/en/* dist/temp-mail/browser/ && rm -rf dist/temp-mail/browser/en",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

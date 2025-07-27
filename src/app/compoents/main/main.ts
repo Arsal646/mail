@@ -4,7 +4,7 @@ import { take } from 'rxjs/operators';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { LucideAngularModule } from "lucide-angular";
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { EmailService } from '../../services/email';
 import { EmailViewDialog } from '../email-view-dialog/email-view-dialog';
 import { NewEmailModalComponent } from '../new-email-modal/new-email-modal';
@@ -15,7 +15,7 @@ import { SaveSuccessDialogComponent } from '../save-success-dialog/save-success-
   standalone: true,
   templateUrl: './main.html',
   styleUrl: './main.css',
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule, LucideAngularModule, RouterModule],
 })
 export class Main implements OnInit, OnDestroy {
   countdown = signal(10);

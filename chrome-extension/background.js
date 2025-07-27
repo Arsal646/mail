@@ -46,7 +46,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             break;
             
         case 'showNotification':
-            handleShowNotification(request.title, request.message);
+            // Notifications removed - no longer showing notifications
             break;
             
         default:
@@ -192,15 +192,15 @@ function handleOpenInbox(email) {
     chrome.tabs.create({ url: url });
 }
 
-// Handle showing notifications
-function handleShowNotification(title, message) {
-    chrome.notifications.create({
-        type: 'basic',
-        iconUrl: 'icons/icon48.png',
-        title: title,
-        message: message
-    });
-}
+// Handle showing notifications - REMOVED
+// function handleShowNotification(title, message) {
+//     chrome.notifications.create({
+//         type: 'basic',
+//         iconUrl: 'icons/icon48.png',
+//         title: title,
+//         message: message
+//     });
+// }
 
 // Handle badge updates (optional - for showing unread count)
 function updateBadge(unreadCount) {
@@ -232,13 +232,13 @@ setInterval(async () => {
             
             updateBadge(unreadCount);
             
-            // Show notification for new emails (if enabled)
-            if (settings.notifications && unreadCount > 0) {
-                handleShowNotification(
-                    'New Emails',
-                    `You have ${unreadCount} new email(s) in your temporary inbox.`
-                );
-            }
+            // Show notification for new emails - REMOVED
+            // if (settings.notifications && unreadCount > 0) {
+            //     handleShowNotification(
+            //         'New Emails',
+            //         `You have ${unreadCount} new email(s) in your temporary inbox.`
+            //     );
+            // }
         }
     } catch (error) {
         console.error('Error in periodic email check:', error);

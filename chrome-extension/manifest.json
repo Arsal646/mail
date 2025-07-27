@@ -5,9 +5,7 @@
   "description": "Quick access to temporary email addresses for privacy and spam protection",
   "permissions": [
     "storage",
-    "clipboardWrite",
-    "activeTab",
-    "notifications"
+    "clipboardWrite"
   ],
   "host_permissions": [
     "https://mailboxhub.fun/*",

@@ -428,13 +428,7 @@ Access link copied to your clipboard!
 • The link will expire after 7 days for security
 `, 'success');
                         
-                        // Show notification
-                        chrome.notifications.create({
-                            type: 'basic',
-                            iconUrl: 'icons/icon48.png',
-                            title: 'Email Saved Successfully',
-                            message: `Email ${this.currentEmail} saved for 7 days. Access link copied to clipboard!`
-                        });
+                        // Notification removed - no longer showing window notification when save
                     } catch (clipboardError) {
                         // Fallback: just show the message without redirecting
                         saveBtn.textContent = 'Saved!';

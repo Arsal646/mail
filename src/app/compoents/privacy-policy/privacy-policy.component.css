@@ -1,0 +1,8 @@
+/* Privacy Policy Component Styles */
+/* All styling is now handled by Tailwind CSS classes in the template */ 
+
+.container {
+    @media (width >= 96rem) {
+        max-width: 1000px !important;
+    }
+}

@@ -1,14 +1,15 @@
-import { Component, OnInit, OnDestroy, signal, effect, Inject, PLATFORM_ID, inject } from '@angular/core';
+import { Component, OnInit, OnDestroy, signal, effect, Inject, PLATFORM_ID, inject, HostListener } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { LucideAngularModule } from "lucide-angular";
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
 import { EmailService } from '../../services/email';
-import { EmailViewDialog } from '../email-view-dialog/email-view-dialog';
-import { NewEmailModalComponent } from '../new-email-modal/new-email-modal';
-import { SaveSuccessDialogComponent } from '../save-success-dialog/save-success-dialog.component';
+import { EmailViewDialog } from '../../compoents/email-view-dialog/email-view-dialog';
+import { NewEmailModalComponent } from '../../compoents/new-email-modal/new-email-modal';
+import { SaveSuccessDialogComponent } from '../../compoents/save-success-dialog/save-success-dialog.component';
 
 @Component({
   selector: 'app-main',
@@ -35,7 +36,9 @@ export class Main implements OnInit, OnDestroy {
   constructor(
     private emailService: EmailService, 
     @Inject(PLATFORM_ID) private platformId: Object,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private meta: Meta,
+    private title: Title
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
 
@@ -46,6 +49,11 @@ export class Main implements OnInit, OnDestroy {
     });
   }
 
+  // Listen for header refresh events
+  @HostListener('window:headerRefresh')
+  onHeaderRefresh() {
+    this.refreshEmails();
+  }
 
   reload() {
     this.refreshEmails()
@@ -54,6 +62,31 @@ export class Main implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     if (!this.isBrowser) return;
+    
+    // Set SEO meta tags for home page
+    const pageTitle = 'TempMail - Free Temporary Email Service | Disposable Email Address';
+    const pageDescription = 'Get free temporary email addresses instantly. Our disposable email service protects your privacy and keeps your inbox spam-free. No registration required.';
+    
+    this.title.setTitle(pageTitle);
+  
+    // Standard meta tags
+    this.meta.updateTag({ name: 'description', content: pageDescription });
+    this.meta.updateTag({ name: 'keywords', content: 'temporary email, disposable email, free temp mail, anonymous email, burner email, fake email, spam protection, email verification, privacy mail, temp mail service' });
+  
+    // Open Graph/Facebook tags
+    this.meta.updateTag({ property: 'og:title', content: pageTitle });
+    this.meta.updateTag({ property: 'og:description', content: pageDescription });
+    this.meta.updateTag({ property: 'og:type', content: 'website' });
+    this.meta.updateTag({ property: 'og:url', content: 'https://tempmails.online/' });
+    this.meta.updateTag({ property: 'og:image', content: 'https://tempmails.online/assets/images/temp-mail-preview.jpg' });
+    this.meta.updateTag({ property: 'og:site_name', content: 'TempMails' });
+  
+    // Twitter Card tags
+    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.meta.updateTag({ name: 'twitter:title', content: pageTitle });
+    this.meta.updateTag({ name: 'twitter:description', content: pageDescription });
+    this.meta.updateTag({ name: 'twitter:image', content: 'https://tempmails.online/assets/images/temp-mail-preview.jpg' });
+    this.meta.updateTag({ name: 'twitter:site', content: '@tempmails' });
     
     // Check if there's a saved email in query params
     this.route.queryParams.subscribe(params => {

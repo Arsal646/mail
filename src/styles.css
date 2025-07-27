@@ -31,3 +31,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 button:focus-visible {
   outline: none !important;
 }
+
+
+.container {
+    @media (width >= 96rem) {
+        max-width: 1000px !important;
+    }
+}
+

@@ -5,9 +5,25 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { Email10MinComponent } from './pages/email-10min/email-10min.component';
 
 export const routes: Routes = [
-  { path: '', component: Main },
-  { path: 'saved/:token', component: SavedEmailComponent },
-  { path: 'privacy-policy', component: PrivacyPolicyComponent },
-  { path: '10-minutes-temporary-email', component: Email10MinComponent },
+  { 
+    path: '', 
+    component: Main,
+    pathMatch: 'full' 
+  },
+  { 
+    path: 'saved/:token', 
+    component: SavedEmailComponent,
+    pathMatch: 'full'
+  },
+  { 
+    path: 'privacy-policy', 
+    component: PrivacyPolicyComponent,
+    pathMatch: 'full'
+  },
+  { 
+    path: '10-minutes-temporary-email', 
+    component: Email10MinComponent,
+    pathMatch: 'full'  // This ensures exact matching
+  },
   { path: '**', redirectTo: '' }
 ];

@@ -265,27 +265,11 @@ export class Email10MinComponent implements OnInit {
      // Set SEO meta tags
   const pageTitle = '10 Minutes Temp Mail - Free Disposable Email in Seconds';
   const pageDescription = 'Get a free 10-minute temporary email instantly. Perfect for signups, verifications & privacy. No registration, no spam!';
-
   this.title.setTitle(pageTitle);
-
   // Standard meta tags
   this.meta.updateTag({ name: 'description', content: pageDescription });
   this.meta.updateTag({ name: 'keywords', content: '10 minute email, temp mail, disposable email, free temporary email, burner email, spam protection' });
 
-  // Open Graph/Facebook tags
-  this.meta.updateTag({ property: 'og:title', content: pageTitle });
-  this.meta.updateTag({ property: 'og:description', content: pageDescription });
-  this.meta.updateTag({ property: 'og:type', content: 'website' });
-  this.meta.updateTag({ property: 'og:url', content: 'https://tempmail4u.com/10-minutes-temporary-email' });
-  this.meta.updateTag({ property: 'og:image', content: 'https://tempmails.online/assets/images/10min-email-preview.jpg' });
-  this.meta.updateTag({ property: 'og:site_name', content: 'TempMails' });
-
-  // Twitter Card tags
-  this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
-  this.meta.updateTag({ name: 'twitter:title', content: pageTitle });
-  this.meta.updateTag({ name: 'twitter:description', content: pageDescription });
-  this.meta.updateTag({ name: 'twitter:image', content: 'https://tempmails.online/assets/images/10min-email-preview.jpg' });
-  this.meta.updateTag({ name: 'twitter:site', content: '@tempmails' });
 
   this.meta.updateTag({ rel: 'canonical', href: 'https://tempmail4u.com/10-minutes-temporary-email' });
 }

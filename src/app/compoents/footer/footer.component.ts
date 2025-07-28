@@ -24,7 +24,7 @@ import { RouterModule } from '@angular/router';
                     <div class="flex flex-wrap items-center gap-2 text-sm">
                         <a routerLink="/" class="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
                         <span class="text-gray-400">|</span>
-                        <a routerLink="/10-minutes-temporary-email" class="text-gray-600 hover:text-gray-900 transition-colors">10 Minute Email</a>
+                        <a routerLink="/10-minutes-temporary-email/" class="text-gray-600 hover:text-gray-900 transition-colors">10 Minute Email</a>
                         <span class="text-gray-400">|</span>
                         <a routerLink="/privacy-policy" class="text-gray-600 hover:text-gray-900 transition-colors">Privacy</a>
                     </div>

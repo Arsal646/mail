@@ -2,10 +2,3 @@
 command = "ng build"
 functions = "netlify/functions"
 publish = "dist/temp-mail/browser"
-
-
-[[redirects]]
-  from = "/10-minutes-temporary-email"
-  to = "/10-minutes-temporary-email/"
-  status = 301
-  force = true

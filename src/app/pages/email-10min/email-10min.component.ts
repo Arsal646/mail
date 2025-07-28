@@ -276,7 +276,7 @@ export class Email10MinComponent implements OnInit {
   this.meta.updateTag({ property: 'og:title', content: pageTitle });
   this.meta.updateTag({ property: 'og:description', content: pageDescription });
   this.meta.updateTag({ property: 'og:type', content: 'website' });
-  this.meta.updateTag({ property: 'og:url', content: 'https://tempmails.online/email-10min' });
+  this.meta.updateTag({ property: 'og:url', content: 'https://tempmail4u.com/10-minutes-temporary-email' });
   this.meta.updateTag({ property: 'og:image', content: 'https://tempmails.online/assets/images/10min-email-preview.jpg' });
   this.meta.updateTag({ property: 'og:site_name', content: 'TempMails' });
 
@@ -286,6 +286,8 @@ export class Email10MinComponent implements OnInit {
   this.meta.updateTag({ name: 'twitter:description', content: pageDescription });
   this.meta.updateTag({ name: 'twitter:image', content: 'https://tempmails.online/assets/images/10min-email-preview.jpg' });
   this.meta.updateTag({ name: 'twitter:site', content: '@tempmails' });
+
+  this.meta.updateTag({ rel: 'canonical', href: 'https://tempmail4u.com/10-minutes-temporary-email' });
 }
 
 

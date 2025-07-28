@@ -15,9 +15,21 @@ export const routes: Routes = [
     component: SavedEmailComponent,
     pathMatch: 'full'
   },
+  // Redirect trailing slash to non-trailing slash for privacy-policy
+  { 
+    path: 'privacy-policy/', 
+    redirectTo: 'privacy-policy',
+    pathMatch: 'full'
+  },
   { 
     path: 'privacy-policy', 
     component: PrivacyPolicyComponent,
+    pathMatch: 'full'
+  },
+  // Redirect trailing slash to non-trailing slash for 10-minutes-temporary-email
+  { 
+    path: '10-minutes-temporary-email/', 
+    redirectTo: '10-minutes-temporary-email',
     pathMatch: 'full'
   },
   { 

@@ -20,10 +20,5 @@ export const routes: Routes = [
     component: PrivacyPolicyComponent,
     pathMatch: 'full'
   },
-  { 
-    path: '10-minutes-temporary-email', 
-    component: Email10MinComponent,
-    pathMatch: 'full'  // This ensures exact matching
-  },
   { path: '**', redirectTo: '' }
 ];

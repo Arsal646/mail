@@ -14,7 +14,6 @@ template: `
 <!-- Main Component -->
 <app-quick-email [pageTimeCount]=“10”></app-quick-email>
 
-```
   <!-- Hero Section -->
   <div class="bg-white rounded-lg shadow-sm p-6 mt-6">
     <h1 class="text-3xl font-bold text-gray-900 mb-4">10 Minute Temporary Email - Instant Disposable Inbox</h1>
@@ -180,7 +179,7 @@ template: `
     </div>
   </div>
 </div>
-```
+
 
 `
 })

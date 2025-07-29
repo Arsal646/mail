@@ -3,12 +3,6 @@
 
   <!-- Main Content -->
   <main class="container mx-auto px-4 py-4 max-w-4xl">
-    <!-- Page Header -->
-    <div class="text-center mb-4">
-      <h1 class="text-xl md:text-2xl font-semibold text-gray-900 mb-1">{{pageTimeCount}} minutes Temporary Email</h1>
-      <p class="text-sm text-gray-600">Get a temporary email address that expires in {{pageTimeCount}} minutes. Perfect for quick
-        verifications.</p>
-    </div>
 
     <!-- Email Card with Timer -->
     <div class="border-2 rounded-lg border-gray-400 mb-4">
@@ -61,7 +55,7 @@
               <div class="font-mono text-sm md:text-base truncate flex-1">
                 {{currentEmail}}
               </div>
-              <div class="flex gap-2 w-full sm:w-auto">
+              <div class="hidden md:flex  gap-2 w-full sm:w-auto">
                 <button (click)="copyEmail()"
                   class="px-3 py-1 text-sm border border-gray-300 rounded-lg hidden md:flex items-center gap-1 hover:bg-gray-100"
                   [class.bg-green-100]="copied" [class.text-green-600]="copied">
@@ -101,11 +95,13 @@
           <!-- Usage Instructions -->
           <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm">
             <div class="flex gap-2">
-              <lucide-icon name="info" [size]="16" class="text-blue-600 mt-0.5 flex-shrink-0"></lucide-icon>
+             
               <div>
-                <h4 class="font-medium text-blue-900 mb-1">How to use:</h4>
-                <ul class="text-xs text-blue-800 space-y-1">
-                  <li>• Use for quick verifications or one-time registrations</li>
+                <h4 class="font-medium text-blue-900 mb-1 flex gap-1 items-center mb-2">
+                   <lucide-icon name="info" [size]="16" class="text-blue-600 mt-0.5 flex-shrink-0"></lucide-icon>
+                 <span> How to use:</span></h4>
+                <ul class="text-xs text-blue-800 space-y-1 md:pl-5">
+                  <li class="truncate">• Use for quick verifications or one-time registrations</li>
                   <li>• Expires automatically in 10 minutes</li>
                   <li>• Click "Reset" to extend time back to 10 minutes</li>
                   <li>• Check inbox below for received emails</li>

@@ -1,223 +1,215 @@
-import { Component, Inject, OnInit, PLATFORM_ID } from ‘@angular/core’;
-import { QuickEmailComponent } from ‘../../compoents/quick-email/quick-email.component’;
-import { isPlatformBrowser } from ‘@angular/common’;
-import { ScrollService } from ‘../../services/scroll.service’;
-import { MetaService } from ‘../../services/meta.service’;
-import { Title, Meta } from ‘@angular/platform-browser’;
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { QuickEmailComponent } from '../../compoents/quick-email/quick-email.component';
+import { isPlatformBrowser } from '@angular/common';
+import { ScrollService } from '../../services/scroll.service';
+import { MetaService } from '../../services/meta.service';
+import { Title, Meta } from '@angular/platform-browser';
+import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
-selector: ‘app-email-10min’,
-standalone: true,
-imports: [QuickEmailComponent],
-template: `
-<div class="container mx-auto px-4 py-6 max-w-5xl">
-<!-- Main Component -->
-<app-quick-email [pageTimeCount]=“10”></app-quick-email>
-  <!-- Hero Section -->
-  <div class="bg-white rounded-lg shadow-sm p-6 mt-6">
-    <h1 class="text-3xl font-bold text-gray-900 mb-4">10 Minute Temporary Email - Instant Disposable Inbox</h1>
-    <div class="text-gray-600 space-y-4">
-      <p class="text-lg leading-relaxed">
-        Get a secure 10 minute temporary email address instantly. Our disposable email service creates short-lived inboxes perfect for quick verifications, account registrations, and protecting your personal email from spam.
-      </p>
-      
-      <p class="text-base leading-relaxed">
-        Unlike other temporary email providers, our 10 minute temporary email service prioritizes ultra-fast cleanup. All messages and data are permanently deleted after exactly 10 minutes, ensuring maximum privacy protection for your digital activities.
-      </p>
+  selector: 'app-email-10min',
+  standalone: true,
+  imports: [QuickEmailComponent,LucideAngularModule],
+  template:`
+  <main class="container mx-auto px-4 py-6 max-w-5xl">
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
-          <h3 class="font-semibold text-blue-900 mb-2">10 Minute Auto-Delete</h3>
-          <p class="text-sm text-blue-700">Your temporary email expires automatically after exactly 10 minutes for enhanced security</p>
-        </div>
-        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
-          <h3 class="font-semibold text-green-900 mb-2">Instant Generation</h3>
-          <p class="text-sm text-green-700">No signup required - get your 10 minute temporary email in seconds</p>
-        </div>
-        <div class="bg-purple-50 p-4 rounded-lg border border-purple-200">
-          <h3 class="font-semibold text-purple-900 mb-2">Complete Privacy</h3>
-          <p class="text-sm text-purple-700">Anonymous temporary email with no personal data collection</p>
-        </div>
+  <!-- Page Header -->
+  <header class="mb-2 text-center">
+    <h1 class="text-xl font-semibold text-gray-900 mb-3">
+      10 Minutes Temporary Email – Free Disposable Inbox Without Signup
+    </h1>
+    <p class="text-sm text-gray-600 mb-2">
+      Instantly generate a <strong>10 minutes temporary email address</strong>. Perfect for email verifications, OTPs, and anonymous sign-ups without exposing your personal inbox.
+    </p>
+  </header>
+
+  <!-- App Component Placeholder -->
+  <section class="mb-2">
+    <app-quick-email [pageTimeCount]="10"></app-quick-email>
+  </section>
+
+  <!-- About Section -->
+  <section class="bg-white rounded-lg shadow-sm p-5 mb-2">
+    <h2 class="text-lg font-semibold text-gray-900 mb-2">What is a 10 Minutes Temporary Email?</h2>
+    <div class="text-sm text-gray-600 space-y-4">
+      <p>
+        A <strong>10 minutes temporary email</strong> is a disposable, anonymous inbox that lasts only 10 minutes. It’s ideal for one-time registrations, email confirmations, downloading files, and avoiding spam.
+      </p>
+      <p>
+        No sign-up or personal data is required, making it the safest way to stay anonymous online. Use it as a throwaway email whenever you need a quick, secure inbox.
+      </p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Automatically expires after 10 minutes</li>
+        <li>Completely anonymous and untraceable</li>
+        <li>Receive OTPs, confirmations, and attachments securely</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-2">
+    <div class="bg-gray-50 p-3 rounded border border-gray-200">
+      <div class="flex items-center gap-2 mb-1">
+        <lucide-icon name="clock" [size]="16" class="text-blue-500"></lucide-icon>
+        <h3 class="font-medium text-gray-900 text-sm">Self-Destructing Inboxes</h3>
+      </div>
+      <p class="text-xs text-gray-600">All messages are automatically deleted after 10 minutes to protect your privacy.</p>
+    </div>
+    <div class="bg-gray-50 p-3 rounded border border-gray-200">
+      <div class="flex items-center gap-2 mb-1">
+        <lucide-icon name="user" [size]="16" class="text-green-500"></lucide-icon>
+        <h3 class="font-medium text-gray-900 text-sm">No Sign-Up Required</h3>
+      </div>
+      <p class="text-xs text-gray-600">Simply visit the page to start — no login, no password, no hassle.</p>
+    </div>
+    <div class="bg-gray-50 p-3 rounded border border-gray-200">
+      <div class="flex items-center gap-2 mb-1">
+        <lucide-icon name="shield" [size]="16" class="text-purple-500"></lucide-icon>
+        <h3 class="font-medium text-gray-900 text-sm">Anonymous & Secure</h3>
+      </div>
+      <p class="text-xs text-gray-600">We don’t store or log any user data; all inboxes are wiped clean after use.</p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="bg-white rounded-lg shadow-sm p-5 mb-10">
+    <h2 class="text-lg font-semibold text-gray-900 mb-4">How to Use a 10 Minutes Temporary Email</h2>
+    <ol class="space-y-2 text-sm text-gray-600 md:pl-8">
+      <li class="flex items-start">
+        <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
+        <span>Visit our site to instantly receive a free temporary inbox.</span>
+      </li>
+      <li class="flex items-start">
+        <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
+        <span>Copy your 10 minutes temporary email address and use it for registrations or verifications.</span>
+      </li>
+      <li class="flex items-start">
+        <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
+        <span>Receive OTPs or confirmation emails instantly — inbox refreshes every 10 seconds.</span>
+      </li>
+      <li class="flex items-start">
+        <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
+        <span>All data is permanently deleted after 10 minutes for maximum privacy.</span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="bg-white rounded-lg shadow-sm p-5 mb-10">
+    <h2 class="text-lg font-semibold text-gray-900 mb-4">When to Use a Disposable Email Address</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <h3 class="font-medium text-gray-900 mb-2">Tech & Testing</h3>
+        <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
+          <li>Testing sign-up flows</li>
+          <li>Previewing email templates</li>
+          <li>Debugging email APIs</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-medium text-gray-900 mb-2">Privacy & Productivity</h3>
+        <ul class="list-disc pl-5 text-sm text-gray-600 space-y-1">
+          <li>Avoid spam from new websites</li>
+          <li>Access gated content securely</li>
+          <li>Download software & resources</li>
+          <li>Anonymous sign-ups for forums</li>
+        </ul>
       </div>
     </div>
-  </div>
-
-  <!-- How It Works Section -->
-  <div class="bg-white rounded-lg shadow-sm p-6 mt-6">
-    <h2 class="text-2xl font-bold text-gray-900 mb-4">How Our 10 Minute Temporary Email Works</h2>
-    
-    <div class="space-y-6">
-      <div class="border border-gray-200 rounded-lg p-4">
-        <h3 class="font-semibold text-gray-900 mb-3 flex items-center">
-          <span class="bg-blue-100 text-blue-800 w-6 h-6 rounded-full flex items-center justify-center mr-2 text-xs">1</span>
-          Generate Your Disposable Email
-        </h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Instantly receive a unique 10 minute temporary email address. The countdown timer starts immediately, giving you a full 10 minutes for email verification processes.
-        </p>
-      </div>
-
-      <div class="border border-gray-200 rounded-lg p-4">
-        <h3 class="font-semibold text-gray-900 mb-3 flex items-center">
-          <span class="bg-green-100 text-green-800 w-6 h-6 rounded-full flex items-center justify-center mr-2 text-xs">2</span>
-          Use for Verification
-        </h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Use your temporary email for account creation, newsletter signups, or any service requiring email confirmation. Messages arrive instantly in your disposable inbox.
-        </p>
-      </div>
-
-      <div class="border border-gray-200 rounded-lg p-4">
-        <h3 class="font-semibold text-gray-900 mb-3 flex items-center">
-          <span class="bg-purple-100 text-purple-800 w-6 h-6 rounded-full flex items-center justify-center mr-2 text-xs">3</span>
-          Automatic Deletion
-        </h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          After exactly 10 minutes, your temporary email and all received messages are permanently deleted. No traces left behind for complete privacy protection.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Benefits & Use Cases Section -->
-  <div class="bg-white rounded-lg shadow-sm p-6 mt-6">
-    <h2 class="text-2xl font-bold text-gray-900 mb-4">Why Choose 10 Minute Temporary Email</h2>
-    <div class="text-gray-600 space-y-4">
-      <p class="text-base leading-relaxed">
-        Our 10 minute temporary email service is designed for users who need quick, secure email verification without compromising their privacy. Whether you're a developer testing applications or protecting your personal inbox, this disposable email solution provides the perfect balance of functionality and security.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-        <div class="space-y-3">
-          <h3 class="font-semibold text-gray-900">Professional Use Cases</h3>
-          <ul class="text-sm text-gray-600 space-y-2">
-            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>Software testing and QA verification</li>
-            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>Email template and campaign testing</li>
-            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>API integration testing</li>
-            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>Multi-account registration scenarios</li>
-          </ul>
-        </div>
-        <div class="space-y-3">
-          <h3 class="font-semibold text-gray-900">Personal Privacy Protection</h3>
-          <ul class="text-sm text-gray-600 space-y-2">
-            <li class="flex items-start"><span class="text-green-500 mr-2">•</span>Accessing premium content trials</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">•</span>Downloading gated resources</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">•</span>One-time service registrations</li>
-            <li class="flex items-start"><span class="text-green-500 mr-2">•</span>Avoiding promotional emails</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="bg-gray-50 p-4 rounded-lg mt-6">
-        <h3 class="font-semibold text-gray-900 mb-3">10 Minute Temporary Email Advantages:</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <ul class="text-sm text-gray-600 space-y-1">
-            <li class="flex items-start"><span class="text-purple-500 mr-2">•</span><strong>Precise timing</strong> - Exactly 10 minutes, no more, no less</li>
-            <li class="flex items-start"><span class="text-purple-500 mr-2">•</span><strong>Zero registration</strong> - No accounts or personal information required</li>
-            <li class="flex items-start"><span class="text-purple-500 mr-2">•</span><strong>Spam-free</strong> - Protects your real email from unwanted messages</li>
-          </ul>
-          <ul class="text-sm text-gray-600 space-y-1">
-            <li class="flex items-start"><span class="text-purple-500 mr-2">•</span><strong>Mobile optimized</strong> - Works seamlessly on all devices</li>
-            <li class="flex items-start"><span class="text-purple-500 mr-2">•</span><strong>Instant delivery</strong> - Receive emails within seconds</li>
-            <li class="flex items-start"><span class="text-purple-500 mr-2">•</span><strong>Completely free</strong> - No hidden costs or premium upsells</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 
   <!-- FAQ Section -->
-  <div class="bg-white rounded-lg shadow-sm p-6 mt-6">
-    <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions About 10 Minute Temporary Email</h2>
-    <div class="space-y-4">
-      <div class="border-b border-gray-200 pb-4">
-        <h3 class="text-lg font-semibold text-gray-900 mb-2">What makes 10 minute temporary email different from regular disposable email?</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Our 10 minute temporary email service offers a shorter lifespan than standard temporary email providers. This ensures faster data deletion and enhanced privacy protection, making it ideal for quick verifications where you don't need long-term access.
-        </p>
+  <section class="bg-white rounded-lg shadow-sm p-5 mb-10">
+    <h2 class="text-lg font-semibold text-gray-900 mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-4 text-sm text-gray-600">
+      <div>
+        <h3 class="font-medium text-gray-900">What is a 10 minutes email?</h3>
+        <p>A temporary email address that expires after 10 minutes, perfect for receiving one-time messages or verification links.</p>
       </div>
-
-      <div class="border-b border-gray-200 pb-4">
-        <h3 class="text-lg font-semibold text-gray-900 mb-2">Can I receive file attachments with my temporary email?</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Yes, your 10 minute temporary email can receive and display attachments just like regular email. However, remember that all attachments will be permanently deleted when your disposable inbox expires after 10 minutes.
-        </p>
+      <div>
+        <h3 class="font-medium text-gray-900">Is it free to use?</h3>
+        <p>Yes, it’s completely free. No sign-up needed, no ads, and no premium charges.</p>
       </div>
-
-      <div class="border-b border-gray-200 pb-4">
-        <h3 class="text-lg font-semibold text-gray-900 mb-2">What if I need my temporary email for longer than 10 minutes?</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          You can easily refresh your session to get a new 10 minute temporary email address. For extended needs, consider creating multiple temporary email addresses or using our longer-duration options.
-        </p>
+      <div>
+        <h3 class="font-medium text-gray-900">Can I receive OTPs and confirmation emails?</h3>
+        <p>Yes, the temporary inbox supports all common email types including OTPs and confirmation links.</p>
       </div>
-
-      <div class="border-b border-gray-200 pb-4">
-        <h3 class="text-lg font-semibold text-gray-900 mb-2">Is there a limit on how many 10 minute temporary emails I can create?</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          No limits! Generate unlimited 10 minute temporary email addresses as needed. Each disposable email operates independently with its own 10-minute countdown timer.
-        </p>
+      <div>
+        <h3 class="font-medium text-gray-900">Can I extend the timer for my temporary email?</h3>
+        <p>Yes, simply click the "Reset" button to restart the 10-minute countdown.</p>
       </div>
-
-      <div class="pb-4">
-        <h3 class="text-lg font-semibold text-gray-900 mb-2">How secure is the 10 minute temporary email service?</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Our temporary email service uses encrypted connections and automatic data purging. Since we never collect personal information and delete everything after 10 minutes, your privacy is maximally protected.
-        </p>
+      <div>
+        <h3 class="font-medium text-gray-900">Is this email address truly anonymous?</h3>
+        <p>Absolutely. We do not collect or track any personal data; every inbox is temporary and private.</p>
+      </div>
+      <div>
+        <h3 class="font-medium text-gray-900">How many temporary emails can I create?</h3>
+        <p>Unlimited. Create as many temporary inboxes as you want, each with its own time limit.</p>
+      </div>
+      <div>
+        <h3 class="font-medium text-gray-900">Does it work on mobile?</h3>
+        <p>Yes, the service is fully responsive and works seamlessly on all devices.</p>
+      </div>
+      <div>
+        <h3 class="font-medium text-gray-900">Is it safe for important messages?</h3>
+        <p>It’s suitable for short-term use like OTPs and confirmation emails. Avoid using it for sensitive personal information.</p>
+      </div>
+      <div>
+        <h3 class="font-medium text-gray-900">Is it better than using a fake email?</h3>
+        <p>Yes! Unlike fake emails, this service provides a real, functioning inbox for legitimate message receipt.</p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Benefits Summary -->
-  <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 mt-6 border border-blue-200">
-    <h2 class="text-2xl font-bold text-gray-900 mb-4">Start Using 10 Minute Temporary Email Today</h2>
-    <p class="text-gray-700 text-base leading-relaxed mb-4">
-      Experience the fastest, most secure way to handle email verification. Our 10 minute temporary email service provides instant disposable inboxes that automatically clean up after themselves, protecting your privacy while meeting your verification needs.
-    </p>
-    <div class="text-sm text-gray-600">
-      <strong>Perfect for:</strong> Account registrations, email testing, privacy protection, spam prevention, and any situation where you need a quick, disposable email solution.
-    </div>
-  </div>
-</div>
+</main>
 
+  `
 
-`
 })
 export class Email10MinComponent implements OnInit {
-constructor(
-@Inject(PLATFORM_ID) private platformId: Object,
-private scrollService: ScrollService,
-private metaService: MetaService,
-private title: Title,
-private meta: Meta
-) { }
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private scrollService: ScrollService,
+    private metaService: MetaService,
+    private title: Title,
+    private meta: Meta
+  ) { }
 
-ngOnInit(): void {
-if (isPlatformBrowser(this.platformId)) {
-this.scrollService.scrollToTopInstant();
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.scrollService.scrollToTopInstant();
+    }
 
-
-
-// Enhanced SEO meta tags with primary keyword focus
-const pageTitle = '10 Minute Temporary Email - Free Disposable Email Generator | TempMail4U';
-const pageDescription = 'Create a free 10 minute temporary email address instantly. Secure disposable email for quick verification, testing, and privacy protection. Auto-deletes after 10 minutes.';
+    // Set SEO meta tags
+const pageTitle = '10-Minute Temporary Email - Free Disposable Inbox | TempMail4U';
+const pageDescription = 'Get a free 10-minute disposable email for instant verifications. No signup needed. Protect your privacy with our temporary self-destructing inbox.';
+const canonicalUrl = 'https://tempmail4u.com/10-minutes-temporary-email';
 
 this.title.setTitle(pageTitle);
 
-// Standard meta tags with natural keyword integration
+// Standard meta tags
 this.meta.updateTag({ name: 'description', content: pageDescription });
-this.meta.updateTag({ name: 'keywords', content: '10 minute temporary email, disposable email, temporary inbox, burner email, email verification, privacy protection, spam prevention, quick email, temp mail' });
+this.meta.updateTag({ name: 'keywords', content: '10 minute email, disposable email, temporary inbox, burner email, email verification, OTP email, privacy protection, spam prevention, anonymous email, quick email' });
 
-// Open Graph / Social Media meta tags
+// Open Graph / Facebook
 this.meta.updateTag({ property: 'og:title', content: pageTitle });
 this.meta.updateTag({ property: 'og:description', content: pageDescription });
 this.meta.updateTag({ property: 'og:type', content: 'website' });
-
-// Additional SEO meta tags
-this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-this.meta.updateTag({ name: 'author', content: 'TempMail4U' });
+this.meta.updateTag({ property: 'og:url', content: canonicalUrl });
 this.meta.updateTag({ property: 'og:site_name', content: 'TempMail4U' });
+this.meta.updateTag({ property: 'og:locale', content: 'en_US' });
+
+// Twitter Card
+this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+this.meta.updateTag({ name: 'twitter:title', content: pageTitle });
+this.meta.updateTag({ name: 'twitter:description', content: pageDescription });
+this.meta.updateTag({ name: 'twitter:site', content: '@TempMail4U' });
 
 // Canonical URL
-this.meta.updateTag({ name: 'canonical', content: 'https://tempmail4u.com/10-minutes-temporary-email' });
-}
+this.meta.updateTag({ rel: 'canonical', href: canonicalUrl });
+
+// Additional helpful tags
+this.meta.updateTag({ name: 'robots', content: 'index, follow' });
+this.meta.updateTag({ name: 'author', content: 'TempMail4U' });
+  }
 }

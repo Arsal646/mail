@@ -13,7 +13,6 @@ template: `
 <div class="container mx-auto px-4 py-6 max-w-5xl">
 <!-- Main Component -->
 <app-quick-email [pageTimeCount]=“10”></app-quick-email>
-
   <!-- Hero Section -->
   <div class="bg-white rounded-lg shadow-sm p-6 mt-6">
     <h1 class="text-3xl font-bold text-gray-900 mb-4">10 Minute Temporary Email - Instant Disposable Inbox</h1>
@@ -50,7 +49,7 @@ template: `
     <div class="space-y-6">
       <div class="border border-gray-200 rounded-lg p-4">
         <h3 class="font-semibold text-gray-900 mb-3 flex items-center">
-          <span class="bg-blue-100 text-blue-800 w-6 h-6 rounded-full flex items-center justify-center mr-2">1</span>
+          <span class="bg-blue-100 text-blue-800 w-6 h-6 rounded-full flex items-center justify-center mr-2 text-xs">1</span>
           Generate Your Disposable Email
         </h3>
         <p class="text-gray-600 text-sm leading-relaxed">
@@ -60,7 +59,7 @@ template: `
 
       <div class="border border-gray-200 rounded-lg p-4">
         <h3 class="font-semibold text-gray-900 mb-3 flex items-center">
-          <span class="bg-green-100 text-green-800 w-6 h-6 rounded-full flex items-center justify-center mr-2">2</span>
+          <span class="bg-green-100 text-green-800 w-6 h-6 rounded-full flex items-center justify-center mr-2 text-xs">2</span>
           Use for Verification
         </h3>
         <p class="text-gray-600 text-sm leading-relaxed">
@@ -70,7 +69,7 @@ template: `
 
       <div class="border border-gray-200 rounded-lg p-4">
         <h3 class="font-semibold text-gray-900 mb-3 flex items-center">
-          <span class="bg-purple-100 text-purple-800 w-6 h-6 rounded-full flex items-center justify-center mr-2">3</span>
+          <span class="bg-purple-100 text-purple-800 w-6 h-6 rounded-full flex items-center justify-center mr-2 text-xs">3</span>
           Automatic Deletion
         </h3>
         <p class="text-gray-600 text-sm leading-relaxed">
@@ -92,19 +91,19 @@ template: `
         <div class="space-y-3">
           <h3 class="font-semibold text-gray-900">Professional Use Cases</h3>
           <ul class="text-sm text-gray-600 space-y-2">
-            <li>• Software testing and QA verification</li>
-            <li>• Email template and campaign testing</li>
-            <li>• API integration testing</li>
-            <li>• Multi-account registration scenarios</li>
+            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>Software testing and QA verification</li>
+            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>Email template and campaign testing</li>
+            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>API integration testing</li>
+            <li class="flex items-start"><span class="text-blue-500 mr-2">•</span>Multi-account registration scenarios</li>
           </ul>
         </div>
         <div class="space-y-3">
           <h3 class="font-semibold text-gray-900">Personal Privacy Protection</h3>
           <ul class="text-sm text-gray-600 space-y-2">
-            <li>• Accessing premium content trials</li>
-            <li>• Downloading gated resources</li>
-            <li>• One-time service registrations</li>
-            <li>• Avoiding promotional emails</li>
+            <li class="flex items-start"><span class="text-green-500 mr-2">•</span>Accessing premium content trials</li>
+            <li class="flex items-start"><span class="text-green-500 mr-2">•</span>Downloading gated resources</li>
+            <li class="flex items-start"><span class="text-green-500 mr-2">•</span>One-time service registrations</li>
+            <li class="flex items-start"><span class="text-green-500 mr-2">•</span>Avoiding promotional emails</li>
           </ul>
         </div>
       </div>
@@ -113,14 +112,14 @@ template: `
         <h3 class="font-semibold text-gray-900 mb-3">10 Minute Temporary Email Advantages:</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ul class="text-sm text-gray-600 space-y-1">
-            <li>• <strong>Precise timing</strong> - Exactly 10 minutes, no more, no less</li>
-            <li>• <strong>Zero registration</strong> - No accounts or personal information required</li>
-            <li>• <strong>Spam-free</strong> - Protects your real email from unwanted messages</li>
+            <li class="flex items-start"><span class="text-purple-500 mr-2">•</span><strong>Precise timing</strong> - Exactly 10 minutes, no more, no less</li>
+            <li class="flex items-start"><span class="text-purple-500 mr-2">•</span><strong>Zero registration</strong> - No accounts or personal information required</li>
+            <li class="flex items-start"><span class="text-purple-500 mr-2">•</span><strong>Spam-free</strong> - Protects your real email from unwanted messages</li>
           </ul>
           <ul class="text-sm text-gray-600 space-y-1">
-            <li>• <strong>Mobile optimized</strong> - Works seamlessly on all devices</li>
-            <li>• <strong>Instant delivery</strong> - Receive emails within seconds</li>
-            <li>• <strong>Completely free</strong> - No hidden costs or premium upsells</li>
+            <li class="flex items-start"><span class="text-purple-500 mr-2">•</span><strong>Mobile optimized</strong> - Works seamlessly on all devices</li>
+            <li class="flex items-start"><span class="text-purple-500 mr-2">•</span><strong>Instant delivery</strong> - Receive emails within seconds</li>
+            <li class="flex items-start"><span class="text-purple-500 mr-2">•</span><strong>Completely free</strong> - No hidden costs or premium upsells</li>
           </ul>
         </div>
       </div>
@@ -192,15 +191,16 @@ private title: Title,
 private meta: Meta
 ) { }
 
-ngOnInit() {
+ngOnInit(): void {
 if (isPlatformBrowser(this.platformId)) {
 this.scrollService.scrollToTopInstant();
-}
+
 
 
 // Enhanced SEO meta tags with primary keyword focus
 const pageTitle = '10 Minute Temporary Email - Free Disposable Email Generator | TempMail4U';
 const pageDescription = 'Create a free 10 minute temporary email address instantly. Secure disposable email for quick verification, testing, and privacy protection. Auto-deletes after 10 minutes.';
+
 this.title.setTitle(pageTitle);
 
 // Standard meta tags with natural keyword integration
@@ -217,7 +217,7 @@ this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 this.meta.updateTag({ name: 'author', content: 'TempMail4U' });
 this.meta.updateTag({ property: 'og:site_name', content: 'TempMail4U' });
 
-this.meta.updateTag({ rel: 'canonical', href: 'https://tempmail4u.com/10-minutes-temporary-email' });
-
+// Canonical URL
+this.meta.updateTag({ name: 'canonical', content: 'https://tempmail4u.com/10-minutes-temporary-email' });
 }
 }

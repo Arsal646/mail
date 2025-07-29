@@ -15,6 +15,12 @@ export const routes: Routes = [
     component: SavedEmailComponent,
     pathMatch: 'full'
   },
+
+{ 
+  path: '10-minutes-temporary-email', 
+  component: Email10MinComponent,
+  pathMatch: 'full'  // This ensures exact matching
+},
   { 
     path: 'privacy-policy', 
     component: PrivacyPolicyComponent,

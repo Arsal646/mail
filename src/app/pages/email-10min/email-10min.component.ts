@@ -120,43 +120,43 @@ import { LucideAngularModule } from 'lucide-angular';
 
   <!-- FAQ Section -->
   <section class="bg-white rounded-lg shadow-sm p-5 mb-10">
-    <h2 class="text-lg font-semibold text-gray-900 mb-4">Frequently Asked Questions</h2>
+    <h2 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">Frequently Asked Questions</h2>
     <div class="space-y-4 text-sm text-gray-600">
-      <div>
-        <h3 class="font-medium text-gray-900">What is a 10 minutes email?</h3>
-        <p>A temporary email address that expires after 10 minutes, perfect for receiving one-time messages or verification links.</p>
+      <div class="pb-4 border-b border-gray-100">
+        <h3 class="text-base font-medium text-gray-800 flex items-start">What is a 10 minutes email?</h3>
+        <p class="text-sm text-gray-600 mt-2">A temporary email address that expires after 10 minutes, perfect for receiving one-time messages or verification links.</p>
       </div>
-      <div>
-        <h3 class="font-medium text-gray-900">Is it free to use?</h3>
-        <p>Yes, it’s completely free. No sign-up needed, no ads, and no premium charges.</p>
+      <div class="pb-4 border-b border-gray-100">
+        <h3 class="text-base font-medium text-gray-800 flex items-start">Is it free to use?</h3>
+        <p class="text-sm text-gray-600 mt-2">Yes, it’s completely free. No sign-up needed, no ads, and no premium charges.</p>
       </div>
-      <div>
-        <h3 class="font-medium text-gray-900">Can I receive OTPs and confirmation emails?</h3>
-        <p>Yes, the temporary inbox supports all common email types including OTPs and confirmation links.</p>
+      <div class="pb-4 border-b border-gray-100">
+        <h3 class="text-base font-medium text-gray-800 flex items-start">Can I receive OTPs and confirmation emails?</h3>
+        <p class="text-sm text-gray-600 mt-2">Yes, the temporary inbox supports all common email types including OTPs and confirmation links.</p>
       </div>
-      <div>
-        <h3 class="font-medium text-gray-900">Can I extend the timer for my temporary email?</h3>
-        <p>Yes, simply click the "Reset" button to restart the 10-minute countdown.</p>
+      <div class="pb-4 border-b border-gray-100">
+        <h3 class="text-base font-medium text-gray-800 flex items-start">Can I extend the timer for my temporary email?</h3>
+        <p class="text-sm text-gray-600 mt-2">Yes, simply click the "Reset" button to restart the 10-minute countdown.</p>
       </div>
-      <div>
-        <h3 class="font-medium text-gray-900">Is this email address truly anonymous?</h3>
-        <p>Absolutely. We do not collect or track any personal data; every inbox is temporary and private.</p>
+      <div class="pb-4 border-b border-gray-100">
+        <h3 class="text-base font-medium text-gray-800 flex items-start">Is this email address truly anonymous?</h3>
+        <p class="text-sm text-gray-600 mt-2">Absolutely. We do not collect or track any personal data; every inbox is temporary and private.</p>
       </div>
-      <div>
-        <h3 class="font-medium text-gray-900">How many temporary emails can I create?</h3>
-        <p>Unlimited. Create as many temporary inboxes as you want, each with its own time limit.</p>
+      <div class="pb-4 border-b border-gray-100">
+        <h3 class="text-base font-medium text-gray-800 flex items-start">How many temporary emails can I create?</h3>
+        <p class="text-sm text-gray-600 mt-2">Unlimited. Create as many temporary inboxes as you want, each with its own time limit.</p>
       </div>
-      <div>
-        <h3 class="font-medium text-gray-900">Does it work on mobile?</h3>
-        <p>Yes, the service is fully responsive and works seamlessly on all devices.</p>
+      <div class="pb-4 border-b border-gray-100">
+        <h3 class="text-base font-medium text-gray-800 flex items-start">Does it work on mobile?</h3>
+        <p class="text-sm text-gray-600 mt-2">Yes, the service is fully responsive and works seamlessly on all devices.</p>
       </div>
-      <div>
-        <h3 class="font-medium text-gray-900">Is it safe for important messages?</h3>
-        <p>It’s suitable for short-term use like OTPs and confirmation emails. Avoid using it for sensitive personal information.</p>
+      <div class="pb-4 border-b border-gray-100">
+        <h3 class="text-base font-medium text-gray-800 flex items-start">Is it safe for important messages?</h3>
+        <p class="text-sm text-gray-600 mt-2">It’s suitable for short-term use like OTPs and confirmation emails. Avoid using it for sensitive personal information.</p>
       </div>
-      <div>
-        <h3 class="font-medium text-gray-900">Is it better than using a fake email?</h3>
-        <p>Yes! Unlike fake emails, this service provides a real, functioning inbox for legitimate message receipt.</p>
+      <div class="pb-4 border-b border-gray-100">
+        <h3 class="text-base font-medium text-gray-800 flex items-start">Is it better than using a fake email?</h3>
+        <p class="text-sm text-gray-600 mt-2">Yes! Unlike fake emails, this service provides a real, functioning inbox for legitimate message receipt.</p>
       </div>
     </div>
   </section>

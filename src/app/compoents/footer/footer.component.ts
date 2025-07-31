@@ -53,6 +53,13 @@ import { RouterModule } from '@angular/router';
                 20 Minutes Mail
               </a>
               <a 
+                routerLink="/30-minutes-temporary-email" 
+                class="text-gray-600 hover:text-gray-900 transition-colors"
+                aria-label="30 Minute Temporary Email"
+              >
+                30 Minutes Mail
+              </a>
+              <a 
                 routerLink="/privacy-policy" 
                 class="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="Privacy Policy"

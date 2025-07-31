@@ -20,7 +20,7 @@ export class Home implements OnInit {
   ngOnInit(): void {
 
         // Set SEO meta tags for home page
-    const pageTitle = 'TempMail - Free Temporary Email Service | Disposable Email Address';
+    const pageTitle = 'Free Temporary Email Service - Disposable Email Address | TempMail4u';
     const pageDescription = 'Get free temporary email addresses instantly. Our disposable email service protects your privacy and keeps your inbox spam-free. No registration required.';
     
     this.title.setTitle(pageTitle);

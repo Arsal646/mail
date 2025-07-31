@@ -4,6 +4,7 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { Email10MinComponent } from './pages/email-10min/email-10min.component';
 import { Home } from './pages/home/home';
 import { Email20MinComponent } from './pages/email-20min/email-20min.component';
+import { Email30MinComponent } from './pages/email-30min/email-30min.component';
 
 export const routes: Routes = [
   {
@@ -24,6 +25,11 @@ export const routes: Routes = [
   { 
   path: '20-minutes-temporary-email', 
   component: Email20MinComponent,
+  pathMatch: 'full'  // This ensures exact matching
+},
+  { 
+  path: '30-minutes-temporary-email', 
+  component: Email30MinComponent,
   pathMatch: 'full'  // This ensures exact matching
 },
   {

@@ -128,7 +128,8 @@ import { LucideAngularModule } from 'lucide-angular';
   <p class="text-sm text-gray-600 mt-2">
     A temporary email address that expires after 10 minutes, perfect for receiving one-time messages or verification links.
     Need more time? Try our free
-    <a href="/20-minutes-temporary-email" class="text-blue-500 hover:underline">20-minute temporary email</a> instead.
+    <a href="/20-minutes-temporary-email" class="text-blue-500 hover:underline">20-minute temporary email</a> or
+    <a href="/30-minutes-temporary-email" class="text-blue-500 hover:underline">30-minute temporary email</a> instead.
   </p>
 </div>
 

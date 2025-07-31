@@ -39,8 +39,9 @@ import { LucideAngularModule } from 'lucide-angular';
       <h3 class="text-base font-medium text-gray-800">What is a 20-minute temporary email?</h3>
       <p class="mt-2">
         It’s a disposable email address that stays active for 20 minutes. Use it to receive messages without using your personal inbox.
-        Need a shorter option? Try our 
-        <a href="/10-minutes-temporary-email" class="text-blue-500 hover:underline">10-minute email</a>.
+        Need different durations? Try our 
+        <a href="/10-minutes-temporary-email" class="text-blue-500 hover:underline">10-minute email</a> or
+        <a href="/30-minutes-temporary-email" class="text-blue-500 hover:underline">30-minute email</a>.
       </p>
     </div>
 

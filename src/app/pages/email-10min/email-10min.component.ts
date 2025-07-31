@@ -122,10 +122,16 @@ import { LucideAngularModule } from 'lucide-angular';
   <section class="bg-white rounded-lg shadow-sm p-5 mb-10">
     <h2 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">Frequently Asked Questions</h2>
     <div class="space-y-4 text-sm text-gray-600">
-      <div class="pb-4 border-b border-gray-100">
-        <h3 class="text-base font-medium text-gray-800 flex items-start">What is a 10 minutes email?</h3>
-        <p class="text-sm text-gray-600 mt-2">A temporary email address that expires after 10 minutes, perfect for receiving one-time messages or verification links.</p>
-      </div>
+  
+    <div class="pb-4 border-b border-gray-100">
+  <h3 class="text-base font-medium text-gray-800 flex items-start">What is a 10 minutes email?</h3>
+  <p class="text-sm text-gray-600 mt-2">
+    A temporary email address that expires after 10 minutes, perfect for receiving one-time messages or verification links.
+    Need more time? Try our free
+    <a href="/20-minutes-temporary-email" class="text-blue-500 hover:underline">20-minute temporary email</a> instead.
+  </p>
+</div>
+
       <div class="pb-4 border-b border-gray-100">
         <h3 class="text-base font-medium text-gray-800 flex items-start">Is it free to use?</h3>
         <p class="text-sm text-gray-600 mt-2">Yes, it’s completely free. No sign-up needed, no ads, and no premium charges.</p>

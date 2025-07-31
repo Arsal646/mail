@@ -102,8 +102,8 @@
                  <span> How to use:</span></h4>
                 <ul class="text-xs text-blue-800 space-y-1 md:pl-5">
                   <li class="truncate">• Use for quick verifications or one-time registrations</li>
-                  <li>• Expires automatically in 10 minutes</li>
-                  <li>• Click "Reset" to extend time back to 10 minutes</li>
+                  <li>• Expires automatically in {{pageTimeCount}} minutes</li>
+                  <li>• Click "Reset" to extend time back to {{pageTimeCount}} minutes</li>
                   <li>• Check inbox below for received emails</li>
                 </ul>
               </div>
@@ -173,7 +173,7 @@
         <div class="bg-gray-50 p-2 rounded border border-gray-200 text-sm">
           <div class="flex items-center gap-1">
             <lucide-icon name="clock" [size]="14" class="text-red-500"></lucide-icon>
-            <h3 class="font-medium">10-Minute Expiry</h3>
+            <h3 class="font-medium">{{pageTimeCount}}-Minute Expiry</h3>
           </div>
           <p class="text-xs text-gray-600 mt-1">Perfect for quick verifications</p>
         </div>

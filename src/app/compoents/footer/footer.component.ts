@@ -8,32 +8,74 @@ import { RouterModule } from '@angular/router';
   imports: [CommonModule, RouterModule],
   template: `
     <!-- Footer -->
-    <footer class="bg-gray-50 border-t border-gray-200 mt-12">
-        <div class="container mx-auto px-4 py-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex items-center space-x-3 mb-4 md:mb-0">
-                    <div class="bg-gray-800 rounded-full flex items-center justify-center">
-                        <img src="logo.png" alt="Temporary Email Service Logo" style="width: 60px;">
-                    </div>
-                    <div>
-                        <h3 class="text-sm font-semibold text-gray-900">Temporary Email Service</h3>
-                        <p class="text-xs text-gray-600">Free disposable email addresses</p>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-                    <div class="flex flex-wrap items-center gap-2 text-sm">
-                        <a routerLink="/" class="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
-                        <span class="text-gray-400">|</span>
-                        <a routerLink="/10-minutes-temporary-email/" class="text-gray-600 hover:text-gray-900 transition-colors">10 Minute Email</a>
-                        <span class="text-gray-400">|</span>
-                        <a routerLink="/privacy-policy" class="text-gray-600 hover:text-gray-900 transition-colors">Privacy</a>
-                    </div>
-                    <span class="text-xs text-gray-400">© 2024 Temporary Email Service. All rights reserved.</span>
-                </div>
+    <footer class=" border-t border-gray-200 mt-12">
+      <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+          <!-- Branding Section -->
+          <div class="flex items-center gap-3">
+            <div class=" rounded-full p-2 flex-shrink-0">
+              <img 
+                src="logo.png" 
+                alt="Temporary Email Service Logo" 
+                class="w-12 h-12 object-contain"
+                width="48"
+                height="48"
+              >
             </div>
+            <div>
+              <h2 class="text-sm font-semibold text-gray-900">Temporary Email Service</h2>
+              <p class="text-xs text-gray-600">Secure, disposable email addresses</p>
+            </div>
+          </div>
+
+          <!-- Navigation Links -->
+          <nav aria-label="Footer Navigation">
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+              <a 
+                routerLink="/" 
+                class="text-gray-600 hover:text-gray-900 transition-colors"
+                aria-label="Home"
+              >
+                Home
+              </a>
+              <a 
+                routerLink="/10-minutes-temporary-email" 
+                class="text-gray-600 hover:text-gray-900 transition-colors"
+                aria-label="10 Minute Temporary Email"
+              >
+                10 Minutes Mail
+              </a>
+              <a 
+                routerLink="/20-minutes-temporary-email" 
+                class="text-gray-600 hover:text-gray-900 transition-colors"
+                aria-label="20 Minute Temporary Email"
+              >
+                20 Minutes Mail
+              </a>
+              <a 
+                routerLink="/privacy-policy" 
+                class="text-gray-600 hover:text-gray-900 transition-colors"
+                aria-label="Privacy Policy"
+              >
+                Privacy Policy
+              </a>
+            </div>
+          </nav>
+
         </div>
+
+             <!-- Copyright + Logo -->
+        <div class="pt-4 border-t border-gray-200">
+          <div class="flex flex-col items-center gap-2 text-center">
+            <p class="text-xs text-gray-500">
+              © {{ currentYear }} Temporary Email Service. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
-  `
+  `,
 })
 export class FooterComponent {
-} 
+  currentYear: number = new Date().getFullYear();
+}

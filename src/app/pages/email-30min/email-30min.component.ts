@@ -16,7 +16,7 @@ import { LucideAngularModule } from 'lucide-angular';
   <!-- Page Header -->
 <header class="mb-2 text-center">
   <h1 class="text-xl font-semibold text-gray-900 mb-3">
-    30-Minute Temporary Email – Extended Disposable Inbox
+    30-Minute Temporary Email – Free Disposable Inbox
   </h1>
   <p class="text-sm text-gray-600 mb-2">
     Get a <strong>30-minute temporary email address</strong> for longer processes like account setups, multi-step verifications, and extended communications. Perfect when you need more time than standard temporary emails offer.

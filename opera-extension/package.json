@@ -1,0 +1,44 @@
+{
+  "name": "temporary-email-service-opera-extension",
+  "version": "1.0.0",
+  "description": "Opera extension for Temporary Email Service",
+  "main": "popup.js",
+  "scripts": {
+    "build": "node build.js build",
+    "build-opera": "node build-opera.js",
+    "create-zip": "node create-zip.js",
+    "create-clean-zip": "powershell -ExecutionPolicy Bypass -File create-clean-zip.ps1",
+    "clean": "node build.js clean",
+    "watch": "node build.js watch",
+    "help": "node build.js help",
+    "validate": "node build.js validate",
+    "validate-opera": "node validate-opera.js",
+    "package": "npm run clean && npm run build && echo 'Extension built in ./dist folder'",
+    "package-opera": "npm run build-opera",
+    "test": "node test-extension.js"
+  },
+  "keywords": [
+    "opera-extension",
+    "temporary-email",
+    "privacy",
+    "spam-protection",
+    "email-service"
+  ],
+  "author": "Temporary Email Service",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.8.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/temporary-email-opera-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/temporary-email-opera-extension/issues"
+  },
+  "homepage": "https://tempmails.online"
+} 

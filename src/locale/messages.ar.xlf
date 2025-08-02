@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" target-language="ar" datatype="plaintext" original="ng2.template">
+  <file source-language="en-US" target-language="ar" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="2652675418243084367" datatype="html">
         <source>Free Temporary Email Service - Secure &amp; Anonymous Temp Mail</source>
-        <target>خدمة بريد إلكتروني مؤقت مجانية - آمنة ومجهولة الهوية</target>
+        <target>خدمة بريد إلكتروني مؤقت مجانية - بريد مؤقت آمن ومجهول</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.html</context>
           <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6354229821697086517" datatype="html">
+        <source> Keep your inbox safe with our <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>free temporary email<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> service. Get instant <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>temp mail<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> to block spam, stay private, and skip sign-ups, no registration needed! </source>
+        <target> احتفظ بصندوق بريدك آمنًا مع خدمتنا للبريد الإلكتروني المؤقت <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>المجاني<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. احصل على <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>بريد مؤقت<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> فوري لحظر البريد العشوائي، والحفاظ على الخصوصية، وتخطي عمليات التسجيل، دون الحاجة إلى تسجيل! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.html</context>
+          <context context-type="linenumber">11,14</context>
         </context-group>
       </trans-unit>
     </body>

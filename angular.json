@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "temp-mail": {
+        "i18n": {
+     "sourceLocale": { "code": "en-US", "subPath": "" },
+"locales": {
+  "ar": { "translation": "src/locale/messages.ar.xlf", "subPath": "ar" }
+}
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +19,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "localize": true,
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"

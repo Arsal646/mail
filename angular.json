@@ -4,11 +4,17 @@
   "newProjectRoot": "projects",
   "projects": {
     "temp-mail": {
-        "i18n": {
-     "sourceLocale": { "code": "en-US", "subPath": "" },
-"locales": {
-  "ar": { "translation": "src/locale/messages.ar.xlf", "subPath": "ar" }
-}
+      "i18n": {
+        "sourceLocale": {
+          "code": "en-US",
+          "subPath": ""
+        },
+        "locales": {
+          "ar": {
+            "translation": "src/locale/messages.ar.xlf",
+            "subPath": "ar"
+          }
+        }
       },
       "projectType": "application",
       "schematics": {},

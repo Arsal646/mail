@@ -32,9 +32,12 @@ export class MainTempMail implements OnInit, OnDestroy {
   isBrowser = false;
 
   private domain = '@tempmails.online';
+  emailHistory = []
+  showEmailHistory = false;
+  showEmailHistoryTooltip = false;
 
   constructor(
-    private emailService: EmailService, 
+    private emailService: EmailService,
     @Inject(PLATFORM_ID) private platformId: Object,
     private route: ActivatedRoute,
   ) {
@@ -51,6 +54,26 @@ export class MainTempMail implements OnInit, OnDestroy {
   @HostListener('window:headerRefresh')
   onHeaderRefresh() {
     this.refreshEmails();
+  }
+
+  // Close tooltip when clicking outside
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event) {
+    const target = event.target as HTMLElement;
+    // Check if click is outside the history icon container
+    if (!target.closest('[data-history-tooltip]')) {
+      this.showEmailHistoryTooltip = false;
+    }
+  }
+
+  // Close tooltip on window click
+  @HostListener('window:click', ['$event'])
+  onWindowClick(event: Event) {
+    const target = event.target as HTMLElement;
+    // Check if click is outside the history icon container
+    if (!target.closest('[data-history-tooltip]')) {
+      this.showEmailHistoryTooltip = false;
+    }
   }
 
   reload() {
@@ -71,7 +94,7 @@ export class MainTempMail implements OnInit, OnDestroy {
         this.generateNewEmail();
       }
     });
-    
+
     this.reload();
   }
 
@@ -241,7 +264,7 @@ export class MainTempMail implements OnInit, OnDestroy {
     const dialogRef = this.dialog.open(EmailViewDialog, {
       width: '90vw',
       maxWidth: '800px',
-      height:'90vh',
+      height: '90vh',
       maxHeight: '90vh',
       panelClass: 'custom-dialog',
       data: { ...email } // Pass the email data to the dialog
@@ -333,7 +356,7 @@ export class MainTempMail implements OnInit, OnDestroy {
           // Show success state
           this.saved = true;
           this.loading = false;
-          
+
           // Auto copy the access link
           const accessUrl = response.data.access_url;
           navigator.clipboard.writeText(accessUrl).then(() => {
@@ -363,5 +386,57 @@ export class MainTempMail implements OnInit, OnDestroy {
         alert('Failed to save email. Please try again.');
       }
     });
+  }
+
+  toggleEmailHistoryTooltip(): void {
+    this.showEmailHistoryTooltip = !this.showEmailHistoryTooltip;
+  }
+
+  getRecentEmails(): any[] {
+    if (!this.isBrowser) return [];
+
+    const accounts = this.getLocalStorageData();
+    // Sort by creation date (newest first) and limit to last 5
+    return accounts
+      .sort((a: any, b: any) => b.createdAt - a.createdAt)
+      .slice(0, 5);
+  }
+
+  selectEmailFromHistory(email: any): void {
+    this.showEmailHistoryTooltip = false;
+
+    if (email.address === this.currentEmail) {
+      return; // Already selected
+    }
+
+    const accounts = this.getLocalStorageData();
+
+    // Mark all as inactive
+    accounts.forEach((acc: any) => acc.active = false);
+
+    // Find and activate the selected email
+    const selectedAccount = accounts.find((acc: any) => acc.address === email.address);
+    if (selectedAccount) {
+      selectedAccount.active = true;
+      localStorage.setItem('tempMailAccounts', JSON.stringify(accounts));
+
+      this.currentEmail = email.address;
+      this.emails = [];
+      this.refreshEmails();
+    }
+  }
+
+  formatDate(timestamp: number): string {
+    const date = new Date(timestamp);
+    const now = new Date();
+    const diffInHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60);
+
+    if (diffInHours < 1) {
+      return 'Just now';
+    } else if (diffInHours < 24) {
+      return `${Math.floor(diffInHours)}h ago`;
+    } else {
+      return date.toLocaleDateString();
+    }
   }
 }

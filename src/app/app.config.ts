@@ -7,8 +7,9 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { 
   Mail, MailOpen, RefreshCw, Plus, Copy, Check, Bookmark, 
   AlertCircle, User, Calendar, Shield, Circle, X, Info, CheckCircle, Clock,
-  ChevronLeft, Inbox, Loader2, XCircle,
-  LucideAngularModule
+  ChevronLeft, Inbox, Loader2, XCircle,History ,
+  LucideAngularModule,
+  ArrowRight
 } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
@@ -22,7 +23,7 @@ export const appConfig: ApplicationConfig = {
       Mail, MailOpen, RefreshCw, Plus, 
       Copy, Check, Bookmark, AlertCircle,
       User, Calendar, Shield, Circle, X, Info, CheckCircle, Clock,
-      ChevronLeft, Inbox, Loader2, XCircle
+      ChevronLeft, Inbox, Loader2, XCircle, History, ArrowRight
     }))
   ]
 };

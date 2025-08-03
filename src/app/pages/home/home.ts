@@ -45,7 +45,7 @@ export class Home implements OnInit {
       description: seoContent.description,
       keywords: seoContent.keywords,
       ogUrl: baseUrl + '/',
-      ogImage: 'https://tempmails.online/assets/images/temp-mail-preview.jpg',
+      ogImage: 'https://tempmail4u.com/assets/images/temp-mail-preview.jpg',
       ogSiteName: seoContent.siteName,
       twitterSite: '@tempmails'
     });

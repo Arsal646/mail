@@ -68,21 +68,21 @@ Your temporary email application now has **fully translated routes** for better 
 ### **English Version:**
 ```
 Page: 30-minute temporary email
-URL: https://tempmails.online/30-minutes-temporary-email
+URL: https://tempmail4u.com/30-minutes-temporary-email
 Title: "30-Minute Temporary Email - Free Disposable Inbox | TempMail4u"
 Hreflang: 
-  - en: https://tempmails.online/30-minutes-temporary-email
-  - ar: https://tempmails.online/ar/30-دقيقة-بريد-مؤقت
+  - en: https://tempmail4u.com/30-minutes-temporary-email
+  - ar: https://tempmail4u.com/ar/30-دقيقة-بريد-مؤقت
 ```
 
 ### **Arabic Version:**
 ```
 Page: بريد مؤقت لمدة 30 دقيقة
-URL: https://tempmails.online/ar/30-دقيقة-بريد-مؤقت
+URL: https://tempmail4u.com/ar/30-دقيقة-بريد-مؤقت
 Title: "بريد إلكتروني مؤقت لمدة 30 دقيقة - صندوق وارد مؤقت مجاني | TempMail4u"
 Hreflang:
-  - en: https://tempmails.online/30-minutes-temporary-email
-  - ar: https://tempmails.online/ar/30-دقيقة-بريد-مؤقت
+  - en: https://tempmail4u.com/30-minutes-temporary-email
+  - ar: https://tempmail4u.com/ar/30-دقيقة-بريد-مؤقت
 ```
 
 ## 📈 **Expected SEO Impact**

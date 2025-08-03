@@ -164,7 +164,7 @@ Before uploading, verify the ZIP contains files at the root level:
    version=1
    description=Quick access to temporary email addresses for privacy and spam protection - Opera Edition
    author=Temporary Email Service
-   homepage=https://tempmails.online
+   homepage=https://tempmail4u.com
    repository=https://github.com/your-username/temporary-email-opera-extension
    license=MIT
    category=Productivity

@@ -29,9 +29,9 @@ export class PrivacyPolicyComponent implements OnInit {
       title: 'Privacy Policy - Temporary Email Service | TempMails',
       description: 'Read our privacy policy to understand how we protect your data and maintain your privacy while using our temporary email service.',
       keywords: 'privacy policy, temporary email privacy, data protection, email privacy, privacy terms, temp mail privacy',
-      ogUrl: 'https://tempmails.online/privacy-policy',
-      ogImage: 'https://tempmails.online/assets/images/privacy-policy-preview.jpg',
-      twitterImage: 'https://tempmails.online/assets/images/privacy-policy-preview.jpg'
+      ogUrl: 'https://tempmail4u.com/privacy-policy',
+      ogImage: 'https://tempmail4u.com/assets/images/privacy-policy-preview.jpg',
+      twitterImage: 'https://tempmail4u.com/assets/images/privacy-policy-preview.jpg'
     });
   }
 } 

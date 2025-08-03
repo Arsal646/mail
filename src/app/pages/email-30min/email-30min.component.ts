@@ -210,7 +210,7 @@ export class Email30MinComponent implements OnInit {
       description: seoContent.description,
       keywords: seoContent.keywords,
       ogUrl: baseUrl + (translatedRoute ? '/' + translatedRoute : '/30-minutes-temporary-email'),
-      ogImage: 'https://tempmails.online/assets/images/30-minute-email-preview.jpg',
+      ogImage: 'https://tempmail4u.com/assets/images/30-minute-email-preview.jpg',
       ogSiteName: 'TempMail4u',
       twitterSite: '@tempmails'
     });

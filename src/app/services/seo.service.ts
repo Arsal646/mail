@@ -123,7 +123,7 @@ export class SeoService {
             const link = this.document.createElement('link');
             link.rel = 'alternate';
             link.hreflang = language.code;
-            link.href = `https://tempmails.online${language.urlPrefix}${translatedRoute ? '/' + translatedRoute : ''}`;
+            link.href = `https://tempmail4u.com${language.urlPrefix}${translatedRoute ? '/' + translatedRoute : ''}`;
             head.appendChild(link);
         });
 
@@ -134,7 +134,7 @@ export class SeoService {
             const defaultLink = this.document.createElement('link');
             defaultLink.rel = 'alternate';
             defaultLink.hreflang = 'x-default';
-            defaultLink.href = `https://tempmails.online${defaultLanguage.urlPrefix}${defaultRoute ? '/' + defaultRoute : ''}`;
+            defaultLink.href = `https://tempmail4u.com${defaultLanguage.urlPrefix}${defaultRoute ? '/' + defaultRoute : ''}`;
             head.appendChild(defaultLink);
         }
     }
@@ -143,7 +143,7 @@ export class SeoService {
      * Extract route key from URL for hreflang generation
      */
     private getRouteKeyFromUrl(url: string): string | null {
-        let path = url.replace('https://tempmails.online', '');
+        let path = url.replace('https://tempmail4u.com', '');
         
         // Remove locale prefix
         this.supportedLanguages.forEach(lang => {
@@ -197,9 +197,9 @@ export class SeoService {
     getBaseUrl(locale: string): string {
         const language = this.supportedLanguages.find(lang => lang.code === locale);
         if (language) {
-            return `https://tempmails.online${language.urlPrefix}`;
+            return `https://tempmail4u.com${language.urlPrefix}`;
         }
         // Default to English if locale not found
-        return 'https://tempmails.online';
+        return 'https://tempmail4u.com';
     }
 }

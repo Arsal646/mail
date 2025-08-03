@@ -182,6 +182,13 @@
           <context context-type="linenumber">172,174</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="mainTempMail.inbox" datatype="html">
+        <source>Inbox</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/main-temp-mail/main-temp-mail.html</context>
+          <context context-type="linenumber">204,205</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="mainTempMail.autoRefresh" datatype="html">
         <source>Auto-refresh in <x id="INTERPOLATION" equiv-text="{{ countdown() }}"/>s</source>
         <context-group purpose="location">
@@ -524,39 +531,53 @@
           <context context-type="linenumber">50,51</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="saveSuccess.copyButton" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{linkCopied ? &apos;Copied!&apos; : &apos;Copy&apos;}}"/></source>
+      <trans-unit id="copied2" datatype="html">
+        <source>Copied!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">55,56</context>
+          <context context-type="linenumber">57,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="copy2" datatype="html">
+        <source>Copy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
+          <context context-type="linenumber">59,61</context>
         </context-group>
       </trans-unit>
       <trans-unit id="saveSuccess.expires" datatype="html">
         <source>Expires: <x id="INTERPOLATION" equiv-text="{{data.expiresAtFormatted}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">63,64</context>
+          <context context-type="linenumber">70,71</context>
         </context-group>
       </trans-unit>
       <trans-unit id="saveSuccess.instructions" datatype="html">
         <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>How to use:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Save this link to return to your inbox anytime within 7 days. Share it with others or bookmark it for easy access.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">72,73</context>
+          <context context-type="linenumber">79,80</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="saveSuccess.copyLinkButton" datatype="html">
-        <source><x id="INTERPOLATION" equiv-text="{{linkCopied ? &apos;Copied!&apos; : &apos;Copy Link&apos;}}"/></source>
+      <trans-unit id="copied1" datatype="html">
+        <source>Copied!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">83,84</context>
+          <context context-type="linenumber">91,93</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="copyLink1" datatype="html">
+        <source>Copy Link</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
+          <context context-type="linenumber">93,95</context>
         </context-group>
       </trans-unit>
       <trans-unit id="saveSuccess.gotIt" datatype="html">
         <source>Got it!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">88,90</context>
+          <context context-type="linenumber">99,101</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email10minTitle" datatype="html">

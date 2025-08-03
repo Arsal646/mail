@@ -52,7 +52,14 @@ export interface SaveSuccessData {
                   class="text-blue-600 cursor-pointer hover:text-blue-800 text-xs flex items-center space-x-1"
                   [class.text-green-600]="linkCopied">
             <lucide-icon [name]="linkCopied ? 'check' : 'copy'" [size]="12"></lucide-icon>
-            <span i18n="@@saveSuccess.copyButton">{{linkCopied ? 'Copied!' : 'Copy'}}</span>
+            <span>
+  @if (linkCopied) {
+    <span i18n="@@copied2">Copied!</span>
+  } @else {
+    <span i18n="@@copy2">Copy</span>
+  }
+</span>
+
           </button>
         </div>
         <div class="text-xs text-gray-600 bg-white p-2 rounded border break-all font-mono">
@@ -80,7 +87,11 @@ export interface SaveSuccessData {
         <button (click)="copyLink()" 
                 class="flex-1 bg-blue-600 cursor-pointer text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center justify-center">
           <lucide-icon [name]="linkCopied ? 'check' : 'copy'" [size]="16" class="mr-2"></lucide-icon>
-          <span i18n="@@saveSuccess.copyLinkButton">{{linkCopied ? 'Copied!' : 'Copy Link'}}</span>
+          @if (linkCopied) {
+  <span i18n="@@copied1">Copied!</span>
+} @else {
+  <span i18n="@@copyLink1">Copy Link</span>
+}
         </button>
         
         <button (click)="close()" 

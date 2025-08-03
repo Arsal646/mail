@@ -49,10 +49,30 @@
           },
           "configurations": {
             "ar": {
-              "localize": ["ar"]
+              "localize": [
+                "ar"
+              ]
             },
             "en": {
-              "localize": ["en"]
+              "localize": [
+                "en-US"
+              ]
+            },
+            "en-dev": {
+              "localize": [
+                "en-US"
+              ],
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            },
+            "ar-dev": {
+              "localize": [
+                "ar"
+              ],
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
             },
             "production": {
               "budgets": [
@@ -87,10 +107,10 @@
               "buildTarget": "temp-mail:build:development"
             },
             "ar": {
-              "buildTarget": "temp-mail:build:production,ar"
+              "buildTarget": "temp-mail:build:ar-dev"
             },
-                "en": {
-              "buildTarget": "temp-mail:build:production,en"
+            "en": {
+              "buildTarget": "temp-mail:build:en-dev"
             }
           },
           "defaultConfiguration": "development"

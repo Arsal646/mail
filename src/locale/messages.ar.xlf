@@ -1318,6 +1318,50 @@
   <source> Generate New Email </source>
   <target> إنشاء بريد إلكتروني جديد </target>
 </trans-unit>
+
+<trans-unit id="mainTempMail.inbox" datatype="html">
+  <source>Inbox</source>
+  <target>البريد الوارد</target>
+</trans-unit>
+
+
+<trans-unit id="copied2" datatype="html">
+  <source>Copied!</source>
+  <target>تم النسخ!</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
+    <context context-type="linenumber">57,59</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="copy2" datatype="html">
+  <source>Copy</source>
+  <target>نسخ</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
+    <context context-type="linenumber">59,61</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="copied1" datatype="html">
+  <source>Copied!</source>
+  <target>تم النسخ!</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
+    <context context-type="linenumber">91,93</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="copyLink1" datatype="html">
+  <source>Copy Link</source>
+  <target>انسخ الرابط</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
+    <context context-type="linenumber">93,95</context>
+  </context-group>
+</trans-unit>
+
+
     </body>
   </file>
 </xliff>

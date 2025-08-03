@@ -10,7 +10,7 @@
       <div
         class="bg-gray-50 px-4 py-3 border-b border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
         <div class="flex items-center gap-2">
-          <h2 class="text-base font-semibold text-gray-900">Your Quick Email Address</h2>
+          <h2 class="text-base font-semibold text-gray-900" i18n="@@quickEmail.title">Your Quick Email Address</h2>
           <div class="flex items-center gap-2">
             <div class="flex items-center gap-1 bg-white px-2 py-1 rounded border border-red-200">
               <lucide-icon name="clock" [size]="16" class="text-red-600"></lucide-icon>
@@ -26,7 +26,7 @@
           <button (click)="generateNewQuickEmail()"
             class="px-3 py-1 bg-gray-800 text-white rounded-lg hover:bg-gray-700 hidden md:flex items-center gap-1 text-sm">
             <lucide-icon name="refresh-cw" [size]="14"></lucide-icon>
-            <span>New Email</span>
+            <span i18n="@@quickEmail.newEmail">New Email</span>
           </button>
         </div>
       </div>
@@ -36,16 +36,16 @@
         @if (emailExpired) {
         <div class="text-center py-4">
           <lucide-icon name="clock" [size]="36" class="text-gray-400 mx-auto mb-2"></lucide-icon>
-          <h3 class="text-lg font-semibold text-gray-900 mb-1">Email Expired</h3>
+          <h3 class="text-lg font-semibold text-gray-900 mb-1" i18n="@@quickEmail.expired">Email Expired</h3>
           <button (click)="generateNewQuickEmail()"
-            class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 text-sm mt-2">
+            class="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 text-sm mt-2" i18n="@@quickEmail.generateNewEmail">
             Generate New Email
           </button>
         </div>
         } @else if (emailGenerating) {
         <div class="text-center py-4">
           <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-gray-800 mx-auto mb-2"></div>
-          <p class="text-sm text-gray-600">Generating new email...</p>
+          <p class="text-sm text-gray-600" i18n="@@quickEmail.generating">Generating new email...</p>
         </div>
         } @else {
         <div class="space-y-3">
@@ -60,7 +60,7 @@
                   class="px-3 py-1 text-sm border border-gray-300 rounded-lg hidden md:flex items-center gap-1 hover:bg-gray-100"
                   [class.bg-green-100]="copied" [class.text-green-600]="copied">
                   <lucide-icon name="{{copied ? 'check' : 'copy'}}" [size]="14"></lucide-icon>
-                  <span>{{copied ? 'Copied' : 'Copy'}}</span>
+                  <span i18n="@@quickEmail.copyButton">{{copied ? 'Copied' : 'Copy'}}</span>
                 </button>
               </div>
             </div>
@@ -73,7 +73,7 @@
               <button (click)="generateNewQuickEmail()"
                 class="w-full px-2 text-xs py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-lg transition-all duration-200 font-medium border border-gray-300 flex items-center justify-center space-x-1">
                 <lucide-icon name="refresh-cw" [size]="16"></lucide-icon>
-                <span>New Email</span>
+                <span i18n="@@quickEmail.newEmail">New Email</span>
               </button>
             </div>
 
@@ -87,7 +87,7 @@
                 } @else {
                 <lucide-icon name="check" [size]="16"></lucide-icon>
                 }
-                <span>{{copied ? 'Copied!' : 'Copy'}}</span>
+                <span i18n="@@quickEmail.copyButtonMobile">{{copied ? 'Copied!' : 'Copy'}}</span>
               </button>
             </div>
           </div>
@@ -99,12 +99,12 @@
               <div>
                 <h4 class="font-medium text-blue-900 mb-1 flex gap-1 items-center mb-2">
                    <lucide-icon name="info" [size]="16" class="text-blue-600 mt-0.5 flex-shrink-0"></lucide-icon>
-                 <span> How to use:</span></h4>
+                 <span i18n="@@quickEmail.howToUse"> How to use:</span></h4>
                 <ul class="text-xs text-blue-800 space-y-1 md:pl-5">
-                  <li class="truncate">• Use for quick verifications or one-time registrations</li>
-                  <li>• Expires automatically in {{pageTimeCount}} minutes</li>
-                  <li>• Click "Reset" to extend time back to {{pageTimeCount}} minutes</li>
-                  <li>• Check inbox below for received emails</li>
+                  <li class="truncate" i18n="@@quickEmail.instruction1">• Use for quick verifications or one-time registrations</li>
+                  <li i18n="@@quickEmail.instruction2">• Expires automatically in {{pageTimeCount}} minutes</li>
+                  <li i18n="@@quickEmail.instruction3">• Click "Reset" to extend time back to {{pageTimeCount}} minutes</li>
+                  <li i18n="@@quickEmail.instruction4">• Check inbox below for received emails</li>
                 </ul>
               </div>
             </div>
@@ -118,9 +118,9 @@
     <div class="border-2 rounded-lg border-gray-400">
       <div
         class="px-4 py-3 border-b border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
-        <h2 class="text-base font-semibold text-gray-900">Inbox</h2>
+        <h2 class="text-base font-semibold text-gray-900" i18n="@@quickEmail.inbox">Inbox</h2>
         <div class="flex items-center gap-2">
-          <span class="text-xs text-gray-600">Auto-refresh in {{ countdown() }}s</span>
+          <span class="text-xs text-gray-600" i18n="@@quickEmail.autoRefresh">Auto-refresh in {{ countdown() }}s</span>
           <button (click)="refreshEmails()" class="p-1 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded">
             <lucide-icon name="refresh-cw" [size]="16" [class.animate-spin]="refreshing"></lucide-icon>
           </button>
@@ -131,13 +131,13 @@
         @if (emailExpired) {
         <div class="text-center py-4">
           <lucide-icon name="mail-x" [size]="36" class="text-gray-400 mx-auto mb-2"></lucide-icon>
-          <p class="text-sm text-gray-600">Email expired. Generate a new email to view inbox.</p>
+          <p class="text-sm text-gray-600" i18n="@@quickEmail.expiredInbox">Email expired. Generate a new email to view inbox.</p>
         </div>
         } @else if (emails.length === 0) {
         <div class="text-center py-4 flex flex-col items-center justify-center">
           <lucide-icon name="mail" [size]="24" class="text-gray-400 mb-3 animate-bounce"
             style="animation-duration: 2s;"></lucide-icon>
-          <p class="text-sm text-gray-600">Waiting for messages for <span class="font-medium">{{currentEmail}}</span>
+          <p class="text-sm text-gray-600" i18n="@@quickEmail.waitingForMessages">Waiting for messages for <span class="font-medium">{{currentEmail}}</span>
           </p>
         </div>
         } @else {
@@ -168,28 +168,28 @@
 
     <!-- Features Section -->
     <div class="bg-white rounded-lg p-4 mt-4 border border-gray-200">
-      <h2 class="text-base font-semibold text-gray-900 mb-2">Quick Email Features</h2>
+      <h2 class="text-base font-semibold text-gray-900 mb-2" i18n="@@quickEmail.featuresTitle">Quick Email Features</h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
         <div class="bg-gray-50 p-2 rounded border border-gray-200 text-sm">
           <div class="flex items-center gap-1">
             <lucide-icon name="clock" [size]="14" class="text-red-500"></lucide-icon>
-            <h3 class="font-medium">{{pageTimeCount}}-Minute Expiry</h3>
+            <h3 class="font-medium" i18n="@@quickEmail.feature1Title">{{pageTimeCount}}-Minute Expiry</h3>
           </div>
-          <p class="text-xs text-gray-600 mt-1">Perfect for quick verifications</p>
+          <p class="text-xs text-gray-600 mt-1" i18n="@@quickEmail.feature1Desc">Perfect for quick verifications</p>
         </div>
         <div class="bg-gray-50 p-2 rounded border border-gray-200 text-sm">
           <div class="flex items-center gap-1">
             <!-- <lucide-icon name="zap" [size]="14" class="text-yellow-500"></lucide-icon> -->
-            <h3 class="font-medium">Instant Generation</h3>
+            <h3 class="font-medium" i18n="@@quickEmail.feature2Title">Instant Generation</h3>
           </div>
-          <p class="text-xs text-gray-600 mt-1">Get a new email instantly</p>
+          <p class="text-xs text-gray-600 mt-1" i18n="@@quickEmail.feature2Desc">Get a new email instantly</p>
         </div>
         <div class="bg-gray-50 p-2 rounded border border-gray-200 text-sm">
           <div class="flex items-center gap-1">
             <lucide-icon name="shield" [size]="14" class="text-green-500"></lucide-icon>
-            <h3 class="font-medium">Privacy Focused</h3>
+            <h3 class="font-medium" i18n="@@quickEmail.feature3Title">Privacy Focused</h3>
           </div>
-          <p class="text-xs text-gray-600 mt-1">Completely anonymous</p>
+          <p class="text-xs text-gray-600 mt-1" i18n="@@quickEmail.feature3Desc">Completely anonymous</p>
         </div>
       </div>
     </div>

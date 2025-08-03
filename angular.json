@@ -48,6 +48,12 @@
             }
           },
           "configurations": {
+            "ar": {
+              "localize": ["ar"]
+            },
+            "en": {
+              "localize": ["en"]
+            },
             "production": {
               "budgets": [
                 {
@@ -79,6 +85,12 @@
             },
             "development": {
               "buildTarget": "temp-mail:build:development"
+            },
+            "ar": {
+              "buildTarget": "temp-mail:build:production,ar"
+            },
+                "en": {
+              "buildTarget": "temp-mail:build:production,en"
             }
           },
           "defaultConfiguration": "development"

@@ -23,43 +23,43 @@ import { RouterModule } from '@angular/router';
               >
             </div>
             <div>
-              <h2 class="text-sm font-semibold text-gray-900">Temporary Email Service</h2>
-              <p class="text-xs text-gray-600">Secure, disposable email addresses</p>
+              <h2 i18n="@@footer.title" class="text-sm font-semibold text-gray-900">Temporary Email Service</h2>
+              <p i18n="@@footer.subtitle" class="text-xs text-gray-600">Secure, disposable email addresses</p>
             </div>
           </div>
 
           <!-- Navigation Links -->
           <nav aria-label="Footer Navigation">
             <div class="flex flex-wrap justify-center gap-4 text-sm">
-              <a 
+              <a i18n="@@footer.home"
                 routerLink="/" 
                 class="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="Home"
               >
                 Home
               </a>
-              <a 
+              <a i18n="@@footer.10MinMail"
                 routerLink="/10-minutes-temporary-email" 
                 class="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="10 Minute Temporary Email"
               >
                 10 Minutes Mail
               </a>
-              <a 
+              <a i18n="@@footer.20MinMail"
                 routerLink="/20-minutes-temporary-email" 
                 class="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="20 Minute Temporary Email"
               >
                 20 Minutes Mail
               </a>
-              <a 
+              <a i18n="@@footer.30MinMail"
                 routerLink="/30-minutes-temporary-email" 
                 class="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="30 Minute Temporary Email"
               >
                 30 Minutes Mail
               </a>
-              <a 
+              <a i18n="@@footer.privacyPolicy"
                 routerLink="/privacy-policy" 
                 class="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="Privacy Policy"
@@ -74,7 +74,7 @@ import { RouterModule } from '@angular/router';
              <!-- Copyright + Logo -->
         <div class="pt-4 border-t border-gray-200">
           <div class="flex flex-col items-center gap-2 text-center">
-            <p class="text-xs text-gray-500">
+            <p i18n="@@footer.copyright" class="text-xs text-gray-500">
               © {{ currentYear }} Temporary Email Service. All rights reserved.
             </p>
           </div>

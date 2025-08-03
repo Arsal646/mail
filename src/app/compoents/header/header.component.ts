@@ -20,7 +20,7 @@ import { RouterModule } from '@angular/router';
                     </div>
                     <div>
                         <div class="flex items-center">
-                            <span class="text-xs text-green-700">Online</span>
+                            <span i18n="@@header.online" class="text-xs text-green-700">Online</span>
                             <span class="ml-1 w-2 h-2 bg-green-700 rounded-full animate-pulse"></span>
                         </div>
                     </div>

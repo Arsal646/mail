@@ -383,6 +383,7 @@ export class MainTempMail implements OnInit, OnDestroy {
       },
       error: (error) => {
         console.error('Error saving email:', error);
+        // TODO: Replace alert with proper i18n toast notification
         alert('Failed to save email. Please try again.');
       }
     });
@@ -432,9 +433,9 @@ export class MainTempMail implements OnInit, OnDestroy {
     const diffInHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60);
 
     if (diffInHours < 1) {
-      return 'Just now';
+      return 'Just now'; // TODO: Add i18n
     } else if (diffInHours < 24) {
-      return `${Math.floor(diffInHours)}h ago`;
+      return `${Math.floor(diffInHours)}h ago`; // TODO: Add i18n
     } else {
       return date.toLocaleDateString();
     }

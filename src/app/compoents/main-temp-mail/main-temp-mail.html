@@ -7,7 +7,7 @@
     <!-- Email Address Section -->
     <div class="bg-white p-5 relative rounded-lg">
         <div class="flex justify-between mb-2">
-            <h2 class="text-lg font-semibold text-gray-900">Your Temporary Email</h2>
+            <h2 class="text-lg font-semibold text-gray-900" i18n="@@mainTempMail.title">Your Temporary Email</h2>
             <!-- <button (click)="openHistoryDialog()"
                         class="hidden md:flex items-center space-x-1 px-4 border border-gray-800 animate-pulse transition duration-300 rounded-lg hover:bg-gray-800 hover:text-white text-sm">
                         <lucide-icon name="refresh-cw" [size]="14"></lucide-icon>
@@ -18,7 +18,7 @@
                 <button (click)="openHistoryDialog()"
                     class="px-4 hidden md:flex py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-lg transition-all duration-200 text-sm font-medium border border-gray-300 items-center space-x-2">
                     <lucide-icon name="refresh-cw" [size]="16"></lucide-icon>
-                    <span>New Email</span>
+                    <span i18n="@@mainTempMail.newEmail">New Email</span>
                 </button>
             </div>
         </div>
@@ -39,7 +39,7 @@
                             <div class="p-3">
                                 <div class="text-sm font-medium text-gray-900 mb-2">Recent Emails</div>
                                 <div class="max-h-48 overflow-y-auto">
-                                    <div *ngIf="getRecentEmails().length === 0" class="text-sm text-gray-500 py-2">
+                                    <div i18n="@@mainTempMail.noRecentEmails" *ngIf="getRecentEmails().length === 0" class="text-sm text-gray-500 py-2">
                                         No recent emails found
                                     </div>
                                     <div *ngFor="let email of getRecentEmails()"
@@ -63,7 +63,7 @@
 
                     <div class="font-mono text-gray-900 truncate text-sm md:text-base">
                         @if (emailGenerating) {
-                        Generating email...
+                        <span i18n="@@mainTempMail.generatingEmail">Generating email...</span>
                         } @else {
                         {{currentEmail}}
                         }
@@ -83,13 +83,23 @@
                             <lucide-icon name="bookmark" [size]="14"></lucide-icon>
                             }
                             <span class="inline-block w-[52px] text-left">
-                                {{saved ? 'Saved!' : 'Save'}}
+
+                                @if(saved){
+                                <span i18n="@@mainTempMail.saved">Saved!</span>
+                                }@else{
+                                <span i18n="@@mainTempMail.save">Save</span>
+                                }
                             </span>
                         </button>
                         <!-- Save Tooltip -->
                         <div
                             class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-20">
-                            {{saved ? 'Email saved!' : 'Save for 7 days'}}
+
+                            @if(saved){
+                            <span i18n="@@mainTempMail.emailSaved">Email saved!</span>
+                            }@else{
+                            <span i18n="@@mainTempMail.saveFor7Days">Save for 7 days</span>
+                            }
                             <div
                                 class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-gray-800">
                             </div>
@@ -107,13 +117,22 @@
                             <lucide-icon name="check" [size]="14"></lucide-icon>
                             }
                             <span class="inline-block w-[52px] text-left">
-                                {{copied ? 'Copied!' : 'Copy'}}
+                                @if(copied){
+                                <span i18n="@@mainTempMail.copied" >Copied</span>
+                                }@else{
+                                <span i18n="@@mainTempMail.copy">Copy</span>
+                                }
                             </span>
                         </button>
                         <!-- Copy Tooltip -->
                         <div
                             class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-20">
-                            {{copied ? 'Copied!' : 'Copy email address'}}
+
+                            @if(copied){
+                            <span i18n="@@mainTempMail.copied">Copied</span>
+                            }@else{
+                            <span i18n="@@mainTempMail.copyEmailAddress">Copy email address</span>
+                            }
                             <div
                                 class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-gray-800">
                             </div>
@@ -136,7 +155,12 @@
                     } @else {
                     <lucide-icon name="bookmark" [size]="16"></lucide-icon>
                     }
-                    <span>{{saved ? 'Saved!' : 'Save'}}</span>
+                    @if(saved){
+                    <span i18n="@@mainTempMail.savedMobile">Saved</span>
+                    }@else{
+                    <span i18n="@@mainTempMail.saveMobile">Save</span>
+                    }
+
                 </button>
             </div>
 
@@ -145,7 +169,7 @@
                 <button (click)="openHistoryDialog()"
                     class="w-full px-2 text-xs py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-lg transition-all duration-200 font-medium border border-gray-300 flex items-center justify-center space-x-1">
                     <lucide-icon name="refresh-cw" [size]="16"></lucide-icon>
-                    <span>New Email</span>
+                    <span i18n="@@mainTempMail.newEmailMobile"> New Email</span>
                 </button>
             </div>
 
@@ -159,7 +183,12 @@
                     } @else {
                     <lucide-icon name="check" [size]="16"></lucide-icon>
                     }
-                    <span>{{copied ? 'Copied!' : 'Copy'}}</span>
+
+                          @if(copied){
+                                <span i18n="@@mainTempMail.copied">Copied</span>
+                                }@else{
+                                <span i18n="@@mainTempMail.copy">Copy</span>
+                                }
                 </button>
             </div>
         </div>
@@ -174,7 +203,7 @@
             <div class="flex items-center justify-between mb-4">
                 <h2 class="text-lg font-semibold text-gray-900">Inbox</h2>
                 <div class="flex items-center text-sm text-gray-600">
-                    <span class="mr-2">Auto-refresh in {{ countdown() }}s</span>
+                    <span class="mr-2" i18n="@@mainTempMail.autoRefresh">Auto-refresh in {{ countdown() }}s</span>
                     <button (click)="reload()" class="p-1 text-gray-600 hover:text-gray-900">
                         <lucide-icon name="refresh-cw" [size]="16" [class.animate-spin]="refreshing"></lucide-icon>
                     </button>
@@ -199,12 +228,12 @@
                                 </circle>
                             </svg>
                         </div>
-                        <p class="text-sm text-gray-600">Waiting for incoming messages for <span
+                        <p class="text-sm text-gray-600" i18n="@@mainTempMail.waitingForMessages">Waiting for incoming messages for <span
                                 class="font-bold text-dark">{{currentEmail}}</span></p>
                         <button (click)="refreshEmails()"
                             class="mt-4 px-4 py-2 text-sm bg-gray-100 text-gray-900 rounded-lg hover:bg-gray-200 transition-colors flex items-center">
                             <lucide-icon name="refresh-cw" [size]="14" [class.animate-spin]="refreshing"></lucide-icon>
-                            Check Again
+                           <span i18n="@@mainTempMail.checkAgain"> Check Again</span>
                         </button>
                     </div>
                 </div>

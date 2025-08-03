@@ -4,11 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "ar": "ng serve --configuration=ar",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:temp-mail": "node dist/temp-mail/server/server.mjs",
-    "multi":"ng extract-i18n --output-path src/locale --format=xlf"
+    "multi":"ng extract-i18n --output-path src/locale --format=xlf",
+    "i18n:extract": "ng extract-i18n --output-path src/locale --format=xlf",
+    "i18n:check": "node scripts/check-missing-translations.js",
+    "i18n:generate": "node scripts/generate-missing-translations.js"
   },
   "private": true,
   "dependencies": {

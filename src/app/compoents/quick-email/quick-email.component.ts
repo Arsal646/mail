@@ -225,6 +225,7 @@ export class QuickEmailComponent implements OnInit, OnDestroy {
       },
       error: (error) => {
         console.error('Error saving email:', error);
+        // TODO: Replace alert with proper i18n toast notification
         alert('Failed to save email. Please try again.');
       }
     });

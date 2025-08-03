@@ -1,4 +1,3 @@
-// pipes/safe-html-or-text.pipe.ts
 import { Pipe, PipeTransform } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -13,7 +12,23 @@ export class SafeHtmlOrTextPipe implements PipeTransform {
     if (!value) return '';
 
     const hasHtml = /<\/?[a-z][\s\S]*>/i.test(value);
-    const displayValue = hasHtml ? value : value.replace(/(?:\r\n|\r|\n)/g, '<br>');
-    return this.sanitizer.bypassSecurityTrustHtml(displayValue);
+
+    if (hasHtml) {
+      return this.sanitizer.bypassSecurityTrustHtml(value);
+    }
+
+    // Convert URLs to clickable links
+    const linkedText = value.replace(
+      /((https?:\/\/|www\.)[^\s<]+)/g,
+      (match) => {
+        const href = match.startsWith('http') ? match : `https://${match}`;
+        return `<a href="${href}" class="custom-link" target="_blank" rel="noopener noreferrer">${match}</a>`;
+      }
+    );
+
+    // Convert newlines to <br>
+    const finalText = linkedText.replace(/(?:\r\n|\r|\n)/g, '<br>');
+
+    return this.sanitizer.bypassSecurityTrustHtml(finalText);
   }
 }

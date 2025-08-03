@@ -39,3 +39,8 @@ button:focus-visible {
     }
 }
 
+.custom-link{
+  color: black;
+  text-decoration: underline;
+}
+

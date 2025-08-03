@@ -1362,6 +1362,98 @@
 </trans-unit>
 
 
+          <trans-unit id="seo.home.title" datatype="html">
+        <source>Free Temporary Email Service - Disposable Email Address | TempMail4u</source>
+        <target>خدمة البريد الإلكتروني المؤقتة المجانية - عنوان بريد إلكتروني مؤقت | TempMail4u</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+          <trans-unit id="seo.home.description" datatype="html">
+        <source>Get free temporary email addresses instantly. Our disposable email service protects your privacy and keeps your inbox spam-free. No registration required.</source>
+        <target>احصل على عناوين بريد إلكتروني مؤقتة مجانية فورياً. خدمة البريد الإلكتروني المؤقت تحمي خصوصيتك وتحافظ على صندوق الوارد خالياً من الرسائل المزعجة. لا يتطلب تسجيل.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+          <trans-unit id="seo.home.keywords" datatype="html">
+        <source>temporary email, disposable email, free temp mail, anonymous email, burner email, fake email, spam protection, email verification, privacy mail, temp mail service</source>
+        <target>بريد إلكتروني مؤقت, بريد مؤقت مجاني, بريد مجهول, حماية الخصوصية, منع الرسائل المزعجة, تفعيل البريد الإلكتروني, خدمة البريد المؤقت</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+          <trans-unit id="seo.home.siteName" datatype="html">
+        <source>TempMail4u</source>
+        <target>TempMail4u</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+          <trans-unit id="seo.email10min.title" datatype="html">
+        <source>10-Minute Temporary Email - Free Disposable Inbox | TempMail4u</source>
+        <target>بريد إلكتروني مؤقت لمدة 10 دقائق - صندوق وارد مؤقت مجاني | TempMail4u</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
+          <context context-type="linenumber">209</context>
+        </context-group>
+      </trans-unit>
+          <trans-unit id="seo.email10min.description" datatype="html">
+        <source>Get a free 10-minute disposable email for instant verifications. No signup needed. Protect your privacy with our temporary self-destructing inbox.</source>
+        <target>احصل على بريد إلكتروني مؤقت مجاني لمدة 10 دقائق للتحقق الفوري. لا يتطلب تسجيل. احم خصوصيتك مع صندوق الوارد المؤقت الذي يدمر نفسه.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+      </trans-unit>
+          <trans-unit id="seo.email10min.keywords" datatype="html">
+        <source>10 minute email, disposable email, temporary inbox, burner email, email verification, OTP email, privacy protection, spam prevention, anonymous email, quick email</source>
+        <target>بريد 10 دقائق, بريد إلكتروني مؤقت, صندوق وارد مؤقت, بريد مجهول, تفعيل البريد الإلكتروني, حماية الخصوصية, منع الرسائل المزعجة, بريد سريع</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
+          <context context-type="linenumber">211</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.email20min.title" datatype="html">
+        <source>20-Minute Temporary Email - Free Disposable Inbox | TempMail4u</source>
+        <target>بريد إلكتروني مؤقت لمدة 20 دقيقة - صندوق وارد مؤقت مجاني | TempMail4u</target>
+      </trans-unit>
+      <trans-unit id="seo.email20min.description" datatype="html">
+        <source>Get a free 20-minute temporary email address. No registration, no spam, just a secure disposable inbox for sign-ups, verifications, and one-time messages.</source>
+        <target>احصل على عنوان بريد إلكتروني مؤقت مجاني لمدة 20 دقيقة. لا يتطلب تسجيل، لا رسائل مزعجة، فقط صندوق وارد مؤقت آمن للتسجيل والتحقق والرسائل لمرة واحدة.</target>
+      </trans-unit>
+      <trans-unit id="seo.email20min.keywords" datatype="html">
+        <source>20 minute email, temporary email, disposable inbox, temp mail, burner email, secure temp email, free email for verification, 20 min email</source>
+        <target>بريد 20 دقيقة, بريد إلكتروني مؤقت, صندوق وارد مؤقت, بريد مؤقت, بريد مجهول, بريد مؤقت آمن, بريد مجاني للتحقق, بريد 20 دقيقة</target>
+      </trans-unit>
+      <trans-unit id="seo.email30min.title" datatype="html">
+        <source>30-Minute Temporary Email - Free Disposable Inbox | TempMail4u</source>
+        <target>بريد إلكتروني مؤقت لمدة 30 دقيقة - صندوق وارد مؤقت مجاني | TempMail4u</target>
+      </trans-unit>
+      <trans-unit id="seo.email30min.description" datatype="html">
+        <source>Free 30-minute temp mail for secure sign-ups, multi-step verification, and business use. Instant access, no signup needed.</source>
+        <target>بريد مؤقت مجاني لمدة 30 دقيقة للتسجيل الآمن والتحقق متعدد الخطوات والاستخدام التجاري. وصول فوري، لا يتطلب تسجيل.</target>
+      </trans-unit>
+      <trans-unit id="seo.email30min.keywords" datatype="html">
+        <source>30 minute email, extended temporary email, disposable inbox, temp mail, burner email, business email verification, long term temp email, 30 min email</source>
+        <target>بريد 30 دقيقة, بريد إلكتروني مؤقت ممتد, صندوق وارد مؤقت, بريد مؤقت, بريد مجهول, تحقق البريد الإلكتروني التجاري, بريد مؤقت طويل المدى, بريد 30 دقيقة</target>
+      </trans-unit>
+      <trans-unit id="seo.privacy.title" datatype="html">
+        <source>Privacy Policy - Temporary Email Service | TempMail4u</source>
+        <target>سياسة الخصوصية - خدمة البريد الإلكتروني المؤقت | TempMail4u</target>
+      </trans-unit>
+      <trans-unit id="seo.privacy.description" datatype="html">
+        <source>Read our privacy policy to understand how we protect your data and maintain your privacy while using our temporary email service.</source>
+        <target>اقرأ سياسة الخصوصية الخاصة بنا لفهم كيفية حماية بياناتك والحفاظ على خصوصيتك أثناء استخدام خدمة البريد الإلكتروني المؤقت.</target>
+      </trans-unit>
+      <trans-unit id="seo.privacy.keywords" datatype="html">
+        <source>privacy policy, temporary email privacy, data protection, email privacy, privacy terms, temp mail privacy</source>
+        <target>سياسة الخصوصية, خصوصية البريد الإلكتروني المؤقت, حماية البيانات, خصوصية البريد الإلكتروني, شروط الخصوصية, خصوصية البريد المؤقت</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

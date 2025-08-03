@@ -1,15 +1,18 @@
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID, LOCALE_ID, inject } from '@angular/core';
 import { QuickEmailComponent } from '../../compoents/quick-email/quick-email.component';
 import { isPlatformBrowser } from '@angular/common';
 import { ScrollService } from '../../services/scroll.service';
-import { MetaService } from '../../services/meta.service';
-import { Title, Meta } from '@angular/platform-browser';
+import { SeoService } from '../../services/seo.service';
+import { RouteTranslationService } from '../../services/route-translation.service';
 import { LucideAngularModule } from 'lucide-angular';
+import { RouterModule } from '@angular/router';
+
+declare const $localize: any;
 
 @Component({
   selector: 'app-email-30min',
   standalone: true,
-  imports: [QuickEmailComponent, LucideAngularModule],
+  imports: [QuickEmailComponent, LucideAngularModule, RouterModule],
   template: `
   <main class="container mx-auto px-4 py-6 max-w-5xl">
 
@@ -130,8 +133,8 @@ import { LucideAngularModule } from 'lucide-angular';
         <p i18n="@@email30min.faq1Answer" class="mt-2">
           It's an extended disposable email address that stays active for 30 minutes, perfect for longer processes that need more time than standard temporary emails.
           Need shorter options? Try our 
-          <a  href="/10-minutes-temporary-email" class="text-blue-500 hover:underline"> 10-minute email</a> or 
-          <a  href="/20-minutes-temporary-email" class="text-blue-500 hover:underline">20-minute email</a>.
+          <a [routerLink]="routes.email10min" class="text-blue-500 hover:underline"> 10-minute email</a> or 
+          <a [routerLink]="routes.email20min" class="text-blue-500 hover:underline">20-minute email</a>.
         </p>
       </div>
 
@@ -173,14 +176,20 @@ import { LucideAngularModule } from 'lucide-angular';
 
 })
 export class Email30MinComponent implements OnInit {
-  private structuredDataScript?: HTMLScriptElement;
+  private seoService = inject(SeoService);
+  private locale = inject(LOCALE_ID);
+  private routeTranslation = inject(RouteTranslationService);
+
+  get routes() {
+    return {
+      email10min: this.routeTranslation.getRoute('email-10min'),
+      email20min: this.routeTranslation.getRoute('email-20min')
+    };
+  }
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
-    private scrollService: ScrollService,
-    private metaService: MetaService,
-    private title: Title,
-    private meta: Meta
+    private scrollService: ScrollService
   ) { }
 
   ngOnInit() {
@@ -188,48 +197,30 @@ export class Email30MinComponent implements OnInit {
       this.scrollService.scrollToTopInstant();
     }
 
-    const pageTitle = '30-Minute Temporary Email - Free Disposable Inbox | TempMail4U';
-    const pageDescription = 'Free 30-minute temp mail for secure sign-ups, multi-step verification, and business use. Instant access, no signup needed.';
-    const canonicalUrl = 'https://tempmail4u.com/30-minutes-temporary-email';
+    this.setSeoTags();
+  }
 
-    this.title.setTitle(pageTitle);
-
-    // Basic SEO meta tags
-    this.meta.updateTag({ name: 'description', content: pageDescription });
-    this.meta.updateTag({
-      name: 'keywords',
-      content: '30 minute email, extended temporary email, disposable inbox, temp mail, burner email, business email verification, long term temp email, 30 min email'
+  private setSeoTags(): void {
+    const seoContent = this.getLocalizedSeoContent();
+    const baseUrl = this.seoService.getBaseUrl(this.locale);
+    const translatedRoute = this.routeTranslation.getRoute('email-30min');
+    
+    this.seoService.updateSeoTags({
+      title: seoContent.title,
+      description: seoContent.description,
+      keywords: seoContent.keywords,
+      ogUrl: baseUrl + (translatedRoute ? '/' + translatedRoute : '/30-minutes-temporary-email'),
+      ogImage: 'https://tempmails.online/assets/images/30-minute-email-preview.jpg',
+      ogSiteName: 'TempMail4u',
+      twitterSite: '@tempmails'
     });
+  }
 
-    // Open Graph (Facebook / LinkedIn)
-    this.meta.updateTag({ property: 'og:title', content: pageTitle });
-    this.meta.updateTag({ property: 'og:description', content: pageDescription });
-    this.meta.updateTag({ property: 'og:type', content: 'website' });
-    this.meta.updateTag({ property: 'og:url', content: canonicalUrl });
-    this.meta.updateTag({ property: 'og:site_name', content: 'TempMail4U' });
-    this.meta.updateTag({ property: 'og:locale', content: 'en_US' });
-    this.meta.updateTag({ property: 'og:image', content: 'https://tempmail4u.com/assets/images/30-minute-email-preview.jpg' });
-    this.meta.updateTag({ property: 'og:image:width', content: '1200' });
-    this.meta.updateTag({ property: 'og:image:height', content: '630' });
-    this.meta.updateTag({ property: 'og:image:alt', content: '30 Minute Temporary Email Service' });
-
-    // Twitter Card
-    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
-    this.meta.updateTag({ name: 'twitter:title', content: pageTitle });
-    this.meta.updateTag({ name: 'twitter:description', content: pageDescription });
-    this.meta.updateTag({ name: 'twitter:site', content: '@TempMail4U' });
-    this.meta.updateTag({ name: 'twitter:image', content: 'https://tempmail4u.com/assets/images/30-minute-email-preview.jpg' });
-
-    // Canonical tag
-    this.meta.updateTag({ rel: 'canonical', href: canonicalUrl });
-
-    // Other standard meta tags
-    this.meta.updateTag({ name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' });
-    this.meta.updateTag({ name: 'author', content: 'TempMail4U' });
-    this.meta.updateTag({ name: 'language', content: 'English' });
-    this.meta.updateTag({ name: 'revisit-after', content: '7 days' });
-    this.meta.updateTag({ name: 'distribution', content: 'global' });
-    this.meta.updateTag({ name: 'rating', content: 'general' });
-
+  private getLocalizedSeoContent() {
+    return {
+      title: $localize`:@@seo.email30min.title:30-Minute Temporary Email - Free Disposable Inbox | TempMail4u`,
+      description: $localize`:@@seo.email30min.description:Free 30-minute temp mail for secure sign-ups, multi-step verification, and business use. Instant access, no signup needed.`,
+      keywords: $localize`:@@seo.email30min.keywords:30 minute email, extended temporary email, disposable inbox, temp mail, burner email, business email verification, long term temp email, 30 min email`
+    };
   }
 }

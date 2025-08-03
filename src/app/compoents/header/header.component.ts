@@ -1,7 +1,8 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from "lucide-angular";
 import { RouterModule } from '@angular/router';
+import { RouteTranslationService } from '../../services/route-translation.service';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,7 @@ import { RouterModule } from '@angular/router';
                 <div class="flex items-center space-x-3">
                     <div class="relative">
                         <div class=" bg-gray-800 rounded-full flex items-center justify-center">
-                            <img routerLink="/" class="cursor-pointer" src="logo.png" alt="Temporary Email Service Logo" style="width: 100px;">
+                            <img [routerLink]="homeRoute" class="cursor-pointer" src="logo.png" alt="Temporary Email Service Logo" style="width: 100px;">
                         </div>
                     </div>
                     <div>
@@ -38,6 +39,11 @@ export class HeaderComponent {
   @Output() refreshClick = new EventEmitter<void>();
   
   refreshing = false;
+  private routeTranslation = inject(RouteTranslationService);
+
+  get homeRoute() {
+    return this.routeTranslation.getRoute('home');
+  }
 
   onRefreshClick() {
     this.refreshing = true;

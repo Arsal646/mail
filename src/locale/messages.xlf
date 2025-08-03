@@ -584,749 +584,812 @@
         <source> 10 Minutes Temporary Email – Free Disposable Inbox Without Signup </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">19,21</context>
+          <context context-type="linenumber">20,22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email10minSubtitle" datatype="html">
         <source> Instantly generate a <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>10 minutes temporary email address<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. Perfect for email verifications, OTPs, and anonymous sign-ups without exposing your personal inbox. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">22,24</context>
+          <context context-type="linenumber">23,25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="whatIs10minEmail" datatype="html">
         <source>What is a 10 Minutes Temporary Email?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">33,34</context>
+          <context context-type="linenumber">34,35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="10minEmailDesc1" datatype="html">
         <source> A <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>10 minutes temporary email<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> is a disposable, anonymous inbox that lasts only 10 minutes. It&apos;s ideal for one-time registrations, email confirmations, downloading files, and avoiding spam. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">36,38</context>
+          <context context-type="linenumber">37,39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="10minEmailDesc2" datatype="html">
         <source> No sign-up or personal data is required, making it the safest way to stay anonymous online. Use it as a throwaway email whenever you need a quick, secure inbox. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">39,41</context>
+          <context context-type="linenumber">40,42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="feature1" datatype="html">
         <source>Automatically expires after 10 minutes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">42,43</context>
+          <context context-type="linenumber">43,44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="feature2" datatype="html">
         <source>Completely anonymous and untraceable</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">43,44</context>
+          <context context-type="linenumber">44,45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="feature3" datatype="html">
         <source>Receive OTPs, confirmations, and attachments securely</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">44,46</context>
+          <context context-type="linenumber">45,47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="featureTitle1" datatype="html">
         <source>Self-Destructing Inboxes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">54,56</context>
+          <context context-type="linenumber">55,57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="featureDesc1" datatype="html">
         <source>All messages are automatically deleted after 10 minutes to protect your privacy.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">56,58</context>
+          <context context-type="linenumber">57,59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="featureTitle2" datatype="html">
         <source>No Sign-Up Required</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">61,63</context>
+          <context context-type="linenumber">62,64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="featureDesc2" datatype="html">
         <source>Simply visit the page to start — no login, no password, no hassle.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">63,65</context>
+          <context context-type="linenumber">64,66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="featureTitle3" datatype="html">
         <source>Anonymous &amp; Secure</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">68,70</context>
+          <context context-type="linenumber">69,71</context>
         </context-group>
       </trans-unit>
       <trans-unit id="featureDesc3" datatype="html">
         <source>We don&apos;t store or log any user data; all inboxes are wiped clean after use.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">70,72</context>
+          <context context-type="linenumber">71,73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="howToUseTitle" datatype="html">
         <source>How to Use a 10 Minutes Temporary Email</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">76,77</context>
+          <context context-type="linenumber">77,78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="step1" datatype="html">
         <source><x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;circle&quot; [size]=&quot;14&quot; class=&quot;text-gray-400 mt-1 mr-2 flex-shrink-0&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Visit our site to instantly receive a free temporary inbox.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">79,82</context>
+          <context context-type="linenumber">80,83</context>
         </context-group>
       </trans-unit>
       <trans-unit id="step2" datatype="html">
         <source><x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;circle&quot; [size]=&quot;14&quot; class=&quot;text-gray-400 mt-1 mr-2 flex-shrink-0&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Copy your 10 minutes temporary email address and use it for registrations or verifications.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">83,86</context>
+          <context context-type="linenumber">84,87</context>
         </context-group>
       </trans-unit>
       <trans-unit id="step3" datatype="html">
         <source><x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;circle&quot; [size]=&quot;14&quot; class=&quot;text-gray-400 mt-1 mr-2 flex-shrink-0&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Receive OTPs or confirmation emails instantly — inbox refreshes every 10 seconds.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">87,90</context>
+          <context context-type="linenumber">88,91</context>
         </context-group>
       </trans-unit>
       <trans-unit id="step4" datatype="html">
         <source><x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;circle&quot; [size]=&quot;14&quot; class=&quot;text-gray-400 mt-1 mr-2 flex-shrink-0&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>All data is permanently deleted after 10 minutes for maximum privacy.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">91,94</context>
+          <context context-type="linenumber">92,95</context>
         </context-group>
       </trans-unit>
       <trans-unit id="useCasesTitle" datatype="html">
         <source>When to Use a Disposable Email Address</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">99,100</context>
+          <context context-type="linenumber">100,101</context>
         </context-group>
       </trans-unit>
       <trans-unit id="techUseCases" datatype="html">
         <source>Tech &amp; Testing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">102,103</context>
+          <context context-type="linenumber">103,104</context>
         </context-group>
       </trans-unit>
       <trans-unit id="techUseCase1" datatype="html">
         <source>Testing sign-up flows</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">104,105</context>
+          <context context-type="linenumber">105,106</context>
         </context-group>
       </trans-unit>
       <trans-unit id="techUseCase2" datatype="html">
         <source>Previewing email templates</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">105,106</context>
+          <context context-type="linenumber">106,107</context>
         </context-group>
       </trans-unit>
       <trans-unit id="techUseCase3" datatype="html">
         <source>Debugging email APIs</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">106,108</context>
+          <context context-type="linenumber">107,109</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privacyUseCases" datatype="html">
         <source>Privacy &amp; Productivity</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">110,111</context>
+          <context context-type="linenumber">111,112</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privacyUseCase1" datatype="html">
         <source>Avoid spam from new websites</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">112,113</context>
+          <context context-type="linenumber">113,114</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privacyUseCase2" datatype="html">
         <source>Access gated content securely</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">113,114</context>
+          <context context-type="linenumber">114,115</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privacyUseCase3" datatype="html">
         <source>Download software &amp; resources</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">114,115</context>
+          <context context-type="linenumber">115,116</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privacyUseCase4" datatype="html">
         <source>Anonymous sign-ups for forums</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">115,117</context>
+          <context context-type="linenumber">116,118</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faqTitle" datatype="html">
         <source>Frequently Asked Questions</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">123,124</context>
+          <context context-type="linenumber">124,125</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq1Question" datatype="html">
         <source>What is a 10 minutes email?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">127,128</context>
+          <context context-type="linenumber">128,129</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq1Answer" datatype="html">
         <source> A temporary email address that expires after 10 minutes, perfect for receiving one-time messages or verification links. Need more time? Try our free <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;/20-minutes-temporary-email&quot; class=&quot;text-blue-500 hover:underline&quot;&gt;"/>20-minute temporary email<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> or <x id="START_LINK_1" equiv-text="&lt;a href=&quot;/30-minutes-temporary-email&quot; class=&quot;text-blue-500 hover:underline&quot;&gt;"/>30-minute temporary email<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> instead. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">129,134</context>
+          <context context-type="linenumber">130,135</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq2Question" datatype="html">
         <source>Is it free to use?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">137,138</context>
+          <context context-type="linenumber">138,139</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq2Answer" datatype="html">
         <source>Yes, it&apos;s completely free. No sign-up needed, no ads, and no premium charges.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">138,140</context>
+          <context context-type="linenumber">139,141</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq3Question" datatype="html">
         <source>Can I receive OTPs and confirmation emails?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">141,142</context>
+          <context context-type="linenumber">142,143</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq3Answer" datatype="html">
         <source>Yes, the temporary inbox supports all common email types including OTPs and confirmation links.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">142,144</context>
+          <context context-type="linenumber">143,145</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq4Question" datatype="html">
         <source>Can I extend the timer for my temporary email?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">145,146</context>
+          <context context-type="linenumber">146,147</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq4Answer" datatype="html">
         <source>Yes, simply click the &quot;Reset&quot; button to restart the 10-minute countdown.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">146,148</context>
+          <context context-type="linenumber">147,149</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq5Question" datatype="html">
         <source>Is this email address truly anonymous?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">149,150</context>
+          <context context-type="linenumber">150,151</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq5Answer" datatype="html">
         <source>Absolutely. We do not collect or track any personal data; every inbox is temporary and private.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">150,152</context>
+          <context context-type="linenumber">151,153</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq6Question" datatype="html">
         <source>How many temporary emails can I create?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">153,154</context>
+          <context context-type="linenumber">154,155</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq6Answer" datatype="html">
         <source>Unlimited. Create as many temporary inboxes as you want, each with its own time limit.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">154,156</context>
+          <context context-type="linenumber">155,157</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq7Question" datatype="html">
         <source>Does it work on mobile?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">157,158</context>
+          <context context-type="linenumber">158,159</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq7Answer" datatype="html">
         <source>Yes, the service is fully responsive and works seamlessly on all devices.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">158,160</context>
+          <context context-type="linenumber">159,161</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq8Question" datatype="html">
         <source>Is it safe for important messages?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">161,162</context>
+          <context context-type="linenumber">162,163</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq8Answer" datatype="html">
         <source>It&apos;s suitable for short-term use like OTPs and confirmation emails. Avoid using it for sensitive personal information.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">162,164</context>
+          <context context-type="linenumber">163,165</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq9Question" datatype="html">
         <source>Is it better than using a fake email?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">165,166</context>
+          <context context-type="linenumber">166,167</context>
         </context-group>
       </trans-unit>
       <trans-unit id="faq9Answer" datatype="html">
         <source>Yes! Unlike fake emails, this service provides a real, functioning inbox for legitimate message receipt.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
-          <context context-type="linenumber">166,168</context>
+          <context context-type="linenumber">167,169</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.email10min.title" datatype="html">
+        <source>10-Minute Temporary Email - Free Disposable Inbox | TempMail4u</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
+          <context context-type="linenumber">209</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.email10min.description" datatype="html">
+        <source>Get a free 10-minute disposable email for instant verifications. No signup needed. Protect your privacy with our temporary self-destructing inbox.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.email10min.keywords" datatype="html">
+        <source>10 minute email, disposable email, temporary inbox, burner email, email verification, OTP email, privacy protection, spam prevention, anonymous email, quick email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/email-10min/email-10min.component.ts</context>
+          <context context-type="linenumber">211</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email20min.title" datatype="html">
         <source> 20-Minute Temporary Email – free Disposable Inbox </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
-          <context context-type="linenumber">19,21</context>
+          <context context-type="linenumber">20,22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email20min.subtitle" datatype="html">
         <source> Instantly generate a <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>20-minute temporary email address<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>, ideal for sign-ups, OTPs, and multi-step verifications that take a bit more time. No registration, no spam, just a secure and private inbox that works when you need it. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
-          <context context-type="linenumber">22,24</context>
+          <context context-type="linenumber">23,25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email20min.faqTitle" datatype="html">
         <source>20-Minute Temporary Email – FAQs</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
-          <context context-type="linenumber">35,36</context>
+          <context context-type="linenumber">36,37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email20min.faq1Question" datatype="html">
         <source>What is a 20-minute temporary email?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
-          <context context-type="linenumber">39,40</context>
+          <context context-type="linenumber">40,41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email20min.faq1Answer" datatype="html">
         <source> It’s a disposable email address that stays active for 20 minutes. Use it to receive messages without using your personal inbox. Need different durations? Try our <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;/10-minutes-temporary-email&quot; class=&quot;text-blue-500 hover:underline&quot;&gt;"/>10-minute email<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> or <x id="START_LINK_1" equiv-text="&lt;a href=&quot;/30-minutes-temporary-email&quot; class=&quot;text-blue-500 hover:underline&quot;&gt;"/>30-minute email<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
-          <context context-type="linenumber">41,46</context>
+          <context context-type="linenumber">42,47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email20min.faq2Question" datatype="html">
         <source>Is it really free?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
-          <context context-type="linenumber">49,50</context>
+          <context context-type="linenumber">50,51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email20min.faq2Answer" datatype="html">
         <source>Yes, it&apos;s 100% free to use. No registration or payment needed.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
-          <context context-type="linenumber">50,53</context>
+          <context context-type="linenumber">51,54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email20min.faq3Question" datatype="html">
         <source>Can I use it to receive OTPs and verification emails?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
-          <context context-type="linenumber">54,55</context>
+          <context context-type="linenumber">55,56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email20min.faq3Answer" datatype="html">
         <source>Yes. You can receive one-time passwords, activation links, and other verification emails safely.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
-          <context context-type="linenumber">55,58</context>
+          <context context-type="linenumber">56,59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email20min.faq4Question" datatype="html">
         <source>Will the email address delete itself?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
-          <context context-type="linenumber">59,60</context>
+          <context context-type="linenumber">60,61</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email20min.faq4Answer" datatype="html">
         <source>Yes. All emails and the inbox itself are automatically deleted after 20 minutes.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
-          <context context-type="linenumber">60,63</context>
+          <context context-type="linenumber">61,64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email20min.faq5Question" datatype="html">
         <source>Is my identity protected?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
-          <context context-type="linenumber">64,65</context>
+          <context context-type="linenumber">65,66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email20min.faq5Answer" datatype="html">
         <source>Absolutely. We do not track or store any personal information. Your privacy is our priority.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
-          <context context-type="linenumber">65,69</context>
+          <context context-type="linenumber">66,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.email20min.title" datatype="html">
+        <source>20-Minute Temporary Email - Free Disposable Inbox | TempMail4u</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.email20min.description" datatype="html">
+        <source>Get a free 20-minute temporary email address. No registration, no spam, just a secure disposable inbox for sign-ups, verifications, and one-time messages.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.email20min.keywords" datatype="html">
+        <source>20 minute email, temporary email, disposable inbox, temp mail, burner email, secure temp email, free email for verification, 20 min email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/email-20min/email-20min.component.ts</context>
+          <context context-type="linenumber">112</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.title" datatype="html">
         <source> 30-Minute Temporary Email – Free Disposable Inbox </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">19,21</context>
+          <context context-type="linenumber">20,22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.subtitle" datatype="html">
         <source> Get a <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>30-minute temporary email address<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> for longer processes like account setups, multi-step verifications, and extended communications. Perfect when you need more time than standard temporary emails offer. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">22,25</context>
+          <context context-type="linenumber">23,26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.whatIsTitle" datatype="html">
         <source>What is a 30-Minute Temporary Email?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">33,34</context>
+          <context context-type="linenumber">34,35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.description1" datatype="html">
         <source> A <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>30-minute temporary email<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> is an extended disposable inbox that remains active for half an hour. It&apos;s perfect for complex sign-up processes, multi-step verifications, and situations where you need more time to complete your tasks. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">36,38</context>
+          <context context-type="linenumber">37,39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.description2" datatype="html">
         <source> This extended timeframe makes it ideal for account activations that involve multiple confirmation steps, downloading large files, or completing lengthy registration processes without rushing. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">39,41</context>
+          <context context-type="linenumber">40,42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.feature1" datatype="html">
         <source>Extended 30-minute lifespan for complex processes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">42,43</context>
+          <context context-type="linenumber">43,44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.feature2" datatype="html">
         <source>Perfect for multi-step verifications and account setups</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">43,44</context>
+          <context context-type="linenumber">44,45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.feature3" datatype="html">
         <source>Completely anonymous and secure</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">44,45</context>
+          <context context-type="linenumber">45,46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.feature4" datatype="html">
         <source>Receive confirmations, OTPs, and attachments safely</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">45,48</context>
+          <context context-type="linenumber">46,49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.featureTitle1" datatype="html">
         <source>Extended 30-Minute Window</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">55,57</context>
+          <context context-type="linenumber">56,58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.featureDesc1" datatype="html">
         <source>More time for complex processes while maintaining privacy and security.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">57,59</context>
+          <context context-type="linenumber">58,60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.featureTitle2" datatype="html">
         <source>No Registration Needed</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">62,64</context>
+          <context context-type="linenumber">63,65</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.featureDesc2" datatype="html">
         <source>Instant access without any personal information or account creation.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">64,66</context>
+          <context context-type="linenumber">65,67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.featureTitle3" datatype="html">
         <source>Complete Privacy</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">69,71</context>
+          <context context-type="linenumber">70,72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.featureDesc3" datatype="html">
         <source>All data is automatically deleted after 30 minutes with no traces left behind.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">71,75</context>
+          <context context-type="linenumber">72,76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.howToUseTitle" datatype="html">
         <source>How to Use a 30-Minute Temporary Email</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">77,78</context>
+          <context context-type="linenumber">78,79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.step1" datatype="html">
         <source><x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;circle&quot; [size]=&quot;14&quot; class=&quot;text-gray-400 mt-1 mr-2 flex-shrink-0&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Get your free 30-minute temporary email address instantly upon visiting.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">80,83</context>
+          <context context-type="linenumber">81,84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.step2" datatype="html">
         <source><x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;circle&quot; [size]=&quot;14&quot; class=&quot;text-gray-400 mt-1 mr-2 flex-shrink-0&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Use it for extended sign-up processes, account verifications, or multi-step registrations.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">84,87</context>
+          <context context-type="linenumber">85,88</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.step3" datatype="html">
         <source><x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;circle&quot; [size]=&quot;14&quot; class=&quot;text-gray-400 mt-1 mr-2 flex-shrink-0&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Monitor your inbox with automatic refreshes every 10 seconds for incoming messages.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">88,91</context>
+          <context context-type="linenumber">89,92</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.step4" datatype="html">
         <source><x id="START_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;lucide-icon name=&quot;circle&quot; [size]=&quot;14&quot; class=&quot;text-gray-400 mt-1 mr-2 flex-shrink-0&quot;&gt;"/><x id="CLOSE_TAG_LUCIDE_ICON" ctype="x-lucide_icon" equiv-text="&lt;/lucide-icon&gt;"/><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Complete your tasks within 30 minutes before the inbox automatically expires.<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">92,95</context>
+          <context context-type="linenumber">93,96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.useCasesTitle" datatype="html">
         <source>Perfect Use Cases for 30-Minute Email</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">100,101</context>
+          <context context-type="linenumber">101,102</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.extendedProcesses" datatype="html">
         <source>Extended Processes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">103,104</context>
+          <context context-type="linenumber">104,105</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.useCase1" datatype="html">
         <source>Complex account registrations</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">105,106</context>
+          <context context-type="linenumber">106,107</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.useCase2" datatype="html">
         <source>Multi-step verification processes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">106,107</context>
+          <context context-type="linenumber">107,108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.useCase3" datatype="html">
         <source>Software trials with multiple confirmations</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">107,108</context>
+          <context context-type="linenumber">108,109</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.useCase4" datatype="html">
         <source>Educational platform sign-ups</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">108,110</context>
+          <context context-type="linenumber">109,111</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.businessProfessional" datatype="html">
         <source>Business &amp; Professional</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">112,113</context>
+          <context context-type="linenumber">113,114</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.useCase5" datatype="html">
         <source>B2B service trials</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">114,115</context>
+          <context context-type="linenumber">115,116</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.useCase6" datatype="html">
         <source>Professional tool evaluations</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">115,116</context>
+          <context context-type="linenumber">116,117</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.useCase7" datatype="html">
         <source>Conference and webinar registrations</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">116,117</context>
+          <context context-type="linenumber">117,118</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.useCase8" datatype="html">
         <source>Extended download processes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">117,119</context>
+          <context context-type="linenumber">118,120</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faqTitle" datatype="html">
         <source>30-Minute Temporary Email – FAQs</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">125,126</context>
+          <context context-type="linenumber">126,127</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq1Question" datatype="html">
         <source>What is a 30-minute temporary email?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">129,130</context>
+          <context context-type="linenumber">130,131</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq1Answer" datatype="html">
         <source> It&apos;s an extended disposable email address that stays active for 30 minutes, perfect for longer processes that need more time than standard temporary emails. Need shorter options? Try our <x id="START_LINK" ctype="x-a" equiv-text="&lt;a  href=&quot;/10-minutes-temporary-email&quot; class=&quot;text-blue-500 hover:underline&quot;&gt;"/> 10-minute email<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> or <x id="START_LINK_1" equiv-text="&lt;a  href=&quot;/20-minutes-temporary-email&quot; class=&quot;text-blue-500 hover:underline&quot;&gt;"/>20-minute email<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">131,135</context>
+          <context context-type="linenumber">132,136</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq2Question" datatype="html">
         <source>Is it completely free?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">139,140</context>
+          <context context-type="linenumber">140,141</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq2Answer" datatype="html">
         <source>Yes, it&apos;s 100% free with no hidden costs, registration requirements, or premium features.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">140,143</context>
+          <context context-type="linenumber">141,144</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq3Question" datatype="html">
         <source>Can I use it for business registrations?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">144,145</context>
+          <context context-type="linenumber">145,146</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq3Answer" datatype="html">
         <source>Absolutely. The 30-minute window is perfect for business tool trials, B2B service sign-ups, and professional platform evaluations.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">145,148</context>
+          <context context-type="linenumber">146,149</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq4Question" datatype="html">
         <source>What happens after 30 minutes?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">149,150</context>
+          <context context-type="linenumber">150,151</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq4Answer" datatype="html">
         <source>The email address and all received messages are permanently deleted. No data is retained or recoverable.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">150,153</context>
+          <context context-type="linenumber">151,154</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq5Question" datatype="html">
         <source>Can I extend the 30-minute timer?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">154,155</context>
+          <context context-type="linenumber">155,156</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq5Answer" datatype="html">
         <source>Yes, you can reset the timer by clicking the &quot;Reset&quot; button to get another full 30 minutes.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">155,158</context>
+          <context context-type="linenumber">156,159</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq6Question" datatype="html">
         <source>Is my privacy protected?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">159,160</context>
+          <context context-type="linenumber">160,161</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq6Answer" datatype="html">
         <source>Completely. We don&apos;t track, store, or log any personal information. Your anonymity is guaranteed.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">160,163</context>
+          <context context-type="linenumber">161,164</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq7Question" datatype="html">
         <source>How many emails can I receive?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">164,165</context>
+          <context context-type="linenumber">165,166</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email30min.faq7Answer" datatype="html">
         <source>There&apos;s no limit on the number of emails you can receive within the 30-minute window.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
-          <context context-type="linenumber">165,169</context>
+          <context context-type="linenumber">166,170</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.email30min.title" datatype="html">
+        <source>30-Minute Temporary Email - Free Disposable Inbox | TempMail4u</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.email30min.description" datatype="html">
+        <source>Free 30-minute temp mail for secure sign-ups, multi-step verification, and business use. Instant access, no signup needed.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
+          <context context-type="linenumber">211</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.email30min.keywords" datatype="html">
+        <source>30 minute email, extended temporary email, disposable inbox, temp mail, burner email, business email verification, long term temp email, 30 min email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/email-30min/email-30min.component.ts</context>
+          <context context-type="linenumber">212</context>
         </context-group>
       </trans-unit>
       <trans-unit id="home.title" datatype="html">
@@ -1774,6 +1837,34 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.html</context>
           <context context-type="linenumber">332,333</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.home.title" datatype="html">
+        <source>Free Temporary Email Service - Disposable Email Address | TempMail4u</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.home.description" datatype="html">
+        <source>Get free temporary email addresses instantly. Our disposable email service protects your privacy and keeps your inbox spam-free. No registration required.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.home.keywords" datatype="html">
+        <source>temporary email, disposable email, free temp mail, anonymous email, burner email, fake email, spam protection, email verification, privacy mail, temp mail service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="seo.home.siteName" datatype="html">
+        <source>TempMail4u</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/home/home.ts</context>
+          <context context-type="linenumber">50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="privacy.title" datatype="html">

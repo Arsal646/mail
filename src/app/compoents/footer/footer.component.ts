@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { RouteTranslationService } from '../../services/route-translation.service';
 
 @Component({
   selector: 'app-footer',
@@ -32,35 +33,35 @@ import { RouterModule } from '@angular/router';
           <nav aria-label="Footer Navigation">
             <div class="flex flex-wrap justify-center gap-4 text-sm">
               <a i18n="@@footer.home"
-                routerLink="/" 
+                [routerLink]="routes.home" 
                 class="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="Home"
               >
                 Home
               </a>
               <a i18n="@@footer.10MinMail"
-                routerLink="/10-minutes-temporary-email" 
+                [routerLink]="routes.email10min" 
                 class="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="10 Minute Temporary Email"
               >
                 10 Minutes Mail
               </a>
               <a i18n="@@footer.20MinMail"
-                routerLink="/20-minutes-temporary-email" 
+                [routerLink]="routes.email20min" 
                 class="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="20 Minute Temporary Email"
               >
                 20 Minutes Mail
               </a>
               <a i18n="@@footer.30MinMail"
-                routerLink="/30-minutes-temporary-email" 
+                [routerLink]="routes.email30min" 
                 class="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="30 Minute Temporary Email"
               >
                 30 Minutes Mail
               </a>
               <a i18n="@@footer.privacyPolicy"
-                routerLink="/privacy-policy" 
+                [routerLink]="routes.privacy" 
                 class="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="Privacy Policy"
               >
@@ -85,4 +86,16 @@ import { RouterModule } from '@angular/router';
 })
 export class FooterComponent {
   currentYear: number = new Date().getFullYear();
+  private routeTranslation = inject(RouteTranslationService);
+
+  // Get translated routes for navigation
+  get routes() {
+    return {
+      home: this.routeTranslation.getRoute('home'),
+      email10min: this.routeTranslation.getRoute('email-10min'),
+      email20min: this.routeTranslation.getRoute('email-20min'),
+      email30min: this.routeTranslation.getRoute('email-30min'),
+      privacy: this.routeTranslation.getRoute('privacy-policy')
+    };
+  }
 }

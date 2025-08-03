@@ -1,16 +1,19 @@
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID, LOCALE_ID, inject } from '@angular/core';
 import { QuickEmailComponent } from '../../compoents/quick-email/quick-email.component';
 import { isPlatformBrowser } from '@angular/common';
 import { ScrollService } from '../../services/scroll.service';
-import { MetaService } from '../../services/meta.service';
-import { Title, Meta } from '@angular/platform-browser';
+import { SeoService } from '../../services/seo.service';
+import { RouteTranslationService } from '../../services/route-translation.service';
 import { LucideAngularModule } from 'lucide-angular';
+import { RouterModule } from '@angular/router';
+
+declare const $localize: any;
 
 @Component({
   selector: 'app-email-10min',
   standalone: true,
-  imports: [QuickEmailComponent,LucideAngularModule],
-  template:`
+  imports: [QuickEmailComponent, LucideAngularModule, RouterModule],
+  template: `
   <main class="container mx-auto px-4 py-6 max-w-5xl">
 
   <!-- Page Header -->
@@ -128,8 +131,8 @@ import { LucideAngularModule } from 'lucide-angular';
       <p class="text-sm text-gray-600 mt-2" i18n="@@faq1Answer">
         A temporary email address that expires after 10 minutes, perfect for receiving one-time messages or verification links.
         Need more time? Try our free
-        <a href="/20-minutes-temporary-email" class="text-blue-500 hover:underline">20-minute temporary email</a> or
-        <a href="/30-minutes-temporary-email" class="text-blue-500 hover:underline">30-minute temporary email</a> instead.
+        <a [routerLink]="routes.email20min" class="text-blue-500 hover:underline">20-minute temporary email</a> or
+        <a [routerLink]="routes.email30min" class="text-blue-500 hover:underline">30-minute temporary email</a> instead.
       </p>
     </div>
 
@@ -172,12 +175,20 @@ import { LucideAngularModule } from 'lucide-angular';
   `
 })
 export class Email10MinComponent implements OnInit {
+  private seoService = inject(SeoService);
+  private locale = inject(LOCALE_ID);
+  private routeTranslation = inject(RouteTranslationService);
+
+  get routes() {
+    return {
+      email20min: this.routeTranslation.getRoute('email-20min'),
+      email30min: this.routeTranslation.getRoute('email-30min')
+    };
+  }
+
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
-    private scrollService: ScrollService,
-    private metaService: MetaService,
-    private title: Title,
-    private meta: Meta
+    private scrollService: ScrollService
   ) { }
 
   ngOnInit() {
@@ -185,36 +196,30 @@ export class Email10MinComponent implements OnInit {
       this.scrollService.scrollToTopInstant();
     }
 
-    // Set SEO meta tags
-    const pageTitle = '10-Minute Temporary Email - Free Disposable Inbox | TempMail4U';
-    const pageDescription = 'Get a free 10-minute disposable email for instant verifications. No signup needed. Protect your privacy with our temporary self-destructing inbox.';
-    const canonicalUrl = 'https://tempmail4u.com/10-minutes-temporary-email';
+    this.setSeoTags();
+  }
 
-    this.title.setTitle(pageTitle);
+  private setSeoTags(): void {
+    const seoContent = this.getLocalizedSeoContent();
+    const baseUrl = this.seoService.getBaseUrl(this.locale);
+    const translatedRoute = this.routeTranslation.getRoute('email-10min');
 
-    // Standard meta tags
-    this.meta.updateTag({ name: 'description', content: pageDescription });
-    this.meta.updateTag({ name: 'keywords', content: '10 minute email, disposable email, temporary inbox, burner email, email verification, OTP email, privacy protection, spam prevention, anonymous email, quick email' });
+    this.seoService.updateSeoTags({
+      title: seoContent.title,
+      description: seoContent.description,
+      keywords: seoContent.keywords,
+      ogUrl: baseUrl + (translatedRoute ? '/' + translatedRoute : '/10-minutes-temporary-email'),
+      ogImage: 'https://tempmails.online/assets/images/10-minute-email-preview.jpg',
+      ogSiteName: 'TempMail4u',
+      twitterSite: '@tempmails'
+    });
+  }
 
-    // Open Graph / Facebook
-    this.meta.updateTag({ property: 'og:title', content: pageTitle });
-    this.meta.updateTag({ property: 'og:description', content: pageDescription });
-    this.meta.updateTag({ property: 'og:type', content: 'website' });
-    this.meta.updateTag({ property: 'og:url', content: canonicalUrl });
-    this.meta.updateTag({ property: 'og:site_name', content: 'TempMail4U' });
-    this.meta.updateTag({ property: 'og:locale', content: 'en_US' });
-
-    // Twitter Card
-    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
-    this.meta.updateTag({ name: 'twitter:title', content: pageTitle });
-    this.meta.updateTag({ name: 'twitter:description', content: pageDescription });
-    this.meta.updateTag({ name: 'twitter:site', content: '@TempMail4U' });
-
-    // Canonical URL
-    this.meta.updateTag({ rel: 'canonical', href: canonicalUrl });
-
-    // Additional helpful tags
-    this.meta.updateTag({ name: 'robots', content: 'index, follow' });
-    this.meta.updateTag({ name: 'author', content: 'TempMail4U' });
+  private getLocalizedSeoContent() {
+    return {
+      title: $localize`:@@seo.email10min.title:10-Minute Temporary Email - Free Disposable Inbox | TempMail4u`,
+      description: $localize`:@@seo.email10min.description:Get a free 10-minute disposable email for instant verifications. No signup needed. Protect your privacy with our temporary self-destructing inbox.`,
+      keywords: $localize`:@@seo.email10min.keywords:10 minute email, disposable email, temporary inbox, burner email, email verification, OTP email, privacy protection, spam prevention, anonymous email, quick email`
+    };
   }
 }

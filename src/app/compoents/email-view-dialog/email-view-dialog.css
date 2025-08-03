@@ -123,3 +123,8 @@ button{
   cursor: pointer;
 }
 
+::ng-deep .email-view a{
+  color: blue;
+  text-decoration: underline !important;
+}
+

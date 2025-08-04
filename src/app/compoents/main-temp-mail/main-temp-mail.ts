@@ -7,6 +7,7 @@ import { LucideAngularModule } from "lucide-angular";
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
 import { EmailService } from '../../services/email';
+import { GoogleAnalyticsService } from '../../services/google-analytics.service';
 import { EmailViewDialog } from '../email-view-dialog/email-view-dialog';
 import { NewEmailModalComponent } from '../new-email-modal/new-email-modal';
 import { SaveSuccessDialogComponent } from '../save-success-dialog/save-success-dialog.component';
@@ -38,6 +39,7 @@ export class MainTempMail implements OnInit, OnDestroy {
 
   constructor(
     private emailService: EmailService,
+    private googleAnalytics: GoogleAnalyticsService,
     @Inject(PLATFORM_ID) private platformId: Object,
     private route: ActivatedRoute,
   ) {
@@ -230,6 +232,7 @@ export class MainTempMail implements OnInit, OnDestroy {
         }, 1000);
 
         this.refreshing = false;
+        this.googleAnalytics.trackEmailRefreshed();
         this.startCountdown();
       },
       error: (err) => {
@@ -250,6 +253,7 @@ export class MainTempMail implements OnInit, OnDestroy {
 
     navigator.clipboard.writeText(this.currentEmail).then(() => {
       this.copied = true;
+      this.googleAnalytics.trackEmailCopied();
       setTimeout(() => (this.copied = false), 2000);
     });
   }
@@ -261,6 +265,7 @@ export class MainTempMail implements OnInit, OnDestroy {
   dialog = inject(MatDialog)
 
   viewEmail(email: any): void {
+    this.googleAnalytics.trackEmailView();
     const dialogRef = this.dialog.open(EmailViewDialog, {
       width: '90vw',
       maxWidth: '800px',

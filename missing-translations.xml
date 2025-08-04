@@ -2,39 +2,21 @@
 <!-- Copy these trans-unit blocks to your messages.ar.xlf file -->
 <!-- Replace the TODO comments with actual Arabic translations -->
 
-      <trans-unit id="copied2" datatype="html">
-        <source>Copied!</source>
-        <target><!-- TODO: Add Arabic translation for: Copied! --></target>
+      <trans-unit id="mainTempMail.recentEmail" datatype="html">
+        <source>Recent Emails</source>
+        <target><!-- TODO: Add Arabic translation for: Recent Emails --></target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">57,59</context>
+          <context context-type="sourcefile">src/app/compoents/main-temp-mail/main-temp-mail.html</context>
+          <context context-type="linenumber">40,41</context>
         </context-group>
       </trans-unit>
 
-      <trans-unit id="copy2" datatype="html">
-        <source>Copy</source>
-        <target><!-- TODO: Add Arabic translation for: Copy --></target>
+      <trans-unit id="mainTempMail.emailActive" datatype="html">
+        <source>Active</source>
+        <target><!-- TODO: Add Arabic translation for: Active --></target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">59,61</context>
-        </context-group>
-      </trans-unit>
-
-      <trans-unit id="copied1" datatype="html">
-        <source>Copied!</source>
-        <target><!-- TODO: Add Arabic translation for: Copied! --></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">91,93</context>
-        </context-group>
-      </trans-unit>
-
-      <trans-unit id="copyLink1" datatype="html">
-        <source>Copy Link</source>
-        <target><!-- TODO: Add Arabic translation for: Copy Link --></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">93,95</context>
+          <context context-type="sourcefile">src/app/compoents/main-temp-mail/main-temp-mail.html</context>
+          <context context-type="linenumber">53,54</context>
         </context-group>
       </trans-unit>
 

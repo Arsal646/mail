@@ -165,3 +165,40 @@ button, a{
 .new {
   animation: slideInFromRight 0.5s ease-out;
 }
+
+/* Email History Tooltip Responsive Positioning */
+[data-history-tooltip] .absolute {
+  /* On mobile, position from right to prevent overflow */
+  @media (max-width: 768px) {
+    right: auto;
+    left: auto;
+    transform: translateX(0);
+  }
+  
+  /* For RTL languages */
+  [dir="rtl"] & {
+    right: auto;
+    left: 0;
+  }
+  
+  /* Ensure tooltip doesn't overflow viewport on small screens */
+  @media (max-width: 320px) {
+    min-width: 250px;
+    max-width: 280px;
+  }
+}
+
+/* Prevent horizontal scrolling on mobile when tooltip is shown */
+@media (max-width: 768px) {
+  [data-history-tooltip] {
+    position: relative;
+    overflow: visible;
+  }
+  
+  [data-history-tooltip] .absolute {
+    /* Ensure tooltip stays within viewport */
+    max-width: calc(100vw - 40px);
+    right: auto;
+    left: auto;
+  }
+}

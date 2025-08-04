@@ -35,9 +35,9 @@
 
                         <!-- Email History Tooltip -->
                         <div *ngIf="showEmailHistoryTooltip"
-                            class="absolute top-8 left-0 bg-white border border-gray-300 rounded-lg shadow-lg z-50 min-w-[280px] max-w-[400px]">
+                            class="absolute top-8 left-0 bg-white border border-gray-300 rounded-lg shadow-lg z-50 min-w-[280px] max-w-[400px] ">
                             <div class="p-3">
-                                <div class="text-sm font-medium text-gray-900 mb-2">Recent Emails</div>
+                                <div class="text-sm font-medium text-gray-900 mb-2" i18n="@@mainTempMail.recentEmail">Recent Emails</div>
                                 <div class="max-h-48 overflow-y-auto">
                                     <div i18n="@@mainTempMail.noRecentEmails" *ngIf="getRecentEmails().length === 0" class="text-sm text-gray-500 py-2">
                                         No recent emails found
@@ -49,7 +49,7 @@
                                             <div class="font-mono text-gray-900 truncate">{{email.address}}</div>
                                             <div class="text-xs text-gray-500">
                                                 {{formatDate(email.createdAt)}}
-                                                <span *ngIf="email.active"
+                                                <span *ngIf="email.active" i18n="@@mainTempMail.emailActive"
                                                     class="ml-2 px-1 py-0.5 bg-green-100 text-green-600 rounded text-xs">Active</span>
                                             </div>
                                         </div>

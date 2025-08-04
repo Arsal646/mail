@@ -1454,6 +1454,25 @@
         <source>privacy policy, temporary email privacy, data protection, email privacy, privacy terms, temp mail privacy</source>
         <target>سياسة الخصوصية, خصوصية البريد الإلكتروني المؤقت, حماية البيانات, خصوصية البريد الإلكتروني, شروط الخصوصية, خصوصية البريد المؤقت</target>
       </trans-unit>
+
+      <trans-unit id="mainTempMail.recentEmail" datatype="html">
+  <source>Recent Emails</source>
+  <target>رسائل البريد الإلكتروني الحديثة</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/compoents/main-temp-mail/main-temp-mail.html</context>
+    <context context-type="linenumber">40,41</context>
+  </context-group>
+</trans-unit>
+
+<trans-unit id="mainTempMail.emailActive" datatype="html">
+  <source>Active</source>
+  <target>نشط</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">src/app/compoents/main-temp-mail/main-temp-mail.html</context>
+    <context context-type="linenumber">53,54</context>
+  </context-group>
+</trans-unit>
+
     </body>
   </file>
 </xliff>

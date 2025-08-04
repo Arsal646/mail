@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { EmailService } from '../../services/email';
 import { EmailViewDialog } from '../../compoents/email-view-dialog/email-view-dialog';
 import { SaveSuccessDialogComponent } from '../../compoents/save-success-dialog/save-success-dialog.component';
+import { GoogleAnalyticsService } from '../../services/google-analytics.service';
 
 @Component({
   selector: 'app-quick-email',
@@ -36,6 +37,7 @@ export class QuickEmailComponent implements OnInit, OnDestroy {
   private domain = '@tempmails.online';
 
   constructor(
+    private googleAnalytics: GoogleAnalyticsService,
     private emailService: EmailService, 
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
@@ -175,6 +177,7 @@ export class QuickEmailComponent implements OnInit, OnDestroy {
 
     navigator.clipboard.writeText(this.currentEmail).then(() => {
       this.copied = true;
+      this.googleAnalytics.trackEmailCopied();
       setTimeout(() => (this.copied = false), 2000);
     });
   }
@@ -182,6 +185,7 @@ export class QuickEmailComponent implements OnInit, OnDestroy {
   dialog = inject(MatDialog);
 
   viewEmail(email: any): void {
+    this.googleAnalytics.trackEmailView();
     const dialogRef = this.dialog.open(EmailViewDialog, {
       width: '90vw',
       maxWidth: '800px',

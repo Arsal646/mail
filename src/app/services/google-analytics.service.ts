@@ -35,10 +35,10 @@ export class GoogleAnalyticsService {
     trackEvent(eventName: string, parameters?: any): void {
         // Temporarily allow dev mode for testing - remove this condition later
         if ((this.isProduction) && typeof gtag !== 'undefined') {
-            //console.log('GA Event:', eventName, parameters); // Debug logging
+            console.log('GA Event:', eventName, parameters); // Debug logging
             gtag('event', eventName, parameters);
         } else {
-            //console.log('GA Event (dev mode - gtag not available):', eventName, parameters);
+            console.log('GA Event (dev mode - gtag not available):', eventName, parameters);
         }
     }
 

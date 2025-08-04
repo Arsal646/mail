@@ -232,7 +232,7 @@ export class MainTempMail implements OnInit, OnDestroy {
         }, 1000);
 
         this.refreshing = false;
-        this.googleAnalytics.trackEmailRefreshed();
+        //this.googleAnalytics.trackEmailRefreshed();
         this.startCountdown();
       },
       error: (err) => {

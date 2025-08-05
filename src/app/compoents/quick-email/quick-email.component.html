@@ -60,7 +60,12 @@
                   class="px-3 py-1 text-sm border border-gray-300 rounded-lg hidden md:flex items-center gap-1 hover:bg-gray-100"
                   [class.bg-green-100]="copied" [class.text-green-600]="copied">
                   <lucide-icon name="{{copied ? 'check' : 'copy'}}" [size]="14"></lucide-icon>
-                  <span i18n="@@quickEmail.copyButton">{{copied ? 'Copied' : 'Copy'}}</span>
+
+                    @if(copied){
+                      <span i18n="@@quickEmail.copiedMessage">copied</span>
+                    }@else{
+                      <span i18n="@@quickEmail.copyMessage1">copy</span>
+                    }
                 </button>
               </div>
             </div>

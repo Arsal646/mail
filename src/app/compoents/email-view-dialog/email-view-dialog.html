@@ -27,13 +27,13 @@
         <div class="min-w-0">
           <div class="flex flex-col sm:flex-row sm:items-baseline sm:space-x-2">
             <p class="text-sm sm:text-base font-medium text-gray-900 truncate">
-              {{email.from_name || email.from_email.split('@')[0]}}
-            </p>
-            <p class="text-xs sm:text-sm text-gray-500 truncate">
               {{email.from_email}}
             </p>
+            <!-- <p class="text-xs sm:text-sm text-gray-500 truncate">
+              {{email.from_email}}
+            </p> -->
           </div>
-          <p class="text-xs sm:text-sm text-gray-500 mt-1 flex ">
+          <p class="text-xs sm:text-sm text-gray-500 mt-1 flex items-center">
             <lucide-icon name="clock" [size]="14" class="mr-1"></lucide-icon>
             {{email.created_at | date:'mediumDate'}} at {{email.created_at | date:'shortTime'}}
           </p>

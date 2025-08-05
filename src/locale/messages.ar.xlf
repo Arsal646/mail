@@ -1473,6 +1473,25 @@
   </context-group>
 </trans-unit>
 
+<trans-unit id="quickEmail.copiedMessage" datatype="html">
+    <source>copied</source>
+    <target>تم النسخ</target>
+    <context-group purpose="location">
+        <context context-type="sourcefile">src/app/compoents/quick-email/quick-email.component.html</context>
+        <context context-type="linenumber">65,67</context>
+    </context-group>
+</trans-unit>
+
+<trans-unit id="quickEmail.copyMessage1" datatype="html">
+    <source>copy</source>
+    <target>نسخ</target>
+    <context-group purpose="location">
+        <context context-type="sourcefile">src/app/compoents/quick-email/quick-email.component.html</context>
+        <context context-type="linenumber">67,69</context>
+    </context-group>
+</trans-unit>
+
+
     </body>
   </file>
 </xliff>

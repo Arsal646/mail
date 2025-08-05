@@ -1364,7 +1364,7 @@
 
           <trans-unit id="seo.home.title" datatype="html">
         <source>Free Temporary Email Service - Disposable Email Address | TempMail4u</source>
-        <target>خدمة البريد الإلكتروني المؤقتة المجانية - عنوان بريد إلكتروني مؤقت | TempMail4u</target>
+        <target>خدمة بريد إلكتروني مؤقت مجاني بدون تسجيل – TempMail4u</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.ts</context>
           <context context-type="linenumber">47</context>

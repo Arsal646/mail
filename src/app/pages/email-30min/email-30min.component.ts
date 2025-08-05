@@ -203,7 +203,7 @@ export class Email30MinComponent implements OnInit {
   private setSeoTags(): void {
     const seoContent = this.getLocalizedSeoContent();
     const baseUrl = this.seoService.getBaseUrl(this.locale);
-    const translatedRoute = this.routeTranslation.getRoute('email-30min');
+    const translatedRoute = '';
     
     this.seoService.updateSeoTags({
       title: seoContent.title,

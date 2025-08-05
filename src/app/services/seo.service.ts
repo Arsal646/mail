@@ -110,34 +110,39 @@ export class SeoService {
         // Remove existing hreflang tags
         const existingTags = this.document.querySelectorAll('link[rel="alternate"][hreflang]');
         existingTags.forEach(tag => tag.remove());
-
+    
         // Get the route key from the current URL
         const routeKey = this.getRouteKeyFromUrl(currentUrl);
-        if (!routeKey) return;
-
+        // Stop only if routeKey is null or undefined (allow empty string for / route)
+        if (routeKey === null || routeKey === undefined) return;
+    
         const head = this.document.getElementsByTagName('head')[0];
-
-        // Add hreflang tags for all supported languages with translated routes
+    
+        // Build correct path: homepage = '/', otherwise '/routeKey'
+        const buildPath = (key: string) => key === 'home' ? '/' : `/${key}`;
+        
+    
+        // Add hreflang tags for all supported languages
         this.supportedLanguages.forEach(language => {
-            const translatedRoute = this.routeTranslation.getRouteForLocale(routeKey, language.code);
             const link = this.document.createElement('link');
             link.rel = 'alternate';
             link.hreflang = language.code;
-            link.href = `https://tempmail4u.com${language.urlPrefix}${translatedRoute ? '/' + translatedRoute : ''}`;
+            link.href = `https://tempmail4u.com${language.urlPrefix}${buildPath(routeKey)}`;
             head.appendChild(link);
         });
-
-        // Add x-default for the default language
+    
+        // Add x-default hreflang
         const defaultLanguage = this.supportedLanguages.find(lang => lang.isDefault);
         if (defaultLanguage) {
-            const defaultRoute = this.routeTranslation.getRouteForLocale(routeKey, defaultLanguage.code);
             const defaultLink = this.document.createElement('link');
             defaultLink.rel = 'alternate';
             defaultLink.hreflang = 'x-default';
-            defaultLink.href = `https://tempmail4u.com${defaultLanguage.urlPrefix}${defaultRoute ? '/' + defaultRoute : ''}`;
+            defaultLink.href = `https://tempmail4u.com${defaultLanguage.urlPrefix}${buildPath(routeKey)}`;
             head.appendChild(defaultLink);
         }
     }
+    
+    
 
     /**
      * Extract route key from URL for hreflang generation
@@ -157,15 +162,11 @@ export class SeoService {
 
         // Map paths to route keys
         const pathToRouteKey: { [key: string]: string } = {
-            '': 'home',
-            '10-minutes-temporary-email': 'email-10min',
-            '10-دقائق-بريد-مؤقت': 'email-10min',
-            '20-minutes-temporary-email': 'email-20min',
-            '20-دقيقة-بريد-مؤقت': 'email-20min',
-            '30-minutes-temporary-email': 'email-30min',
-            '30-دقيقة-بريد-مؤقت': 'email-30min',
+            '':'home',
+            '10-minutes-temporary-email': '10-minutes-temporary-email',
+            '20-minutes-temporary-email': '20-minutes-temporary-email',
+            '30-minutes-temporary-email': '30-minutes-temporary-email',
             'privacy-policy': 'privacy-policy',
-            'سياسة-الخصوصية': 'privacy-policy'
         };
 
         return pathToRouteKey[path] || null;

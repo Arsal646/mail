@@ -1,27 +1,42 @@
 import { Routes } from '@angular/router';
-import { routesEn } from './routes/routes.en';
-import { routesAr } from './routes/routes.ar';
+import { SavedEmailComponent } from './pages/saved-email/saved-email.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { Email10MinComponent } from './pages/email-10min/email-10min.component';
+import { Home } from './pages/home/home';
+import { Email20MinComponent } from './pages/email-20min/email-20min.component';
+import { Email30MinComponent } from './pages/email-30min/email-30min.component';
 
-// Get the current locale from the document or default to 'en'
-function getCurrentLocale(): string {
-  if (typeof document !== 'undefined') {
-    const htmlLang = document.documentElement.lang;
-    return htmlLang || 'en';
-  }
-  return 'en';
-}
-
-// Select routes based on current locale
-function getLocalizedRoutes(): Routes {
-  const locale = getCurrentLocale();
-  
-  switch (locale) {
-    case 'ar':
-      return routesAr;
-    case 'en':
-    default:
-      return routesEn;
-  }
-}
-
-export const routes: Routes = getLocalizedRoutes();
+// Use English routes for both languages - content will be localized based on locale
+export const routes: Routes = [
+  {
+    path: '',
+    component: Home,
+    pathMatch: 'full'
+  },
+  {
+    path: 'saved/:token',
+    component: SavedEmailComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: '10-minutes-temporary-email',
+    component: Email10MinComponent,
+    pathMatch: 'full'
+  },
+  { 
+    path: '20-minutes-temporary-email', 
+    component: Email20MinComponent,
+    pathMatch: 'full'
+  },
+  { 
+    path: '30-minutes-temporary-email', 
+    component: Email30MinComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'privacy-policy',
+    component: PrivacyPolicyComponent,
+    pathMatch: 'full'
+  },
+  { path: '**', redirectTo: '' }
+];

@@ -91,11 +91,11 @@ export class FooterComponent {
   // Get translated routes for navigation
   get routes() {
     return {
-      home: this.routeTranslation.getRoute('home'),
-      email10min: this.routeTranslation.getRoute('email-10min'),
-      email20min: this.routeTranslation.getRoute('email-20min'),
-      email30min: this.routeTranslation.getRoute('email-30min'),
-      privacy: this.routeTranslation.getRoute('privacy-policy')
+      home: '',
+      email10min: '10-minutes-temporary-email',
+      email20min: '20-minutes-temporary-email',
+      email30min: '30-minutes-temporary-email',
+      privacy: 'privacy-policy'
     };
   }
 }

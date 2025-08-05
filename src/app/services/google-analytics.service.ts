@@ -12,6 +12,7 @@ export class GoogleAnalyticsService {
     constructor() {
         // Initialize gtag if in production
         if (this.isProduction && typeof gtag !== 'undefined') {
+            console.log('prod... ');
             gtag('config', environment.googleAnalyticsId, {
                 page_title: document.title,
                 page_location: window.location.href
@@ -22,7 +23,8 @@ export class GoogleAnalyticsService {
     // Track page views
     trackPageView(url: string, title?: string): void {
         // Temporarily allow dev mode for testing - remove this condition later
-        if ((this.isProduction || !this.isProduction) && typeof gtag !== 'undefined') {
+        if ((this.isProduction) && typeof gtag !== 'undefined') {
+            console.log('prod2... ');
             console.log('GA Page View:', url, title); // Debug logging
             gtag('config', environment.googleAnalyticsId, {
                 page_path: url,

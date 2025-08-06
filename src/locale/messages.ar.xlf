@@ -1363,7 +1363,7 @@
 
 
           <trans-unit id="seo.home.title" datatype="html">
-        <source>Free Temporary Email Service - Disposable Email Address | TempMail4u</source>
+      <source>Temp Mail – Free Temporary Email & Disposable Inbox Service</source>
         <target>خدمة بريد مؤقت وبريد إلكتروني مجاني بدون تسجيل – TempMail4u</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.ts</context>
@@ -1371,7 +1371,7 @@
         </context-group>
       </trans-unit>
           <trans-unit id="seo.home.description" datatype="html">
-        <source>Get free temporary email addresses instantly. Our disposable email service protects your privacy and keeps your inbox spam-free. No registration required.</source>
+        <source>Temp mail lets you create free temporary emails instantly. Keep your inbox private and spam-free with our disposable service. No signup—try it now!</source>
         <target>احصل على عناوين بريد مؤقت وبريد إلكتروني مؤقتة مجانية فورياً. خدمة البريد الإلكتروني المؤقت تحمي خصوصيتك وتحافظ على صندوق الوارد خالياً من الرسائل المزعجة. لا يتطلب تسجيل.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.ts</context>

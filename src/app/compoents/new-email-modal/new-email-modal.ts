@@ -46,7 +46,8 @@ export class NewEmailModalComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     // Auto focus on the input field when modal opens
-    if (this.isBrowser && this.usernameInput) {
+    if (this.isBrowser) {
+      this.generateRandom();
       setTimeout(() => {
         this.usernameInput.nativeElement.focus();
       }, 100);

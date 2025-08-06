@@ -128,7 +128,6 @@ export class SeoService {
             link.rel = 'alternate';
             link.hreflang = language.code;
             link.href = `https://tempmail4u.com${language.urlPrefix}${buildPath(routeKey)}`;
-            console.log(link)
             head.appendChild(link);
         });
     
@@ -139,7 +138,6 @@ export class SeoService {
             defaultLink.rel = 'alternate';
             defaultLink.hreflang = 'x-default';
             defaultLink.href = `https://tempmail4u.com${defaultLanguage.urlPrefix}${buildPath(routeKey)}`;
-            console.log(defaultLink)
             head.appendChild(defaultLink);
         }
     }

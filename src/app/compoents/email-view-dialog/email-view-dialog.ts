@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, ViewEncapsulation } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import {LucideAngularModule} from "lucide-angular";
-import { SafeHtmlOrTextPipe } from '../../pipe/safe-html-or-text.pipe';
+import { EmailBodyComponent } from '../email-body/email-body';
 
 @Component({
   selector: 'app-email-view-dialog',
-  imports: [CommonModule, LucideAngularModule, SafeHtmlOrTextPipe],
+  imports: [CommonModule, LucideAngularModule, EmailBodyComponent],
   templateUrl: './email-view-dialog.html',
   styleUrl: './email-view-dialog.css'
 })

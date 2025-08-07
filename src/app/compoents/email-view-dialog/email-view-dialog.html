@@ -43,23 +43,13 @@
 
     <!-- Email Body - Fixed horizontal scrolling -->
 @if(email.body_html){
-  <div
-    class="flex-1 overflow-y-auto overflow-x-hidden px-5 py-3 max-w-full text-gray-800 text-sm break-words"
-    style="height: auto; padding: 35px; word-break: break-word;"
-    [innerHTML]="email.body_html">
-  </div>
-}@else{
-  <!-- <div
-    class="flex-1 overflow-y-auto overflow-x-hidden px-5 py-3 max-w-full text-gray-800 text-sm break-words"
-    style="height: auto; padding: 35px; word-break: break-word; white-space: pre-wrap;">
-    {{ email.body_text }}
-  </div> -->
+<app-email-body [htmlContent]="email.body_html"></app-email-body>
 
-  <div
-  class="flex-1 overflow-y-auto overflow-x-hidden px-5 py-3 max-w-full text-gray-800 text-sm break-words"
-  style="padding: 35px; word-break: break-word;"
-  [innerHTML]="email.body_text | safeHtmlOrText">
-</div>
+}@else{
+
+
+<app-email-body [htmlContent]="email.body_text"></app-email-body>
+
 }
 
   </div>

@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { RouteTranslationService } from '../../services/route-translation.service';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
@@ -70,6 +71,35 @@ import { RouteTranslationService } from '../../services/route-translation.servic
             </div>
           </nav>
 
+          <!-- Language Toggle -->
+          <div class="relative">
+            <button 
+              (click)="toggleDropdown()"
+              class="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-900 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors"
+            >
+              <span>{{ currentLanguage.flag }}</span>
+              <span class="hidden sm:inline">{{ currentLanguage.name }}</span>
+              <svg class="w-4 h-4" [class.rotate-180]="isDropdownOpen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+
+            <div 
+              *ngIf="isDropdownOpen"
+              class="absolute bottom-full right-0 mb-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+            >
+              <button
+                *ngFor="let lang of languages"
+                (click)="switchLanguage(lang.code)"
+                class="w-full flex items-center gap-3 px-4 py-2 text-sm text-left hover:bg-gray-50"
+                [class.bg-blue-50]="lang.code === currentLanguage.code"
+              >
+                <span>{{ lang.flag }}</span>
+                <span>{{ lang.name }}</span>
+              </button>
+            </div>
+          </div>
+
         </div>
 
              <!-- Copyright + Logo -->
@@ -86,9 +116,21 @@ import { RouteTranslationService } from '../../services/route-translation.servic
 })
 export class FooterComponent {
   currentYear: number = new Date().getFullYear();
+  isDropdownOpen = false;
+  
   private routeTranslation = inject(RouteTranslationService);
+  private locale = inject(LOCALE_ID);
+  private document = inject(DOCUMENT);
 
-  // Get translated routes for navigation
+  languages = [
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'ar', name: 'العربية', flag: '🇸🇦' }
+  ];
+
+  get currentLanguage() {
+    return this.languages.find(lang => lang.code === this.locale || lang.code === this.locale.split('-')[0]) || this.languages[0];
+  }
+
   get routes() {
     return {
       home: '',
@@ -97,5 +139,24 @@ export class FooterComponent {
       email30min: '30-minutes-temporary-email',
       privacy: 'privacy-policy'
     };
+  }
+
+  toggleDropdown() {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  switchLanguage(langCode: string) {
+    this.isDropdownOpen = false;
+    const currentPath = this.document.location.pathname;
+    
+    // Remove current locale prefix
+    let newPath = currentPath.replace(/^\/ar/, '');
+    
+    // Add new locale prefix if not English
+    if (langCode === 'ar') {
+      newPath = '/ar' + newPath;
+    }
+    
+    this.document.location.href = newPath;
   }
 }

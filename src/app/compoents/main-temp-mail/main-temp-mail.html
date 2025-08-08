@@ -201,7 +201,7 @@
     <div class="px-5 pb-5 bg-white rounded-lg">
         <div class=" border px-4 pt-4 border-gray-200 rounded-lg">
             <div class="flex items-center justify-between mb-4">
-                <h2 class="text-lg font-semibold text-gray-900" i18n="@@mainTempMail.inbox">Inbox</h2>
+                <h2 class="text-lg font-semibold text-gray-900" i18n="@@mainTempMail.inbox">Your Temporary Inbox</h2>
                 <div class="flex items-center text-sm text-gray-600">
                     <span class="mr-2" i18n="@@mainTempMail.autoRefresh">Auto-refresh in {{ countdown() }}s</span>
                     <button (click)="reload()" class="p-1 text-gray-600 hover:text-gray-900">
@@ -239,10 +239,10 @@
                 </div>
 
                 <!-- Email List -->
-                <div *ngIf="emails.length > 0" class="space-y-2 overflow-y-auto">
+                <div *ngIf="emails.length > 0" class="space-y-2 overflow-y-auto p-1">
                     <div *ngFor="let email of emails"
-                        class="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors"
-                        [class.bg-gray-100]="!email.read" [class.new]="email.new_added" (click)="viewEmail(email)">
+                        class="p-4 border border-gray-200 rounded-lg hover:bg-gray-100 cursor-pointer transition-colors"
+                        [class.bg-gray-50]="!email.read" [class.new]="email.new_added" (click)="viewEmail(email)">
                         <div class="flex items-start">
                             <div class="mr-3">
                                 <div class="w-10 h-10 rounded-full flex items-center justify-center"

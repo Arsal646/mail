@@ -21,6 +21,7 @@ import { SafeHtmlOrTextPipe } from '../../pipe/safe-html-or-text.pipe';
       word-break: break-word;
       height: auto;
       display: block;
+      padding-top:0;
     }
   `],
   encapsulation: ViewEncapsulation.ShadowDom

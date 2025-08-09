@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
@@ -14,118 +14,151 @@ export interface SaveSuccessData {
   standalone: true,
   imports: [CommonModule, LucideAngularModule],
   template: `
-    <div class="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 bg-white border-b border-gray-300">
-    <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
+    <div class="relative bg-white rounded-lg shadow-xl overflow-hidden">
+      <canvas #confettiCanvas class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
 
+      <div class="relative z-10 p-6">
+        <!-- Close Button -->
+        <button (click)="dialogRef.close()" [attr.aria-label]="'common.close'"
+                class="absolute right-4 top-4 p-1.5 text-gray-400 hover:bg-gray-50 hover:text-gray-600 rounded-md transition-colors">
+          <lucide-icon name="x" [size]="18"></lucide-icon>
+        </button>
 
-    </div>
-    <button (click)="dialogRef.close()" 
-            class="p-1 sm:p-2 text-gray-500 cursor-pointer hover:bg-red-100 w-8 h-8 sm:w-10 sm:h-10 rounded-full">
-      <lucide-icon name="x" [size]="20"></lucide-icon>
-    </button>
-  </div>
-    <div class="p-6 ">
+        <div class="text-center space-y-5 max-w-md mx-auto">
+          <!-- Success Visual -->
+          <div class="w-20 h-20 mx-auto bg-emerald-50 rounded-full flex items-center justify-center">
+            <lucide-icon name="check-circle" [size]="36" class="text-emerald-600"></lucide-icon>
+          </div>
 
-      <!-- Header with App-style Navigation -->
-      <!-- Success Header -->
-      <div class="text-center mb-6">
-        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <lucide-icon name="check-circle" [size]="32" class="text-green-600"></lucide-icon>
-        </div>
-        <h2 class="text-xl font-bold text-gray-900 mb-2" i18n="@@saveSuccess.title">Email Saved Successfully!</h2>
-        <p class="text-gray-600 text-sm" i18n="@@saveSuccess.subtitle">Your access link has been copied to clipboard</p>
-      </div>
+          <!-- Header -->
+          <div class="space-y-1">
+            <h2 class="text-2xl font-bold text-gray-900" i18n="@@saveSuccess.title">Your Link is Ready!</h2>
+            <p class="text-gray-500" i18n="@@saveSuccess.subtitle">Share this secure link with anyone who needs access.</p>
+          </div>
 
-      <!-- Email Info -->
-      <div class="bg-gray-50 rounded-lg p-4 mb-4">
-        <div class="text-sm font-medium text-gray-700 mb-2" i18n="@@saveSuccess.yourEmail">Your Email:</div>
-        <div class="font-mono text-sm text-gray-900 bg-white p-2 rounded border break-all">
-          {{data.emailAddress}}
-        </div>
-      </div>
+          <!-- Link Section -->
+          <div class="space-y-3">
+            <div class="flex items-center bg-gray-50 border border-gray-200 rounded-lg p-3 hover:border-emerald-300 transition-colors">
+              <div class="flex-1 text-sm font-mono text-gray-700 break-all mr-3">
+                {{data.accessUrl}}
+              </div>
+              <button (click)="copyLink()" 
+                      class="p-2 hover:bg-white rounded transition-colors"
+                      [attr.aria-label]="linkCopied ? ('common.copied') : ('common.copy')"
+                      [class.text-emerald-600]="linkCopied">
+                <lucide-icon [name]="linkCopied ? 'check' : 'copy'" [size]="16"></lucide-icon>
+              </button>
+            </div>
+            <p class="text-xs text-gray-500">
+              <span class="font-medium" i18n="@@saveSuccess.expiresLabel">Expires:</span> {{data.expiresAtFormatted}}
+              <span class="block mt-1"><span i18n="@@saveSuccess.sentToLabel">Sent to:</span> {{data.emailAddress}}</span>
+            </p>
+          </div>
 
-      <!-- Access Link -->
-      <div class="bg-blue-50 rounded-lg p-4 mb-4">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-sm font-medium text-gray-700" i18n="@@saveSuccess.accessLink">7-Day Access Link:</span>
-          <button (click)="copyLink()" 
-                  class="text-blue-600 cursor-pointer hover:text-blue-800 text-xs flex items-center space-x-1"
-                  [class.text-green-600]="linkCopied">
-            <lucide-icon [name]="linkCopied ? 'check' : 'copy'" [size]="12"></lucide-icon>
-            <span>
-  @if (linkCopied) {
-    <span i18n="@@copied2">Copied!</span>
-  } @else {
-    <span i18n="@@copy2">Copy</span>
-  }
-</span>
-
-          </button>
-        </div>
-        <div class="text-xs text-gray-600 bg-white p-2 rounded border break-all font-mono">
-          {{data.accessUrl}}
-        </div>
-        <div class="mt-2 text-xs text-gray-500 flex items-center">
-          <lucide-icon name="calendar" [size]="12" class="mr-1"></lucide-icon>
-          <span i18n="@@saveSuccess.expires">Expires: {{data.expiresAtFormatted}}</span>
-        </div>
-      </div>
-
-      <!-- Instructions -->
-      <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-6">
-        <div class="flex items-start">
-          <lucide-icon name="info" [size]="16" class="text-yellow-600 mr-2 mt-0.5 flex-shrink-0"></lucide-icon>
-          <div class="text-xs text-yellow-800">
-            <span i18n="@@saveSuccess.instructions"><strong>How to use:</strong> Save this link to return to your inbox anytime within 7 days. 
-            Share it with others or bookmark it for easy access.</span>
+          <!-- Action Buttons -->
+          <div class="pt-2 flex justify-center gap-3">
+            <button (click)="dialogRef.close()"
+                    class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-md border border-gray-300 transition-colors"
+                    i18n="@@common.close">
+              Close
+            </button>
+            <button (click)="sendEmail()"
+                    class="px-4 py-2 text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 rounded-md transition-colors"
+                    i18n="@@saveSuccess.emailLink">
+              Email Link
+            </button>
           </div>
         </div>
-      </div>
-
-      <!-- Action Buttons -->
-      <div class="flex space-x-3">
-        <button (click)="copyLink()" 
-                class="flex-1 bg-blue-600 cursor-pointer text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center justify-center">
-          <lucide-icon [name]="linkCopied ? 'check' : 'copy'" [size]="16" class="mr-2"></lucide-icon>
-          @if (linkCopied) {
-  <span i18n="@@copied1">Copied!</span>
-} @else {
-  <span i18n="@@copyLink1">Copy Link</span>
-}
-        </button>
-        
-        <button (click)="close()" 
-                class="flex-1 bg-gray-100 cursor-pointer text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
-          <span i18n="@@saveSuccess.gotIt">Got it!</span>
-        </button>
       </div>
     </div>
   `,
   styles: [`
-    .break-all {
-      word-break: break-all;
+    .break-all { 
+      word-break: break-word;
     }
-    
-    .button{
-      cursor:pointer;
-    }
-    
-    button:hover {
-      transform: translateY(-1px);
-    }
-    
-    button:active {
-      transform: translateY(0);
+    button, a, lucide-icon {
+      cursor: pointer;
     }
   `]
 })
-export class SaveSuccessDialogComponent {
+export class SaveSuccessDialogComponent implements AfterViewInit {
+  @ViewChild('confettiCanvas') private confettiCanvasRef?: ElementRef<HTMLCanvasElement>;
   linkCopied = false;
 
   constructor(
     public dialogRef: MatDialogRef<SaveSuccessDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: SaveSuccessData
   ) {}
+
+  ngAfterViewInit(): void {
+    this.launchConfetti();
+  }
+
+  private launchConfetti(): void {
+    const canvas = this.confettiCanvasRef?.nativeElement;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    const container = canvas.parentElement as HTMLElement;
+    canvas.width = container.clientWidth;
+    canvas.height = container.clientHeight;
+
+    const colors = ['#10b981', '#3b82f6', '#f59e0b', '#ef4444', '#8b5cf6'];
+    const particles: Array<{
+      x: number; y: number; vx: number; vy: number; life: number; color: string;
+    }> = [];
+
+    const createBurst = (cx: number, cy: number, count: number) => {
+      for (let i = 0; i < count; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const speed = 1 + Math.random() * 2;
+        particles.push({
+          x: cx, y: cy,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed - 1,
+          life: 60 + Math.floor(Math.random() * 40),
+          color: colors[Math.floor(Math.random() * colors.length)],
+        });
+      }
+    };
+
+    createBurst(canvas.width * 0.5, canvas.height * 0.2, 30);
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = particles.length - 1; i >= 0; i--) {
+        const p = particles[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.05;
+        p.life -= 1;
+
+        const alpha = Math.max(0, p.life / 80);
+        ctx.fillStyle = this.hexToRgba(p.color, alpha);
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (p.life <= 0) particles.splice(i, 1);
+      }
+
+      if (particles.length > 0) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    animate();
+  }
+
+  private hexToRgba(hex: string, alpha: number): string {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
 
   async copyLink(): Promise<void> {
     try {
@@ -134,10 +167,14 @@ export class SaveSuccessDialogComponent {
       setTimeout(() => this.linkCopied = false, 2000);
     } catch (err) {
       console.error('Failed to copy link:', err);
+      // Consider showing a translated error message
     }
   }
 
-  close(): void {
-    this.dialogRef.close();
+  sendEmail(): void {
+    // Implementation would depend on your email service
+    const subject = 'Your Secure Access Link';
+    const body = `Here's your secure access link:\n\n${this.data.accessUrl}\n\nExpires: ${this.data.expiresAtFormatted}`;
+    window.location.href = `mailto:${this.data.emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 }

@@ -3,6 +3,10 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+html{
+  --mat-sys-corner-extra-large: 10px;
+}
+
 
 /* Apply to entire page or specific container */
 ::-webkit-scrollbar {

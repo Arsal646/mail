@@ -234,8 +234,8 @@
         <target>• تحقق من صندوق الوارد أدناه للرسائل المستلمة</target>
       </trans-unit>
       <trans-unit id="quickEmail.inbox" datatype="html">
-        <source>Inbox</source>
-        <target>صندوق الوارد</target>
+     <source>Your Temporary Inbox</source>
+  <target>بريدك الوارد المؤقت</target>
       </trans-unit>
       <trans-unit id="quickEmail.autoRefresh" datatype="html">
         <source>Auto-refresh in <x id="INTERPOLATION" equiv-text="{{ countdown() }}"/>s</source>
@@ -1319,10 +1319,14 @@
   <target> إنشاء بريد إلكتروني جديد </target>
 </trans-unit>
 
+
 <trans-unit id="mainTempMail.inbox" datatype="html">
-  <source>Inbox</source>
-  <target>البريد الوارد</target>
+  <source>Your Temporary Inbox</source>
+  <target>بريدك الوارد المؤقت</target>
 </trans-unit>
+
+
+    
 
 
 <trans-unit id="copied2" datatype="html">
@@ -1490,6 +1494,38 @@
         <context context-type="linenumber">67,69</context>
     </context-group>
 </trans-unit>
+
+<trans-unit id="saveSuccess.expiresLabel" datatype="html">
+  <source>Expires:</source>
+  <target>ينتهي في:</target>
+</trans-unit>
+
+<trans-unit id="saveSuccess.sentToLabel" datatype="html">
+  <source>Sent to:</source>
+  <target>أُرسل إلى:</target>
+</trans-unit>
+
+<trans-unit id="common.close" datatype="html">
+  <source> Close </source>
+  <target>إغلاق</target>
+</trans-unit>
+
+<trans-unit id="saveSuccess.emailLink" datatype="html">
+  <source> Email Link </source>
+  <target>رابط البريد الإلكتروني</target>
+</trans-unit>
+
+<trans-unit id="emailView.showDetail" datatype="html">
+  <source>Show Details</source>
+  <target>عرض التفاصيل</target>
+</trans-unit>
+
+<trans-unit id="emailView.hideDetail" datatype="html">
+  <source>Hide Details</source>
+  <target>إخفاء التفاصيل</target>
+</trans-unit>
+
+
 
 
     </body>

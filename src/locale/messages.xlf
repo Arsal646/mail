@@ -2,67 +2,74 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="emailViewDialog.temporaryEmail" datatype="html">
-        <source> Temporary email</source>
+      <trans-unit id="emailView.showDetail" datatype="html">
+        <source>Show Details</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/email-view-dialog/email-view-dialog.html</context>
-          <context context-type="linenumber">72,76</context>
+          <context context-type="linenumber">36,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailView.hideDetail" datatype="html">
+        <source>Hide Details</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/compoents/email-view-dialog/email-view-dialog.html</context>
+          <context context-type="linenumber">38,40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.title" datatype="html">
         <source>Temporary Email Service</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/footer/footer.component.ts</context>
-          <context context-type="linenumber">27,28</context>
+          <context context-type="linenumber">28,29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.subtitle" datatype="html">
         <source>Secure, disposable email addresses</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/footer/footer.component.ts</context>
-          <context context-type="linenumber">28,30</context>
+          <context context-type="linenumber">29,31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.home" datatype="html">
         <source> Home </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/footer/footer.component.ts</context>
-          <context context-type="linenumber">40,41</context>
+          <context context-type="linenumber">41,42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.10MinMail" datatype="html">
         <source> 10 Minutes Mail </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/footer/footer.component.ts</context>
-          <context context-type="linenumber">47,48</context>
+          <context context-type="linenumber">48,49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.20MinMail" datatype="html">
         <source> 20 Minutes Mail </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/footer/footer.component.ts</context>
-          <context context-type="linenumber">54,55</context>
+          <context context-type="linenumber">55,56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.30MinMail" datatype="html">
         <source> 30 Minutes Mail </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/footer/footer.component.ts</context>
-          <context context-type="linenumber">61,62</context>
+          <context context-type="linenumber">62,63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.privacyPolicy" datatype="html">
         <source> Privacy Policy </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/footer/footer.component.ts</context>
-          <context context-type="linenumber">68,69</context>
+          <context context-type="linenumber">69,70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.copyright" datatype="html">
         <source> © <x id="INTERPOLATION" equiv-text="{{ currentYear }}"/> Temporary Email Service. All rights reserved. </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/footer/footer.component.ts</context>
-          <context context-type="linenumber">79,80</context>
+          <context context-type="linenumber">109,110</context>
         </context-group>
       </trans-unit>
       <trans-unit id="header.online" datatype="html">
@@ -197,7 +204,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="mainTempMail.inbox" datatype="html">
-        <source>Inbox</source>
+        <source>Your Temporary Inbox</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/main-temp-mail/main-temp-mail.html</context>
           <context context-type="linenumber">204,205</context>
@@ -448,7 +455,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="quickEmail.inbox" datatype="html">
-        <source>Inbox</source>
+        <source>Your Temporary Inbox</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/quick-email/quick-email.component.html</context>
           <context context-type="linenumber">126,127</context>
@@ -525,80 +532,45 @@
         </context-group>
       </trans-unit>
       <trans-unit id="saveSuccess.title" datatype="html">
-        <source>Email Saved Successfully!</source>
+        <source>Your Link is Ready!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
           <context context-type="linenumber">35,36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="saveSuccess.subtitle" datatype="html">
-        <source>Your access link has been copied to clipboard</source>
+        <source>Share this secure link with anyone who needs access.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
           <context context-type="linenumber">36,39</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="saveSuccess.yourEmail" datatype="html">
-        <source>Your Email:</source>
+      <trans-unit id="saveSuccess.expiresLabel" datatype="html">
+        <source>Expires:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">41,42</context>
+          <context context-type="linenumber">53,54</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="saveSuccess.accessLink" datatype="html">
-        <source>7-Day Access Link:</source>
+      <trans-unit id="saveSuccess.sentToLabel" datatype="html">
+        <source>Sent to:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">50,51</context>
+          <context context-type="linenumber">54,55</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="copied2" datatype="html">
-        <source>Copied!</source>
+      <trans-unit id="common.close" datatype="html">
+        <source> Close </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">57,59</context>
+          <context context-type="linenumber">63,64</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="copy2" datatype="html">
-        <source>Copy</source>
+      <trans-unit id="saveSuccess.emailLink" datatype="html">
+        <source> Email Link </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">59,61</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="saveSuccess.expires" datatype="html">
-        <source>Expires: <x id="INTERPOLATION" equiv-text="{{data.expiresAtFormatted}}"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">70,71</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="saveSuccess.instructions" datatype="html">
-        <source><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>How to use:<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> Save this link to return to your inbox anytime within 7 days. Share it with others or bookmark it for easy access.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">79,80</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="copied1" datatype="html">
-        <source>Copied!</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">91,93</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="copyLink1" datatype="html">
-        <source>Copy Link</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">93,95</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="saveSuccess.gotIt" datatype="html">
-        <source>Got it!</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/compoents/save-success-dialog/save-success-dialog.component.ts</context>
-          <context context-type="linenumber">99,101</context>
+          <context context-type="linenumber">68,69</context>
         </context-group>
       </trans-unit>
       <trans-unit id="email10minTitle" datatype="html">
@@ -1861,7 +1833,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="seo.home.title" datatype="html">
-        <source>Temp Mail – Free Temporary Email & Disposable Inbox Service</source>
+        <source>Temp Mail – Free Temporary Email &amp; Disposable Inbox Service</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/pages/home/home.ts</context>
           <context context-type="linenumber">57</context>

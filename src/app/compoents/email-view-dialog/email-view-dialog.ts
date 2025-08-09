@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Inject, ViewEncapsulation } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import {LucideAngularModule} from "lucide-angular";
 import { EmailBodyComponent } from '../email-body/email-body';
@@ -16,34 +16,23 @@ export class EmailViewDialog {
     @Inject(MAT_DIALOG_DATA) public email: any
   ) {}
 
+  showDetails = false;
+  copiedKey: string | null = null;
+  private copyTimeout: any;
+
+  toggleDetails(): void {
+    this.showDetails = !this.showDetails;
+  }
+
+  copyText(text: string, key: string) {
+    navigator.clipboard.writeText(text).then(() => {
+      this.copiedKey = key;
+      clearTimeout(this.copyTimeout);
+      this.copyTimeout = setTimeout(() => (this.copiedKey = null), 1500);
+    });
+  }
+
   close(): void {
     this.dialogRef.close();
   }
-
-  onReply(): void {
-    this.dialogRef.close('reply');
-  }
-
-  onForward(): void {
-    this.dialogRef.close('forward');
-  }
-
-  copiedAddress: string | null = null;
-copyTimeout: any;
-
-copyEmail(text: string, context: string = '') {
-  navigator.clipboard.writeText(text).then(() => {
-    this.copiedAddress = context || text;
-    
-    // Clear previous timeout if exists
-    if (this.copyTimeout) {
-      clearTimeout(this.copyTimeout);
-    }
-    
-    // Reset after 2 seconds
-    this.copyTimeout = setTimeout(() => {
-      this.copiedAddress = null;
-    }, 2000);
-  });
-}
 }

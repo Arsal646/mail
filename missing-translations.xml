@@ -2,21 +2,21 @@
 <!-- Copy these trans-unit blocks to your messages.ar.xlf file -->
 <!-- Replace the TODO comments with actual Arabic translations -->
 
-      <trans-unit id="quickEmail.copiedMessage" datatype="html">
-        <source>copied</source>
-        <target><!-- TODO: Add Arabic translation for: copied --></target>
+      <trans-unit id="emailView.showDetail" datatype="html">
+        <source>Show Details</source>
+        <target><!-- TODO: Add Arabic translation for: Show Details --></target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/compoents/quick-email/quick-email.component.html</context>
-          <context context-type="linenumber">65,67</context>
+          <context context-type="sourcefile">src/app/compoents/email-view-dialog/email-view-dialog.html</context>
+          <context context-type="linenumber">36,38</context>
         </context-group>
       </trans-unit>
 
-      <trans-unit id="quickEmail.copyMessage1" datatype="html">
-        <source>copy</source>
-        <target><!-- TODO: Add Arabic translation for: copy --></target>
+      <trans-unit id="emailView.hideDetail" datatype="html">
+        <source>Hide Details</source>
+        <target><!-- TODO: Add Arabic translation for: Hide Details --></target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/compoents/quick-email/quick-email.component.html</context>
-          <context context-type="linenumber">67,69</context>
+          <context context-type="sourcefile">src/app/compoents/email-view-dialog/email-view-dialog.html</context>
+          <context context-type="linenumber">38,40</context>
         </context-group>
       </trans-unit>
 

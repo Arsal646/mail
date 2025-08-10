@@ -11,7 +11,7 @@
         },
         "locales": {
           "ar": {
-            "translation": "src/locale/messages.ar.xlf",
+            "translation": "src/locale/messages.ar.json",
             "subPath": "ar"
           }
         }

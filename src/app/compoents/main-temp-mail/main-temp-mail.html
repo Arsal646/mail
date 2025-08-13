@@ -201,7 +201,8 @@
     <div class="px-5 pb-5 bg-white rounded-lg">
         <div class=" border px-4 pt-4 border-gray-200 rounded-lg">
             <div class="flex items-center justify-between mb-4">
-                <h2 class="text-lg font-semibold text-gray-900" i18n="@@mainTempMail.inbox">Your Temporary Inbox</h2>
+                <h2 class="text-lg text-base md:flex hidden font-semibold text-gray-900" i18n="@@mainTempMail.inbox">Your Temporary Inbox</h2>
+                <h2 class="text-lg text-base md:hidden flex font-semibold text-gray-900" i18n="@@mainTempMail.inbox2">Your Inbox</h2>
                 <div class="flex items-center text-sm text-gray-600">
                     <span class="mr-2" i18n="@@mainTempMail.autoRefresh">Auto-refresh in {{ countdown() }}s</span>
                     <button (click)="reload()" class="p-1 text-gray-600 hover:text-gray-900">

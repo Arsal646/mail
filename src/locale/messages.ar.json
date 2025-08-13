@@ -29,6 +29,7 @@
     "mainTempMail.saveMobile": "حفظ",
     "mainTempMail.newEmailMobile": "بريد جديد",
     "mainTempMail.inbox": "صندوق الوارد المؤقت",
+    "mainTempMail.inbox2": "صندوق الوارد",
     "mainTempMail.autoRefresh": "تحديث تلقائي خلال {$INTERPOLATION} ثانية",
     "mainTempMail.waitingForMessages": "في انتظار الرسائل الواردة لـ {$START_TAG_SPAN}{$INTERPOLATION}{$CLOSE_TAG_SPAN}",
     "mainTempMail.checkAgain": "تحقق مرة أخرى",

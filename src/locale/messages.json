@@ -29,6 +29,7 @@
     "mainTempMail.saveMobile": "Save",
     "mainTempMail.newEmailMobile": " New Email",
     "mainTempMail.inbox": "Your Temporary Inbox",
+    "mainTempMail.inbox2": "Your Inbox",
     "mainTempMail.autoRefresh": "Auto-refresh in {$INTERPOLATION}s",
     "mainTempMail.waitingForMessages": "Waiting for incoming messages for {$START_TAG_SPAN}{$INTERPOLATION}{$CLOSE_TAG_SPAN}",
     "mainTempMail.checkAgain": " Check Again",

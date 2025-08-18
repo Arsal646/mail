@@ -13,7 +13,6 @@ import { SafeHtmlOrTextPipe } from '../../pipe/safe-html-or-text.pipe';
     .email-body {
       flex: 1;
       overflow-y: auto;
-      overflow-x: hidden;
       padding: 35px;
       max-width: 100%;
       color: #1f2937; /* gray-800 */
@@ -22,6 +21,12 @@ import { SafeHtmlOrTextPipe } from '../../pipe/safe-html-or-text.pipe';
       height: auto;
       display: block;
       padding-top:10px;
+    }
+
+       @media (max-width: 640px) {
+      .email-body {
+        padding: 10px;
+      }
     }
   `],
   encapsulation: ViewEncapsulation.ShadowDom

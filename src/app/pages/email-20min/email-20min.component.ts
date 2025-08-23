@@ -14,66 +14,138 @@ declare const $localize: any;
   standalone: true,
   imports: [QuickEmailComponent, LucideAngularModule, RouterModule],
   template: `
-  <main class="container mx-auto px-4 py-6 max-w-5xl">
+  <main class="container mx-auto px-4 py-8 md:py-10 max-w-5xl">
 
-  <!-- Page Header -->
-<header class="mb-2 text-center">
-  <h1 class="text-xl font-semibold text-gray-900 mb-3" i18n="@@email20min.title">
-    20-Minute Temporary Email – free Disposable Inbox
-  </h1>
-  <p class="text-sm text-gray-600 mb-2" i18n="@@email20min.subtitle">
-    Instantly generate a <strong>20-minute temporary email address</strong>,  ideal for sign-ups, OTPs, and multi-step verifications that take a bit more time. No registration, no spam, just a secure and private inbox that works when you need it.
-  </p>
-</header>
+    <!-- Page Header (card-like hero) -->
+    <header class="text-center mb-6">
+      <div class=" bg-white p-5 md:p-7 ">
+        <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3" i18n="@@email20min.title">
+          20-Minute Temporary Email – free Disposable Inbox
+        </h1>
+        <p class="mx-auto max-w-3xl text-sm md:text-base text-gray-600" i18n="@@email20min.subtitle">
+          Instantly generate a <strong>20-minute temporary email address</strong>,  ideal for sign-ups, OTPs, and multi-step verifications that take a bit more time. No registration, no spam, just a secure and private inbox that works when you need it.
+        </p>
+      </div>
+    </header>
 
+    <!-- App Component Placeholder -->
+    <section class="mb-6">
+      <div class="rounded-2xl bg-white shadow-xl ring-1 ring-gray-200 p-3 md:p-4">
+        <app-quick-email [pageTimeCount]="20"></app-quick-email>
+      </div>
+    </section>
 
-  <!-- App Component Placeholder -->
-  <section class="mb-2">
-    <app-quick-email [pageTimeCount]="20"></app-quick-email>
-  </section>
+    <!-- FAQ Section (homepage-style accordion) -->
+    <section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-4" id="faq">
+      <h2 i18n="@@email20min.faqTitle" class="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+        20-Minute Temporary Email – FAQs
+      </h2>
 
-  
+      <div class="divide-y divide-gray-200">
 
-  <section class="bg-white rounded-lg shadow-sm p-5 mb-10">
-  <h2 i18n="@@email20min.faqTitle" class="text-lg font-semibold text-gray-900 mb-4">20-Minute Temporary Email – FAQs</h2>
-  <div class="space-y-4 text-sm text-gray-600">
+        <!-- Q1 -->
+        <div class="py-3">
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
+              <span i18n="@@email20min.faq1Question">What is a 20-minute temporary email?</span>
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="h-4 w-4 transition-transform group-open:rotate-180"
+                   viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd" />
+              </svg>
+            </summary>
+            <p i18n="@@email20min.faq1Answer" class="mt-2 text-sm md:text-base text-gray-700">
+              It’s a disposable email address that stays active for 20 minutes. Use it to receive messages without using your personal inbox.
+              Need different durations? Try our 
+              <a [routerLink]="routes.email10min" class="text-blue-600 hover:underline">10-minute email</a> or
+              <a [routerLink]="routes.email30min" class="text-blue-600 hover:underline">30-minute email</a>.
+            </p>
+          </details>
+        </div>
 
-    <div class="pb-4 border-b border-gray-100">
-      <h3 i18n="@@email20min.faq1Question" class="text-base font-medium text-gray-800">What is a 20-minute temporary email?</h3>
-      <p i18n="@@email20min.faq1Answer" class="mt-2">
-        It’s a disposable email address that stays active for 20 minutes. Use it to receive messages without using your personal inbox.
-        Need different durations? Try our 
-        <a [routerLink]="routes.email10min" class="text-blue-500 hover:underline">10-minute email</a> or
-        <a [routerLink]="routes.email30min" class="text-blue-500 hover:underline">30-minute email</a>.
-      </p>
-    </div>
+        <!-- Q2 -->
+        <div class="py-3">
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
+              <span i18n="@@email20min.faq2Question">Is it really free?</span>
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="h-4 w-4 transition-transform group-open:rotate-180"
+                   viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd" />
+              </svg>
+            </summary>
+            <p i18n="@@email20min.faq2Answer" class="mt-2 text-sm md:text-base text-gray-700">
+              Yes, it's 100% free to use. No registration or payment needed.
+            </p>
+          </details>
+        </div>
 
-    <div class="pb-4 border-b border-gray-100">
-      <h3 i18n="@@email20min.faq2Question" class="text-base font-medium text-gray-800">Is it really free?</h3>
-      <p i18n="@@email20min.faq2Answer" class="mt-2">Yes, it's 100% free to use. No registration or payment needed.</p>
-    </div>
+        <!-- Q3 -->
+        <div class="py-3">
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
+              <span i18n="@@email20min.faq3Question">Can I use it to receive OTPs and verification emails?</span>
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="h-4 w-4 transition-transform group-open:rotate-180"
+                   viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd" />
+              </svg>
+            </summary>
+            <p i18n="@@email20min.faq3Answer" class="mt-2 text-sm md:text-base text-gray-700">
+              Yes. You can receive one-time passwords, activation links, and other verification emails safely.
+            </p>
+          </details>
+        </div>
 
-    <div class="pb-4 border-b border-gray-100">
-      <h3 i18n="@@email20min.faq3Question" class="text-base font-medium text-gray-800">Can I use it to receive OTPs and verification emails?</h3>
-      <p i18n="@@email20min.faq3Answer" class="mt-2">Yes. You can receive one-time passwords, activation links, and other verification emails safely.</p>
-    </div>
+        <!-- Q4 -->
+        <div class="py-3">
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
+              <span i18n="@@email20min.faq4Question">Will the email address delete itself?</span>
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="h-4 w-4 transition-transform group-open:rotate-180"
+                   viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd" />
+              </svg>
+            </summary>
+            <p i18n="@@email20min.faq4Answer" class="mt-2 text-sm md:text-base text-gray-700">
+              Yes. All emails and the inbox itself are automatically deleted after 20 minutes.
+            </p>
+          </details>
+        </div>
 
-    <div class="pb-4 border-b border-gray-100">
-      <h3 i18n="@@email20min.faq4Question" class="text-base font-medium text-gray-800">Will the email address delete itself?</h3>
-      <p i18n="@@email20min.faq4Answer" class="mt-2">Yes. All emails and the inbox itself are automatically deleted after 20 minutes.</p>
-    </div>
+        <!-- Q5 -->
+        <div class="py-3">
+          <details class="group">
+            <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
+              <span i18n="@@email20min.faq5Question">Is my identity protected?</span>
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   class="h-4 w-4 transition-transform group-open:rotate-180"
+                   viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd" />
+              </svg>
+            </summary>
+            <p i18n="@@email20min.faq5Answer" class="mt-2 text-sm md:text-base text-gray-700">
+              Absolutely. We do not track or store any personal information. Your privacy is our priority.
+            </p>
+          </details>
+        </div>
 
-    <div class="pb-4 border-b border-gray-100">
-      <h3 i18n="@@email20min.faq5Question" class="text-base font-medium text-gray-800">Is my identity protected?</h3>
-      <p i18n="@@email20min.faq5Answer" class="mt-2">Absolutely. We do not track or store any personal information. Your privacy is our priority.</p>
-    </div>
+      </div>
+    </section>
 
-  </div>
-</section>
-
-
+  </main>
   `
-
 })
 export class Email20MinComponent implements OnInit {
   private seoService = inject(SeoService);
@@ -96,7 +168,6 @@ export class Email20MinComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
       this.scrollService.scrollToTopInstant();
     }
-
     this.setSeoTags();
   }
 
@@ -105,8 +176,6 @@ export class Email20MinComponent implements OnInit {
     const baseUrl = this.seoService.getBaseUrl(this.locale);
     const translatedRoute = '';
 
-    
-    
     this.seoService.updateSeoTags({
       title: seoContent.title,
       description: seoContent.description,

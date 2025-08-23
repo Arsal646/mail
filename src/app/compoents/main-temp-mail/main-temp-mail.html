@@ -1,276 +1,255 @@
-<div class="border-2 rounded-lg border-gray-400 relative">
-    <!-- Loader -->
-    <div *ngIf="loading" class="h-1 bg-gray-300 rounded-full overflow-hidden loader-bar">
-        <div class="h-full animate-pulse"></div>
+<!-- Wrapper -->
+<div class="rounded-2xl bg-white/80 ring-1 ring-gray-200 shadow-sm relative">
+
+  <!-- Loader -->
+
+
+  <div  class="h-1 overflow-hidden rounded-t-2xl">
+    <div class="h-full loader-bar" *ngIf="loading"></div>
+  </div>
+  
+
+  <!-- Email Address Section -->
+  <div class="p-5 md:p-6">
+    <div class="flex items-center justify-between gap-3 mb-3">
+      <h2 class="text-base md:text-lg font-semibold text-gray-900" i18n="@@mainTempMail.title">
+        Your Temporary Email
+      </h2>
+
+      <!-- Desktop: New Email -->
+      <button
+        (click)="openHistoryDialog()"
+        class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-lg ring-1 ring-inset ring-gray-300 text-gray-700 hover:bg-gray-100 transition">
+        <lucide-icon name="refresh-cw" [size]="16"></lucide-icon>
+        <span i18n="@@mainTempMail.newEmail">New Email</span>
+      </button>
     </div>
 
-    <!-- Email Address Section -->
-    <div class="bg-white p-5 relative rounded-lg">
-        <div class="flex justify-between mb-2">
-            <h2 class="text-lg font-semibold text-gray-900" i18n="@@mainTempMail.title">Your Temporary Email</h2>
-            <!-- <button (click)="openHistoryDialog()"
-                        class="hidden md:flex items-center space-x-1 px-4 border border-gray-800 animate-pulse transition duration-300 rounded-lg hover:bg-gray-800 hover:text-white text-sm">
-                        <lucide-icon name="refresh-cw" [size]="14"></lucide-icon>
-                        <span>New Email</span>
-                    </button> -->
+    <!-- Email Display -->
+    <div class="rounded-xl ring-1 ring-dashed ring-gray-300 bg-gray-50 px-3.5 md:px-4 py-2.5">
+      <div class="flex flex-wrap items-center gap-2 md:gap-3 justify-between">
+        <div class="flex items-center gap-2 min-w-0 flex-1">
+          <!-- History button with popover -->
+          <div class="relative" data-history-tooltip>
+            <button
+              (click)="toggleEmailHistoryTooltip()"
+              class="inline-flex items-center justify-center p-1.5 rounded-lg hover:bg-gray-200 text-gray-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+               >
+              <lucide-icon name="history" [size]="18" class="text-gray-600"></lucide-icon>
+              <span class="sr-only">Recent emails</span>
+            </button>
 
-            <div class="relative group">
-                <button (click)="openHistoryDialog()"
-                    class="px-4 hidden md:flex py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-lg transition-all duration-200 text-sm font-medium border border-gray-300 items-center space-x-2">
-                    <lucide-icon name="refresh-cw" [size]="16"></lucide-icon>
-                    <span i18n="@@mainTempMail.newEmail">New Email</span>
-                </button>
-            </div>
-        </div>
-        <!-- Email Display Container -->
-        <div class="bg-gray-50 px-4 py-1 rounded-lg border-2 border-dashed border-gray-500">
-            <div class="flex items-center justify-between md:justify-start">
-                <div class="flex-1 min-w-0 flex gap-2 items-center">
-                    <!-- History Icon with Tooltip -->
-                    <div class="relative group" data-history-tooltip>
-                        <button (click)="toggleEmailHistoryTooltip()"
-                            class="p-1 hover:bg-gray-200 rounded transition-colors">
-                            <lucide-icon name="history" size="18" class="text-gray-600"></lucide-icon>
-                        </button>
-
-                        <!-- Email History Tooltip -->
-                        <div *ngIf="showEmailHistoryTooltip"
-                            class="absolute top-8 left-0 bg-white border border-gray-300 rounded-lg shadow-lg z-50 min-w-[280px] max-w-[400px] ">
-                            <div class="p-3">
-                                <div class="text-sm font-medium text-gray-900 mb-2" i18n="@@mainTempMail.recentEmail">Recent Emails</div>
-                                <div class="max-h-48 overflow-y-auto">
-                                    <div i18n="@@mainTempMail.noRecentEmails" *ngIf="getRecentEmails().length === 0" class="text-sm text-gray-500 py-2">
-                                        No recent emails found
-                                    </div>
-                                    <div *ngFor="let email of getRecentEmails()"
-                                        class="flex items-center justify-between p-2 hover:bg-gray-50 rounded cursor-pointer text-sm"
-                                        (click)="selectEmailFromHistory(email)">
-                                        <div class="flex-1 min-w-0">
-                                            <div class="font-mono text-gray-900 truncate">{{email.address}}</div>
-                                            <div class="text-xs text-gray-500">
-                                                {{formatDate(email.createdAt)}}
-                                                <span *ngIf="email.active" i18n="@@mainTempMail.emailActive"
-                                                    class="ml-2 px-1 py-0.5 bg-green-100 text-green-600 rounded text-xs">Active</span>
-                                            </div>
-                                        </div>
-                                        <lucide-icon name="arrow-right" size="14"
-                                            class="text-gray-400 ml-2"></lucide-icon>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="font-mono text-gray-900 truncate text-sm md:text-base">
-                        @if (emailGenerating) {
-                        <span i18n="@@mainTempMail.generatingEmail">Generating email...</span>
-                        } @else {
-                        {{currentEmail}}
-                        }
-                    </div>
+            <!-- Popover -->
+            <div
+              *ngIf="showEmailHistoryTooltip"
+              class="absolute z-50 mt-2 w-72 md:w-80 rounded-xl bg-white ring-1 ring-gray-200 shadow-lg">
+              <div class="p-3">
+                <div class="text-sm font-medium text-gray-900 mb-2" i18n="@@mainTempMail.recentEmail">
+                  Recent Emails
                 </div>
 
-                <!-- Desktop Buttons (hidden on mobile) -->
-                <div class="hidden md:flex space-x-2 ml-4 relative">
-                    <!-- Save Button -->
-                    <div class="relative group w-[80px]">
-                        <button (click)="saveEmail()"
-                            class="w-full px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-lg transition-all duration-200 text-sm font-medium flex items-center justify-center space-x-1"
-                            [class.bg-blue-100]="saved" [class.text-blue-600]="saved">
-                            @if (saved) {
-                            <lucide-icon name="check" [size]="14"></lucide-icon>
-                            } @else {
-                            <lucide-icon name="bookmark" [size]="14"></lucide-icon>
-                            }
-                            <span class="inline-block w-[52px] text-left">
+                <div class="max-h-56 overflow-y-auto custom-scroll">
+                  <div
+                    i18n="@@mainTempMail.noRecentEmails"
+                    *ngIf="getRecentEmails().length === 0"
+                    class="text-sm text-gray-500 py-2">
+                    No recent emails found
+                  </div>
 
-                                @if(saved){
-                                <span i18n="@@mainTempMail.saved">Saved!</span>
-                                }@else{
-                                <span i18n="@@mainTempMail.save">Save</span>
-                                }
-                            </span>
-                        </button>
-                        <!-- Save Tooltip -->
-                        <div
-                            class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-20">
-
-                            @if(saved){
-                            <span i18n="@@mainTempMail.emailSaved">Email saved!</span>
-                            }@else{
-                            <span i18n="@@mainTempMail.saveFor7Days">Save for 7 days</span>
-                            }
-                            <div
-                                class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-gray-800">
-                            </div>
-                        </div>
+                  <button
+                    *ngFor="let email of getRecentEmails()"
+                    (click)="selectEmailFromHistory(email)"
+                    class="w-full text-left flex items-center justify-between gap-2 p-2 rounded-lg hover:bg-gray-50">
+                    <div class="min-w-0">
+                      <div class="font-mono text-gray-900 text-sm truncate">
+                        {{email.address}}
+                      </div>
+                      <div class="text-xs text-gray-500 mt-0.5">
+                        {{formatDate(email.createdAt)}}
+                        <span *ngIf="email.active"
+                              i18n="@@mainTempMail.emailActive"
+                              class="ml-2 inline-flex items-center px-1.5 py-0.5 rounded bg-green-100 text-green-700">
+                          Active
+                        </span>
+                      </div>
                     </div>
-
-                    <!-- Copy Button -->
-                    <div class="relative group w-[80px]">
-                        <button (click)="copyEmail()"
-                            class="w-full px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-lg transition-all duration-200 text-sm font-medium flex items-center justify-center space-x-1"
-                            [class.bg-green-100]="copied" [class.text-green-600]="copied">
-                            @if (!copied) {
-                            <lucide-icon name="copy" [size]="14"></lucide-icon>
-                            } @else {
-                            <lucide-icon name="check" [size]="14"></lucide-icon>
-                            }
-                            <span class="inline-block w-[52px] text-left">
-                                @if(copied){
-                                <span class="truncate" i18n="@@mainTempMail.copied" >Copied</span>
-                                }@else{
-                                <span i18n="@@mainTempMail.copy">Copy</span>
-                                }
-                            </span>
-                        </button>
-                        <!-- Copy Tooltip -->
-                        <div
-                            class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-20">
-
-                            @if(copied){
-                            <span i18n="@@mainTempMail.copied">Copied</span>
-                            }@else{
-                            <span i18n="@@mainTempMail.copyEmailAddress">Copy email address</span>
-                            }
-                            <div
-                                class="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-gray-800">
-                            </div>
-                        </div>
-                    </div>
+                    <lucide-icon name="arrow-right" [size]="14" class="text-gray-400"></lucide-icon>
+                  </button>
                 </div>
-
+              </div>
             </div>
+          </div>
+
+          <!-- Current email -->
+          <div class="inline-flex items-center gap-2 min-w-0">
+            <span class="inline-flex items-center gap-2 rounded-lg bg-white px-2.5 py-1 ring-1 ring-gray-200">
+              <lucide-icon name="inbox" [size]="16" class="text-gray-500"></lucide-icon>
+              <span class="font-mono text-gray-900 truncate text-sm md:text-base">
+                @if (emailGenerating) {
+                  <span i18n="@@mainTempMail.generatingEmail">Generating email...</span>
+                } @else {
+                  {{currentEmail}}
+                }
+              </span>
+            </span>
+          </div>
         </div>
 
-        <!-- Mobile Buttons (shown only on mobile, outside the email container) -->
-        <div class="flex md:hidden justify-between mt-3 space-x-2">
-            <!-- Save Button -->
-            <div class="relative group w-28">
-                <button (click)="saveEmail()"
-                    class="w-full px-2 text-xs py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-lg transition-all duration-200 font-medium border border-gray-300 flex items-center justify-center space-x-1"
-                    [class.bg-blue-100]="saved" [class.text-blue-600]="saved" [class.border-blue-300]="saved">
-                    @if (saved) {
-                    <lucide-icon name="check" [size]="16"></lucide-icon>
-                    } @else {
-                    <lucide-icon name="bookmark" [size]="16"></lucide-icon>
-                    }
-                    @if(saved){
-                    <span i18n="@@mainTempMail.savedMobile">Saved</span>
-                    }@else{
-                    <span i18n="@@mainTempMail.saveMobile">Save</span>
-                    }
+        <!-- Desktop Actions -->
+        <div class="hidden md:flex items-center gap-2">
+          <!-- Save -->
+          <button
+            (click)="saveEmail()"
+            class="group inline-flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition
+                   ring-1 ring-inset"
+            [ngClass]="saved ? 'bg-blue-50 text-blue-700 ring-blue-200' : 'text-gray-700 ring-gray-300 hover:bg-gray-100'">
+            <lucide-icon [name]="saved ? 'check' : 'bookmark'" [size]="14"></lucide-icon>
+            <span>
+              @if(saved){ <span i18n="@@mainTempMail.saved">Saved!</span> }
+              @else      { <span i18n="@@mainTempMail.save">Save</span> }
+            </span>
+          </button>
 
-                </button>
-            </div>
-
-            <!-- New Button -->
-            <div class="relative group w-28">
-                <button (click)="openHistoryDialog()"
-                    class="w-full px-2 text-xs py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-lg transition-all duration-200 font-medium border border-gray-300 flex items-center justify-center space-x-1">
-                    <lucide-icon name="refresh-cw" [size]="16"></lucide-icon>
-                    <span i18n="@@mainTempMail.newEmailMobile"> New Email</span>
-                </button>
-            </div>
-
-            <!-- Copy Button -->
-            <div class="relative group w-28">
-                <button (click)="copyEmail()"
-                    class="w-full px-2 text-xs py-1 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-lg transition-all duration-200 font-medium border border-gray-300 flex items-center justify-center space-x-1"
-                    [class.bg-green-100]="copied" [class.text-green-600]="copied" [class.border-green-300]="copied">
-                    @if (!copied) {
-                    <lucide-icon name="copy" [size]="16"></lucide-icon>
-                    } @else {
-                    <lucide-icon name="check" [size]="16"></lucide-icon>
-                    }
-
-                          @if(copied){
-                                <span i18n="@@mainTempMail.copied">Copied</span>
-                                }@else{
-                                <span i18n="@@mainTempMail.copy">Copy</span>
-                                }
-                </button>
-            </div>
+          <!-- Copy -->
+          <button
+            (click)="copyEmail()"
+            class="group inline-flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition
+                   ring-1 ring-inset"
+            [ngClass]="copied ? 'bg-green-50 text-green-700 ring-green-200' : 'text-gray-700 ring-gray-300 hover:bg-gray-100'">
+            <lucide-icon [name]="copied ? 'check' : 'copy'" [size]="14"></lucide-icon>
+            <span>
+              @if(copied){ <span i18n="@@mainTempMail.copied">Copied</span> }
+              @else       { <span i18n="@@mainTempMail.copy">Copy</span> }
+            </span>
+          </button>
         </div>
-
-
-
+      </div>
     </div>
 
-    <!-- Inbox Section -->
-    <div class="px-5 pb-5 bg-white rounded-lg">
-        <div class=" border px-4 pt-4 border-gray-200 rounded-lg">
-            <div class="flex items-center justify-between mb-4">
-                <h2 class="text-lg text-base md:flex hidden font-semibold text-gray-900" i18n="@@mainTempMail.inbox">Your Temporary Inbox</h2>
-                <h2 class="text-lg text-base md:hidden flex font-semibold text-gray-900" i18n="@@mainTempMail.inbox2">Your Inbox</h2>
-                <div class="flex items-center text-sm text-gray-600">
-                    <span class="mr-2" i18n="@@mainTempMail.autoRefresh">Auto-refresh in {{ countdown() }}s</span>
-                    <button (click)="reload()" class="p-1 text-gray-600 hover:text-gray-900">
-                        <lucide-icon name="refresh-cw" [size]="16" [class.animate-spin]="refreshing"></lucide-icon>
-                    </button>
-                </div>
-            </div>
+    <!-- Mobile Actions -->
+    <div class="mt-3 grid grid-cols-3 gap-2 md:hidden">
+      <button
+        (click)="saveEmail()"
+        class="inline-flex items-center justify-center gap-1.5 rounded-lg px-2 py-2 text-xs font-medium transition
+               ring-1 ring-inset"
+        [ngClass]="saved ? 'bg-blue-50 text-blue-700 ring-blue-200' : 'text-gray-700 ring-gray-300 hover:bg-gray-100'">
+        <lucide-icon [name]="saved ? 'check' : 'bookmark'" [size]="16"></lucide-icon>
+        @if(saved){ <span i18n="@@mainTempMail.savedMobile">Saved</span> }
+        @else      { <span i18n="@@mainTempMail.saveMobile">Save</span> }
+      </button>
 
-            <div class="max-h-96 h-96 overflow-y-auto">
-                <div *ngIf="emails.length === 0" class="py-10 text-center">
-                    <div *ngIf="true" class="flex flex-col items-center animate-pulse">
-                        <div class="relative w-16 h-16 mb-4">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <lucide-icon name="mail" [size]="24" class="text-gray-400 animate-bounce"
-                                    style="animation-duration: 2s;"></lucide-icon>
-                            </div>
-                            <svg class="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="40" stroke="rgba(209, 213, 219, 0.5)" stroke-width="8"
-                                    fill="none">
-                                </circle>
-                                <circle cx="50" cy="50" r="40" stroke="#9CA3AF" stroke-width="8" fill="none"
-                                    stroke-dasharray="251" [attr.stroke-dashoffset]="refreshEmails"
-                                    stroke-linecap="round" class="transition-all duration-300">
-                                </circle>
-                            </svg>
-                        </div>
-                        <p class="text-sm text-gray-600" i18n="@@mainTempMail.waitingForMessages">Waiting for incoming messages for <span
-                                class="font-bold text-dark">{{currentEmail}}</span></p>
-                        <button (click)="refreshEmails()"
-                            class="mt-4 px-4 py-2 text-sm bg-gray-100 text-gray-900 rounded-lg hover:bg-gray-200 transition-colors flex items-center">
-                            <lucide-icon name="refresh-cw" [size]="14" [class.animate-spin]="refreshing"></lucide-icon>
-                           <span i18n="@@mainTempMail.checkAgain"> Check Again</span>
-                        </button>
-                    </div>
-                </div>
+      <button
+        (click)="openHistoryDialog()"
+        class="inline-flex items-center justify-center gap-1.5 rounded-lg px-2 py-2 text-xs font-medium transition
+               ring-1 ring-inset ring-gray-300 text-gray-700 hover:bg-gray-100">
+        <lucide-icon name="refresh-cw" [size]="16"></lucide-icon>
+        <span i18n="@@mainTempMail.newEmailMobile">New Email</span>
+      </button>
 
-                <!-- Email List -->
-                <div *ngIf="emails.length > 0" class="space-y-2 overflow-y-auto p-1">
-                    <div *ngFor="let email of emails"
-                        class="p-4 border border-gray-200 rounded-lg hover:bg-gray-100 cursor-pointer transition-colors"
-                        [class.bg-gray-50]="!email.read" [class.new]="email.new_added" (click)="viewEmail(email)">
-                        <div class="flex items-start">
-                            <div class="mr-3">
-                                <div class="w-10 h-10 rounded-full flex items-center justify-center"
-                                    [class.bg-gray-200]="!email.read" [class.bg-gray-100]="email.read">
-                                    @if (!email.read) {
-                                    <lucide-icon name="mail" [size]="18" class="text-gray-900"></lucide-icon>
-                                    } @else {
-                                    <lucide-icon name="mail-open" [size]="18" class="text-gray-600"></lucide-icon>
-                                    }
-                                </div>
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <div class="flex justify-between">
-                                    <h3 class="font-medium text-gray-900 truncate">{{email.subject || '(No
-                                        subject)'}}</h3>
-                                    <span class="text-xs text-gray-500 whitespace-nowrap ml-2">
-                                        {{email.created_at | date:'shortTime'}}
-                                    </span>
-                                </div>
-                                <p class="text-sm text-gray-600 truncate">{{email.from_email}}</p>
-                                <p *ngIf="email.preview" class="text-xs text-gray-500 mt-1 truncate">
-                                    {{email.preview}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <button
+        (click)="copyEmail()"
+        class="inline-flex items-center justify-center gap-1.5 rounded-lg px-2 py-2 text-xs font-medium transition
+               ring-1 ring-inset"
+        [ngClass]="copied ? 'bg-green-50 text-green-700 ring-green-200' : 'text-gray-700 ring-gray-300 hover:bg-gray-100'">
+        <lucide-icon [name]="copied ? 'check' : 'copy'" [size]="16"></lucide-icon>
+        @if(copied){ <span i18n="@@mainTempMail.copied">Copied</span> }
+        @else       { <span i18n="@@mainTempMail.copy">Copy</span> }
+      </button>
     </div>
+  </div>
+
+  <!-- Inbox Section -->
+  <div class="px-5 md:px-6 pb-5">
+    <div class="rounded-2xl ring-1 ring-gray-200 bg-white">
+      <!-- Sticky header inside the list card -->
+      <div class="flex items-center justify-between gap-3 px-4 pt-4">
+        <h2 class="hidden md:flex text-base font-semibold text-gray-900" i18n="@@mainTempMail.inbox">
+          Your Temporary Inbox
+        </h2>
+        <h2 class="md:hidden flex text-base font-semibold text-gray-900" i18n="@@mainTempMail.inbox2">
+          Your Inbox
+        </h2>
+        <div class="flex items-center text-sm text-gray-600">
+          <span class="mr-2" i18n="@@mainTempMail.autoRefresh">Auto-refresh in {{ countdown() }}s</span>
+          <button (click)="reload()" class="p-1.5 rounded-lg hover:bg-gray-100 text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
+            <lucide-icon name="refresh-cw" [size]="16" [class.animate-spin]="refreshing"></lucide-icon>
+            <span class="sr-only">Reload</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- List -->
+      <div class="p-4 pt-3">
+        <div class="h-96 max-h-[28rem] overflow-y-auto custom-scroll">
+          <!-- Empty state -->
+          <div *ngIf="emails.length === 0" class="h-full grid place-items-center">
+            <div class="text-center">
+              <div class="mx-auto mb-4 grid place-items-center">
+                <div class="relative w-14 h-14">
+                  <div class="absolute inset-0 grid place-items-center">
+                    <lucide-icon name="mail" [size]="22" class="text-gray-400 animate-bounce" style="animation-duration:2s;"></lucide-icon>
+                  </div>
+                  <svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" stroke="rgba(209,213,219,.5)" stroke-width="8" fill="none"></circle>
+                    <circle cx="50" cy="50" r="40" stroke="#9CA3AF" stroke-width="8" fill="none"
+                            stroke-dasharray="251" [attr.stroke-dashoffset]="refreshEmails"
+                            stroke-linecap="round" class="transition-all duration-300"></circle>
+                  </svg>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600">
+                <span i18n="@@mainTempMail.waitingForMessages">
+                  Waiting for incoming messages for
+                </span>
+                <span class="font-semibold text-gray-900">{{currentEmail}}</span>
+              </p>
+              <button
+                (click)="refreshEmails()"
+                class="mt-3 inline-flex items-center gap-2 rounded-lg bg-gray-100 px-3.5 py-2 text-sm text-gray-900 hover:bg-gray-200 ring-1 ring-inset ring-gray-200 transition">
+                <lucide-icon name="refresh-cw" [size]="14" [class.animate-spin]="refreshing"></lucide-icon>
+                <span i18n="@@mainTempMail.checkAgain">Check Again</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Email list -->
+          <div *ngIf="emails.length > 0" class="space-y-2">
+            <button
+              *ngFor="let email of emails"
+              (click)="viewEmail(email)"
+              class="w-full text-left p-3.5 rounded-xl ring-1 ring-gray-200 hover:bg-gray-50 transition
+                     flex items-start gap-3"
+              [class.bg-gray-50]="!email.read"
+              [attr.aria-label]="email.subject || 'No subject'">
+              <div class="shrink-0">
+                <div class="w-10 h-10 rounded-full grid place-items-center"
+                     [ngClass]="!email.read ? 'bg-blue-100' : 'bg-gray-100'">
+                  <lucide-icon [name]="!email.read ? 'mail' : 'mail-open'" [size]="18"
+                               [ngClass]="!email.read ? 'text-blue-700' : 'text-gray-600'"></lucide-icon>
+                </div>
+              </div>
+
+              <div class="min-w-0 flex-1">
+                <div class="flex items-start justify-between gap-3">
+                  <h3 class="font-medium text-gray-900 truncate">
+                    {{ email.subject || '(No subject)' }}
+                  </h3>
+                  <span class="text-xs text-gray-500 shrink-0 whitespace-nowrap">
+                    {{email.created_at | date:'shortTime'}}
+                  </span>
+                </div>
+                <p class="text-sm text-gray-600 truncate">{{email.from_email}}</p>
+                <p *ngIf="email.preview" class="text-xs text-gray-500 mt-1 line-clamp-2">
+                  {{email.preview}}
+                </p>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </div>
+
+

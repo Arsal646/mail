@@ -1,7 +1,7 @@
 import { Component, inject, OnInit, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from "lucide-angular";
-import {  RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { MainTempMail } from '../../compoents/main-temp-mail/main-temp-mail';
 import { SeoService } from '../../services/seo.service';
 import { RouteTranslationService } from '../../services/route-translation.service';
@@ -36,10 +36,10 @@ export class Home implements OnInit {
   private setSeoTags(): void {
     // Get localized SEO content based on current locale
     const seoContent = this.getLocalizedSeoContent();
-    
+
     // Determine base URL based on locale
     const baseUrl = this.seoService.getBaseUrl(this.locale);
-    
+
     this.seoService.updateSeoTags({
       title: seoContent.title,
       description: seoContent.description,
@@ -54,11 +54,12 @@ export class Home implements OnInit {
   private getLocalizedSeoContent() {
     // Using Angular's $localize function for runtime i18n
     return {
-      title: $localize`:@@seo.home.title:Temp Mail – Free Temporary Email & Disposable Inbox Service`,
-      description: $localize`:@@seo.home.description:Temp mail lets you create free temporary emails instantly. Keep your inbox private and spam-free with our disposable service. No signup—try it now!`,
-      keywords: $localize`:@@seo.home.keywords:temporary email, disposable email, free temp mail, anonymous email, burner email, fake email, spam protection, email verification, privacy mail, temp mail service`,
+      title: $localize`:@@seo.home.title:Free Temporary Email & Disposable Inbox | TempMail4u`,
+      description: $localize`:@@seo.home.description:Create a free temp email in seconds. Get a disposable inbox to keep your real address private and spam-free. No sign up required. Try TempMail4u now!`,
+      keywords: $localize`:@@seo.home.keywords:temporary email, temp mail, disposable email, burner email, anonymous email, fake email, spam protection, email verification, privacy email, temporary mailbox`,
       siteName: $localize`:@@seo.home.siteName:TempMail4u`
     };
+
   }
- 
+
 }

@@ -8,7 +8,7 @@ import {
   inject
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LucideAngularModule } from "lucide-angular";
+import { LucideAngularModule } from 'lucide-angular';
 import { RouterModule, Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { RouteTranslationService } from '../../services/route-translation.service';
@@ -27,7 +27,7 @@ import { RouteTranslationService } from '../../services/route-translation.servic
               <div class="bg-gray-800 rounded-full flex items-center justify-center">
                 <img
                   [routerLink]="['/']"
-                  (click)="closeMenu(); $event.stopPropagation()"
+                  (pointerup)="closeMenu(); $event.stopPropagation()"
                   class="cursor-pointer"
                   src="logo.png"
                   alt="Temporary Email Service Logo"
@@ -84,9 +84,8 @@ import { RouteTranslationService } from '../../services/route-translation.servic
             <button
               #menuButton
               type="button"
-              (click)="onToggleButton($event)"
-              (touchstart)="onToggleButton($event)"
-              class="focus:outline-none"
+              (pointerup)="onToggleButton($event)"
+              class="focus:outline-none touch-manipulation"
               [attr.aria-expanded]="menuOpen"
               aria-label="Toggle menu"
               i18n-aria-label="@@header.menu.toggle">
@@ -109,9 +108,8 @@ import { RouteTranslationService } from '../../services/route-translation.servic
            [class.translate-y-0]="menuOpen"
            [class.-translate-y-4]="!menuOpen"
            [style.maxHeight]="menuOpen ? '320px' : '0'"
-           (click)="$event.stopPropagation()"
-           (touchstart)="$event.stopPropagation()"
-      >
+           (pointerdown)="$event.stopPropagation()"
+           (pointerup)="$event.stopPropagation()">
         <div class="p-4">
           <a [routerLink]="['/']" [routerLinkActiveOptions]="{ exact: true }"
              routerLinkActive="font-semibold bg-gray-100"
@@ -120,8 +118,7 @@ import { RouteTranslationService } from '../../services/route-translation.servic
              [class.text-gray-900]="mHome.isActive"
              [class.text-gray-700]="!mHome.isActive"
              [attr.aria-current]="mHome.isActive ? 'page' : null"
-             (click)="linkClick($event)"
-             (touchstart)="linkClick($event)"
+             (pointerup)="linkClick($event)"
              i18n="@@nav.home">Home</a>
 
           <a [routerLink]="['/about']" routerLinkActive="font-semibold bg-gray-100"
@@ -130,8 +127,7 @@ import { RouteTranslationService } from '../../services/route-translation.servic
              [class.text-gray-900]="mAbout.isActive"
              [class.text-gray-700]="!mAbout.isActive"
              [attr.aria-current]="mAbout.isActive ? 'page' : null"
-             (click)="linkClick($event)"
-             (touchstart)="linkClick($event)"
+             (pointerup)="linkClick($event)"
              i18n="@@nav.about">About</a>
 
           <a [routerLink]="['/services']" routerLinkActive="font-semibold bg-gray-100"
@@ -140,8 +136,7 @@ import { RouteTranslationService } from '../../services/route-translation.servic
              [class.text-gray-900]="mServices.isActive"
              [class.text-gray-700]="!mServices.isActive"
              [attr.aria-current]="mServices.isActive ? 'page' : null"
-             (click)="linkClick($event)"
-             (touchstart)="linkClick($event)"
+             (pointerup)="linkClick($event)"
              i18n="@@nav.services">Services</a>
 
           <a [routerLink]="['/contact']" routerLinkActive="font-semibold bg-gray-100"
@@ -150,8 +145,7 @@ import { RouteTranslationService } from '../../services/route-translation.servic
              [class.text-gray-900]="mContact.isActive"
              [class.text-gray-700]="!mContact.isActive"
              [attr.aria-current]="mContact.isActive ? 'page' : null"
-             (click)="linkClick($event)"
-             (touchstart)="linkClick($event)"
+             (pointerup)="linkClick($event)"
              i18n="@@nav.contact">Contact</a>
         </div>
       </div>
@@ -160,15 +154,11 @@ import { RouteTranslationService } from '../../services/route-translation.servic
 })
 export class HeaderComponent {
   @Output() refreshClick = new EventEmitter<void>();
-
   @ViewChild('menuPanel') menuPanel!: ElementRef<HTMLElement>;
   @ViewChild('menuButton') menuButton!: ElementRef<HTMLButtonElement>;
 
   refreshing = false;
   menuOpen = false;
-
-  // ignore the first document events after toggle to avoid mobile ghost clicks
-  private ignoreDocEventsUntil = 0;
 
   private router = inject(Router);
   private routeTranslation = inject(RouteTranslationService);
@@ -178,39 +168,25 @@ export class HeaderComponent {
       .subscribe(() => this.closeMenu());
   }
 
-  // Document listeners for outside click
-  @HostListener('document:click', ['$event'])
-  onDocumentClick(event: Event) { this.handleDocumentEvent(event); }
-
-  @HostListener('document:touchstart', ['$event'])
-  onDocumentTouch(event: Event) { this.handleDocumentEvent(event); }
-
-  private handleDocumentEvent(event: Event) {
+  // Outside click using a single pointer listener
+  @HostListener('document:pointerdown', ['$event'])
+  onDocumentPointer(event: PointerEvent) {
     if (!this.menuOpen) return;
-    const now = Date.now();
-    if (now < this.ignoreDocEventsUntil) return;
-
     const target = event.target as Node;
     const insidePanel = this.menuPanel?.nativeElement.contains(target);
     const onButton = this.menuButton?.nativeElement.contains(target);
     if (!insidePanel && !onButton) this.closeMenu();
   }
 
-  // New handler used by the button
-  onToggleButton(event: Event) {
+  onToggleButton(event: PointerEvent) {
     event.stopPropagation();
+    event.preventDefault();
     this.menuOpen = !this.menuOpen;
-    this.ignoreDocEventsUntil = Date.now() + 200;
   }
 
-  // Backward compatible method in case the template or another component still calls it
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
-    this.ignoreDocEventsUntil = Date.now() + 200;
-  }
-
-  linkClick(event: Event) {
+  linkClick(event: PointerEvent) {
     event.stopPropagation();
+    event.preventDefault();
     this.closeMenu();
   }
 

@@ -48,3 +48,6 @@ button:focus-visible {
   text-decoration: underline;
 }
 
+button{
+  cursor:  pointer !important;
+}

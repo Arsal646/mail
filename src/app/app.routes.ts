@@ -1,42 +1,68 @@
 import { Routes } from '@angular/router';
-import { SavedEmailComponent } from './pages/saved-email/saved-email.component';
-import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
-import { Email10MinComponent } from './pages/email-10min/email-10min.component';
-import { Home } from './pages/home/home';
-import { Email20MinComponent } from './pages/email-20min/email-20min.component';
-import { Email30MinComponent } from './pages/email-30min/email-30min.component';
 
-// Use English routes for both languages - content will be localized based on locale
 export const routes: Routes = [
   {
     path: '',
-    component: Home,
+    loadComponent: () =>
+      import('./pages/home/home').then(m => m.Home),
     pathMatch: 'full'
   },
   {
     path: 'saved/:token',
-    component: SavedEmailComponent,
+    loadComponent: () =>
+      import('./pages/saved-email/saved-email.component').then(m => m.SavedEmailComponent),
     pathMatch: 'full'
   },
   {
     path: '10-minutes-temporary-email',
-    component: Email10MinComponent,
+    loadComponent: () =>
+      import('./pages/email-10min/email-10min.component').then(m => m.Email10MinComponent),
     pathMatch: 'full'
   },
-  { 
-    path: '20-minutes-temporary-email', 
-    component: Email20MinComponent,
+  {
+    path: '20-minutes-temporary-email',
+    loadComponent: () =>
+      import('./pages/email-20min/email-20min.component').then(m => m.Email20MinComponent),
     pathMatch: 'full'
   },
-  { 
-    path: '30-minutes-temporary-email', 
-    component: Email30MinComponent,
+  {
+    path: '30-minutes-temporary-email',
+    loadComponent: () =>
+      import('./pages/email-30min/email-30min.component').then(m => m.Email30MinComponent),
     pathMatch: 'full'
   },
   {
     path: 'privacy-policy',
-    component: PrivacyPolicyComponent,
+    loadComponent: () =>
+      import('./pages/privacy-policy/privacy-policy.component').then(m => m.PrivacyPolicyComponent),
     pathMatch: 'full'
   },
-  { path: '**', redirectTo: '' }
+  {
+    path: 'about',
+    loadComponent: () =>
+      import('./pages/about/about').then(m => m.About),
+    pathMatch: 'full'
+  },
+  {
+    path: 'services',
+    loadComponent: () =>
+      import('./pages/service/service').then(m => m.Service),
+    pathMatch: 'full'
+  },
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('./pages/contact/contact').then(m => m.Contact),
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'terms-and-conditions',
+    loadComponent: () => import('./pages/term/term').then(m => m.Term),
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];

@@ -33,40 +33,20 @@ import { DOCUMENT } from '@angular/common';
           <!-- Navigation Links -->
           <nav aria-label="Footer Navigation">
             <div class="flex flex-wrap justify-center gap-4 text-sm">
-              <a i18n="@@footer.home"
-                [routerLink]="routes.home" 
-                class="text-gray-600 hover:text-gray-900 transition-colors"
-                aria-label="Home"
-              >
-                Home
-              </a>
-              <a i18n="@@footer.10MinMail"
-                [routerLink]="routes.email10min" 
-                class="text-gray-600 hover:text-gray-900 transition-colors"
-                aria-label="10 Minute Temporary Email"
-              >
-                10 Minutes Mail
-              </a>
-              <a i18n="@@footer.20MinMail"
-                [routerLink]="routes.email20min" 
-                class="text-gray-600 hover:text-gray-900 transition-colors"
-                aria-label="20 Minute Temporary Email"
-              >
-                20 Minutes Mail
-              </a>
-              <a i18n="@@footer.30MinMail"
-                [routerLink]="routes.email30min" 
-                class="text-gray-600 hover:text-gray-900 transition-colors"
-                aria-label="30 Minute Temporary Email"
-              >
-                30 Minutes Mail
-              </a>
+             
               <a i18n="@@footer.privacyPolicy"
                 [routerLink]="routes.privacy" 
                 class="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="Privacy Policy"
               >
                 Privacy Policy
+              </a>
+                       <a i18n="@@footer.termsConditions"
+                [routerLink]="routes.terms" 
+                class="text-gray-600 hover:text-gray-900 transition-colors"
+                aria-label="Privacy Policy"
+              >
+                 Terms & Conditions
               </a>
             </div>
           </nav>
@@ -137,7 +117,8 @@ export class FooterComponent {
       email10min: '10-minutes-temporary-email',
       email20min: '20-minutes-temporary-email',
       email30min: '30-minutes-temporary-email',
-      privacy: 'privacy-policy'
+      privacy: 'privacy-policy',
+      terms: 'terms-and-conditions'
     };
   }
 

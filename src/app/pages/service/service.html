@@ -1,0 +1,128 @@
+<div class="min-h-screen font-sans bg-white">
+  <!-- HERO -->
+  <section class="bg-gradient-to-r from-gray-50 to-white py-16">
+    <div class="container mx-auto px-4 max-w-4xl text-center">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4"
+          i18n="@@services.title">
+        Our Temporary Email Services
+      </h1>
+      <p class="text-base md:text-lg text-gray-700 leading-relaxed"
+         i18n="@@services.subtitle">
+        Protect your privacy with a free <strong>temp mail</strong> solution.
+        Whether you need a quick <strong>one time email</strong> or a longer-lasting <strong>temporary inbox</strong>, TempMail4U has you covered.
+      </p>
+    </div>
+  </section>
+
+  <main class="container mx-auto px-4 max-w-5xl py-10 space-y-10">
+
+    <!-- SERVICE CARDS -->
+    <section>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4"
+          i18n="@@services.list.title">
+        Choose Your Disposable Inbox
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-5">
+        <!-- 10 MIN -->
+        <a class="block rounded-2xl ring-1 ring-gray-200 bg-white p-5 hover:shadow-md transition"
+           [routerLink]="['/10-minutes-temporary-email']">
+          <h3 class="text-lg font-semibold text-gray-900 mb-1"
+              i18n="@@services.card.10.title">
+            10-Minute Mail
+          </h3>
+          <p class="text-sm text-gray-700"
+             i18n="@@services.card.10.desc">
+            A short-lived <strong>one time email</strong> for instant verifications.
+          </p>
+        </a>
+
+        <!-- 20 MIN -->
+        <a class="block rounded-2xl ring-1 ring-gray-200 bg-white p-5 hover:shadow-md transition"
+           [routerLink]="['/20-minutes-temporary-email']">
+          <h3 class="text-lg font-semibold text-gray-900 mb-1"
+              i18n="@@services.card.20.title">
+            20-Minute Mail
+          </h3>
+          <p class="text-sm text-gray-700"
+             i18n="@@services.card.20.desc">
+            Extra time for multi-step signups and delayed codes.
+          </p>
+        </a>
+
+        <!-- 30 MIN -->
+        <a class="block rounded-2xl ring-1 ring-gray-200 bg-white p-5 hover:shadow-md transition"
+           [routerLink]="['/30-minutes-temporary-email']">
+          <h3 class="text-lg font-semibold text-gray-900 mb-1"
+              i18n="@@services.card.30.title">
+            30-Minute Mail
+          </h3>
+          <p class="text-sm text-gray-700"
+             i18n="@@services.card.30.desc">
+            A longer <strong>temporary inbox</strong> for apps and free trials.
+          </p>
+        </a>
+
+        <!-- 7 DAY -->
+        <div class="block rounded-2xl ring-1 ring-gray-200 bg-white p-5">
+          <h3 class="text-lg font-semibold text-gray-900 mb-1"
+              i18n="@@services.card.7.title">
+            7-Day Saved Inbox
+          </h3>
+          <p class="text-sm text-gray-700 mb-3"
+             i18n="@@services.card.7.desc">
+            Keep your <strong>temporary email</strong> active for up to a week - perfect for projects and ongoing tasks.
+          </p>
+          <p class="text-xs text-gray-500"
+             i18n="@@services.card.7.note">
+            Save your unique link to revisit anytime within 7 days.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="rounded-2xl ring-1 ring-gray-200 p-5">
+      <h2 class="text-2xl font-bold text-gray-900 mb-3"
+          i18n="@@services.features.title">
+        Why Use TempMail4U?
+      </h2>
+      <ul class="grid md:grid-cols-2 gap-3 text-sm text-gray-700">
+        <li class="p-3 rounded-lg bg-gray-50 ring-1 ring-gray-200"
+            i18n="@@services.features.li1">
+          Instant <strong>temp mail</strong> address - no signup needed
+        </li>
+        <li class="p-3 rounded-lg bg-gray-50 ring-1 ring-gray-200"
+            i18n="@@services.features.li2">
+          Privacy-first: no tracking, no spam, no ads
+        </li>
+        <li class="p-3 rounded-lg bg-gray-50 ring-1 ring-gray-200"
+            i18n="@@services.features.li3">
+          Clean, fast, mobile-friendly interface
+        </li>
+        <li class="p-3 rounded-lg bg-gray-50 ring-1 ring-gray-200"
+            i18n="@@services.features.li4">
+          Flexible durations: 10m, 20m, 30m, and 7-day inbox
+        </li>
+      </ul>
+    </section>
+
+    <!-- CTA -->
+    <section class="rounded-2xl ring-1 ring-gray-200 bg-gradient-to-r from-gray-50 to-white p-6 text-center">
+      <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3"
+          i18n="@@services.cta.title">
+        Start With Your Free Disposable Inbox
+      </h2>
+      <p class="text-sm md:text-base text-gray-700 mb-5 max-w-2xl mx-auto"
+         i18n="@@services.cta.desc">
+        Create a <strong>temporary email</strong> instantly and keep your personal inbox safe from spam.
+      </p>
+      <a class="rounded-xl bg-gray-900 text-white px-6 py-3 text-sm font-medium hover:bg-gray-800 transition inline-block"
+         [routerLink]="['/']"
+         i18n="@@services.cta.button">
+        Generate Temp Mail Now
+      </a>
+    </section>
+
+  </main>
+</div>

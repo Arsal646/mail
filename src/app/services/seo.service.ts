@@ -32,7 +32,8 @@ export class SeoService {
     // Supported languages configuration
     private supportedLanguages: LanguageConfig[] = [
         { code: 'en', urlPrefix: '', isDefault: true },
-        { code: 'ar', urlPrefix: '/ar', isDefault: false }
+        { code: 'ar', urlPrefix: '/ar', isDefault: false },
+        { code: 'fr', urlPrefix: '/fr', isDefault: false }
         // Add more languages here in the future:
         // { code: 'es', urlPrefix: '/es', isDefault: false },
         // { code: 'fr', urlPrefix: '/fr', isDefault: false },
@@ -167,6 +168,10 @@ export class SeoService {
             '20-minutes-temporary-email': '20-minutes-temporary-email',
             '30-minutes-temporary-email': '30-minutes-temporary-email',
             'privacy-policy': 'privacy-policy',
+            'about': 'about',
+            'services': 'services',
+            'contact': 'contact',
+            'terms-and-conditions': 'terms-and-conditions',
         };
 
         return pathToRouteKey[path] || null;

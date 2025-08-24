@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "ar": "ng serve --configuration=ar --port 4201",
+    "fr": "ng serve --configuration=fr --port 4202",
     "en": "ng serve --configuration=en",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",

@@ -57,7 +57,7 @@
                   </div>
 
                   <button
-                    *ngFor="let email of getRecentEmails()"
+                    *ngFor="let email of emailHistoryList"
                     (click)="selectEmailFromHistory(email)"
                     class="w-full text-left flex items-center justify-between gap-2 p-2 rounded-lg hover:bg-gray-50">
                     <div class="min-w-0">

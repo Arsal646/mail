@@ -37,6 +37,8 @@ export class MainTempMail implements OnInit, OnDestroy {
   showEmailHistory = false;
   showEmailHistoryTooltip = false;
 
+  emailHistoryList: any[] = []
+
   constructor(
     private emailService: EmailService,
     private googleAnalytics: GoogleAnalyticsService,
@@ -98,6 +100,8 @@ export class MainTempMail implements OnInit, OnDestroy {
     });
 
     this.reload();
+
+    this.emailHistoryList = this.getRecentEmails()
   }
 
   ngOnDestroy(): void {

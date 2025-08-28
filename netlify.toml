@@ -2,8 +2,3 @@
 command = "ng build --localize"
 functions = "netlify/functions"
 publish = "dist/temp-mail/browser"
-
-
-[[edge_functions]]
-path = "/*"
-function = "block-bots"

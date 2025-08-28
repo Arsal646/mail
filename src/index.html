@@ -43,21 +43,33 @@
     gtag('config', 'G-HK61KXLF77');
   </script> -->
 
-  <script>
-  if (window.location.hostname !== 'localhost') {
-    var gaScript = document.createElement('script');
-    gaScript.async = true;
-    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-HK61KXLF77';
-    document.head.appendChild(gaScript);
 
-    gaScript.onload = function () {
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-HK61KXLF77');
-    };
-  }
-</script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-K6FLVVZQ');</script>
+  <!-- End Google Tag Manager -->
+
+  <script>
+    if (window.location.hostname !== 'localhost') {
+      var gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-HK61KXLF77';
+      document.head.appendChild(gaScript);
+
+      gaScript.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-HK61KXLF77');
+      };
+    }
+  </script>
 
 
   <!-- Structured Data / Schema Markup -->
@@ -79,22 +91,32 @@
   </script>
 
 
-  <a title="GDPR-compliant Web Analytics" href="https://clicky.com/101491490"><img style="display: none;" alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
-<script>
-var clicky_site_id = 101491490;
-(function() {
-	var s = document.createElement('script');
-	s.type = 'text/javascript';
-	s.async = true;
-	s.src = '//static.getclicky.com/js';
-	( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
-})();
-</script>
-<noscript><p><img style="display: none;" alt="Clicky" width="1" height="1" src="//in.getclicky.com/101491490ns.gif" /></p></noscript>
+  <a title="GDPR-compliant Web Analytics" href="https://clicky.com/101491490"><img style="display: none;" alt="Clicky"
+      src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+  <script>
+    var clicky_site_id = 101491490;
+    (function () {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//static.getclicky.com/js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+    })();
+  </script>
+  <noscript>
+    <p><img style="display: none;" alt="Clicky" width="1" height="1" src="//in.getclicky.com/101491490ns.gif" /></p>
+  </noscript>
 </head>
 
 <body class="mat-typography">
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6FLVVZQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <app-root></app-root>
+
+  
 </body>
 
 </html>

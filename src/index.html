@@ -34,20 +34,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="manifest" href="site.webmanifest">
 
-  <!-- Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-HK61KXLF77"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-HK61KXLF77');
-  </script> -->
 
 
   <!-- Google Tag Manager -->
   <script>
-
-    // if (window.location.hostname !== 'localhost') {
+    if (window.location.hostname !== 'localhost') {
       (function (w, d, s, l, i) {
         w[l] = w[l] || []; w[l].push({
           'gtm.start':
@@ -56,8 +47,7 @@
           j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
             'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
       })(window, document, 'script', 'dataLayer', 'GTM-K6FLVVZQ');
-
-    // }
+    }
   </script>
   <!-- End Google Tag Manager -->
 

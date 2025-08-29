@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, LOCALE_ID, inject } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { Route } from 'lucide-angular';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-term',
@@ -11,6 +12,8 @@ import { Route } from 'lucide-angular';
 })
 export class Term {
 constructor(private title: Title, private meta: Meta) {}
+private seoService = inject(SeoService);
+private locale = inject(LOCALE_ID);
 
   ngOnInit(): void {
     const pageTitle = $localize`:@@seo.terms.title:Terms & Conditions – TempMail4U | Temporary Email & Temp Mail`;
@@ -27,5 +30,21 @@ constructor(private title: Title, private meta: Meta) {}
     this.meta.updateTag({ property: 'og:description', content: description });
     this.meta.updateTag({ property: 'og:url', content: 'https://tempmail4u.com/terms' });
     this.meta.updateTag({ property: 'og:site_name', content: 'TempMail4U' });
+
+    // Inject JSON-LD, canonical and hreflang via SeoService
+    const baseUrl = this.seoService.getBaseUrl(this.locale);
+    this.seoService.updateSeoTags({
+      title: pageTitle,
+      description,
+      keywords,
+      ogUrl: baseUrl + '/terms',
+      ogImage: 'https://tempmail4u.com/assets/images/og/terms.jpg',
+      ogSiteName: 'TempMail4u',
+      twitterSite: '@tempmails',
+      breadcrumbs: [
+        { name: $localize`:@@breadcrumbs.home:Home`, url: baseUrl + '/' },
+        { name: pageTitle, url: baseUrl + '/terms' }
+      ]
+    });
   }
 }

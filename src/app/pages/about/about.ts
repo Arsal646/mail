@@ -38,7 +38,11 @@ private setSeoTags(): void {
     ogUrl: baseUrl + translatedRoute,
     ogImage: 'https://tempmail4u.com/assets/images/og/about-us.jpg',
     ogSiteName: 'TempMail4u',
-    twitterSite: '@tempmails'
+    twitterSite: '@tempmails',
+    breadcrumbs: [
+      { name: $localize`:@@breadcrumbs.home:Home`, url: baseUrl + '/' },
+      { name: $localize`:@@seo.about.title:About TempMail4u - Privacy First Temporary Email Service`, url: baseUrl + translatedRoute }
+    ]
   });
 }
 

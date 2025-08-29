@@ -38,7 +38,11 @@ private setSeoTags(): void {
     ogUrl: baseUrl + translatedRoute,
     ogImage: 'https://tempmail4u.com/assets/images/og/services.jpg',
     ogSiteName: 'TempMail4u',
-    twitterSite: '@tempmails'
+    twitterSite: '@tempmails',
+    breadcrumbs: [
+      { name: $localize`:@@breadcrumbs.home:Home`, url: baseUrl + '/' },
+      { name: $localize`:@@seo.services.title:Temporary Email Services - Disposable Inboxes, Custom Aliases, OTP Support`, url: baseUrl + translatedRoute }
+    ]
   });
 }
 

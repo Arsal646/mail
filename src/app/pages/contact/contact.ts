@@ -38,7 +38,11 @@ private setSeoTags(): void {
     ogUrl: baseUrl + translatedRoute,
     ogImage: 'https://tempmail4u.com/assets/images/og/contact.jpg',
     ogSiteName: 'TempMail4u',
-    twitterSite: '@tempmails'
+    twitterSite: '@tempmails',
+    breadcrumbs: [
+      { name: $localize`:@@breadcrumbs.home:Home`, url: baseUrl + '/' },
+      { name: $localize`:@@seo.contact.title:Contact TempMail4u - Support and Feedback`, url: baseUrl + translatedRoute }
+    ]
   });
 }
 

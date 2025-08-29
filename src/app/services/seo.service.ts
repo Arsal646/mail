@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable, LOCALE_ID, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
 import { RouteTranslationService } from './route-translation.service';
@@ -11,6 +11,8 @@ export interface SeoData {
     ogImage?: string;
     ogSiteName?: string;
     twitterSite?: string;
+    breadcrumbs?: { name: string; url: string }[];
+    faq?: { question: string; answer: string }[];
 }
 
 // Configuration for supported languages
@@ -28,6 +30,7 @@ export class SeoService {
     private title = inject(Title);
     private document = inject(DOCUMENT);
     private routeTranslation = inject(RouteTranslationService);
+    private localeId = inject(LOCALE_ID);
 
     // Supported languages configuration
     private supportedLanguages: LanguageConfig[] = [
@@ -89,6 +92,17 @@ export class SeoService {
         if (seoData.ogUrl) {
             this.addHreflangTags(seoData.ogUrl);
         }
+
+        // JSON-LD structured data (@graph)
+        this.injectStructuredData({
+            title: seoData.title,
+            description: seoData.description,
+            url: seoData.ogUrl,
+            image: seoData.ogImage,
+            siteName: seoData.ogSiteName || 'TempMail4u',
+            breadcrumbs: seoData.breadcrumbs,
+            faq: seoData.faq
+        });
     }
 
     private updateCanonicalUrl(url?: string): void {
@@ -105,6 +119,163 @@ export class SeoService {
         link.setAttribute('rel', 'canonical');
         link.setAttribute('href', url);
         this.document.head.appendChild(link);
+    }
+
+    /**
+     * Injects Organization, WebSite and WebPage JSON-LD into <head>.
+     * It replaces prior injected blocks to avoid duplicates during navigation.
+     */
+    private injectStructuredData(params: { title: string; description: string; url?: string; image?: string; siteName: string; breadcrumbs?: {name:string;url:string}[]; faq?: {question:string;answer:string}[]; }): void {
+        // Clean previously injected JSON-LD blocks and prior graph
+        ['Organization','WebSite','WebPage','WebApplication','Service','BreadcrumbList','FAQPage','Graph']
+          .forEach(key => this.removeJsonLdByKey(key));
+
+        const siteUrl = 'https://tempmail4u.com';
+        const inLanguage = this.localeId || 'en';
+
+        // Organization with logo object and sameAs
+        const organization = {
+            '@type': 'Organization',
+            '@id': `${siteUrl}#organization`,
+            name: params.siteName,
+            url: siteUrl,
+            logo: {
+              '@type': 'ImageObject',
+              url: `${siteUrl}/logo.png`
+            },
+            sameAs: [
+              `${siteUrl}`,
+              'https://twitter.com/tempmails',
+              'https://x.com/tempmails'
+            ]
+        } as const;
+
+        // WebSite with SearchAction
+        const website = {
+            '@type': 'WebSite',
+            '@id': `${siteUrl}#website`,
+            name: params.siteName,
+            url: siteUrl,
+            inLanguage,
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: `${siteUrl}/search?q={search_term_string}`,
+              'query-input': 'required name=search_term_string'
+            }
+        } as const;
+
+        // WebApplication (software app) with free offer
+        const webApp = {
+            '@type': 'WebApplication',
+            '@id': `${siteUrl}#webapp`,
+            name: params.siteName,
+            url: siteUrl,
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            browserRequirements: 'Requires JavaScript; modern web browser',
+            isAccessibleForFree: true,
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'USD',
+              category: 'free'
+            },
+            publisher: { '@id': `${siteUrl}#organization` }
+        } as const;
+
+        // Service offered (temporary email)
+        const languages = this.supportedLanguages.map(l => l.code);
+        const service = {
+            '@type': 'Service',
+            '@id': `${siteUrl}#service`,
+            name: 'Temporary Email Service',
+            serviceType: 'Temporary email, Disposable inbox, Burner email',
+            provider: { '@id': `${siteUrl}#organization` },
+            areaServed: 'Worldwide',
+            availableLanguage: languages,
+            isAccessibleForFree: true,
+            url: siteUrl
+        } as const;
+
+        // WebPage (per route) linking back to Organization
+        const webPage: any = {
+            '@type': 'WebPage',
+            '@id': (params.url ? `${params.url}#webpage` : `${siteUrl}#webpage`),
+            name: params.title,
+            description: params.description,
+            isPartOf: { '@id': `${siteUrl}#website` },
+            publisher: { '@id': `${siteUrl}#organization` },
+            about: { '@id': `${siteUrl}#organization` },
+            inLanguage
+        };
+        if (params.url) {
+            webPage.url = params.url;
+        }
+        if (params.image) {
+            webPage.primaryImageOfPage = {
+                '@type': 'ImageObject',
+                contentUrl: params.image
+            };
+        }
+
+        const graph: any[] = [organization, website, webApp, service, webPage];
+
+        // BreadcrumbList (optional)
+        if (params.breadcrumbs && params.breadcrumbs.length) {
+            const breadcrumb = {
+                '@type': 'BreadcrumbList',
+                itemListElement: params.breadcrumbs.map((b, idx) => ({
+                    '@type': 'ListItem',
+                    position: idx + 1,
+                    name: b.name,
+                    item: b.url
+                }))
+            };
+            graph.push(breadcrumb);
+        }
+
+        // FAQPage (optional)
+        if (params.faq && params.faq.length) {
+            const faq = {
+                '@type': 'FAQPage',
+                mainEntity: params.faq.map(q => ({
+                    '@type': 'Question',
+                    name: q.question,
+                    acceptedAnswer: { '@type': 'Answer', text: q.answer }
+                }))
+            };
+            graph.push(faq);
+        }
+
+        // Append single @graph script
+        const script = this.document.createElement('script');
+        script.setAttribute('type', 'application/ld+json');
+        script.setAttribute('data-schema-key', 'Graph');
+        script.textContent = JSON.stringify({
+          '@context': 'https://schema.org',
+          '@graph': graph
+        });
+        this.document.head.appendChild(script);
+    }
+
+    /**
+     * Helper to append a JSON-LD script with a stable data key.
+     */
+    private appendJsonLd(key: string, data: unknown): void {
+        const script = this.document.createElement('script');
+        script.setAttribute('type', 'application/ld+json');
+        script.setAttribute('data-schema-key', key);
+        // Use textContent to avoid HTML parsing and preserve SSR safety
+        script.textContent = JSON.stringify(data);
+        this.document.head.appendChild(script);
+    }
+
+    /**
+     * Removes a JSON-LD script by key to prevent duplicates.
+     */
+    private removeJsonLdByKey(key: string): void {
+        const existing = this.document.querySelectorAll(`script[type="application/ld+json"][data-schema-key="${key}"]`);
+        existing.forEach(s => s.remove());
     }
 
     private addHreflangTags(currentUrl: string): void {

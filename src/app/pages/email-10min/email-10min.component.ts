@@ -68,46 +68,47 @@ private getLocalizedSeoContent() {
   };
 }
 
-  private getFaqItems() {
-    return [
-      {
-        question: $localize`:@@seo.email10min.faq.q1:What is a 10 minute email?`,
-        answer: $localize`:@@seo.email10min.faq.a1:A 10 minute email is a short-lived inbox that deletes itself after 600 seconds, ideal for receiving codes and links without exposing your main account.`
-      },
-      {
-        question: $localize`:@@seo.email10min.faq.q2:Can I use it for sign-ups and OTP?`,
-        answer: $localize`:@@seo.email10min.faq.a2:Yes. Use the disposable inbox for quick registrations, OTPs, and downloads; it's receive-only and requires no signup.`
-      },
-      {
-        question: $localize`:@@seo.email10min.faq.q3:Can I reset or extend the inbox?`,
-        answer: $localize`:@@seo.email10min.faq.a3:Use Reset to restart the timer, or switch to a 20 or 30 minute inbox for longer use.`
-      },
-      {
-        question: $localize`:@@seo.email10min.faq.q4:Why didn't I receive my OTP or verification?`,
-        answer: $localize`:@@seo.email10min.faq.a4:Some services delay or block temp domains. Refresh, request a new code, or try a longer duration.`
-      },
-      {
-        question: $localize`:@@seo.email10min.faq.q5:Can I use it for sensitive accounts?`,
-        answer: $localize`:@@seo.email10min.faq.a5:Not recommended. Use permanent email for banking, government, or personal accounts.`
-      },
-      {
-        question: $localize`:@@seo.email10min.faq.q6:Is it anonymous and private?`,
-        answer: $localize`:@@seo.email10min.faq.a6:Yes. No registration required; HTTPS is used and emails are deleted at expiry.`
-      },
-      {
-        question: $localize`:@@seo.email10min.faq.q7:How many inboxes can I create?`,
-        answer: $localize`:@@seo.email10min.faq.a7:Unlimited. Create as many temporary inboxes as you need; each expires automatically.`
-      },
-      {
-        question: $localize`:@@seo.email10min.faq.q8:Does it work on mobile devices?`,
-        answer: $localize`:@@seo.email10min.faq.a8:Yes. The generator is responsive and works across devices.`
-      },
-      {
-        question: $localize`:@@seo.email10min.faq.q9:Can I just use a 10 minute email without extras?`,
-        answer: $localize`:@@seo.email10min.faq.a9:Yes. A simple 10 minute inbox provides a fast, disposable address that expires automatically.`
-      }
-    ];
-  }
+private getFaqItems() {
+  return [
+    {
+      question: $localize`:@@seo.email10min.faq.q1:What is a 10 minutes email?`,
+      answer: $localize`:@@seo.email10min.faq.a1:A temporary email address that expires after 10 minutes, perfect for receiving one-time messages or verification links. You can also try our free 20-minute or 30-minute temporary email if you need more time.`
+    },
+    {
+      question: $localize`:@@seo.email10min.faq.q2:Is it free to use?`,
+      answer: $localize`:@@seo.email10min.faq.a2:Yes, it's completely free. No sign-up needed, no ads, and no premium charges.`
+    },
+    {
+      question: $localize`:@@seo.email10min.faq.q3:Can I receive OTPs and confirmation emails?`,
+      answer: $localize`:@@seo.email10min.faq.a3:Yes, the temporary inbox supports all common email types including OTPs and confirmation links.`
+    },
+    {
+      question: $localize`:@@seo.email10min.faq.q4:Can I extend the timer for my temporary email?`,
+      answer: $localize`:@@seo.email10min.faq.a4:Yes, simply click the "Reset" button to restart the 10-minute countdown.`
+    },
+    {
+      question: $localize`:@@seo.email10min.faq.q5:Is this email address truly anonymous?`,
+      answer: $localize`:@@seo.email10min.faq.a5:Absolutely. We do not collect or track any personal data; every inbox is temporary and private.`
+    },
+    {
+      question: $localize`:@@seo.email10min.faq.q6:How many temporary emails can I create?`,
+      answer: $localize`:@@seo.email10min.faq.a6:Unlimited. Create as many temporary inboxes as you want, each with its own time limit.`
+    },
+    {
+      question: $localize`:@@seo.email10min.faq.q7:Does it work on mobile?`,
+      answer: $localize`:@@seo.email10min.faq.a7:Yes, the service is fully responsive and works seamlessly on all devices.`
+    },
+    {
+      question: $localize`:@@seo.email10min.faq.q8:Is it safe for important messages?`,
+      answer: $localize`:@@seo.email10min.faq.a8:It's suitable for short-term use like OTPs and confirmation emails. Avoid using it for sensitive personal information.`
+    },
+    {
+      question: $localize`:@@seo.email10min.faq.q9:Is it better than using a fake email?`,
+      answer: $localize`:@@seo.email10min.faq.a9:Yes! Unlike fake emails, this service provides a real, functioning inbox for legitimate message receipt.`
+    }
+  ];
+}
+
 
 //
 

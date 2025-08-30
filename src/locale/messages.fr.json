@@ -110,78 +110,81 @@
     "seo.contact.title": "Contact TempMail4u - Support et retours",
     "seo.contact.description": "Contactez l’équipe TempMail4u pour le support, les suggestions et les partenariats.",
     "seo.contact.keywords": "contact tempmail, support temp mail, aide email jetable, avis, partenariat",
-    "email10min.hero.title.label": "Générateur d’email temporaire 10 minutes",
-    "email10min.hero.subtitle.label": "Créez facilement une {$START_TAG_STRONG}adresse email temporaire de 10 minutes{$CLOSE_TAG_STRONG} pour les inscriptions rapides, la vérification OTP et les téléchargements. Ce service est aussi connu sous le nom de {$START_EMPHASISED_TEXT}10 minute mail, boîte jetable, email temporaire ou boîte aux lettres anonyme{$CLOSE_EMPHASISED_TEXT}. C’est la façon la plus simple de protéger votre adresse personnelle et d’éviter le spam.",
-    "email10min.about.title.label": "Qu’est-ce qu’un email temporaire 10 minutes ?",
-    "email10min.about.desc1.label": "Un {$START_TAG_STRONG}email temporaire de 10 minutes{$CLOSE_TAG_STRONG} est une boîte de réception éphémère qui s’efface automatiquement après 600 secondes. Beaucoup l’appellent aussi une {$START_TAG_STRONG}boîte auto-destructrice{$CLOSE_TAG_STRONG} car elle disparaît une fois le temps écoulé. Idéal pour recevoir des codes de vérification, des liens de confirmation ou des téléchargements sans exposer votre adresse principale.",
-    "email10min.about.desc2.label": "Contrairement aux adresses aléatoires ou fausses, il s’agit d’une {$START_TAG_STRONG}vraie boîte jetable{$CLOSE_TAG_STRONG} qui reçoit les messages instantanément. Aucune inscription ni donnée personnelle n’est requise, ce qui en fait un moyen sûr et rapide de protéger votre vie privée en ligne.",
-    "email10min.about.features.title.label": "Caractéristiques principales :",
-    "email10min.about.feature1.label": "Expire automatiquement après 10 minutes, soit 600 secondes",
-    "email10min.about.feature2.label": "Boîte de réception uniquement pour OTP et vérification",
-    "email10min.about.feature3.label": "Anonyme, chiffrée et sécurisée",
-    "email10min.about.feature4.label": "Fonctionne instantanément, aucune inscription nécessaire",
-    "email10min.how.title.label": "Comment fonctionne la boîte temporaire",
-    "email10min.how.step1.label": "Ouvrez cette page pour obtenir instantanément une boîte jetable.",
-    "email10min.how.step2.label": "Copiez l’adresse email dans tout site ou application qui demande une vérification.",
-    "email10min.how.step3.label": "Recevez vos OTP, liens de confirmation ou messages en temps réel.",
-    "email10min.how.step4.label": "Après 10 minutes, la boîte et les emails sont supprimés définitivement. C’est une boîte auto-destructrice qui protège vos données.",
-    "email10min.use.title.label": "Meilleures utilisations",
-    "email10min.use.dev.title.label": "Pour les développeurs et testeurs",
-    "email10min.use.dev.li1.label": "Tester les parcours d’inscription et de connexion",
-    "email10min.use.dev.li2.label": "Prévisualiser les emails transactionnels ou générés par API",
-    "email10min.use.dev.li3.label": "Créer rapidement des comptes de test",
-    "email10min.use.privacy.title.label": "Pour la vie privée au quotidien",
-    "email10min.use.privacy.li1.label": "Inscriptions anonymes sur de nouvelles plateformes",
-    "email10min.use.privacy.li2.label": "Accès aux codes promo et téléchargements protégés",
-    "email10min.use.privacy.li3.label": "Éviter le spam, les newsletters et les listes marketing",
-    "email10min.trust.title.label": "Pourquoi faire confiance à TempMail4U",
-    "email10min.trust.desc1.label": "Depuis 2020, TempMail4U fournit chaque jour des milliers de {$START_TAG_STRONG}boîtes temporaires{$CLOSE_TAG_STRONG} aux utilisateurs du monde entier. Nous mettons l’accent sur la confidentialité, la sécurité et la simplicité :",
-    "email10min.trust.li1.label": "Pas d’inscription ni de données personnelles",
-    "email10min.trust.li2.label": "Les boîtes s’auto-détruisent après expiration",
-    "email10min.trust.li3.label": "Connexion sécurisée HTTPS avec une Politique de Confidentialité claire",
-    "email10min.proscons.title.label": "Avantages et limites",
-    "email10min.pros.title.label": "Avantages :",
-    "email10min.pros.li1.label": "Rapide et simple à utiliser",
-    "email10min.pros.li2.label": "Protège votre boîte principale",
-    "email10min.pros.li3.label": "Parfait pour les OTP et vérifications rapides",
-    "email10min.cons.title.label": "Limites :",
-    "email10min.cons.li1.label": "Certains sites bloquent les domaines temporaires",
-    "email10min.cons.li2.label": "Non adapté pour les comptes sensibles ou à long terme",
-    "email10min.cons.li3.label": "Les emails sont supprimés définitivement après expiration",
-    "email10min.troubleshoot.title.label": "Dépannage de la réception d’emails",
-    "email10min.troubleshoot.li1.label": "Attendez 1 à 2 minutes, certains expéditeurs mettent en file d’attente les messages",
-    "email10min.troubleshoot.li2.label": "Demandez un nouvel OTP ou un lien de confirmation",
-    "email10min.troubleshoot.li3.label": "Si retard, essayez un email temporaire 20 minutes ou une boîte jetable 30 minutes",
-    "email10min.troubleshoot.li4.label": "Si un service bloque les domaines temporaires, utilisez un email permanent",
-    "email10min.troubleshoot.li5.label": "Passez à une boîte temporaire plus longue si les messages arrivent en retard",
-    "email10min.alternatives.title.label": "Alternatives et options plus longues",
-    "email10min.alternatives.desc.label": "Besoin de plus de temps qu’une boîte 10 minutes ? Essayez :",
-    "email10min.links.20min.label": "{$START_LINK}Email temporaire 20 minutes{$CLOSE_LINK}",
-    "email10min.links.30min.label": "{$START_LINK}Email temporaire 30 minutes{$CLOSE_LINK}",
-    "email10min.links.saved.label": "{$START_LINK}Boîte sauvegardée 7 jours{$CLOSE_LINK}",
-    "email10min.faq.title.label": "Foire aux questions",
-    "email10min.faq.q1.label": "Qu’est-ce qu’un email temporaire 10 minutes ?",
-    "email10min.faq.a1.label": "C’est une {$START_TAG_STRONG}boîte auto-destructrice{$CLOSE_TAG_STRONG} qui dure 600 secondes. Parfaite pour les OTP, vérifications et pour éviter le spam.",
-    "email10min.faq.q2.label": "Ce service est-il gratuit ?",
-    "email10min.faq.a2.label": "Oui. Notre {$START_TAG_STRONG}générateur d’email temporaire{$CLOSE_TAG_STRONG} est 100 % gratuit sans abonnement ni frais cachés.",
-    "email10min.faq.q3.label": "Puis-je réinitialiser ou prolonger la boîte ?",
-    "email10min.faq.a3.label": "Oui. Utilisez Réinitialiser pour redémarrer le minuteur, ou passez à une boîte 20 ou 30 minutes pour plus de temps.",
-    "email10min.faq.q4.label": "Pourquoi je n’ai pas reçu mon OTP ou ma vérification ?",
-    "email10min.faq.a4.label": "Certains services retardent les emails ou bloquent les domaines temporaires. Actualisez votre boîte, demandez un nouveau code ou utilisez une option plus longue.",
-    "email10min.faq.q5.label": "Puis-je l’utiliser pour des comptes sensibles ?",
-    "email10min.faq.a5.label": "Non recommandé. Pour les comptes bancaires, gouvernementaux ou personnels, utilisez toujours un email permanent. Une {$START_TAG_STRONG}boîte jetable{$CLOSE_TAG_STRONG} est mieux adaptée aux usages courts et peu risqués.",
-    "email10min.faq.q6.label": "Est-ce anonyme et privé ?",
-    "email10min.faq.a6.label": "Oui. Notre service de {$START_TAG_STRONG}10 minute mail{$CLOSE_TAG_STRONG} ne nécessite pas d’inscription. Les messages sont supprimés à l’expiration et toutes les connexions sont protégées par HTTPS.",
-    "email10min.faq.q7.label": "Combien de boîtes puis-je créer ?",
-    "email10min.faq.a7.label": "Illimité. Générez autant de {$START_TAG_STRONG}boîtes temporaires{$CLOSE_TAG_STRONG} que vous le souhaitez. Chacune expire automatiquement.",
-    "email10min.faq.q8.label": "Est-ce que ça marche sur mobile ?",
-    "email10min.faq.a8.label": "Oui. Le {$START_TAG_STRONG}générateur d’email temporaire{$CLOSE_TAG_STRONG} est réactif et fonctionne sur tous les appareils.",
-    "email10min.faq.q9.label": "Puis-je juste utiliser un email 10 minutes sans extras ?",
-    "email10min.faq.a9.label": "Oui. Un simple {$START_TAG_STRONG}email 10 minutes{$CLOSE_TAG_STRONG} offre une boîte jetable rapide qui expire automatiquement.",
-    "email10min.cta.title.label": "Commencez maintenant",
-    "email10min.cta.subtitle.label": "Générez gratuitement votre {$START_TAG_STRONG}email temporaire 10 minutes{$CLOSE_TAG_STRONG} dès maintenant. Rejoignez des milliers d’utilisateurs qui font confiance à TempMail4U pour des {$START_TAG_STRONG}boîtes jetables{$CLOSE_TAG_STRONG} rapides, anonymes et sécurisées. Notre {$START_TAG_STRONG}service d’email temporaire{$CLOSE_TAG_STRONG} est conçu pour protéger votre vie privée et simplifier vos activités en ligne.",
-    "email10min.cta.button.label": "Générer un email 10 minutes",
-    "email10min.cta.note.label": "Gratuit • Anonyme • Sécurisé • Réception uniquement",
+    "email10minTitle": " Email temporaire 10 minutes – Boîte jetable gratuite sans inscription ",
+    "email10minSubtitle": " Générez instantanément une {$START_TAG_STRONG}adresse mail temporaire 10 minutes{$CLOSE_TAG_STRONG}. Idéal pour les vérifications e-mail, OTP et inscriptions anonymes sans exposer votre boîte personnelle. ",
+    "whatIs10minEmail": "Qu’est-ce qu’un email temporaire 10 minutes ?",
+    "10minEmailDesc1": " Un {$START_TAG_STRONG}email temporaire 10 minutes{$CLOSE_TAG_STRONG} est une boîte jetable et anonyme valable seulement 10 minutes. Parfait pour les inscriptions uniques, confirmations e-mail, téléchargements et l’évitement du spam.",
+    "10minEmailDesc2": " Aucune inscription ni données personnelles requises , la façon la plus sûre de rester anonyme en ligne. Utilisez-le comme mail jetable dès que vous avez besoin d’une boîte rapide et sécurisée.",
+    "feature1": "Expire automatiquement après 10 minutes",
+    "feature2": "Totalement anonyme et intraçable",
+    "feature3": "Réception sécurisée des OTP, confirmations et pièces jointes",
+    "featureTitle1": "Boîtes auto-supprimées",
+    "featureDesc1": "Tous les messages sont supprimés automatiquement après 10 minutes pour protéger votre vie privée.",
+    "featureTitle2": "Sans inscription",
+    "featureDesc2": "Visitez la page pour commencer , sans connexion, mot de passe, ni contrainte.",
+    "featureTitle3": "Anonyme et sécurisé",
+    "featureDesc3": "Nous ne stockons ni ne journalisons aucune donnée , toutes les boîtes sont effacées après usage.",
+    "howToUseTitle": "Comment utiliser un email temporaire 10 minutes",
+    "step1": "{$START_TAG_LUCIDE_ICON}{$CLOSE_TAG_LUCIDE_ICON}{$START_TAG_SPAN}Rendez-vous sur notre site pour recevoir une boîte jetable gratuite instantanément.{$CLOSE_TAG_SPAN}",
+    "step2": "{$START_TAG_LUCIDE_ICON}{$CLOSE_TAG_LUCIDE_ICON}{$START_TAG_SPAN}Copiez votre adresse mail 10 minutes et utilisez-la pour inscriptions ou vérifications.{$CLOSE_TAG_SPAN}",
+    "step3": "{$START_TAG_LUCIDE_ICON}{$CLOSE_TAG_LUCIDE_ICON}{$START_TAG_SPAN}Recevez immédiatement OTP ou confirmations , actualisation toutes les 10 secondes.{$CLOSE_TAG_SPAN}",
+    "step4": "{$START_TAG_LUCIDE_ICON}{$CLOSE_TAG_LUCIDE_ICON}{$START_TAG_SPAN}Toutes les données sont supprimées définitivement après 10 minutes pour une confidentialité maximale.{$CLOSE_TAG_SPAN}",
+    "useCasesTitle": "Quand utiliser une adresse e-mail jetable",
+    "techUseCases": "Tech & tests",
+    "techUseCase1": "Tester les parcours d’inscription",
+    "techUseCase2": "Prévisualiser des modèles d’e-mails",
+    "techUseCase3": "Déboguer des API e-mail",
+    "privacyUseCases": "Confidentialité & productivité",
+    "privacyUseCase1": "Éviter le spam des nouveaux sites",
+    "privacyUseCase2": "Accéder à du contenu restreint en sécurité",
+    "privacyUseCase3": "Télécharger logiciels et ressources",
+    "privacyUseCase4": "Inscriptions anonymes aux forums",
+    "faqTitle": " Foire aux questions ",
+    "faq1Question": "Qu’est-ce qu’un e-mail 10 minutes ?",
+    "faq1Answer": " Une adresse temporaire qui expire après 10 minutes , parfaite pour recevoir des messages uniques ou des liens de vérification. Besoin de plus de temps ? Essayez notre {$START_LINK}email temporaire 20 minutes{$CLOSE_LINK} ou {$START_LINK_1}email temporaire 30 minutes{$CLOSE_LINK}. ",
+    "faq2Question": "Est-ce gratuit ?",
+    "faq2Answer": " Oui, entièrement gratuit. Sans inscription, sans publicité, sans option payante.",
+    "faq3Question": "Puis-je recevoir des OTP et e-mails de confirmation ?",
+    "faq3Answer": " Oui, la boîte temporaire gère les OTP, liens de confirmation et messages courants.",
+    "faq4Question": "Puis-je prolonger le délai de mon mail temporaire ?",
+    "faq4Answer": " Oui, cliquez sur « Réinitialiser » pour relancer le compte à rebours de 10 minutes.",
+    "faq5Question": "Est-ce vraiment anonyme ?",
+    "faq5Answer": " Absolument. Aucune donnée personnelle collectée ni suivie ; chaque boîte est privée et temporaire.",
+    "faq6Question": "Combien d’emails temporaires puis-je créer ?",
+    "faq6Answer": " Illimité. Créez autant de boîtes jetables que nécessaire, chacune avec sa durée.",
+    "faq7Question": "Ça marche sur mobile ?",
+    "faq7Answer": " Oui, le service est responsive et fluide sur tous les appareils.",
+    "faq8Question": "Est-ce adapté aux messages importants ?",
+    "faq8Answer": " Idéal pour du court terme (OTP, confirmations). Évitez pour des données sensibles.",
+    "faq9Question": "Mieux que d’utiliser un faux e-mail ?",
+    "faq9Answer": " Oui ! Contrairement aux faux e-mails, vous disposez d’une vraie boîte fonctionnelle.",
+    "seo.email10min.faq.q1": "Qu’est-ce qu’un email de 10 minutes ?",
+"seo.email10min.faq.a1": "Une adresse email temporaire qui expire après 10 minutes, idéale pour recevoir des messages uniques ou des liens de vérification. Vous pouvez aussi essayer notre email temporaire gratuit de 20 ou 30 minutes si vous avez besoin de plus de temps.",
+
+"seo.email10min.faq.q2": "Est-ce gratuit à utiliser ?",
+"seo.email10min.faq.a2": "Oui, c’est entièrement gratuit. Aucun enregistrement requis, pas de publicités et aucun frais premium.",
+
+"seo.email10min.faq.q3": "Puis-je recevoir des OTP et des emails de confirmation ?",
+"seo.email10min.faq.a3": "Oui, la boîte temporaire prend en charge tous les types d’emails courants, y compris les OTP et les liens de confirmation.",
+
+"seo.email10min.faq.q4": "Puis-je prolonger la durée de mon email temporaire ?",
+"seo.email10min.faq.a4": "Oui, il suffit de cliquer sur le bouton « Réinitialiser » pour relancer le compte à rebours de 10 minutes.",
+
+"seo.email10min.faq.q5": "Cette adresse email est-elle vraiment anonyme ?",
+"seo.email10min.faq.a5": "Absolument. Nous ne collectons ni ne suivons aucune donnée personnelle ; chaque boîte est temporaire et privée.",
+
+"seo.email10min.faq.q6": "Combien d’emails temporaires puis-je créer ?",
+"seo.email10min.faq.a6": "Illimités. Créez autant de boîtes temporaires que vous le souhaitez, chacune avec sa propre limite de temps.",
+
+"seo.email10min.faq.q7": "Est-ce que cela fonctionne sur mobile ?",
+"seo.email10min.faq.a7": "Oui, le service est entièrement responsive et fonctionne parfaitement sur tous les appareils.",
+
+"seo.email10min.faq.q8": "Est-ce sûr pour les messages importants ?",
+"seo.email10min.faq.a8": "C’est adapté pour une utilisation à court terme comme les OTP et les emails de confirmation. Évitez de l’utiliser pour des informations personnelles sensibles.",
+
+"seo.email10min.faq.q9": "Est-ce mieux que d’utiliser un faux email ?",
+"seo.email10min.faq.a9": "Oui ! Contrairement aux faux emails, ce service fournit une vraie boîte de réception fonctionnelle pour recevoir des messages légitimes."
+,
     "seo.email10min.title": "Email temporaire 10 minutes - Boîte mail jetable gratuite | TempMail4u",
     "seo.email10min.description": "Obtenez un email jetable de 10 minutes pour des vérifications instantanées. Sans inscription. Protégez votre vie privée.",
     "seo.email10min.keywords": "email 10 minutes, mail jetable, boîte temporaire, burner email, vérification e-mail, OTP, protection vie privée, anti-spam, mail anonyme, e-mail rapide",
@@ -515,24 +518,6 @@
   , "seo.home.faq.a9": "Oui. Nous proposons des boîtes 10, 20 et 30 minutes pour un usage rapide et jetable."
   , "seo.home.faq.q10": "Pourquoi utiliser une boîte privée ?"
   , "seo.home.faq.a10": "Pour protéger votre vie privée, éviter le spam, garder votre boîte principale propre et réduire les risques de fuite de données."
-  , "seo.email10min.faq.q1": "Qu'est-ce qu'un e-mail 10 minutes ?"
-  , "seo.email10min.faq.a1": "Une boîte de 10 minutes se supprime automatiquement après 600 secondes, idéale pour codes et liens sans exposer votre e-mail principal."
-  , "seo.email10min.faq.q2": "Pour inscriptions et OTP ?"
-  , "seo.email10min.faq.a2": "Oui. Utilisez la boîte jetable pour les inscriptions rapides, OTP et téléchargements ; réception uniquement, sans inscription."
-  , "seo.email10min.faq.q3": "Puis-je réinitialiser ou prolonger ?"
-  , "seo.email10min.faq.a3": "Utilisez Réinitialiser pour relancer le minuteur, ou passez à 20/30 minutes."
-  , "seo.email10min.faq.q4": "Je n'ai pas reçu mon OTP ?"
-  , "seo.email10min.faq.a4": "Certains services retardent ou bloquent les domaines temporaires. Rafraîchissez, demandez un nouveau code ou essayez une durée plus longue."
-  , "seo.email10min.faq.q5": "Pour des comptes sensibles ?"
-  , "seo.email10min.faq.a5": "Non recommandé. Utilisez un e-mail permanent pour banque, administration ou comptes personnels."
-  , "seo.email10min.faq.q6": "Est-ce anonyme et privé ?"
-  , "seo.email10min.faq.a6": "Oui. Aucune inscription requise ; HTTPS ; suppression à l'expiration."
-  , "seo.email10min.faq.q7": "Combien de boîtes puis-je créer ?"
-  , "seo.email10min.faq.a7": "Illimité. Créez autant de boîtes temporaires que nécessaire ; chacune expire automatiquement."
-  , "seo.email10min.faq.q8": "Fonctionne sur mobile ?"
-  , "seo.email10min.faq.a8": "Oui. Le générateur est réactif et fonctionne sur tous les appareils."
-  , "seo.email10min.faq.q9": "Puis-je utiliser une simple boîte 10 minutes ?"
-  , "seo.email10min.faq.a9": "Oui. Une boîte simple 10 minutes offre une adresse jetable rapide qui expire automatiquement."
   , "seo.email20min.faq.q1": "Qu'est-ce qu'un e-mail 20 minutes ?"
   , "seo.email20min.faq.a1": "Une adresse jetable active pendant 20 minutes. Recevez des messages sans utiliser votre boîte personnelle."
   , "seo.email20min.faq.q2": "Est-ce vraiment gratuit ?"

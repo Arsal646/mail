@@ -17,6 +17,10 @@
           "fr": {
             "translation": "src/locale/messages.fr.json",
             "subPath": "fr"
+          },
+            "ru": {
+            "translation": "src/locale/messages.ru.json",
+            "subPath": "ru"
           }
         }
       },
@@ -63,6 +67,11 @@
                 "fr"
               ]
             },
+              "ru": {
+              "localize": [
+                "ru"
+              ]
+            },
             "en": {
               "localize": [
                 "en-US"
@@ -87,6 +96,14 @@
             "fr-dev": {
               "localize": [
                 "fr"
+              ],
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            },
+              "ru-dev": {
+              "localize": [
+                "ru"
               ],
               "optimization": false,
               "extractLicenses": false,
@@ -135,6 +152,9 @@
             },
             "fr": {
               "buildTarget": "temp-mail:build:fr-dev"
+            },
+             "ru": {
+              "buildTarget": "temp-mail:build:ru-dev"
             },
             "en": {
               "buildTarget": "temp-mail:build:en-dev"

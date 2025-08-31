@@ -36,7 +36,8 @@ export class SeoService {
     private supportedLanguages: LanguageConfig[] = [
         { code: 'en', urlPrefix: '', isDefault: true },
         { code: 'ar', urlPrefix: '/ar', isDefault: false },
-        { code: 'fr', urlPrefix: '/fr', isDefault: false }
+        { code: 'fr', urlPrefix: '/fr', isDefault: false },
+        { code: 'ru', urlPrefix: '/ru', isDefault: false }
         // Add more languages here in the future:
         // { code: 'es', urlPrefix: '/es', isDefault: false },
         // { code: 'fr', urlPrefix: '/fr', isDefault: false },

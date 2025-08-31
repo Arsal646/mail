@@ -102,10 +102,14 @@ export class FooterComponent {
   private locale = inject(LOCALE_ID);
   private document = inject(DOCUMENT);
 
+
   languages = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'ar', name: 'العربية', flag: '🇸🇦' }
-  ];
+  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' }
+];
+
 
   get currentLanguage() {
     return this.languages.find(lang => lang.code === this.locale || lang.code === this.locale.split('-')[0]) || this.languages[0];

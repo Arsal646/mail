@@ -141,6 +141,13 @@ export class FooterComponent {
     if (langCode === 'ar') {
       newPath = '/ar' + newPath;
     }
+        if (langCode === 'ru') {
+      newPath = '/ru' + newPath;
+    }
+        if (langCode === 'fr') {
+      newPath = '/fr' + newPath;
+    }
+
     
     this.document.location.href = newPath;
   }

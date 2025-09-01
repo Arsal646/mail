@@ -5,7 +5,7 @@
   <main class="container mx-auto  py-4 max-w-4xl">
 
     <!-- Email Card with Timer -->
-    <div class="border-2 rounded-lg border-gray-400 mb-4">
+    <div class="ring-1 ring-gray-200 rounded-lg border-gray-400 mb-4">
       <!-- Email Header with Timer -->
       <div
         class="bg-gray-50 rounded-lg px-4 py-3 border-b border-gray-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
@@ -106,7 +106,7 @@
                    <lucide-icon name="info" [size]="16" class="text-blue-600 mt-0.5 flex-shrink-0"></lucide-icon>
                  <span i18n="@@quickEmail.howToUse"> How to use:</span></h4>
                 <ul class="text-xs text-blue-800 space-y-1 md:pl-5">
-                  <li class="truncate" i18n="@@quickEmail.instruction1">• Use for quick verifications or one-time registrations</li>
+                  <li class="" i18n="@@quickEmail.instruction1">• Use for quick verifications or one-time registrations</li>
                   <li i18n="@@quickEmail.instruction2">• Expires automatically in {{pageTimeCount}} minutes</li>
                   <li i18n="@@quickEmail.instruction3">• Click "Reset" to extend time back to {{pageTimeCount}} minutes</li>
                   <li i18n="@@quickEmail.instruction4">• Check inbox below for received emails</li>
@@ -132,7 +132,7 @@
         </div>
       </div>
 
-      <div class="p-4">
+      <div class="p-4 min-h-[400px]">
         @if (emailExpired) {
         <div class="text-center py-4">
           <lucide-icon name="mail-x" [size]="36" class="text-gray-400 mx-auto mb-2"></lucide-icon>

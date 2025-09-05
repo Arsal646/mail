@@ -149,7 +149,7 @@ export class FooterComponent {
     }
 
             if (langCode === 'en') {
-      newPath = '/' + newPath;
+      newPath = '';
     }
 
     

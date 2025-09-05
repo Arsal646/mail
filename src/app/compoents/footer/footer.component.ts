@@ -133,6 +133,7 @@ export class FooterComponent {
   switchLanguage(langCode: string) {
     this.isDropdownOpen = false;
     const currentPath = this.document.location.pathname;
+    const domain = this.document.location.origin;
     
     // Remove current locale prefix
     let newPath = currentPath.replace(/^\/ar/, '');
@@ -149,7 +150,7 @@ export class FooterComponent {
     }
 
             if (langCode === 'en') {
-      newPath = '';
+      newPath = domain;
     }
 
     

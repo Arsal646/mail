@@ -148,6 +148,10 @@ export class FooterComponent {
       newPath = '/fr' + newPath;
     }
 
+            if (langCode === 'en') {
+      newPath = '/' + newPath;
+    }
+
     
     this.document.location.href = newPath;
   }

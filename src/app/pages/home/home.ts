@@ -20,6 +20,9 @@ export class Home implements OnInit {
   private seoService = inject(SeoService);
   private locale = inject(LOCALE_ID);
   private routeTranslation = inject(RouteTranslationService);
+  currentMonth = '';
+  currentYear = 2025;
+
 
   get routes() {
     return {
@@ -31,6 +34,10 @@ export class Home implements OnInit {
 
   ngOnInit(): void {
     this.setSeoTags();
+
+    const now = new Date();
+    this.currentMonth = now.toLocaleString('default', { month: 'long' });
+    this.currentYear = now.getFullYear();
   }
 
   private setSeoTags(): void {

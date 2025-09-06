@@ -15,7 +15,13 @@
     "multi": "ng extract-i18n --output-path src/locale --format=xlf",
     "i18n:extract": "ng extract-i18n --output-path src/locale --format=json",
     "i18n:check": "node scripts/check-missing-translations.js",
-    "i18n:generate": "node scripts/generate-missing-translations.js"
+    "i18n:generate": "node scripts/generate-missing-translations.js",
+    "i18n:diff": "node scripts/diff-messages.mjs --file src/locale/messages.json --ref HEAD",
+    "i18n:diff:json": "node scripts/diff-messages.mjs --file src/locale/messages.json --ref HEAD --format json",
+    "i18n:diff:write": "node scripts/diff-messages.mjs --file src/locale/messages.json --ref HEAD --out i18n-diff/messages-diff.json",
+    "i18n:diff:simple": "node scripts/diff-messages.mjs --file src/locale/messages.json --ref HEAD --format simple --out i18n-diff/messages-diff.simple.json",
+    "i18n:sync": "node scripts/sync-locales.mjs",
+    "i18n:updated": "node scripts/updated-messages.mjs --file src/locale/messages.json --ref HEAD --out i18n-diff/messages-updated.json"
   },
   "private": true,
   "dependencies": {

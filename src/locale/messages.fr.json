@@ -560,7 +560,10 @@
   "home.section.faq.social.a11.label": "Oui, TempMail4U permet de créer et vérifier des comptes sur Instagram, Facebook, Snapchat, Twitter X, Discord, Reddit, TikTok, Telegram et Kick. Il fonctionne aussi avec des services de streaming comme Netflix et Amazon Prime, et des plateformes de jeux comme Steam, Epic Games et Rockstar. Vous pouvez recevoir des OTP et codes de vérification instantanément tout en protégeant votre adresse personnelle.",
   "home.section.faq.a6.label": "Non. Ces boîtes sont uniquement destinées à la réception. Elles sont conçues pour des inscriptions, vérifications et utilisations rapides à usage unique, pas pour l’envoi ou la communication à long terme.",
   "home.section.faq.a9.label": "Oui. Nous proposons {$START_TAG_STRONG}un email temporaire de 10 minutes{$CLOSE_TAG_STRONG} ainsi que des variantes de 20 et 30 minutes pour un usage rapide et jetable. Idéal pour des inscriptions courtes ou des codes de vérification ponctuels.",
-  "privacy.lastUpdated": "Dernière mise à jour : septembre 2025"
+  "privacy.lastUpdated": "Dernière mise à jour : septembre 2025",
+  "home.section.faq.equivalence.q.label": "Le faux email est-il le même qu'un email temporaire ?",
+"home.section.faq.equivalence.a.label": "Dans la plupart des cas oui. Les gens utilisent le terme <strong>faux email</strong> pour désigner un <strong>email temporaire ou jetable</strong> qui reçoit des messages et des OTP sans exposer leur boîte de réception réelle."
+
 
   }
 }

@@ -65,8 +65,8 @@ export class Home implements OnInit {
   private getLocalizedSeoContent() {
     // Using Angular's $localize function for runtime i18n
     return {
-      title: $localize`:@@seo.home.title:Free Temporary Email & Disposable Inbox | TempMail4u`,
-      description: $localize`:@@seo.home.description:Create a free temp email in seconds. Get a disposable inbox to keep your real address private and spam-free. No sign up required. Try TempMail4u now!`,
+      title: $localize`:@@seo.home.title:Free Fake Email Service - Temporary Disposable Email | TempMail4U`,
+      description: $localize`:@@seo.home.description:Tired of spam? Get a free fake email now with TempMail4U. Create a temporary inbox for OTPs and signups in seconds. Protect your privacy instantly.`,
       keywords: $localize`:@@seo.home.keywords:temporary email, temp mail, disposable email, burner email, anonymous email, fake email, spam protection, email verification, privacy email, temporary mailbox`,
       siteName: $localize`:@@seo.home.siteName:TempMail4u`
     };

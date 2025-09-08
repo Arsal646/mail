@@ -545,6 +545,9 @@
     "terms.contact.para": " If you have any questions regarding these Terms, please reach us via our {$START_LINK}Contact Us{$CLOSE_LINK} page. ",
     "seo.terms.title": "Terms & Conditions – TempMail4U | Temporary Email & Temp Mail",
     "seo.terms.description": "Read the Terms & Conditions for using TempMail4U's services, including one time email, temporary email, temp mail, and temporary inbox options.",
-    "seo.terms.keywords": "terms and conditions, temp mail terms, temporary email policy, one time email rules, temporary inbox conditions"
+    "seo.terms.keywords": "terms and conditions, temp mail terms, temporary email policy, one time email rules, temporary inbox conditions",
+    "home.section.faq.equivalence.q.label": "Is fake email the same as temporary email?",
+"home.section.faq.equivalence.a.label": "In most cases yes. People use the term <strong>fake email</strong> to mean a <strong>temporary or disposable email</strong> that receives messages and OTPs without exposing their real inbox."
+
   }
 }

@@ -563,6 +563,9 @@
   "privacy.lastUpdated": "Dernière mise à jour : septembre 2025",
   "home.section.faq.equivalence.q.label": "Le faux email est-il le même qu'un email temporaire ?",
 "home.section.faq.equivalence.a.label": "Dans la plupart des cas oui. Les gens utilisent le terme <strong>faux email</strong> pour désigner un <strong>email temporaire ou jetable</strong> qui reçoit des messages et des OTP sans exposer leur boîte de réception réelle."
+,
+  "faq10Question": "Puis-je utiliser un e-mail de 10 minutes pour les affaires ?",
+  "faq10Answer": "Oui, vous pouvez utiliser un <strong>e-mail professionnel de 10 minutes</strong> pour les inscriptions rapides, les essais gratuits ou les vérifications ponctuelles. Cependant, il n’est pas recommandé pour une communication à long terme ou des données sensibles, car la boîte expire après 10 minutes."
 
 
   }

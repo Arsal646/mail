@@ -2,7 +2,7 @@
 
 
   <!-- Main Content -->
-  <main class="container mx-auto  py-4 max-w-4xl">
+  <main class="container mx-auto max-w-4xl">
 
     <!-- Email Card with Timer -->
     <div class="ring-1 ring-gray-200 rounded-lg border-gray-400 mb-4">
@@ -98,7 +98,7 @@
           </div>
 
           <!-- Usage Instructions -->
-          <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm">
+          <!-- <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 text-sm">
             <div class="flex gap-2">
              
               <div>
@@ -113,7 +113,7 @@
                 </ul>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         }
       </div>
@@ -126,7 +126,7 @@
       </div>
       <div
         class="px-4 py-3 border-b border-gray-200 flex   justify-between items-start sm:items-center gap-2">
-        <h2 class="text-base font-semibold text-gray-900" i18n="@@quickEmail.inbox">Your Temporary Inbox</h2>
+        <h2 class="text-base font-semibold text-gray-900" i18n="@@quickEmail.inbox">Your Inbox</h2>
         <div class="flex items-center gap-2">
           <span class="text-xs text-gray-600" i18n="@@quickEmail.autoRefresh">Auto-refresh in {{ countdown() }}s</span>
           <button (click)="refreshEmails()" class="p-1 text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded">

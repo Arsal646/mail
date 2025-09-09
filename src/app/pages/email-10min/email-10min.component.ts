@@ -62,8 +62,8 @@ export class Email10MinComponent implements OnInit {
 
 private getLocalizedSeoContent() {
   return {
-    title: $localize`:@@seo.email10min.title:10 Minute Temporary Email | Free, Secure & Spam-Free Inbox`,
-    description: $localize`:@@seo.email10min.description:Generate your free 10 minute temporary email instantly. Protect your inbox with our secure disposable inbox service – fast, private, and spam-free.`,
+    title: $localize`:@@seo.email10min.title:10 Minute mail | Free, Secure & Spam-Free Inbox`,
+    description: $localize`:@@seo.email10min.description:Generate your free 10 minute mail instantly. Protect your inbox with our secure disposable inbox service, fast, private, and spam-free.`,
     keywords: $localize`:@@seo.email10min.keywords:10 minute temporary email, 10 minute mail, disposable email, burner email, temporary mailbox, anonymous inbox, spam free email, OTP verification`
   };
 }

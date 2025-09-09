@@ -268,7 +268,7 @@
     "seo.email30min.faq.q7": "Сколько писем можно получить?",
     "seo.email30min.faq.a7": "Ограничений в пределах 30 минут нет.",
     "home.section.hero.title.label": " Бесплатный сервис временной почты ",
-    "home.section.hero.subtitle.label": " Мгновенно создайте {$START_TAG_STRONG}временный адрес{$CLOSE_TAG_STRONG} с {$START_TAG_STRONG}TempMail4U{$CLOSE_TAG_STRONG}. Получите {$START_EMPHASISED_TEXT}одноразовый адрес{$CLOSE_EMPHASISED_TEXT}, который защищает вашу приватность. Без регистрации, без спама, без риска. Используйте для быстрых регистраций, тестирования приложений, загрузок и когда нужен безопасный {$START_EMPHASISED_TEXT}одноразовый email{$CLOSE_EMPHASISED_TEXT}, чтобы сохранить чистоту основной почты. ",
+    "home.section.hero.subtitle.label": "Создавайте одноразовые фейковые адреса электронной почты и управляйте временным почтовым ящиком",
     "home.section.why.title.label": " Зачем нужна временная почта? ",
     "home.section.why.intro.label": " Раздавать везде личный email рискованно. Компании могут продавать базы, злоумышленники атакуют утечки, а спам переполняет ящик. {$START_TAG_STRONG}Одноразовый адрес даёт контроль.{$CLOSE_TAG_STRONG}",
     "home.section.why.li1.label": "Защитите личный ящик от спама и рекламы",

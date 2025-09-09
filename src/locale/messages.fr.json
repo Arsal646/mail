@@ -254,7 +254,7 @@
     "seo.email30min.description": "Mail temporaire gratuit 30 minutes pour inscriptions sécurisées, vérifications multi-étapes et usage pro. Accès instantané, sans inscription.",
     "seo.email30min.keywords": "email 30 minutes, email temporaire prolongé, boîte jetable, temp mail, vérification pro, 30 min email",
     "home.section.hero.title.label": " Service d’email temporaire gratuit ",
-    "home.section.hero.subtitle.label": " Créez instantanément un {$START_TAG_STRONG}email temporaire{$CLOSE_TAG_STRONG} avec {$START_TAG_STRONG}TempMail4U{$CLOSE_TAG_STRONG}. Obtenez une {$START_EMPHASISED_TEXT}adresse mail jetable{$CLOSE_EMPHASISED_TEXT} qui protège votre vie privée , sans inscription, sans spam, sans risque. Utilisez-la pour les inscriptions rapides, tests d’apps, téléchargements, ou dès que vous avez besoin d’un {$START_EMPHASISED_TEXT}burner email{$CLOSE_EMPHASISED_TEXT} pour garder votre vraie boîte propre. ",
+    "home.section.hero.subtitle.label": "Générez des adresses e-mail jetables et gérez votre boîte de réception temporaire",
     "home.section.why.title.label": " Pourquoi avez-vous besoin d’un temp mail ? ",
     "home.section.why.intro.label": " Partager votre vrai e-mail partout est risqué : revente à des marketeurs, fuites de données, spam. {$START_TAG_STRONG}Utiliser un email jetable vous redonne le contrôle.{$CLOSE_TAG_STRONG}",
     "home.section.why.li1.label": "Protégez votre boîte personnelle du spam et des pubs",

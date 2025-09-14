@@ -23,6 +23,10 @@ export class Home implements OnInit {
   currentMonth = '';
   currentYear = 2025;
 
+  // Expose a simple flag for English-only UI elements
+  public isEnglish: boolean = String(this.locale || '').toLowerCase().startsWith('en');
+  public fakeEmailPath = '/fake-email';
+
 
   get routes() {
     return {

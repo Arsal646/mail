@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, signal, effect, Inject, PLATFORM_ID, inject, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, signal, effect, Inject, PLATFORM_ID, inject, HostListener, Input } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
@@ -20,6 +20,7 @@ import { SaveSuccessDialogComponent } from '../save-success-dialog/save-success-
   imports: [CommonModule, LucideAngularModule, RouterModule],
 })
 export class MainTempMail implements OnInit, OnDestroy {
+  @Input() title = '';
   countdown = signal(10);
   private countdownSub?: Subscription;
 

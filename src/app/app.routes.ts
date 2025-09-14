@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Router, Routes } from '@angular/router';
 import { inject, LOCALE_ID } from '@angular/core';
 
 export const routes: Routes = [
@@ -66,10 +66,17 @@ export const routes: Routes = [
   {
     path: 'fake-email',
     canMatch: [() => {
-      const locale = String(inject(LOCALE_ID) ?? '').toLowerCase();
-      return locale.startsWith('en');
+      const locale = (inject(LOCALE_ID) ?? '').toString().toLowerCase();
+      if (locale.startsWith('en')) {
+        return true;
+      }
+
+      // redirect non-English to root
+      inject(Router).navigateByUrl('/');
+      return false;
     }],
-    loadComponent: () => import('./pages/fake-email/fake-email').then(m => m.FakeEmail),
+    loadComponent: () =>
+      import('./pages/fake-email/fake-email').then(m => m.FakeEmail),
     pathMatch: 'full'
   },
   {

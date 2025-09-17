@@ -32,6 +32,8 @@ export class MainTempMail implements OnInit, OnDestroy {
   saved = false;
   emailGenerating = false;
   isBrowser = false;
+  showCopyToast = false;
+  private copyToastTimer: ReturnType<typeof setTimeout> | null = null;
 
   private domain = '@tempmails.online';
   emailHistory = []
@@ -107,6 +109,10 @@ export class MainTempMail implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.countdownSub?.unsubscribe();
+    if (this.copyToastTimer) {
+      clearTimeout(this.copyToastTimer);
+      this.copyToastTimer = null;
+    }
   }
 
   startCountdown(): void {
@@ -254,13 +260,26 @@ export class MainTempMail implements OnInit, OnDestroy {
 
 
   copyEmail(): void {
-    if (!this.currentEmail) return;
+    if (!this.currentEmail || !this.isBrowser) return;
 
     navigator.clipboard.writeText(this.currentEmail).then(() => {
       this.copied = true;
+      this.triggerCopyToast();
       this.googleAnalytics.trackEmailCopied();
       setTimeout(() => (this.copied = false), 2000);
     });
+  }
+
+  private triggerCopyToast(): void {
+    if (this.copyToastTimer) {
+      clearTimeout(this.copyToastTimer);
+    }
+
+    this.showCopyToast = true;
+    this.copyToastTimer = setTimeout(() => {
+      this.showCopyToast = false;
+      this.copyToastTimer = null;
+    }, 2500);
   }
 
   toggleEmailRead(email: any): void {
@@ -451,3 +470,6 @@ export class MainTempMail implements OnInit, OnDestroy {
     }
   }
 }
+
+
+

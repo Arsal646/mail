@@ -279,3 +279,7 @@
 </div>
 
 
+<div class="copy-toast" *ngIf="showCopyToast" role="status" aria-live="polite">
+  <lucide-icon name="check-circle" [size]="18" class="copy-toast__icon"></lucide-icon>
+  <span class="copy-toast__text" i18n="@@mainTempMail.copyToastMessage">Email copied to clipboard</span>
+</div>

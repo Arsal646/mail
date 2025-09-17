@@ -51,8 +51,8 @@ private setSeoTags(): void {
 
 private getSeoContent() {
   return {
-    title: 'Fake Email Address Generator | Private Disposable Inbox - TempMail4U',
-    description: 'Generate a fake email instantly. Get a private disposable inbox for OTPs, app testing, and quick signups. No signup required. 100% spam free.',
+    title: 'Create Fake Email | Temporary Private Inbox | TempMail4U',
+    description: 'Create a fake email instantly. Get a private temporary inbox for OTPs, app testing, and quick signups. No signup required. 100% spam free.',
     keywords: 'fake email, disposable email, temporary email, burner email, throwaway email, anonymous inbox, otp email'
   }
 }

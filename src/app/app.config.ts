@@ -9,7 +9,9 @@ import {
   AlertCircle, User, Calendar, Shield, Circle, X, Info, CheckCircle, Clock,
   ChevronLeft, Inbox, Loader2, XCircle,History ,
   LucideAngularModule,
-  ArrowRight
+  ArrowRight,
+  Zap,
+  Clock4
 } from 'lucide-angular';
 
 export const appConfig: ApplicationConfig = {
@@ -23,7 +25,7 @@ export const appConfig: ApplicationConfig = {
       Mail, MailOpen, RefreshCw, Plus, 
       Copy, Check, Bookmark, AlertCircle,
       User, Calendar, Shield, Circle, X, Info, CheckCircle, Clock,
-      ChevronLeft, Inbox, Loader2, XCircle, History, ArrowRight
+      ChevronLeft, Inbox, Loader2, XCircle, History, ArrowRight, Zap, Clock4
     }))
   ]
 };

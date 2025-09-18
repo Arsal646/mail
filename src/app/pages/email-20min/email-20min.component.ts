@@ -14,23 +14,25 @@ declare const $localize: any;
   standalone: true,
   imports: [QuickEmailComponent, LucideAngularModule, RouterModule],
   template: `
-  <main class="container mx-auto px-4 py-8 md:py-10 max-w-5xl">
+    <main class="container mx-auto px-4  md:py-5 max-w-5xl">
+
 
     <!-- Page Header (card-like hero) -->
-    <header class="text-center mb-6">
-      <div class=" bg-white p-5 md:p-7 ">
+    <header class="text-center mb-6 md:mb-0">
+      <div class=" bg-white p-5 pb-0 md:p-7 ">
         <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3" i18n="@@email20min.title">
-          20-Minute Temporary Email – free Disposable Inbox
+          20 Minute Temporary Email
         </h1>
         <p class="mx-auto max-w-3xl text-sm md:text-base text-gray-600" i18n="@@email20min.subtitle">
-          Instantly generate a <strong>20-minute temporary email address</strong>,  ideal for sign-ups, OTPs, and multi-step verifications that take a bit more time. No registration, no spam, just a secure and private inbox that works when you need it.
+  Generate a <strong>20-minute temporary email address</strong> instantly for sign-ups, OTPs, and multi-step verifications. Enjoy a secure, private inbox with no registration and no spam.
+         
         </p>
       </div>
     </header>
 
     <!-- App Component Placeholder -->
     <section class="mb-6">
-      <div class="rounded-2xl bg-white shadow-xl ring-1 ring-gray-200 p-3 md:p-4">
+      <div class="rounded-2xl bg-white shadow-xl ring-1 ring-gray-200 ">
         <app-quick-email [pageTimeCount]="20"></app-quick-email>
       </div>
     </section>
@@ -38,7 +40,7 @@ declare const $localize: any;
     <!-- FAQ Section (homepage-style accordion) -->
     <section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-4" id="faq">
       <h2 i18n="@@email20min.faqTitle" class="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-        20-Minute Temporary Email – FAQs
+        20 Minute Temporary Email – FAQs
       </h2>
 
       <div class="divide-y divide-gray-200">
@@ -47,7 +49,7 @@ declare const $localize: any;
         <div class="py-3">
           <details class="group">
             <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
-              <span i18n="@@email20min.faq1Question">What is a 20-minute temporary email?</span>
+              <span i18n="@@email20min.faq1Question">What is a 20 minute temporary email?</span>
               <svg xmlns="http://www.w3.org/2000/svg"
                    class="h-4 w-4 transition-transform group-open:rotate-180"
                    viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -186,7 +188,7 @@ export class Email20MinComponent implements OnInit {
       twitterSite: '@tempmails',
       breadcrumbs: [
         { name: $localize`:@@seo.breadcrumbs.home:Home`, url: baseUrl + '/' },
-        { name: $localize`:@@seo.email20min.titleShort:20-Minute Temporary Email – Free Disposable Inbox`, url: baseUrl + '/20-minutes-temporary-email' }
+        { name: $localize`:@@seo.email20min.titleShort:20 Minute Temporary Email – Free Disposable Inbox`, url: baseUrl + '/20-minutes-temporary-email' }
       ],
       faq: this.getFaqItems()
     });
@@ -194,8 +196,8 @@ export class Email20MinComponent implements OnInit {
 
   private getLocalizedSeoContent() {
     return {
-      title: $localize`:@@seo.email20min.title:20-Minute Temporary Email - Free Disposable Inbox | TempMail4u`,
-      description: $localize`:@@seo.email20min.description:Get a free 20-minute temporary email address. No registration, no spam, just a secure disposable inbox for sign-ups, verifications, and one-time messages.`,
+      title: $localize`:@@seo.email20min.title:20 Minute Temporary Email - Free Disposable Inbox | TempMail4u`,
+      description: $localize`:@@seo.email20min.description:Get a free 20 minute temporary email address. No registration, no spam, just a secure disposable inbox for sign-ups, verifications, and one-time messages.`,
       keywords: $localize`:@@seo.email20min.keywords:20 minute email, temporary email, disposable inbox, temp mail, burner email, secure temp email, free email for verification, 20 min email`
     };
   }
@@ -203,7 +205,7 @@ export class Email20MinComponent implements OnInit {
   private getFaqItems() {
     return [
       {
-        question: $localize`:@@seo.email20min.faq.q1:What is a 20-minute temporary email?`,
+        question: $localize`:@@seo.email20min.faq.q1:What is a 20 minute temporary email?`,
         answer: $localize`:@@seo.email20min.faq.a1:It's a disposable email address that stays active for 20 minutes. Use it to receive messages without using your personal inbox.`
       },
       {

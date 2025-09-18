@@ -14,33 +14,36 @@ declare const $localize: any;
   standalone: true,
   imports: [QuickEmailComponent, LucideAngularModule, RouterModule],
   template: `
-  <main class="container mx-auto px-4 py-8 md:py-10 max-w-5xl">
+  <main class="container mx-auto px-4  md:py-5 max-w-5xl">
 
     <!-- Page Header (card-like hero) -->
-    <header class="text-center mb-6">
-      <div class=" bg-white p-5 md:p-7 ">
+    <header class="text-center mb-6 md:mb-0">
+      <div class=" bg-white p-5 pb-0 md:p-7 ">
         <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3" i18n="@@email30min.title">
-          30-Minute Temporary Email – Free Disposable Inbox
+          30 Minute Temporary Email
         </h1>
-        <p class="mx-auto max-w-3xl text-sm md:text-base text-gray-600" i18n="@@email30min.subtitle">
-          Get a <strong>30-minute temporary email address</strong> for longer processes like account setups, multi-step verifications, and extended communications. Perfect when you need more time than standard temporary emails offer.
-        </p>
+    <p class="mx-auto max-w-3xl text-sm md:text-base text-gray-600" i18n="@@email30min.subtitle">
+  Get a <strong>30 minute temporary email</strong> for account setups, multi step verifications, or longer tasks ideal when standard temp emails expire too soon.
+</p>
+
       </div>
     </header>
 
+    
+
     <!-- App Component Placeholder -->
     <section class="mb-6">
-      <div class="rounded-2xl bg-white shadow-xl ring-1 ring-gray-200 p-3 md:p-4">
+      <div class="rounded-2xl bg-white shadow-xl ring-1 ring-gray-200">
         <app-quick-email [pageTimeCount]="30"></app-quick-email>
       </div>
     </section>
 
     <!-- About Section -->
     <section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-6">
-      <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" i18n="@@email30min.whatIsTitle">What is a 30-Minute Temporary Email?</h2>
+      <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" i18n="@@email30min.whatIsTitle">What is a 30 Minute Temporary Email?</h2>
       <div class="text-sm md:text-base text-gray-700 space-y-4 leading-relaxed">
         <p i18n="@@email30min.description1">
-          A <strong>30-minute temporary email</strong> is an extended disposable inbox that remains active for half an hour. It's perfect for complex sign-up processes, multi-step verifications, and situations where you need more time to complete your tasks.
+          A <strong>30 minute temporary email</strong> is an extended disposable inbox that remains active for half an hour. It's perfect for complex sign-up processes, multi-step verifications, and situations where you need more time to complete your tasks.
         </p>
         <p i18n="@@email30min.description2">
           This extended timeframe makes it ideal for account activations that involve multiple confirmation steps, downloading large files, or completing lengthy registration processes without rushing.
@@ -83,11 +86,11 @@ declare const $localize: any;
 
     <!-- How It Works -->
     <section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-8">
-      <h2 i18n="@@email30min.howToUseTitle" class="text-xl md:text-2xl font-bold text-gray-900 mb-4">How to Use a 30-Minute Temporary Email</h2>
+      <h2 i18n="@@email30min.howToUseTitle" class="text-xl md:text-2xl font-bold text-gray-900 mb-4">How to Use a 30 Minute Temporary Email</h2>
       <ol class="space-y-2 text-sm md:text-base text-gray-700 md:pl-8">
         <li i18n="@@email30min.step1" class="flex items-start">
           <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
-          <span>Get your free 30-minute temporary email address instantly upon visiting.</span>
+          <span>Get your free 30 minute temporary email address instantly upon visiting.</span>
         </li>
         <li i18n="@@email30min.step2" class="flex items-start">
           <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
@@ -131,7 +134,7 @@ declare const $localize: any;
 
     <!-- FAQ Section (homepage-style accordion) -->
     <section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-4" id="faq">
-      <h2 i18n="@@email30min.faqTitle" class="text-xl md:text-2xl font-bold text-gray-900 mb-4">30-Minute Temporary Email – FAQs</h2>
+      <h2 i18n="@@email30min.faqTitle" class="text-xl md:text-2xl font-bold text-gray-900 mb-4">30 Minute Temporary Email – FAQs</h2>
 
       <div class="divide-y divide-gray-200">
 
@@ -139,7 +142,7 @@ declare const $localize: any;
         <div class="py-3">
           <details class="group">
             <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
-              <span i18n="@@email30min.faq1Question">What is a 30-minute temporary email?</span>
+              <span i18n="@@email30min.faq1Question">What is a 30 minute temporary email?</span>
               <svg xmlns="http://www.w3.org/2000/svg"
                    class="h-4 w-4 transition-transform group-open:rotate-180"
                    viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -304,7 +307,7 @@ export class Email30MinComponent implements OnInit {
       twitterSite: '@tempmails',
       breadcrumbs: [
         { name: $localize`:@@seo.breadcrumbs.home:Home`, url: baseUrl + '/' },
-        { name: $localize`:@@seo.email30min.titleShort:30-Minute Temporary Email – Free Disposable Inbox`, url: baseUrl + '/30-minutes-temporary-email' }
+        { name: $localize`:@@seo.email30min.titleShort:30 Minute Temporary Email – Free Disposable Inbox`, url: baseUrl + '/30-minutes-temporary-email' }
       ],
       faq: this.getFaqItems()
     });
@@ -312,7 +315,7 @@ export class Email30MinComponent implements OnInit {
 
   private getLocalizedSeoContent() {
     return {
-      title: $localize`:@@seo.email30min.title:30-Minute Temporary Email - Free Disposable Inbox | TempMail4u`,
+      title: $localize`:@@seo.email30min.title:30 Minute Temporary Email - Free Disposable Inbox | TempMail4u`,
       description: $localize`:@@seo.email30min.description:Free 30-minute temp mail for secure sign-ups, multi-step verification, and business use. Instant access, no signup needed.`,
       keywords: $localize`:@@seo.email30min.keywords:30 minute email, extended temporary email, disposable inbox, temp mail, burner email, business email verification, long term temp email, 30 min email`
     };
@@ -321,8 +324,8 @@ export class Email30MinComponent implements OnInit {
   private getFaqItems() {
     return [
       {
-        question: $localize`:@@seo.email30min.faq.q1:What is a 30-minute temporary email?`,
-        answer: $localize`:@@seo.email30min.faq.a1:A 30-minute temporary email is an extended disposable inbox that remains active for half an hour.`
+        question: $localize`:@@seo.email30min.faq.q1:What is a 30 minute temporary email?`,
+        answer: $localize`:@@seo.email30min.faq.a1:A 30 minute temporary email is an extended disposable inbox that remains active for half an hour.`
       },
       {
         question: $localize`:@@seo.email30min.faq.q2:Is it free to use?`,

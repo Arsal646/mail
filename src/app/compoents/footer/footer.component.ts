@@ -84,11 +84,13 @@ import { DOCUMENT } from '@angular/common';
              <a
                 href="https://www.goodfirms.co/email-management-software/"
                 target="_blank"
+                
                 class="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors mb-2"
                 aria-label="GoodFirms Email Management Software"
               >
        
               <img
+  src="GF-Blue-2.png"
   alt="GoodFirms badge"
   class="h-8 w-auto"
   width="123"

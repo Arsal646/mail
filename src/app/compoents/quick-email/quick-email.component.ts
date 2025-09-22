@@ -34,7 +34,7 @@ export class QuickEmailComponent implements OnInit, OnDestroy {
   isBrowser = false;
   emailExpired = false;
 
-  private domain = '@tempmails.online';
+  private domain = '';
 
   constructor(
     private googleAnalytics: GoogleAnalyticsService,
@@ -42,6 +42,7 @@ export class QuickEmailComponent implements OnInit, OnDestroy {
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
+    this.domain = this.emailService.domain;
 
     effect(() => {
       if (this.countdown() === 0) {

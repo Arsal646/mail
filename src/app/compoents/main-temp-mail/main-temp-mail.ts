@@ -35,7 +35,7 @@ export class MainTempMail implements OnInit, OnDestroy {
   showCopyToast = false;
   private copyToastTimer: ReturnType<typeof setTimeout> | null = null;
 
-  private domain = '@tempmails.online';
+  private domain = '';
   emailHistory = []
   showEmailHistory = false;
   showEmailHistoryTooltip = false;
@@ -49,6 +49,7 @@ export class MainTempMail implements OnInit, OnDestroy {
     private route: ActivatedRoute,
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
+    this.domain = this.emailService.domain;
 
     effect(() => {
       if (this.countdown() === 0) {

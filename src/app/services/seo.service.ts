@@ -344,6 +344,7 @@ export class SeoService {
             'services': 'services',
             'contact': 'contact',
             'terms-and-conditions': 'terms-and-conditions',
+            'temporary-email-for-facebook': 'temporary-email-for-facebook',
         };
 
         return pathToRouteKey[path] || null;

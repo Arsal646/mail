@@ -89,7 +89,6 @@ import { DOCUMENT } from '@angular/common';
               >
        
               <img
-  src="GF-Blue-2.png"
   alt="GoodFirms badge"
   class="h-8 w-auto"
   width="123"

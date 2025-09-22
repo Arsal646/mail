@@ -33,18 +33,17 @@ import { DOCUMENT } from '@angular/common';
           <!-- Navigation Links -->
           <nav aria-label="Footer Navigation">
             <div class="flex flex-wrap justify-center gap-4 text-sm">
-             
               <a i18n="@@footer.privacyPolicy"
-                [routerLink]="routes.privacy" 
+                [routerLink]="routes.privacy"
                 class="text-gray-600 hover:text-gray-900 transition-colors"
                 aria-label="Privacy Policy"
               >
                 Privacy Policy
               </a>
-                       <a i18n="@@footer.termsConditions"
-                [routerLink]="routes.terms" 
+              <a i18n="@@footer.termsConditions"
+                [routerLink]="routes.terms"
                 class="text-gray-600 hover:text-gray-900 transition-colors"
-                aria-label="Privacy Policy"
+                aria-label="Terms & Conditions"
               >
                  Terms & Conditions
               </a>
@@ -82,7 +81,27 @@ import { DOCUMENT } from '@angular/common';
 
         </div>
 
-             <!-- Copyright + Logo -->
+             <a
+                href="https://www.goodfirms.co/email-management-software/"
+                target="_blank"
+                class="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors mb-2"
+                aria-label="GoodFirms Email Management Software"
+              >
+       
+              <img
+  src="GF-Blue-2.png"
+  alt="GoodFirms badge"
+  class="h-8 w-auto"
+  width="123"
+  height="32"
+  loading="lazy"
+  style="filter: grayscale(100%);"
+/>
+
+                <span class="text-sm">Listed on GoodFirms</span>
+              </a>
+
+                           <!-- Copyright + Logo -->
         <div class="pt-4 border-t border-gray-200">
           <div class="flex flex-col items-center gap-2 text-center">
             <p i18n="@@footer.copyright" class="text-xs text-gray-500">
@@ -97,18 +116,18 @@ import { DOCUMENT } from '@angular/common';
 export class FooterComponent {
   currentYear: number = new Date().getFullYear();
   isDropdownOpen = false;
-  
+
   private routeTranslation = inject(RouteTranslationService);
   private locale = inject(LOCALE_ID);
   private document = inject(DOCUMENT);
 
 
   languages = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'ar', name: 'العربية', flag: '🇸🇦' },
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
-  { code: 'ru', name: 'Русский', flag: '🇷🇺' }
-];
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'ru', name: 'Русский', flag: '🇷🇺' }
+  ];
 
 
   get currentLanguage() {
@@ -134,26 +153,28 @@ export class FooterComponent {
     this.isDropdownOpen = false;
     const currentPath = this.document.location.pathname;
     const domain = this.document.location.origin;
-    
+
     // Remove current locale prefix
     let newPath = currentPath.replace(/^\/ar/, '');
-    
+
     // Add new locale prefix if not English
     if (langCode === 'ar') {
       newPath = '/ar' + newPath;
     }
-        if (langCode === 'ru') {
+    if (langCode === 'ru') {
       newPath = '/ru' + newPath;
     }
-        if (langCode === 'fr') {
+    if (langCode === 'fr') {
       newPath = '/fr' + newPath;
     }
 
-            if (langCode === 'en') {
+    if (langCode === 'en') {
       newPath = domain;
     }
 
-    
+
     this.document.location.href = newPath;
   }
 }
+
+

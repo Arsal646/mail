@@ -345,6 +345,7 @@ export class SeoService {
             'contact': 'contact',
             'terms-and-conditions': 'terms-and-conditions',
             'temporary-email-for-facebook': 'temporary-email-for-facebook',
+            'temporary-email-for-discord': 'temporary-email-for-discord',
         };
 
         return pathToRouteKey[path] || null;
@@ -382,3 +383,4 @@ export class SeoService {
         return 'https://tempmail4u.com';
     }
 }
+

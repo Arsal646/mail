@@ -82,9 +82,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-    <url>
+  <url>
     <loc>https://tempmail4u.com/temporary-email-for-facebook</loc>
     <lastmod>2025-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tempmail4u.com/temporary-email-for-discord</loc>
+    <lastmod>2025-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -194,7 +200,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-    <url>
+  <url>
     <loc>https://tempmail4u.com/fake-email</loc>
     <lastmod>2025-09-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -238,3 +244,5 @@
   </url>
 
 </urlset>
+
+

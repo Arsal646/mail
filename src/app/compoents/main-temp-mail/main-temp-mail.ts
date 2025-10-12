@@ -304,29 +304,9 @@ export class MainTempMail implements OnInit, OnDestroy {
 
   // In your main component
   getFullEmailHistory() {
-    // This would come from your actual service/API in production
-    const dummyEmails = [
-      {
-        "address": "dfv1tcqi@tempmails.online",
-        "createdAt": 1752252538765,
-        "active": true,
-        "expiresAt": 1752256138765
-      },
-      {
-        "address": "xzy123@tempmails.online",
-        "createdAt": 1752152538765,
-        "active": false,
-        "expiresAt": 1752156138765
-      },
-      {
-        "address": "abc456@tempmails.online",
-        "createdAt": 1752052538765,
-        "active": false,
-        "expiresAt": 1752056138765
-      }
-    ];
+ 
 
-    return dummyEmails;
+    return [];
   }
 
   openHistoryDialog() {

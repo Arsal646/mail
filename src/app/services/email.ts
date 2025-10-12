@@ -7,8 +7,8 @@ import { delay, map, mergeMap, scan, startWith, take } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class EmailService {
-  domain = '@vimto.store';
-   apiUrl = 'https://mailboxhub.fun/api'
+  domain = '@tempmails.online';
+  apiUrl = 'https://mailboxhub.fun/api'
   //apiUrl = 'http://127.0.0.1:8000/api'
 
 
@@ -59,7 +59,7 @@ export class EmailService {
   // src/app/services/email.ts - Add these methods
 
 
-  
+
   saveEmailToBackend(email: string): Observable<any> {
     return this.http.post(`${this.apiUrl}/save-email`, { email });
   }

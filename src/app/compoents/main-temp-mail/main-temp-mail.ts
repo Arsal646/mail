@@ -339,7 +339,13 @@ export class MainTempMail implements OnInit, OnDestroy {
           this.generateNewEmail()
 
         } else {
-          this.autoGenerateEmail(res);
+          if (typeof res === 'string') {
+            this.autoGenerateEmail(res);
+          } else if (res.username && res.domain) {
+            this.domain = res.domain;
+            this.emailService.domain = res.domain;
+            this.autoGenerateEmail(res.username);
+          }
         }
 
       }

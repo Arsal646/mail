@@ -1,4 +1,4 @@
-import { Component, inject, Inject, PLATFORM_ID, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, inject, Inject, PLATFORM_ID, ViewChild, ElementRef, AfterViewInit, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
@@ -23,7 +23,7 @@ import {LucideAngularModule} from "lucide-angular";
   templateUrl: './new-email-modal.html',
   styleUrl: './new-email-modal.css'
 })
-export class NewEmailModalComponent implements AfterViewInit {
+export class NewEmailModalComponent implements AfterViewInit, OnInit {
   @ViewChild('usernameInput') usernameInput!: ElementRef<HTMLInputElement>;
   
   public emailService = inject(EmailService)
@@ -34,6 +34,10 @@ export class NewEmailModalComponent implements AfterViewInit {
     Validators.pattern(/^[a-z0-9]+$/i)
   ]);
   isBrowser = false;
+  availableDomains: string[] = [];
+  domainControl = new FormControl('', [
+    Validators.required
+  ]);
 
   constructor(
     private dialog: MatDialog,
@@ -42,6 +46,15 @@ export class NewEmailModalComponent implements AfterViewInit {
     @Inject(MAT_DIALOG_DATA) public data: { domain: string, historyEmails:any[] }
   ) { 
     this.isBrowser = isPlatformBrowser(this.platformId);
+  }
+
+  ngOnInit(): void {
+    this.availableDomains = this.emailService.availableDomains ?? [];
+    if (this.data?.domain && !this.availableDomains.includes(this.data.domain)) {
+      this.availableDomains = [this.data.domain, ...this.availableDomains];
+    }
+    const defaultDomain = this.data?.domain ?? this.availableDomains[0];
+    this.domainControl.setValue(defaultDomain || '');
   }
 
   ngAfterViewInit(): void {
@@ -87,15 +100,17 @@ export class NewEmailModalComponent implements AfterViewInit {
     if (username) {
       this.usernameControl.setValue(username);
       this.username = username;
+      this.submitted = false;
     }
   }
 
   submit() {
     this.submitted = true;
-    if (this.usernameControl.valid) {
-      // const email = this.emailService.generateNewEmail(this.usernameControl.value as string);
-      // const username = email.split('@')[0];
-      this.dialogRef.close(this.usernameControl.value);
+    if (this.usernameControl.valid && this.domainControl.valid) {
+      this.dialogRef.close({
+        username: this.usernameControl.value,
+        domain: this.domainControl.value
+      });
     }
   }
 

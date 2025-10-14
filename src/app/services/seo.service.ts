@@ -345,6 +345,7 @@ export class SeoService {
             'contact': 'contact',
             'terms-and-conditions': 'terms-and-conditions',
             'temporary-email-for-facebook': 'temporary-email-for-facebook',
+            'temporary-email-for-instagram': 'temporary-email-for-instagram',
             'temporary-email-for-discord': 'temporary-email-for-discord',
             'temporary-email-for-tiktok': 'temporary-email-for-tiktok',
         };

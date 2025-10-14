@@ -95,6 +95,21 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'temporary-email-for-instagram',
+    canMatch: [() => {
+      const locale = (inject(LOCALE_ID) ?? '').toString().toLowerCase();
+      if (locale.startsWith('en')) {
+        return true;
+      }
+
+      inject(Router).navigateByUrl('/');
+      return false;
+    }],
+    loadComponent: () =>
+      import('./pages/instagram-temp-email/instagram-temp-email').then(m => m.InstagramTempEmail),
+    pathMatch: 'full'
+  },
+  {
     path: 'temporary-email-for-tiktok',
     canMatch: [() => {
       const locale = (inject(LOCALE_ID) ?? '').toString().toLowerCase();

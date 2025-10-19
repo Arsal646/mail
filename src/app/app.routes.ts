@@ -110,6 +110,21 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'temporary-email-for-twitter-x',
+    canMatch: [() => {
+      const locale = (inject(LOCALE_ID) ?? '').toString().toLowerCase();
+      if (locale.startsWith('en')) {
+        return true;
+      }
+
+      inject(Router).navigateByUrl('/');
+      return false;
+    }],
+    loadComponent: () =>
+      import('./pages/twitter-temp-email/twitter-temp-email').then(m => m.TwitterTempEmail),
+    pathMatch: 'full'
+  },
+  {
     path: 'temporary-email-for-tiktok',
     canMatch: [() => {
       const locale = (inject(LOCALE_ID) ?? '').toString().toLowerCase();

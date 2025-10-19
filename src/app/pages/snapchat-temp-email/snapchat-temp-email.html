@@ -1,0 +1,110 @@
+<div class="min-h-screen font-sans bg-white">
+  <div class="font-sans bg-white">
+    <!-- Hero -->
+    <section class="bg-white border-b border-gray-200">
+      <div class="container mx-auto px-4 pt-10 pb-12 text-center">
+        <h1 class="text-4xl mb-3 font-bold text-gray-900">Temporary Email for Snapchat</h1>
+        <p class="mb-8 text-gray-700 max-w-2xl mx-auto text-base">
+          Get a fresh burner inbox for Snapchat sign ups, verification codes, or password resets without giving away your personal address.
+        </p>
+
+        <!-- Widget -->
+        <div class="rounded-lg bg-gray-50 shadow-sm border border-gray-300">
+          <app-main-temp-mail title="snapchat verification"></app-main-temp-mail>
+        </div>
+
+        <!-- Steps -->
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <div class="flex items-center gap-3 bg-gray-50 p-3 rounded-lg border border-gray-300">
+            <span class="h-6 w-6 rounded-full bg-gray-800 text-white text-xs flex items-center justify-center font-semibold">1</span>
+            <span class="text-sm text-gray-800">Copy the address</span>
+          </div>
+          <div class="flex items-center gap-3 bg-gray-50 p-3 rounded-lg border border-gray-300">
+            <span class="h-6 w-6 rounded-full bg-gray-800 text-white text-xs flex items-center justify-center font-semibold">2</span>
+            <span class="text-sm text-gray-800">Use it on Snapchat</span>
+          </div>
+          <div class="flex items-center gap-3 bg-gray-50 p-3 rounded-lg border border-gray-300">
+            <span class="h-6 w-6 rounded-full bg-gray-800 text-white text-xs flex items-center justify-center font-semibold">3</span>
+            <span class="text-sm text-gray-800">Watch for the code</span>
+          </div>
+          <div class="flex items-center gap-3 bg-gray-50 p-3 rounded-lg border border-gray-300">
+            <span class="h-6 w-6 rounded-full bg-gray-800 text-white text-xs flex items-center justify-center font-semibold">4</span>
+            <span class="text-sm text-gray-800">Confirm your account</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container mx-auto px-4 max-w-4xl">
+      <!-- How to -->
+      <section class="mt-10 bg-white p-6 rounded-lg border border-gray-200">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">How to use this temporary email for Snapchat</h2>
+        <ol class="space-y-3 text-gray-700 text-sm">
+          <li><strong>1. Copy the email</strong> above and keep this tab open.</li>
+          <li><strong>2. Go to <a href="https://accounts.snapchat.com/accounts/signup" target="_blank" rel="noopener noreferrer" class="text-gray-900 underline">Snapchat</a></strong> and paste it during signup or verification.</li>
+          <li><strong>3. Check back here</strong> for the login code or confirmation link.</li>
+          <li><strong>4. Finish the flow</strong> before the inbox timer runs out.</li>
+        </ol>
+      </section>
+
+      <!-- Why -->
+      <section class="mt-8 bg-gray-50 p-6 rounded-lg border border-gray-300">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">Why use a Snapchat temp mail?</h2>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>• <strong>Protect your main inbox</strong> from marketing emails or spam.</li>
+          <li>• <strong>Spin up throwaway profiles</strong> for testing or client work.</li>
+          <li>• <strong>Reset passwords safely</strong> without exposing your personal address.</li>
+          <li>• <strong>No account needed</strong> — inbox is live instantly.</li>
+        </ul>
+      </section>
+
+      <!-- How it works -->
+      <section class="mt-8 bg-white p-6 rounded-lg border border-gray-200">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">How our Snapchat disposable email works</h2>
+        <div class="space-y-3 text-gray-700 text-sm">
+          <p><strong>Real inbox</strong> — receives Snapchat messages and OTP codes in seconds.</p>
+          <p><strong>Instant refresh</strong> — tap “New Email” any time for a brand-new address.</p>
+          <p><strong>Auto deletion</strong> — everything is wiped after the timer to keep things private.</p>
+          <p><strong>Shareable link</strong> — save the inbox link if you need to reopen it on another device.</p>
+        </div>
+      </section>
+
+      <!-- Tips -->
+      <section class="mt-8 bg-white p-6 rounded-lg border border-gray-200">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">Tips for smooth Snapchat verification</h2>
+        <ul class="space-y-2 text-gray-700 text-sm">
+          <li>• Leave this page open until you finish the sign up.</li>
+          <li>• Use the code quickly — Snapchat OTPs expire fast.</li>
+          <li>• If the email bounces, hit refresh to generate a different domain.</li>
+          <li>• Save screenshots if you need proof before the timer clears the inbox.</li>
+          <li>• Pick a strong password even for disposable accounts.</li>
+        </ul>
+      </section>
+
+      <!-- FAQ -->
+      <section class="mt-8 bg-white p-6 rounded-lg border border-gray-200">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">FAQ</h2>
+        <div class="divide-y divide-gray-300">
+          <div *ngFor="let item of faqItems" class="py-3">
+            <details class="group">
+              <summary class="flex justify-between items-center cursor-pointer text-gray-900 hover:text-gray-700">
+                <span class="font-medium text-sm">{{ item.question }}</span>
+                <span class="text-gray-500 group-open:rotate-180 transition-transform">⌄</span>
+              </summary>
+              <p class="mt-3 text-gray-600 text-sm">{{ item.answer }}</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Closing -->
+      <section class="mt-8 mb-12 bg-gray-50 p-6 rounded-lg border border-gray-300">
+        <h2 class="text-lg font-bold text-gray-900 mb-2">Start with your Snapchat temp mail now</h2>
+        <p class="text-gray-700 text-sm">Create burner inboxes for Snapchat in seconds. Keep your main email private while you test features, run campaigns, or recover access.</p>
+        <p class="text-gray-600 text-sm mt-3">
+          Need other disposable inboxes too? Try our pages for <a routerLink="/temporary-email-for-facebook" class="text-gray-900 underline hover:text-gray-600">Facebook</a>, <a routerLink="/temporary-email-for-instagram" class="text-gray-900 underline hover:text-gray-600">Instagram</a>, <a routerLink="/temporary-email-for-discord" class="text-gray-900 underline hover:text-gray-600">Discord</a>, <a routerLink="/temporary-email-for-tiktok" class="text-gray-900 underline hover:text-gray-600">TikTok</a>, or <a routerLink="/temporary-email-for-twitter-x" class="text-gray-900 underline hover:text-gray-600">Twitter X</a>, or head <a routerLink="/" class="text-gray-900 underline hover:text-gray-600">home</a> for the full list.
+        </p>
+      </section>
+    </main>
+  </div>
+</div>

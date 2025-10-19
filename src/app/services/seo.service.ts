@@ -349,6 +349,7 @@ export class SeoService {
             'temporary-email-for-twitter-x': 'temporary-email-for-twitter-x',
             'temporary-email-for-discord': 'temporary-email-for-discord',
             'temporary-email-for-tiktok': 'temporary-email-for-tiktok',
+            'temporary-email-for-snapchat': 'temporary-email-for-snapchat',
         };
 
         return pathToRouteKey[path] || null;

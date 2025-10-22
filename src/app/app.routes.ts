@@ -170,6 +170,21 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'temporary-business-email',
+    canMatch: [() => {
+      const locale = (inject(LOCALE_ID) ?? '').toString().toLowerCase();
+      if (locale.startsWith('en')) {
+        return true;
+      }
+
+      inject(Router).navigateByUrl('/');
+      return false;
+    }],
+    loadComponent: () =>
+      import('./pages/business-temp-email/business-temp-email').then(m => m.BusinessTempEmail),
+    pathMatch: 'full'
+  },
+  {
     path: '**',
     redirectTo: ''
   }

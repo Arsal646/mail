@@ -349,6 +349,7 @@ export class SeoService {
             'temporary-email-for-twitter-x': 'temporary-email-for-twitter-x',
             'temporary-email-for-discord': 'temporary-email-for-discord',
             'temporary-email-for-tiktok': 'temporary-email-for-tiktok',
+            'temporary-business-email': 'temporary-business-email',
             'temporary-email-for-snapchat': 'temporary-email-for-snapchat',
         };
 

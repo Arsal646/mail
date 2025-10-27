@@ -7,9 +7,10 @@ import { delay, map, mergeMap, scan, startWith, take } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class EmailService {
-  domain = '@vimto.store';
+  domain =  '@nanoware.store';
   availableDomains = [
     '@tempmails.online',
+    '@nanoware.store',
     '@vimto.store',
   ]
   apiUrl = 'https://mailboxhub.fun/api'

@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MainTempMail } from '../../compoents/main-temp-mail/main-temp-mail';
 import { SeoService } from '../../services/seo.service';
 import { RouteTranslationService } from '../../services/route-translation.service';
+import { GoogleAdsenseDirective } from '../../directives/google-adsense.directive';
 
 // Import the localized strings (these will be replaced by Angular i18n at build time)
 declare const $localize: any;
@@ -14,7 +15,7 @@ declare const $localize: any;
   standalone: true,
   templateUrl: './home.html',
   styleUrl: './home.css',
-  imports: [CommonModule, LucideAngularModule, RouterModule, MainTempMail],
+  imports: [CommonModule, LucideAngularModule, RouterModule, MainTempMail, GoogleAdsenseDirective],
 })
 export class Home implements OnInit {
   private seoService = inject(SeoService);

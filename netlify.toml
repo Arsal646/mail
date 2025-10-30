@@ -2,3 +2,10 @@
 command = "ng build --localize"
 functions = "netlify/functions"
 publish = "dist/temp-mail/browser"
+
+
+[[redirects]]
+  from = "/ads.txt"
+  to = "https://srv.adstxtmanager.com/19390/tempmail4u.com"
+  status = 301
+  force = true

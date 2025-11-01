@@ -1,0 +1,126 @@
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <!-- Logo + Status -->
+      <div class="logo-section">
+        <div class="logo-wrapper">
+          <img
+            [routerLink]="['/']"
+            (click)="closeMenu()"
+            class="logo"
+            src="logo.png"
+            alt="Temporary Email Service Logo"
+            i18n-alt="@@header.logo.alt"
+          >
+        </div>
+        <div class="status-indicator">
+          <span i18n="@@header.online" class="status-text">Online</span>
+          <span class="status-dot"></span>
+        </div>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a [routerLink]="['/']" 
+           routerLinkActive="nav-link--active" 
+           [routerLinkActiveOptions]="{ exact: true }"
+           class="nav-link">
+          <span i18n="@@nav.home">Home</span>
+        </a>
+
+        <a [routerLink]="['/about']" 
+           routerLinkActive="nav-link--active" 
+           class="nav-link">
+          <span i18n="@@nav.about">About</span>
+        </a>
+
+        <a [routerLink]="['/how-it-works']" 
+           routerLinkActive="nav-link--active" 
+           class="nav-link">
+          <span i18n="@@nav.howItWorks">How it works</span>
+        </a>
+
+        <a [routerLink]="['/services']" 
+           routerLinkActive="nav-link--active" 
+           class="nav-link">
+          <span i18n="@@nav.services">Services</span>
+        </a>
+
+        <a [routerLink]="['/contact']" 
+           routerLinkActive="nav-link--active" 
+           class="nav-link">
+          <span i18n="@@nav.contact">Contact</span>
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <div class="mobile-menu-button">
+        <button
+          type="button"
+          (click)="toggleMenu()"
+          class="menu-button"
+          [class.menu-button--active]="menuOpen"
+          [attr.aria-expanded]="menuOpen"
+          aria-label="Toggle menu"
+          i18n-aria-label="@@header.menu.toggle"
+        >
+          <span class="menu-button__hamburger">
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+            <span class="menu-button__line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div 
+      *ngIf="menuOpen"
+      class="mobile-menu"
+      [class.mobile-menu--open]="menuOpen"
+    >
+      <div class="mobile-menu__content">
+        <a [routerLink]="['/']" 
+           routerLinkActive="mobile-nav-link--active" 
+           [routerLinkActiveOptions]="{ exact: true }"
+           class="mobile-nav-link"
+           (click)="closeMenu()">
+          <span class="mobile-nav-link__text" i18n="@@nav.home">Home</span>
+          <span class="mobile-nav-link__icon">→</span>
+        </a>
+
+        <a [routerLink]="['/about']" 
+           routerLinkActive="mobile-nav-link--active" 
+           class="mobile-nav-link"
+           (click)="closeMenu()">
+          <span class="mobile-nav-link__text" i18n="@@nav.about">About</span>
+          <span class="mobile-nav-link__icon">→</span>
+        </a>
+
+        <a [routerLink]="['/how-it-works']" 
+           routerLinkActive="mobile-nav-link--active" 
+           class="mobile-nav-link"
+           (click)="closeMenu()">
+          <span class="mobile-nav-link__text" i18n="@@nav.howItWorks">How it works</span>
+          <span class="mobile-nav-link__icon"></span>
+        </a>
+
+        <a [routerLink]="['/services']" 
+           routerLinkActive="mobile-nav-link--active" 
+           class="mobile-nav-link"
+           (click)="closeMenu()">
+          <span class="mobile-nav-link__text" i18n="@@nav.services">Services</span>
+          <span class="mobile-nav-link__icon">→</span>
+        </a>
+
+        <a [routerLink]="['/contact']" 
+           routerLinkActive="mobile-nav-link--active" 
+           class="mobile-nav-link"
+           (click)="closeMenu()">
+          <span class="mobile-nav-link__text" i18n="@@nav.contact">Contact</span>
+          <span class="mobile-nav-link__icon">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

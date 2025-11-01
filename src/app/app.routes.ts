@@ -50,6 +50,23 @@ export const routes: Routes = [
       import('./pages/service/service').then(m => m.Service),
     pathMatch: 'full'
   },
+
+  {
+    path: 'how-it-works',
+    canMatch: [() => {
+      const locale = (inject(LOCALE_ID) ?? '').toString().toLowerCase();
+      if (locale.startsWith('en')) {
+        return true;
+      }
+
+      // redirect non-English to root
+      inject(Router).navigateByUrl('/');
+      return false;
+    }],
+    loadComponent: () =>
+      import('./pages/how-it-works/how-it-works').then(m => m.HowItWorks),
+    pathMatch: 'full'
+  },
   {
     path: 'contact',
     loadComponent: () =>

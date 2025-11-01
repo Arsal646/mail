@@ -82,26 +82,27 @@ button, a{
   position: absolute;
   top: 0;
   left: 0;
-  height: 4px; /* Thicker bar */
+  height: 4px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1); /* Visible track */
+  background-color: var(--neutral-200);
   overflow: hidden;
-  z-index: 1; /* Maximum priority */
+  z-index: 1;
+  border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
 }
 
 .loader-bar::before {
   content: "";
   position: absolute;
   height: 100%;
-  width: 25%; /* Shorter bar for more motion */
+  width: 30%;
   background: linear-gradient(90deg, 
-             #000, 
-             #787878, 
-             #000); /* Deeper blue gradient */
+             var(--primary-400), 
+             var(--primary-500), 
+             var(--primary-600));
   animation: 
-    loaderSlide 1.2s infinite ease-in-out,
-    pulseColor 2.4s infinite ease-in-out; /* Added color pulse */
-  box-shadow: 0 0 10px rgba(234, 237, 244, 0.7); /* Glow effect */
+    loaderSlide 1.5s infinite ease-in-out,
+    loaderPulse 3s infinite ease-in-out;
+  box-shadow: 0 0 12px var(--primary-300);
 }
 
 @keyframes loaderSlide {
@@ -109,33 +110,18 @@ button, a{
     transform: translateX(-100%);
   }
   100% {
-    transform: translateX(400%); /* Faster travel across screen */
+    transform: translateX(400%);
   }
 }
 
-@keyframes pulseColor {
+@keyframes loaderPulse {
   0%, 100% {
+    box-shadow: 0 0 8px var(--primary-300);
     opacity: 1;
   }
   50% {
+    box-shadow: 0 0 16px var(--primary-400);
     opacity: 0.8;
-    background: linear-gradient(90deg, 
-               #252525, 
-               #444444, 
-               #212121); /* Darker mid-animation */
-  }
-}
-
-/* Glow pulse effect */
-@keyframes loaderPulse {
-  0% {
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.9);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
   }
 }
 
@@ -205,38 +191,42 @@ button, a{
 }
 .copy-toast {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  bottom: 2rem;
+  right: 2rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.875rem 1.25rem;
-  background: rgba(17, 24, 39, 0.92);
-  color: #fff;
-  border-radius: 0.75rem;
-  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.2);
+  gap: 0.875rem;
+  padding: 1rem 1.5rem;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  color: white;
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1050;
-  animation: copyToastSlideIn 0.25s ease-out;
+  animation: copyToastSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes copyToastSlideIn {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(20px) scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
 .copy-toast__icon {
-  color: #34d399;
+  color: var(--success-400);
+  font-size: 1.25rem;
 }
 
 .copy-toast__text {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 500;
+  letter-spacing: -0.025em;
 }
 
 @media (max-width: 640px) {

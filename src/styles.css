@@ -1,53 +1,223 @@
-@import "tailwindcss";/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@import "./app/shared/theme-utilities.css";
+@import "./app/shared/page-hero.css";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Enhanced CSS Custom Properties for Theme */
+:root {
+  /* Primary Color Palette */
+  --primary-50: #eff6ff;
+  --primary-100: #dbeafe;
+  --primary-200: #bfdbfe;
+  --primary-300: #93c5fd;
+  --primary-400: #60a5fa;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --primary-800: #1e40af;
+  --primary-900: #1e3a8a;
 
-html{
-  --mat-sys-corner-extra-large: 10px;
+  /* Neutral Color Palette */
+  --neutral-50: #f8fafc;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1e293b;
+  --neutral-900: #0f172a;
+
+  /* Success Colors */
+  --success-50: #f0fdf4;
+  --success-500: #22c55e;
+  --success-600: #16a34a;
+
+  /* Warning Colors */
+  --warning-50: #fffbeb;
+  --warning-500: #f59e0b;
+  --warning-600: #d97706;
+
+  /* Error Colors */
+  --error-50: #fef2f2;
+  --error-500: #ef4444;
+  --error-600: #dc2626;
+
+  /* Spacing & Layout */
+  --border-radius-sm: 6px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-2xl: 20px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* Typography */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Base Styles */
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
 
-/* Apply to entire page or specific container */
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  background-color: var(--neutral-50);
+  color: var(--neutral-800);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px; /* Thin width */
-  height: 6px; /* For horizontal scroll */
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; /* Optional: or use #f1f1f1 */
+  background: var(--neutral-100);
+  border-radius: var(--border-radius-sm);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2); /* Soft thumb */
-  border-radius: 4px;
+  background: var(--neutral-300);
+  border-radius: var(--border-radius-sm);
+  transition: background-color var(--transition-fast);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.35); /* Slightly darker on hover */
+  background: var(--neutral-400);
 }
 
-
-/* .custom-dialog .mat-mdc-dialog-surface{
-    border-radius: 5px !important;
-} */
-
-button:focus-visible {
-  outline: none !important;
+/* Focus Styles */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
 }
 
-
+/* Container Improvements */
 .container {
-    @media (width >= 96rem) {
-        max-width: 1000px !important;
-    }
+  @media (width >=96rem) {
+    max-width: 1000px !important;
+  }
 }
 
-.custom-link{
-  color: black;
+/* Enhanced Link Styles */
+.custom-link {
+  color: var(--primary-600);
   text-decoration: underline;
+  text-decoration-color: var(--primary-300);
+  text-underline-offset: 3px;
+  transition: all var(--transition-fast);
 }
 
-button{
-  cursor:  pointer !important;
+.custom-link:hover {
+  color: var(--primary-700);
+  text-decoration-color: var(--primary-500);
+}
+
+/* Button Enhancements */
+button {
+  cursor: pointer !important;
+  transition: all var(--transition-fast);
+}
+
+/* Utility Classes */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-600) 100%);
+}
+
+.gradient-neutral {
+  background: linear-gradient(135deg, var(--neutral-50) 0%, var(--neutral-100) 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Enhanced Material Design */
+html {
+  --mat-sys-corner-extra-large: var(--border-radius-xl);
+}
+
+/* Improved Selection */
+::selection {
+  background-color: var(--primary-200);
+  color: var(--primary-800);
 }

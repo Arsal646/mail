@@ -566,6 +566,22 @@
 ,
   "faq10Question": "Puis-je utiliser un e-mail de 10 minutes pour les affaires ?",
   "faq10Answer": "Oui, vous pouvez utiliser un <strong>e-mail professionnel de 10 minutes</strong> pour les inscriptions rapides, les essais gratuits ou les vérifications ponctuelles. Cependant, il n’est pas recommandé pour une communication à long terme ou des données sensibles, car la boîte expire après 10 minutes."
+,
+"breadcrumb.home": "Accueil",
+"breadcrumb.services": "Services",
+"breadcrumb.contact": "Contact",
+"breadcrumb.about": "À propos",
+"breadcrumb.10min": "E-mail de 10 minutes",
+"nav.howItWorks": "Comment ça marche",
+"services.hero.cta": "Commencer maintenant",
+"about.hero.cta": "Essayer TempMail",
+"mainTempMail.copyToastMessage": "E-mail copié dans le presse-papiers",
+"quickEmail.resetTimer": "Réinitialiser",
+"quickEmail.timerExpired": "Expiré",
+"quickEmail.emailExpiredMessage": "Générez un nouvel e-mail pour continuer",
+"seo.howItWorks.title": "Comment fonctionne TempMail - Guide étape par étape",
+"seo.howItWorks.description": "Découvrez comment utiliser TempMail en cinq étapes rapides avec des captures d’écran montrant comment générer, copier et gérer vos boîtes mail temporaires.",
+"seo.howItWorks.keywords": "comment fonctionne temp mail, guide tempmail, email temporaire, étapes boîte jetable"
 
 
   }

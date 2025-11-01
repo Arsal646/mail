@@ -10,12 +10,12 @@ import { DOCUMENT } from '@angular/common';
   imports: [CommonModule, RouterModule],
   template: `
     <!-- Footer -->
-    <footer class=" border-t border-gray-200 mt-12">
-      <div class="container mx-auto px-4 py-8">
+    <footer class="bg-gradient-to-r from-neutral-50 to-neutral-100 border-t border-neutral-200 mt-16">
+      <div class="container mx-auto px-4 py-12">
         <div class="flex flex-col md:flex-row justify-between items-center gap-6">
           <!-- Branding Section -->
-          <div class="flex items-center gap-3">
-            <div class=" rounded-full p-2 flex-shrink-0">
+          <div class="flex items-center gap-4">
+            <div class="bg-white rounded-full p-3 shadow-md border border-neutral-200 flex-shrink-0">
               <img 
                 src="logo.png" 
                 alt="Temporary Email Service Logo" 
@@ -25,8 +25,8 @@ import { DOCUMENT } from '@angular/common';
               >
             </div>
             <div>
-              <h2 i18n="@@footer.title" class="text-sm font-semibold text-gray-900">Temporary Email Service</h2>
-              <p i18n="@@footer.subtitle" class="text-xs text-gray-600">Secure, disposable email addresses</p>
+              <h2 i18n="@@footer.title" class="text-base font-bold text-neutral-900">Temporary Email Service</h2>
+              <p i18n="@@footer.subtitle" class="text-sm text-neutral-600">Secure, disposable email addresses</p>
             </div>
           </div>
 
@@ -35,14 +35,14 @@ import { DOCUMENT } from '@angular/common';
             <div class="flex flex-wrap justify-center gap-4 text-sm">
               <a i18n="@@footer.privacyPolicy"
                 [routerLink]="routes.privacy"
-                class="text-gray-600 hover:text-gray-900 transition-colors"
+                class="text-neutral-600 hover:text-primary-600 transition-all duration-200 hover:underline underline-offset-4"
                 aria-label="Privacy Policy"
               >
                 Privacy Policy
               </a>
               <a i18n="@@footer.termsConditions"
                 [routerLink]="routes.terms"
-                class="text-gray-600 hover:text-gray-900 transition-colors"
+                class="text-neutral-600 hover:text-primary-600 transition-all duration-200 hover:underline underline-offset-4"
                 aria-label="Terms & Conditions"
               >
                  Terms & Conditions
@@ -54,7 +54,7 @@ import { DOCUMENT } from '@angular/common';
           <div class="relative">
             <button 
               (click)="toggleDropdown()"
-              class="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-900 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors"
+              class="flex items-center gap-2 px-4 py-2.5 text-sm text-neutral-600 hover:text-primary-600 bg-white border border-neutral-200 rounded-xl hover:border-primary-300 hover:shadow-md transition-all duration-200"
             >
               <span>{{ currentLanguage.flag }}</span>
               <span class="hidden sm:inline">{{ currentLanguage.name }}</span>
@@ -65,13 +65,14 @@ import { DOCUMENT } from '@angular/common';
 
             <div 
               *ngIf="isDropdownOpen"
-              class="absolute bottom-full right-0 mb-2 w-40 bg-white border border-gray-200 rounded-lg shadow-lg z-50"
+              class="absolute bottom-full right-0 mb-3 w-44 bg-white/95 backdrop-blur-sm border border-neutral-200 rounded-xl shadow-xl z-50 animate-scale-in"
             >
               <button
                 *ngFor="let lang of languages"
                 (click)="switchLanguage(lang.code)"
-                class="w-full flex items-center gap-3 px-4 py-2 text-sm text-left hover:bg-gray-50"
-                [class.bg-blue-50]="lang.code === currentLanguage.code"
+                class="w-full flex items-center gap-3 px-4 py-3 text-sm text-left hover:bg-primary-50 hover:text-primary-700 transition-all duration-200 rounded-lg mx-1"
+                [class.bg-primary-100]="lang.code === currentLanguage.code"
+                [class.text-primary-700]="lang.code === currentLanguage.code"
               >
                 <span>{{ lang.flag }}</span>
                 <span>{{ lang.name }}</span>
@@ -85,7 +86,7 @@ import { DOCUMENT } from '@angular/common';
                 href="https://www.goodfirms.co/email-management-software/"
                 target="_blank"
                 
-                class="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors mb-2"
+                class="flex items-center gap-2 text-neutral-600 hover:text-primary-600 transition-all duration-200 mb-3 hover:transform hover:scale-105"
                 aria-label="GoodFirms Email Management Software"
               >
        
@@ -103,9 +104,9 @@ import { DOCUMENT } from '@angular/common';
               </a>
 
                            <!-- Copyright + Logo -->
-        <div class="pt-4 border-t border-gray-200">
-          <div class="flex flex-col items-center gap-2 text-center">
-            <p i18n="@@footer.copyright" class="text-xs text-gray-500">
+        <div class="pt-6 border-t border-neutral-200">
+          <div class="flex flex-col items-center gap-3 text-center">
+            <p i18n="@@footer.copyright" class="text-sm text-neutral-500 font-medium">
               © {{ currentYear }} Temporary Email Service. All rights reserved.
             </p>
           </div>

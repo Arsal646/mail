@@ -4,7 +4,8 @@ import {
   EventEmitter,
   HostListener,
   OnDestroy,
-  inject
+  inject,
+  LOCALE_ID
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router, NavigationEnd } from '@angular/router';
@@ -25,6 +26,7 @@ export class HeaderComponent implements OnDestroy {
 
   private router = inject(Router);
   private routerSubscription: Subscription;
+  private locale = inject(LOCALE_ID);
 
   constructor() {
     this.routerSubscription = this.router.events
@@ -70,5 +72,9 @@ export class HeaderComponent implements OnDestroy {
     this.refreshing = true;
     this.refreshClick.emit();
     setTimeout(() => this.refreshing = false, 1000);
+  }
+
+  get isEnglishLocale(): boolean {
+    return this.locale.split('-')[0] === 'en';
   }
 }

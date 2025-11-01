@@ -51,7 +51,7 @@
               <div class="blog-card__author-info">
                 <span class="blog-card__author">{{ post.author }}</span>
                 <span class="blog-card__separator">•</span>
-                <span class="blog-card__reading-time">{{ post.readingTime }} min read</span>
+                <span class="blog-card__reading-time">{{ getReadingTime(post.content) }} min read</span>
               </div>
               <div class="blog-card__tags">
                 <span 
@@ -105,7 +105,7 @@
               <div class="blog-post-card__author-info">
                 <span class="blog-post-card__author">{{ post.author }}</span>
                 <span class="blog-post-card__separator">•</span>
-                <span class="blog-post-card__reading-time">{{ post.readingTime }} min read</span>
+                <span class="blog-post-card__reading-time">{{ getReadingTime(post.content) }} min read</span>
               </div>
               <div class="blog-post-card__tags">
                 <span 

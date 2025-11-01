@@ -56,7 +56,7 @@
           </div>
           
           <div class="blog-article__content">
-            <div class="blog-article__body" [innerHTML]="post.content"></div>
+            <div class="blog-article__body post-content" [innerHTML]="sanitizedContent || post.content"></div>
           </div>
 
 
@@ -141,16 +141,17 @@
         <aside class="blog-sidebar">
           <div class="blog-sidebar__sticky">
             <!-- Table of Contents -->
-            <div class="blog-toc">
+            <div class="blog-toc" *ngIf="tableOfContents.length">
               <h3 class="blog-toc__title">Table of Contents</h3>
               <nav class="blog-toc__nav">
-                <a href="#what-is-temporary-email" class="blog-toc__link">What is a Temporary Email Address?</a>
-                <a href="#why-use-temporary-email" class="blog-toc__link">Why Use Temporary Email in 2024?</a>
-                <a href="#best-practices" class="blog-toc__link">Best Practices for Using Temporary Email</a>
-                <a href="#security-considerations" class="blog-toc__link">Security Considerations</a>
-                <a href="#common-use-cases" class="blog-toc__link">Common Use Cases</a>
-                <a href="#future-of-email-privacy" class="blog-toc__link">The Future of Email Privacy</a>
-                <a href="#conclusion" class="blog-toc__link">Conclusion</a>
+                <a
+                  *ngFor="let item of tableOfContents"
+                  class="blog-toc__link"
+                  [class.blog-toc__link--level-3]="item.level === 3"
+                  [attr.href]="'#' + item.id"
+                  (click)="scrollToSection(item.id, $event)">
+                  {{ item.text }}
+                </a>
               </nav>
             </div>
             
@@ -215,24 +216,5 @@
     </div>
   </section>
 
-  <!-- Newsletter CTA -->
-  <section class="blog-newsletter">
-    <div class="blog-newsletter__container">
-      <div class="blog-newsletter__content">
-        <div class="blog-newsletter__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
-        </div>
-        <h2 class="blog-newsletter__title">Stay Updated with Privacy Tips</h2>
-        <p class="blog-newsletter__description">Get the latest articles about email privacy, security tips, and temporary email best practices delivered to your inbox.</p>
-        <div class="blog-newsletter__form">
-          <input type="email" placeholder="Enter your email address" class="blog-newsletter__input" />
-          <button class="blog-newsletter__button">Subscribe Now</button>
-        </div>
-        <p class="blog-newsletter__disclaimer">We respect your privacy. Unsubscribe at any time.</p>
-      </div>
-    </div>
-  </section>
+  
 </div>

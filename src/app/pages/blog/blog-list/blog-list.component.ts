@@ -29,4 +29,10 @@ export class BlogListComponent implements OnInit {
       day: 'numeric'
     }).format(date);
   }
+
+    getReadingTime(content: string): number {
+    const wordsPerMinute = 200;
+    const wordCount = content.split(/\s+/).length;
+    return Math.ceil(wordCount / wordsPerMinute);
+  }
 }

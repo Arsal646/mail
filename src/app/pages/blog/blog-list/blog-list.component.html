@@ -30,12 +30,22 @@
           [routerLink]="['/blog', post.slug]"
         >
           <div class="blog-card__image">
-            <div class="blog-card__image-placeholder">
-              <svg class="blog-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-            </div>
+            <ng-container *ngIf="post.featuredImage; else featuredImagePlaceholder">
+              <img 
+                [src]="post.featuredImage" 
+                [alt]="post.title" 
+                class="blog-card__image-photo"
+                loading="lazy"
+              >
+            </ng-container>
+            <ng-template #featuredImagePlaceholder>
+              <div class="blog-card__image-placeholder">
+                <svg class="blog-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+            </ng-template>
           </div>
           
           <div class="blog-card__content">
@@ -79,12 +89,22 @@
           [routerLink]="['/blog', post.slug]"
         >
           <div class="blog-post-card__image">
-            <div class="blog-post-card__image-placeholder">
-              <svg class="blog-post-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-            </div>
+            <ng-container *ngIf="post.featuredImage; else postImagePlaceholder">
+              <img 
+                [src]="post.featuredImage" 
+                [alt]="post.title" 
+                class="blog-post-card__image-photo"
+                loading="lazy"
+              >
+            </ng-container>
+            <ng-template #postImagePlaceholder>
+              <div class="blog-post-card__image-placeholder">
+                <svg class="blog-post-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+            </ng-template>
           </div>
 
           <div class="blog-post-card__content">

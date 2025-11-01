@@ -34,6 +34,13 @@
   position: relative;
 }
 
+.blog-card__image-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .blog-card__image-placeholder {
   width: 100%;
   height: 100%;
@@ -183,6 +190,13 @@
   flex-shrink: 0;
   overflow: hidden;
   border-radius: var(--border-radius-lg);
+}
+
+.blog-post-card__image-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .blog-post-card__image-placeholder {

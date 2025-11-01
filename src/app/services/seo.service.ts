@@ -344,6 +344,7 @@ export class SeoService {
             'services': 'services',
             'contact': 'contact',
             'terms-and-conditions': 'terms-and-conditions',
+            'blog': 'blog',
             'temporary-email-for-facebook': 'temporary-email-for-facebook',
             'temporary-email-for-instagram': 'temporary-email-for-instagram',
             'temporary-email-for-twitter-x': 'temporary-email-for-twitter-x',

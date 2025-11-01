@@ -4,6 +4,10 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Observable, map, switchMap, tap, of } from 'rxjs';
 import { BlogService, BlogPost } from '../../../services/blog.service';
+import { LOCALE_ID } from '@angular/core';
+import { SeoService } from '../../../services/seo.service';
+
+declare const $localize: any;
 
 interface TableOfContentsItem {
   id: string;
@@ -24,6 +28,8 @@ export class BlogPostComponent implements OnInit {
   private blogService = inject(BlogService);
   private platformId = inject(PLATFORM_ID);
   private sanitizer = inject(DomSanitizer);
+  private seoService = inject(SeoService);
+  private locale = inject(LOCALE_ID);
 
   post$!: Observable<BlogPost | null>;
   relatedPosts$!: Observable<BlogPost[]>;
@@ -46,6 +52,7 @@ export class BlogPostComponent implements OnInit {
         const { content, toc } = this.prepareContent(post.content);
         this.sanitizedContent = this.sanitizer.bypassSecurityTrustHtml(content);
         this.tableOfContents = toc;
+        this.updateSeoForPost(post);
       })
     );
 
@@ -65,10 +72,12 @@ export class BlogPostComponent implements OnInit {
       }
     });
 
-    this.currentUrl = this.router.url;
+    if (!this.currentUrl) {
+      this.currentUrl = this.router.url;
 
-    if (this.isBrowser) {
-      this.currentUrl = window.location.href;
+      if (this.isBrowser) {
+        this.currentUrl = window.location.href;
+      }
     }
   }
 
@@ -127,7 +136,7 @@ export class BlogPostComponent implements OnInit {
 
     const parser = new DOMParser();
     const doc = parser.parseFromString(content, 'text/html');
-    const headings = Array.from(doc.querySelectorAll('h2, h3'));
+    const headings = Array.from(doc.querySelectorAll('h2'));
     const usedIds = new Map<string, number>();
     const toc: TableOfContentsItem[] = [];
 
@@ -149,7 +158,7 @@ export class BlogPostComponent implements OnInit {
       toc.push({
         id: slug,
         text,
-        level: heading.tagName.toLowerCase() === 'h2' ? 2 : 3
+        level: heading.tagName.toLowerCase() === 'h2' ? 2:2
       });
     });
 
@@ -162,5 +171,44 @@ export class BlogPostComponent implements OnInit {
       .replace(/[^a-z0-9\s-]/g, '')
       .trim()
       .replace(/\s+/g, '-');
+  }
+
+  private updateSeoForPost(post: BlogPost): void {
+    const localeCode = String(this.locale || 'en').split('-')[0];
+    const baseUrl = this.seoService.getBaseUrl(localeCode);
+    const blogUrl = `${baseUrl}/blog`;
+    const canonicalUrl = `${blogUrl}/${post.slug}`;
+    const keywords = post.tags?.length ? post.tags.join(', ') : undefined;
+    const ogImage = this.buildOgImageUrl(post.featuredImage);
+    const description = post.meta_description || post.excerpt || '';
+
+    this.seoService.updateSeoTags({
+      title: `${post.meta_title} | TempMail4U Blog`,
+      description,
+      keywords,
+      ogUrl: canonicalUrl,
+      ogImage,
+      ogSiteName: 'TempMail4u',
+      twitterSite: '@tempmails',
+      breadcrumbs: [
+        { name: $localize`:@@seo.breadcrumbs.home:Home`, url: `${baseUrl}/` },
+        { name: $localize`:@@seo.blog.breadcrumb:Blog`, url: blogUrl },
+        { name: post.title, url: canonicalUrl }
+      ]
+    });
+
+    this.currentUrl = canonicalUrl;
+  }
+
+  private buildOgImageUrl(imagePath?: string): string {
+    if (!imagePath) {
+      return 'https://tempmail4u.com/assets/images/temp-mail-preview.jpg';
+    }
+
+    if (imagePath.startsWith('http')) {
+      return imagePath;
+    }
+
+    return `https://tempmail4u.com/${imagePath.replace(/^\/+/, '')}`;
   }
 }

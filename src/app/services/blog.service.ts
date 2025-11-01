@@ -24,14 +24,14 @@ export interface BlogPost {
 })
 export class BlogService {
   private blogPosts: BlogPost[] = [
-{
-  id: '1',
-  slug: 'why-you-need-a-temporary-email-and-when-to-use-one',
-  title: 'Why You Need a Temporary Email Address (And When to Use One)',
-  meta_title: 'Why You Need a Temporary Email Address',
-  meta_description: 'Learn how temporary email addresses protect your privacy, reduce spam, and make online life easier. Discover when to use disposable emails and when to avoid them.',
-  excerpt: 'Learn how temporary email addresses protect your privacy, reduce spam, and make online life easier. Discover when to use disposable emails and when to avoid them.',
-  content: `
+    {
+      id: '1',
+      slug: 'why-you-need-a-temporary-email-and-when-to-use-one',
+      title: 'Why You Need a Temporary Email Address (And When to Use One)',
+      meta_title: 'Why You Need a Temporary Email Address',
+      meta_description: 'Learn how temporary email addresses protect your privacy, reduce spam, and make online life easier. Discover when to use disposable emails.',
+      excerpt: 'Learn how temporary email addresses protect your privacy, reduce spam, and make online life easier. Discover when to use disposable emails and when to avoid them.',
+      content: `
     <h2>Picture This: Your Inbox Is a Mess</h2>
     <p>You open your inbox on a Monday morning. Before you even see that important work email, you are greeted by a wall of unread messages. "50% off sale!" "Confirm your subscription!" "Your order is waiting!" You do not even remember signing up for half of them, but somehow your email ended up everywhere.</p>
     <p>Sound familiar? That is how most of us end up drowning in spam. You probably just wanted to download a free eBook, test a new app, or claim a coupon. Instead, your inbox turned into a dumping ground.</p>
@@ -229,15 +229,15 @@ export class BlogService {
     </ol>
     <p>Start protecting your privacy today, one temporary email at a time.</p>
   `,
-  author: 'TempMail4U Team',
-  publishedAt: new Date('2025-11-02'),
-  updatedAt: new Date('2025-11-02'),
-  tags: ['temporary email', 'privacy', 'spam prevention', 'security', 'digital safety'],
-  readingTime: 12,
-  featured: true,
-  metaDescription: 'Understand how temporary emails protect your privacy, prevent spam, and keep your inbox clean. Learn when to use and when to avoid disposable email services.',
-  featuredImage: 'blog/why-use-temporary-email.webp'
-}
+      author: 'TempMail4U Team',
+      publishedAt: new Date('2025-11-02'),
+      updatedAt: new Date('2025-11-02'),
+      tags: ['temporary email', 'privacy', 'spam prevention', 'security', 'digital safety'],
+      readingTime: 12,
+      featured: true,
+      metaDescription: 'Understand how temporary emails protect your privacy, prevent spam, and keep your inbox clean. Learn when to use and when to avoid disposable email services.',
+      featuredImage: 'blog/why-use-temporary-email.webp'
+    }
 
   ];
 

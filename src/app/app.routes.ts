@@ -202,6 +202,35 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'blog',
+    canMatch: [() => {
+      const locale = (inject(LOCALE_ID) ?? '').toString().toLowerCase();
+      if (locale.startsWith('en')) {
+        return true;
+      }
+
+      inject(Router).navigateByUrl('/');
+      return false;
+    }],
+    loadComponent: () =>
+      import('./pages/blog/blog-list/blog-list.component').then(m => m.BlogListComponent),
+    pathMatch: 'full'
+  },
+  {
+    path: 'blog/:slug',
+    canMatch: [() => {
+      const locale = (inject(LOCALE_ID) ?? '').toString().toLowerCase();
+      if (locale.startsWith('en')) {
+        return true;
+      }
+
+      inject(Router).navigateByUrl('/');
+      return false;
+    }],
+    loadComponent: () =>
+      import('./pages/blog/blog-post/blog-post.component').then(m => m.BlogPostComponent),
+  },
+  {
     path: '**',
     redirectTo: ''
   }

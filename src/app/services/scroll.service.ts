@@ -15,7 +15,8 @@ export class ScrollService {
 
   scrollToTopInstant(): void {
     if (isPlatformBrowser(this.platformId)) {
-      window.scrollTo(0, 0);
+      // Override global smooth scrolling so route changes jump to the top immediately.
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     }
   }
 } 

@@ -1,4 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, LOCALE_ID, PLATFORM_ID, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MainTempMail } from '../../compoents/main-temp-mail/main-temp-mail';
@@ -8,7 +8,7 @@ import { SeoService } from '../../services/seo.service';
 @Component({
   selector: 'app-twitter-temp-email',
   standalone: true,
-  imports: [MainTempMail, RouterModule],
+  imports: [MainTempMail, RouterModule, CommonModule],
   templateUrl: './twitter-temp-email.html'
 })
 export class TwitterTempEmail {

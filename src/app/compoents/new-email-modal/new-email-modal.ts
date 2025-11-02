@@ -1,5 +1,5 @@
 import { Component, inject, Inject, PLATFORM_ID, ViewChild, ElementRef, AfterViewInit, OnInit } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA, MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -11,7 +11,9 @@ import {LucideAngularModule} from "lucide-angular";
 
 @Component({
   selector: 'app-new-email-modal',
+  standalone: true,
   imports: [
+    MatDialogModule,
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,

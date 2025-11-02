@@ -1,4 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, LOCALE_ID, PLATFORM_ID, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MainTempMail } from '../../compoents/main-temp-mail/main-temp-mail';
@@ -8,12 +8,12 @@ import { SeoService } from '../../services/seo.service';
 @Component({
   selector: 'app-discord-temp-email',
   standalone: true,
-  imports: [MainTempMail, RouterModule],
+  imports: [CommonModule, MainTempMail, RouterModule],
   templateUrl: './discord-temp-email.html'
 })
 export class DiscordTempEmail {
   private seoService = inject(SeoService);
-  private locale = inject(LOCALE_ID);
+  private locale = inject(LOCALE_ID); 
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,

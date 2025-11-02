@@ -6,6 +6,7 @@ import { EmailBodyComponent } from '../email-body/email-body';
 
 @Component({
   selector: 'app-email-view-dialog',
+  standalone: true,
   imports: [CommonModule, LucideAngularModule, EmailBodyComponent],
   templateUrl: './email-view-dialog.html',
   styleUrl: './email-view-dialog.css'

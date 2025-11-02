@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy, signal, effect, Inject, PLATFORM_ID, inje
 import { interval, Subscription } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { LucideAngularModule } from "lucide-angular";
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
@@ -17,7 +17,7 @@ import { SaveSuccessDialogComponent } from '../save-success-dialog/save-success-
   standalone: true,
   templateUrl: './main-temp-mail.html',
   styleUrl: './main-temp-mail.css',
-  imports: [CommonModule, LucideAngularModule, RouterModule],
+  imports: [CommonModule, LucideAngularModule, MatDialogModule, RouterModule],
 })
 export class MainTempMail implements OnInit, OnDestroy {
   @Input() title = '';

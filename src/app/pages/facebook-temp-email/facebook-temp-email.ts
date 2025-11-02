@@ -1,4 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, LOCALE_ID, PLATFORM_ID, inject } from '@angular/core';
 import { MainTempMail } from '../../compoents/main-temp-mail/main-temp-mail';
 import { RouterModule } from '@angular/router';
@@ -8,7 +8,7 @@ import { SeoService } from '../../services/seo.service';
 @Component({
   selector: 'app-facebook-temp-email',
   standalone: true,
-  imports: [MainTempMail, RouterModule],
+  imports: [MainTempMail, RouterModule, CommonModule],
   templateUrl: './facebook-temp-email.html'
 })
 export class FacebookTempEmail {

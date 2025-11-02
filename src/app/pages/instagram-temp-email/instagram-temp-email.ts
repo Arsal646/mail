@@ -1,4 +1,4 @@
-import { isPlatformBrowser, NgFor } from '@angular/common';
+import { CommonModule, isPlatformBrowser, NgFor } from '@angular/common';
 import { Component, Inject, LOCALE_ID, PLATFORM_ID, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MainTempMail } from '../../compoents/main-temp-mail/main-temp-mail';
@@ -8,7 +8,7 @@ import { SeoService } from '../../services/seo.service';
 @Component({
   selector: 'app-instagram-temp-email',
   standalone: true,
-  imports: [MainTempMail, RouterModule, NgFor],
+  imports: [MainTempMail, RouterModule, NgFor, CommonModule],
   templateUrl: './instagram-temp-email.html'
 })
 export class InstagramTempEmail {

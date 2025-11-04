@@ -192,7 +192,7 @@ export class BlogPostComponent implements OnInit {
       twitterSite: '@tempmails',
       breadcrumbs: [
         { name: $localize`:@@seo.breadcrumbs.home:Home`, url: `${baseUrl}/` },
-        { name: $localize`:@@seo.blog.breadcrumb:Blog`, url: blogUrl },
+        { name: `Blog`, url: blogUrl },
         { name: post.title, url: canonicalUrl }
       ]
     });

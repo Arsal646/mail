@@ -1,140 +1,299 @@
-<div class="min-h-screen font-sans bg-gradient-to-br from-neutral-50 via-white to-neutral-100">
+<div class="min-h-screen font-sans bg-white">
   <!-- Hero Section -->
-  <section class="page-hero page-hero--services">
-    <div class="page-hero__container">
-      <div class="page-hero__breadcrumb">
-        <a href="/" i18n="@@breadcrumb.home">Home</a>
-        <span class="page-hero__breadcrumb-separator">→</span>
-        <span i18n="@@breadcrumb.services">Services</span>
+  <section class="page-hero page-hero--services bg-gray-50 py-12 md:py-20 border-b border-gray-200">
+    <div class="page-hero__container max-w-4xl mx-auto px-4 text-center">
+      <div class="page-hero__breadcrumb flex items-center justify-center gap-2 text-sm text-gray-600 mb-6">
+        <a href="/" class="hover:text-gray-900 transition-colors" i18n="@@breadcrumb.home">Home</a>
+        <span class="page-hero__breadcrumb-separator">/</span>
+        <span class="text-gray-900 font-medium" i18n="@@breadcrumb.services">Services</span>
       </div>
       <div class="page-hero__content">
-        <h1 class="page-hero__title" i18n="@@services.title">
-          Our Temporary Email Services
+        <h1 class="page-hero__title text-3xl md:text-5xl font-bold text-gray-900 mb-6" i18n="@@services.title">
+          Temporary Email Services
         </h1>
-        <p class="page-hero__subtitle" i18n="@@services.subtitle">
-          Protect your privacy with a free <strong>temp mail</strong> solution.
-          Whether you need a quick <strong>one time email</strong> or a longer-lasting <strong>temporary inbox</strong>, TempMail4U has you covered.
+        <p class="page-hero__subtitle text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mb-8" i18n="@@services.subtitle">
+          Choose from our range of free temporary email solutions. Protect your privacy with disposable inboxes for every need.
         </p>
         <div class="page-hero__actions">
-          <a href="/" class="page-hero__cta" i18n="@@services.hero.cta">
-            Get Started Now
+          <a href="/" class="page-hero__cta inline-flex items-center justify-center bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-200 shadow-md" i18n="@@services.hero.cta">
+            Get Started Free
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <main class="page-content">
+  <main class="page-content max-w-4xl mx-auto px-4 py-16">
 
     <!-- SERVICE CARDS -->
-    <section class="page-section">
-      <h2 class="page-section__title" i18n="@@services.list.title">
-        Choose Your Disposable Inbox
-      </h2>
+    <section class="page-section mb-16">
+      <div class="text-center mb-12">
+        <h2 class="page-section__title text-2xl md:text-3xl font-bold text-gray-900 mb-4" i18n="@@services.list.title">
+          Choose Your Temporary Inbox
+        </h2>
+        <p class="text-gray-600 max-w-xl mx-auto" i18n="@@services.list.subtitle">
+          Select the perfect disposable email duration for your specific needs
+        </p>
+      </div>
       <div class="page-section__content">
-        <div class="grid md:grid-cols-2 gap-6">
+        <div class="space-y-6">
           <!-- 10 MIN -->
-          <a class="feature-card hover-lift" [routerLink]="['/10-minutes-temporary-email']">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-12 h-12 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center font-bold">
+          <a class="feature-card group bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all duration-200 block" [routerLink]="['/10-minutes-temporary-email']">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gray-100 text-gray-700 rounded-lg flex items-center justify-center font-bold text-lg flex-shrink-0">
                 10m
               </div>
-              <h3 class="text-lg font-semibold text-neutral-900" i18n="@@services.card.10.title">
-                10-Minute Mail
-              </h3>
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-2">
+                  <h3 class="text-lg font-semibold text-gray-900" i18n="@@services.card.10.title">
+                    10-Minute Mail
+                  </h3>
+                  <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded" i18n="@@services.card.10.badge">
+                    Quick
+                  </span>
+                </div>
+                <p class="text-gray-700 text-sm leading-relaxed" i18n="@@services.card.10.desc">
+                  Perfect for instant OTPs and quick verifications. Get your one-time email instantly.
+                </p>
+                <div class="mt-3 flex items-center gap-2 text-xs text-gray-500">
+                  <span i18n="@@services.card.10.ideal">Ideal for: Quick signups & OTPs</span>
+                </div>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
             </div>
-            <p class="text-neutral-700" i18n="@@services.card.10.desc">
-              A short-lived <strong>one time email</strong> for instant verifications.
-            </p>
           </a>
 
           <!-- 20 MIN -->
-          <a class="feature-card hover-lift" [routerLink]="['/20-minutes-temporary-email']">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-12 h-12 bg-success-100 text-success-600 rounded-xl flex items-center justify-center font-bold">
+          <a class="feature-card group bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all duration-200 block" [routerLink]="['/20-minutes-temporary-email']">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gray-100 text-gray-700 rounded-lg flex items-center justify-center font-bold text-lg flex-shrink-0">
                 20m
               </div>
-              <h3 class="text-lg font-semibold text-neutral-900" i18n="@@services.card.20.title">
-                20-Minute Mail
-              </h3>
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-2">
+                  <h3 class="text-lg font-semibold text-gray-900" i18n="@@services.card.20.title">
+                    20-Minute Mail
+                  </h3>
+                  <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded" i18n="@@services.card.20.badge">
+                    Standard
+                  </span>
+                </div>
+                <p class="text-gray-700 text-sm leading-relaxed" i18n="@@services.card.20.desc">
+                  Extra time for multi-step registrations and delayed verification codes.
+                </p>
+                <div class="mt-3 flex items-center gap-2 text-xs text-gray-500">
+                  <span i18n="@@services.card.20.ideal">Ideal for: Website registrations</span>
+                </div>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
             </div>
-            <p class="text-neutral-700" i18n="@@services.card.20.desc">
-              Extra time for multi-step signups and delayed codes.
-            </p>
           </a>
 
           <!-- 30 MIN -->
-          <a class="feature-card hover-lift" [routerLink]="['/30-minutes-temporary-email']">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-12 h-12 bg-warning-100 text-warning-600 rounded-xl flex items-center justify-center font-bold">
+          <a class="feature-card group bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all duration-200 block" [routerLink]="['/30-minutes-temporary-email']">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gray-100 text-gray-700 rounded-lg flex items-center justify-center font-bold text-lg flex-shrink-0">
                 30m
               </div>
-              <h3 class="text-lg font-semibold text-neutral-900" i18n="@@services.card.30.title">
-                30-Minute Mail
-              </h3>
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-2">
+                  <h3 class="text-lg font-semibold text-gray-900" i18n="@@services.card.30.title">
+                    30-Minute Mail
+                  </h3>
+                  <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded" i18n="@@services.card.30.badge">
+                    Extended
+                  </span>
+                </div>
+                <p class="text-gray-700 text-sm leading-relaxed" i18n="@@services.card.30.desc">
+                  Extended temporary inbox for app testing, free trials, and downloads.
+                </p>
+                <div class="mt-3 flex items-center gap-2 text-xs text-gray-500">
+                  <span i18n="@@services.card.30.ideal">Ideal for: App testing & trials</span>
+                </div>
+              </div>
+              <svg class="w-5 h-5 text-gray-400 group-hover:text-gray-600 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
             </div>
-            <p class="text-neutral-700" i18n="@@services.card.30.desc">
-              A longer <strong>temporary inbox</strong> for apps and free trials.
-            </p>
           </a>
 
           <!-- 7 DAY -->
-          <div class="feature-card">
-            <div class="flex items-center gap-3 mb-3">
-              <div class="w-12 h-12 bg-primary-500 text-white rounded-xl flex items-center justify-center font-bold">
+          <div class="feature-card group bg-gray-900 text-white rounded-xl p-6 shadow-md border border-gray-800 transition-all duration-200">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-white text-gray-900 rounded-lg flex items-center justify-center font-bold text-lg flex-shrink-0">
                 7d
               </div>
-              <h3 class="text-lg font-semibold text-neutral-900" i18n="@@services.card.7.title">
-                7-Day Saved Inbox
-              </h3>
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-2">
+                  <h3 class="text-lg font-semibold text-white" i18n="@@services.card.7.title">
+                    7-Day Saved Inbox
+                  </h3>
+                  <span class="bg-white text-gray-900 text-xs font-medium px-2 py-1 rounded" i18n="@@services.card.7.badge">
+                    Most Flexible
+                  </span>
+                </div>
+                <p class="text-gray-300 text-sm leading-relaxed mb-3" i18n="@@services.card.7.desc">
+                  Keep your temporary email active for up to a week. Perfect for projects, trials, and ongoing tasks.
+                </p>
+                <div class="flex items-center gap-2 text-xs text-gray-400">
+                  <span>✓</span>
+                  <span i18n="@@services.card.7.note">Save your unique link to revisit anytime within 7 days</span>
+                </div>
+                <div class="mt-3 flex items-center gap-2 text-xs text-gray-400">
+                  <span i18n="@@services.card.7.ideal">Ideal for: Projects & extended trials</span>
+                </div>
+              </div>
             </div>
-            <p class="text-neutral-700 mb-3" i18n="@@services.card.7.desc">
-              Keep your <strong>temporary email</strong> active for up to a week - perfect for projects and ongoing tasks.
-            </p>
-            <p class="text-sm text-neutral-500" i18n="@@services.card.7.note">
-              Save your unique link to revisit anytime within 7 days.
-            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section class="page-section mb-16">
+      <div class="text-center mb-12">
+        <h2 class="page-section__title text-2xl md:text-3xl font-bold text-gray-900 mb-4" i18n="@@services.useCases.title">
+          Where to Use Temp Mail
+        </h2>
+        <p class="text-gray-600 max-w-xl mx-auto" i18n="@@services.useCases.subtitle">
+          Our temporary emails work seamlessly across various platforms and services
+        </p>
+      </div>
+      <div class="page-section__content">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-white rounded flex items-center justify-center text-gray-700">
+                📱
+              </div>
+              <span class="text-sm font-medium text-gray-900" i18n="@@services.useCases.social">Social Media</span>
+            </div>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-white rounded flex items-center justify-center text-gray-700">
+                🛠️
+              </div>
+              <span class="text-sm font-medium text-gray-900" i18n="@@services.useCases.apps">App Testing</span>
+            </div>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-white rounded flex items-center justify-center text-gray-700">
+                🛒
+              </div>
+              <span class="text-sm font-medium text-gray-900" i18n="@@services.useCases.shopping">Online Shopping</span>
+            </div>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-white rounded flex items-center justify-center text-gray-700">
+                🎮
+              </div>
+              <span class="text-sm font-medium text-gray-900" i18n="@@services.useCases.gaming">Gaming Platforms</span>
+            </div>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-white rounded flex items-center justify-center text-gray-700">
+                📥
+              </div>
+              <span class="text-sm font-medium text-gray-900" i18n="@@services.useCases.downloads">File Downloads</span>
+            </div>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-white rounded flex items-center justify-center text-gray-700">
+                💬
+              </div>
+              <span class="text-sm font-medium text-gray-900" i18n="@@services.useCases.forums">Forums & Groups</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FEATURES -->
-    <section class="page-section">
-      <h2 class="page-section__title" i18n="@@services.features.title">
-        Why Use TempMail4U?
-      </h2>
+    <section class="page-section mb-16">
+      <div class="text-center mb-12">
+        <h2 class="page-section__title text-2xl md:text-3xl font-bold text-gray-900 mb-4" i18n="@@services.features.title">
+          Why Choose TempMail4U
+        </h2>
+        <p class="text-gray-600 max-w-xl mx-auto" i18n="@@services.features.subtitle">
+          Experience the best temporary email service with privacy-focused features
+        </p>
+      </div>
       <div class="page-section__content">
-        <div class="feature-grid">
-          <div class="feature-card" i18n="@@services.features.li1">
-            <strong>Instant temp mail</strong> address - no signup needed
+        <div class="space-y-4">
+          <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="text-gray-700">⚡</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2" i18n="@@services.features.instant.title">Instant Access</h3>
+                <p class="text-gray-700 text-sm" i18n="@@services.features.instant.desc">Get your temporary email immediately with no signup or registration required</p>
+              </div>
+            </div>
           </div>
-          <div class="feature-card" i18n="@@services.features.li2">
-            <strong>Privacy-first:</strong> no tracking, no spam, no ads
+
+          <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="text-gray-700">🔒</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2" i18n="@@services.features.privacy.title">Complete Privacy</h3>
+                <p class="text-gray-700 text-sm" i18n="@@services.features.privacy.desc">No tracking, no spam, no ads. Your privacy is our priority</p>
+              </div>
+            </div>
           </div>
-          <div class="feature-card" i18n="@@services.features.li3">
-            <strong>Clean, fast,</strong> mobile-friendly interface
+
+          <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="text-gray-700">📱</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2" i18n="@@services.features.mobile.title">Mobile Optimized</h3>
+                <p class="text-gray-700 text-sm" i18n="@@services.features.mobile.desc">Clean, fast interface that works perfectly on all devices</p>
+              </div>
+            </div>
           </div>
-          <div class="feature-card" i18n="@@services.features.li4">
-            <strong>Flexible durations:</strong> 10m, 20m, 30m, and 7-day inbox
+
+          <div class="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span class="text-gray-700">💯</span>
+              </div>
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-2" i18n="@@services.features.free.title">100% Free</h3>
+                <p class="text-gray-700 text-sm" i18n="@@services.features.free.desc">All features available for free with no hidden costs or limitations</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="page-section" style="text-align: center; background: linear-gradient(135deg, var(--primary-50) 0%, var(--neutral-50) 100%);">
-      <h2 class="page-section__title" i18n="@@services.cta.title">
-        Start With Your Free Disposable Inbox
+    <section class="page-section bg-gray-900 rounded-2xl p-8 md:p-12 text-center ">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4" i18n="@@services.cta.title">
+        Ready to Get Started?
       </h2>
-      <div class="page-section__content">
-        <p style="font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;" i18n="@@services.cta.desc">
-          Create a <strong>temporary email</strong> instantly and keep your personal inbox safe from spam.
-        </p>
-        <a class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;" [routerLink]="['/']" i18n="@@services.cta.button">
-          Generate Temp Mail Now
-        </a>
-      </div>
+      <p class="text-gray-700 mb-8 max-w-xl mx-auto" i18n="@@services.cta.desc">
+        Join thousands of users who protect their privacy with TempMail4U. Create your free temporary email in seconds.
+      </p>
+      <a class="btn-primary inline-flex items-center justify-center bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg" [routerLink]="['/']" i18n="@@services.cta.button">
+        Generate Temp Mail Now
+      </a>
+      <p class="text-sm text-gray-400 mt-6" i18n="@@services.cta.note">
+        No registration required • Instant access • Privacy first
+      </p>
     </section>
 
   </main>

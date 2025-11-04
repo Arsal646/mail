@@ -58,18 +58,18 @@ export class BlogListComponent implements OnInit {
       ogSiteName: seoContent.siteName,
       twitterSite: '@tempmails',
       breadcrumbs: [
-        { name: $localize`:@@seo.breadcrumbs.home:Home`, url: `${baseUrl}/` },
-        { name: $localize`:@@seo.blog.breadcrumb:Blog`, url: blogUrl }
+        { name: `Home`, url: `${baseUrl}/` },
+        { name: `Blog`, url: blogUrl }
       ]
     });
   }
 
   private getLocalizedSeoContent() {
     return {
-      title: $localize`:@@seo.blogList.title:TempMail4U Blog - Email Privacy Tips & Temp Mail Guides`,
-      description: $localize`:@@seo.blogList.description:Discover the latest articles on temporary email security, inbox privacy, and spam prevention from the TempMail4U team.`,
-      keywords: $localize`:@@seo.blogList.keywords:temporary email blog, temp mail guides, email privacy tips, disposable email articles, spam protection`,
-      siteName: $localize`:@@seo.blogList.siteName:TempMail4u`
+      title: `TempMail4U Blog - Email Privacy Tips & Temp Mail Guides`,
+      description: `Discover the latest articles on temporary email security, inbox privacy, and spam prevention from the TempMail4U team.`,
+      keywords: `temporary email blog, temp mail guides, email privacy tips, disposable email articles, spam protection`,
+      siteName: `TempMail4u`
     };
   }
 }

@@ -79,8 +79,7 @@
     "common.close": " إغلاق ",
     "saveSuccess.emailLink": " رابط البريد ",
     "email10minTitle": "بريد مؤقت 10 دقائق – صندوق وارد مجاني دون تسجيل",
-"email10minSubtitle": "أنشئ فوراً {$START_TAG_STRONG}بريد مؤقت 10 دقائق{$CLOSE_TAG_STRONG}. مثالي لعمليات التحقق عبر البريد وOTPs والتسجيلات المجهولة دون كشف بريدك الشخصي."
-,
+    "email10minSubtitle": "أنشئ فوراً {$START_TAG_STRONG}بريد مؤقت 10 دقائق{$CLOSE_TAG_STRONG}. مثالي لعمليات التحقق عبر البريد وOTPs والتسجيلات المجهولة دون كشف بريدك الشخصي.",
     "whatIs10minEmail": "ما هو البريد المؤقت لمدة 10 دقائق؟",
     "10minEmailDesc1": " {$START_TAG_STRONG}البريد المؤقت لمدة 10 دقائق{$CLOSE_TAG_STRONG} هو صندوق واردات مجهول يتلاشى بعد 10 دقائق فقط. مثالي للتسجيلات لمرة واحدة، تأكيدات البريد، تنزيل الملفات، وتجنب الرسائل المزعجة. ",
     "10minEmailDesc2": " لا حاجة للتسجيل أو تقديم بيانات شخصية، ما يجعله الطريقة الأكثر أماناً للحفاظ على خصوصيتك على الإنترنت. استخدمه كبريد مؤقت كلما احتجت صندوقاً آمناً وسريعاً. ",
@@ -128,35 +127,25 @@
     "faq9Question": "هل هو أفضل من بريد مزيف؟",
     "faq9Answer": " نعم! على عكس البريد المزيّف، يوفّر هذا خدمة بريد حقيقية تعمل لتلقي الرسائل. ",
     "seo.email10min.faq.q1": "ما هو بريد 10 دقائق؟",
-"seo.email10min.faq.a1": "بريد إلكتروني مؤقت ينتهي صلاحيته بعد 10 دقائق، مثالي لتلقي الرسائل لمرة واحدة أو روابط التحقق. يمكنك أيضًا تجربة بريدنا المؤقت المجاني لمدة 20 دقيقة أو 30 دقيقة إذا كنت بحاجة إلى وقت أطول.",
-
-"seo.email10min.faq.q2": "هل الاستخدام مجاني؟",
-"seo.email10min.faq.a2": "نعم، الخدمة مجانية تمامًا. لا حاجة للتسجيل، بدون إعلانات، وبدون أي رسوم إضافية.",
-
-"seo.email10min.faq.q3": "هل يمكنني استلام أكواد OTP ورسائل التأكيد؟",
-"seo.email10min.faq.a3": "نعم، البريد المؤقت يدعم جميع أنواع الرسائل الشائعة بما في ذلك أكواد OTP وروابط التأكيد.",
-
-"seo.email10min.faq.q4": "هل يمكنني تمديد الوقت لبريدي المؤقت؟",
-"seo.email10min.faq.a4": "نعم، ببساطة اضغط على زر \"إعادة التعيين\" لإعادة تشغيل عداد العشر دقائق.",
-
-"seo.email10min.faq.q5": "هل هذا البريد الإلكتروني مجهول حقًا؟",
-"seo.email10min.faq.a5": "بالتأكيد. نحن لا نجمع أو نتتبع أي بيانات شخصية؛ كل صندوق بريد مؤقت وخاص.",
-
-"seo.email10min.faq.q6": "كم عدد عناوين البريد المؤقتة التي يمكنني إنشاؤها؟",
-"seo.email10min.faq.a6": "غير محدود. يمكنك إنشاء ما تشاء من صناديق البريد المؤقتة، لكل منها وقت صلاحية خاص.",
-
-"seo.email10min.faq.q7": "هل يعمل على الهاتف المحمول؟",
-"seo.email10min.faq.a7": "نعم، الخدمة متجاوبة بالكامل وتعمل بسلاسة على جميع الأجهزة.",
-
-"seo.email10min.faq.q8": "هل هو آمن للرسائل المهمة؟",
-"seo.email10min.faq.a8": "مناسب للاستخدام قصير المدى مثل أكواد OTP ورسائل التأكيد. من الأفضل تجنب استخدامه للمعلومات الشخصية الحساسة.",
-
-"seo.email10min.faq.q9": "هل هو أفضل من استخدام بريد وهمي؟",
-"seo.email10min.faq.a9": "نعم! على عكس البريد الوهمي، هذه الخدمة توفر صندوق بريد حقيقي وفعال لتلقي الرسائل بشكل شرعي."
-,
-"seo.email10min.title": "بريد مؤقت 10 دقائق - صندوق وارد مجاني | TempMail4u",
-"seo.email10min.description": "احصل على بريد مؤقت 10 دقائق لعمليات التحقق الفورية. دون تسجيل. احمِ خصوصيتك بصندوق وارد ذاتي الإتلاف."
-,
+    "seo.email10min.faq.a1": "بريد إلكتروني مؤقت ينتهي صلاحيته بعد 10 دقائق، مثالي لتلقي الرسائل لمرة واحدة أو روابط التحقق. يمكنك أيضًا تجربة بريدنا المؤقت المجاني لمدة 20 دقيقة أو 30 دقيقة إذا كنت بحاجة إلى وقت أطول.",
+    "seo.email10min.faq.q2": "هل الاستخدام مجاني؟",
+    "seo.email10min.faq.a2": "نعم، الخدمة مجانية تمامًا. لا حاجة للتسجيل، بدون إعلانات، وبدون أي رسوم إضافية.",
+    "seo.email10min.faq.q3": "هل يمكنني استلام أكواد OTP ورسائل التأكيد؟",
+    "seo.email10min.faq.a3": "نعم، البريد المؤقت يدعم جميع أنواع الرسائل الشائعة بما في ذلك أكواد OTP وروابط التأكيد.",
+    "seo.email10min.faq.q4": "هل يمكنني تمديد الوقت لبريدي المؤقت؟",
+    "seo.email10min.faq.a4": "نعم، ببساطة اضغط على زر \"إعادة التعيين\" لإعادة تشغيل عداد العشر دقائق.",
+    "seo.email10min.faq.q5": "هل هذا البريد الإلكتروني مجهول حقًا؟",
+    "seo.email10min.faq.a5": "بالتأكيد. نحن لا نجمع أو نتتبع أي بيانات شخصية؛ كل صندوق بريد مؤقت وخاص.",
+    "seo.email10min.faq.q6": "كم عدد عناوين البريد المؤقتة التي يمكنني إنشاؤها؟",
+    "seo.email10min.faq.a6": "غير محدود. يمكنك إنشاء ما تشاء من صناديق البريد المؤقتة، لكل منها وقت صلاحية خاص.",
+    "seo.email10min.faq.q7": "هل يعمل على الهاتف المحمول؟",
+    "seo.email10min.faq.a7": "نعم، الخدمة متجاوبة بالكامل وتعمل بسلاسة على جميع الأجهزة.",
+    "seo.email10min.faq.q8": "هل هو آمن للرسائل المهمة؟",
+    "seo.email10min.faq.a8": "مناسب للاستخدام قصير المدى مثل أكواد OTP ورسائل التأكيد. من الأفضل تجنب استخدامه للمعلومات الشخصية الحساسة.",
+    "seo.email10min.faq.q9": "هل هو أفضل من استخدام بريد وهمي؟",
+    "seo.email10min.faq.a9": "نعم! على عكس البريد الوهمي، هذه الخدمة توفر صندوق بريد حقيقي وفعال لتلقي الرسائل بشكل شرعي.",
+    "seo.email10min.title": "بريد مؤقت 10 دقائق - صندوق وارد مجاني | TempMail4u",
+    "seo.email10min.description": "احصل على بريد مؤقت 10 دقائق لعمليات التحقق الفورية. دون تسجيل. احمِ خصوصيتك بصندوق وارد ذاتي الإتلاف.",
     "seo.email10min.keywords": "بريد 10 دقائق, بريد مؤقت, صندوق مؤقت, بريد حارق, تحقق بالبريد, بريد OTP, حماية الخصوصية, منع الرسائل المزعجة, بريد مجهول, بريد سريع",
     "email20min.title": " بريد مؤقت لمدة 20 دقيقة – صندوق واردات مجاني ",
     "email20min.subtitle": " أنشئ فوراً {$START_TAG_STRONG}عنوان بريد مؤقت لمدة 20 دقيقة{$CLOSE_TAG_STRONG}، مثالي لعمليات التسجيل وOTPs والتحققات متعددة الخطوات التي تحتاج وقتاً أطول قليلاً. بلا تسجيل، بلا إزعاج، مجرد صندوق خاص وآمن يعمل حين تحتاجه. ",
@@ -428,26 +417,26 @@
     "seo.contact.title": "اتصل بـ TempMail4u - الدعم والملاحظات",
     "seo.contact.description": "تواصل مع فريق TempMail4u للحصول على الدعم، تقديم الاقتراحات، واستفسارات الشراكة.",
     "seo.contact.keywords": "اتصل tempmail، دعم temp mail، مساعدة البريد المؤقت، ملاحظات، شراكة",
-    "services.title": " خدمات البريد الإلكتروني المؤقت لدينا ",
-    "services.subtitle": " احمِ خصوصيتك باستخدام حل {$START_TAG_STRONG}بريد مؤقت{$CLOSE_TAG_STRONG} مجاني. سواء كنت تحتاج إلى {$START_TAG_STRONG}بريد لمرة واحدة{$CLOSE_TAG_STRONG} سريع أو {$START_TAG_STRONG}صندوق بريد مؤقت{$CLOSE_TAG_STRONG} يدوم لفترة أطول، فإن TempMail4U يلبي احتياجاتك. ",
-    "services.list.title": " اختر صندوق البريد القابل للتصرف ",
-    "services.card.10.title": " بريد لمدة 10 دقائق ",
-    "services.card.10.desc": " {$START_TAG_STRONG}بريد لمرة واحدة{$CLOSE_TAG_STRONG} قصير العمر للتحقق الفوري. ",
-    "services.card.20.title": " بريد لمدة 20 دقيقة ",
-    "services.card.20.desc": " وقت إضافي لعمليات التسجيل متعددة الخطوات والرموز المتأخرة. ",
-    "services.card.30.title": " بريد لمدة 30 دقيقة ",
-    "services.card.30.desc": " {$START_TAG_STRONG}صندوق بريد مؤقت{$CLOSE_TAG_STRONG} أطول للتطبيقات والفترات التجريبية. ",
-    "services.card.7.title": " صندوق بريد محفوظ لمدة 7 أيام ",
-    "services.card.7.desc": " أبقِ {$START_TAG_STRONG}بريدك المؤقت{$CLOSE_TAG_STRONG} نشطاً لمدة تصل إلى أسبوع - مثالي للمشاريع والمهام المستمرة. ",
-    "services.card.7.note": " احفظ رابطك الفريد للعودة إليه في أي وقت خلال 7 أيام. ",
-    "services.features.title": " لماذا تستخدم TempMail4U؟ ",
+    "services.title": "Temporary Email Services",
+    "services.subtitle": "Choose from our range of free temporary email solutions. Protect your privacy with disposable inboxes for every need.",
+    "services.list.title": "Choose Your Temporary Inbox",
+    "services.card.10.title": "10-Minute Mail",
+    "services.card.10.desc": "Perfect for instant OTPs and quick verifications. Get your one-time email instantly.",
+    "services.card.20.title": "20-Minute Mail",
+    "services.card.20.desc": "Extra time for multi-step signups, delayed confirmations, and onboarding flows.",
+    "services.card.30.title": "30-Minute Mail",
+    "services.card.30.desc": "Extended temporary inbox for app testing, free trials, and downloads.",
+    "services.card.7.title": "7-Day Inbox",
+    "services.card.7.desc": "Keep your temporary email active for up to a week. Perfect for projects, trials, and ongoing collaborations.",
+    "services.card.7.note": "Save your unique link to revisit anytime within 7 days.",
+    "services.features.title": "Why Choose TempMail4U",
     "services.features.li1": " عنوان {$START_TAG_STRONG}بريد مؤقت{$CLOSE_TAG_STRONG} فوري - بدون حاجة إلى تسجيل ",
     "services.features.li2": " الخصوصية أولاً: بلا تتبع، بلا بريد مزعج، بلا إعلانات ",
     "services.features.li3": " واجهة نظيفة وسريعة ومتوافقة مع الجوال ",
     "services.features.li4": " مدد مرنة: 10 دقائق، 20 دقيقة، 30 دقيقة، وصندوق بريد لمدة 7 أيام ",
-    "services.cta.title": " ابدأ بصندوق بريد قابل للتصرف مجاناً ",
-    "services.cta.desc": " أنشئ {$START_TAG_STRONG}بريداً مؤقتاً{$CLOSE_TAG_STRONG} فوراً واحمِ بريدك الشخصي من الرسائل المزعجة. ",
-    "services.cta.button": " أنشئ بريداً مؤقتاً الآن ",
+    "services.cta.title": "Ready to Get Started?",
+    "services.cta.desc": "Join thousands of users who protect their privacy with TempMail4U. Create your free temporary email in seconds.",
+    "services.cta.button": "Generate Temp Mail Now",
     "seo.services.title": "خدمات البريد الإلكتروني المؤقت - صناديق قابلة للتصرف، أسماء مستعارة مخصصة، دعم OTP",
     "seo.services.description": "استخدم TempMail4u للتسجيلات السريعة، اختبار التطبيقات، والتحقق بواسطة OTP. أنشئ صناديق بريد قابلة للتصرف فوراً واحفظ بريدك الحقيقي آمناً.",
     "seo.services.keywords": "خدمات البريد الإلكتروني المؤقت، صندوق بريد قابل للتصرف، بريد حارق، بريد OTP، بريد للاختبار، حماية من البريد العشوائي",
@@ -482,112 +471,130 @@
     "footer.termsConditions": " الشروط والأحكام ",
     "seo.home.title": "بريد إلكتروني مؤقت مجاني وصندوق بريد يمكن التخلص منه | TempMail4u",
     "seo.home.description": "أنشئ بريداً مؤقتاً مجاناً خلال ثوانٍ. احصل على صندوق بريد مؤقت يحافظ على خصوصية عنوانك الحقيقي ويحميك من الرسائل المزعجة. بدون تسجيل. جرّب TempMail4u الآن!",
-    "seo.home.keywords": "بريد مؤقت، temp mail، بريد يمكن التخلص منه، بريد حارق، بريد مجهول، بريد وهمي، حماية من البريد العشوائي، التحقق من البريد، بريد خصوصية، صندوق بريد مؤقت"
-  
-  , "seo.breadcrumbs.home": "الصفحة الرئيسية"
-  , "seo.email10min.titleShort": "بريد مؤقت لمدة 10 دقائق"
-  , "seo.email20min.titleShort": "بريد مؤقت لمدة 20 دقيقة"
-  , "seo.email30min.titleShort": "بريد مؤقت لمدة 30 دقيقة"
-  , "seo.home.faq.q1": "ما هو البريد المؤقت؟"
-  , "seo.home.faq.a1": "البريد المؤقت (صندوق بريد مؤقت/عنوان مؤقت) صندوق قصير المدة للاشتراك واستلام الأكواد وحماية بريدك من الرسائل المزعجة."
-  , "seo.home.faq.q2": "كيف أنشئ بريداً مؤقتاً؟"
-  , "seo.home.faq.a2": "لا حاجة للتسجيل. افتح هذه الصفحة وسينشأ صندوقك المجهول فوراً. يمكنك التحديث لإنشاء صندوق جديد أو اختيار اسم مستخدم قبل رمز @."
-  , "seo.home.faq.q3": "ما مدة الصندوق المؤقت؟"
-  , "seo.home.faq.a3": "افتراضياً تبقى الرسائل 24 ساعة في المتصفح. إذا حفظت الجلسة يبقى الصندوق 7 أيام. كما نوفر 10/20/30 دقيقة."
-  , "seo.home.faq.q4": "هل استخدامه آمن؟"
-  , "seo.home.faq.a4": "نعم. يتم تخزين البيانات محلياً في المتصفح. لا نتتبع أو نسجل استخدامك."
-  , "seo.home.faq.q5": "فيما يُستخدم البريد الوهمي؟"
-  , "seo.home.faq.a5": "مثالي للتسجيلات الجديدة، اختبار التطبيقات، التسوق والتحميلات، وأي مكان لا تريد مشاركة بريدك الحقيقي فيه."
-  , "seo.home.faq.q6": "هل أستطيع إرسال رسائل؟"
-  , "seo.home.faq.a6": "لا. الاستلام فقط. مخصص للتسجيلات والتحقق والاستخدام المؤقت."
-  , "seo.home.faq.q7": "ما الفرق عن البريد العادي؟"
-  , "seo.home.faq.a7": "البريد العادي دائم ويتطلب معلومات شخصية. البريد المؤقت مجهول، بلا تسجيل، وينتهي تلقائياً."
-  , "seo.home.faq.q8": "هل أستطيع تمديد المدة؟"
-  , "seo.home.faq.a8": "نعم، بحفظ الجلسة أو رابط الوصول الفريد يمكنك العودة خلال 7 أيام."
-  , "seo.home.faq.q9": "هل توجد مدة 10 دقائق؟"
-  , "seo.home.faq.a9": "نعم. نوفر 10 و20 و30 دقيقة للاستخدام السريع والمؤقت."
-  , "seo.home.faq.q10": "لماذا أستخدم بريداً خاصاً؟"
-  , "seo.home.faq.a10": "لحماية الخصوصية وتجنب الرسائل المزعجة والحفاظ على نظافة بريدك وتقليل تسرب البيانات."
-
-  , "seo.email20min.faq.q1": "ما هو بريد 20 دقيقة؟"
-  , "seo.email20min.faq.a1": "عنوان مؤقت يبقى نشطاً لمدة 20 دقيقة لاستلام الرسائل دون استخدام بريدك الشخصي."
-  , "seo.email20min.faq.q2": "هل هو مجاني؟"
-  , "seo.email20min.faq.a2": "نعم، مجاني 100% وبدون تسجيل."
-  , "seo.email20min.faq.q3": "OTP والتحقق؟"
-  , "seo.email20min.faq.a3": "نعم، تستلم كلمات المرور لمرة واحدة وروابط التفعيل بأمان."
-  , "seo.email20min.faq.q4": "هل يُحذف تلقائياً؟"
-  , "seo.email20min.faq.a4": "نعم، تُحذف الرسائل والصندوق بعد 20 دقيقة."
-  , "seo.email20min.faq.q5": "هل هويتي محمية؟"
-  , "seo.email20min.faq.a5": "بالتأكيد. لا نتتبع أو نخزن بيانات شخصية."
-  , "seo.email30min.faq.q1": "ما هو بريد 30 دقيقة؟"
-  , "seo.email30min.faq.a1": "صندوق مؤقت ممتد لمدة 30 دقيقة."
-  , "seo.email30min.faq.q2": "هل هو مجاني؟"
-  , "seo.email30min.faq.a2": "نعم، مجاني تماماً بدون تسجيل."
-  , "seo.email30min.faq.q3": "استلام OTP والتحقق؟"
-  , "seo.email30min.faq.a3": "نعم، تستلم OTP وروابط التفعيل بأمان."
-  , "seo.email30min.faq.q4": "ماذا يحدث بعد 30 دقيقة؟"
-  , "seo.email30min.faq.a4": "يُحذف العنوان وجميع الرسائل نهائياً."
-  , "seo.email30min.faq.q5": "هل أستطيع تمديد المؤقت؟"
-  , "seo.email30min.faq.a5": "نعم، انقر إعادة الضبط للحصول على 30 دقيقة إضافية."
-  , "seo.email30min.faq.q6": "هل خصوصيتي محفوظة؟"
-  , "seo.email30min.faq.a6": "نعم، لا تتبع ولا تخزين للبيانات الشخصية."
-  , "seo.email30min.faq.q7": "كم رسالة أستطيع استقبالها؟"
-  , "seo.email30min.faq.a7": "لا يوجد حد أثناء فترة 30 دقيقة."
-  , "breadcrumbs.home": "الصفحة الرئيسية"
-  , "privacyPolicy.title": "سياسة الخصوصية",
-
-
-  
-  "home.section.what.title.label": "ما هو البريد الإلكتروني المؤقت؟ (بريد لمرة واحدة)",
-  "home.section.what.para1.label": "يعد {$START_TAG_STRONG}البريد الإلكتروني المؤقت{$CLOSE_TAG_STRONG} (المعروف أيضًا بـ {$START_EMPHASISED_TEXT}البريد الإلكتروني القابل للاستخدام لمرة واحدة، أو البريد الوهمي، أو البريد المؤقت{$CLOSE_EMPHASISED_TEXT}) صندوق بريد قصير المدى يمكنك استخدامه للأنشطة عبر الإنترنت. بدلاً من مشاركة بريدك الشخصي مثل Gmail أو Outlook أو Yahoo، تحصل على صندوق بريد مجهول يتم حذفه تلقائيًا بعد فترة محددة.",
-  "home.section.what.para2.label": "هو مثالي لـ {$START_TAG_STRONG}التسجيل في المواقع، تحميل الملفات، استلام رموز التحقق، أو تجربة تطبيقات جديدة{$CLOSE_TAG_STRONG}. بمجرد الانتهاء، يختفي العنوان ويحافظ على بريدك الشخصي آمنًا وخاليًا من الرسائل المزعجة.",
-  "home.section.when.intro.label": "البريد الإلكتروني المؤقت ليس مناسبًا لكل شيء، بل هو الأفضل للمهام السريعة، منخفضة المخاطر، والمؤقتة. يعتمد عليه الكثير للتسجيل في {$START_TAG_STRONG}وسائل التواصل الاجتماعي{$CLOSE_TAG_STRONG} مثل إنستغرام، ديسكورد، ريديت، تيك توك، تيليجرام، أو فيسبوك. كما أنه مفيد لتجربة التطبيقات، تحميل الموارد، أو الحفاظ على الخصوصية أثناء التصفح.",
-  "home.section.when.card1.label": "تسجيلات المواقع لمرة واحدة",
-  "home.section.when.card7.label": "إنشاء حسابات على إنستغرام، فيسبوك، سناب شات، وتويتر X",
-  "home.section.when.card8.label": "الانضمام بأمان إلى ديسكورد، ريديت، وتيليجرام",
-  "home.section.when.card9.label": "التسجيل في تيك توك أو Kick مع استلام OTP فورًا",
-  "home.section.when.card10.label": "توثيق حسابات الألعاب على Steam وEpic Games وRockstar",
-  "home.section.when.card11.label": "الوصول إلى منصات البث مثل نتفليكس، أمازون برايم، وHulu",
-  "home.section.who.intro.label": "البريد المؤقت مفيد للعديد من الفئات. {$START_TAG_STRONG}إليك أبرز المستخدمين وكيف يستفيدون منه:{$CLOSE_TAG_STRONG}",
-  "home.section.who.li1.label": "{$START_TAG_STRONG}الطلاب{$CLOSE_TAG_STRONG} – التسجيل في أدوات الدراسة، الدورات عبر الإنترنت، وبوابات الجامعات دون ازدحام بريدك الأساسي.",
-  "home.section.who.li2.label": "{$START_TAG_STRONG}المطورون والمختبرون{$CLOSE_TAG_STRONG} – إنشاء حسابات اختبار للتطبيقات، أدوات SaaS، والنسخ التجريبية بسرعة.",
-  "home.section.who.li3.label": "{$START_TAG_STRONG}المتسوقون{$CLOSE_TAG_STRONG} – الحصول على العروض، القسائم، والفترات التجريبية المجانية على مواقع التجارة الإلكترونية وتجنب الرسائل المزعجة.",
-  "home.section.who.li4.label": "{$START_TAG_STRONG}المسوقون{$CLOSE_TAG_STRONG} – تجربة الحملات والنشرات البريدية دون التأثير على سمعة البريد الأساسي.",
-  "home.section.who.li5.label": "{$START_TAG_STRONG}المستخدمون اليوميون{$CLOSE_TAG_STRONG} – الحفاظ على حسابات Gmail وOutlook وYahoo نظيفة ومخصصة للاستخدام الشخصي.",
-  "home.section.who.li6.label": "{$START_TAG_STRONG}اللاعبون{$CLOSE_TAG_STRONG} – توثيق الحسابات على Steam وEpic Games وRockstar دون مشاركة بريدهم الخاص.",
-  "home.section.who.li7.label": "{$START_TAG_STRONG}مستخدمي وسائل التواصل{$CLOSE_TAG_STRONG} – إنشاء حسابات آمنة على إنستغرام، ديسكورد، ريديت، تيك توك، أو تيليجرام.",
-  "home.section.who.li8.label": "{$START_TAG_STRONG}المستقلون{$CLOSE_TAG_STRONG} – إدارة تسجيلات العملاء، التجارب، والأدوات باستخدام صناديق بريد مؤقتة.",
-  "home.section.who.li9.label": "{$START_TAG_STRONG}المهتمون بالخصوصية{$CLOSE_TAG_STRONG} – البقاء مجهولين، حماية البيانات، والاستمتاع باتصال خالٍ من الرسائل المزعجة.",
-  "home.section.who.outro.label": "استنادًا إلى أكثر من 500,000 مستخدم لـ TempMail4U حول العالم · آخر تحديث سبتمبر 2025",
-  "home.section.variants.li1.label": "{$START_TAG_STRONG}بريد مؤقت 10 دقائق{$CLOSE_TAG_STRONG} – مثالي للحصول على رموز سريعة لمرة واحدة",
-  "home.section.faq.a1.label": "البريد المؤقت (المعروف أيضًا بصندوق بريد لمرة واحدة أو البريد القابل للتصرف أو البريد الوهمي) هو حساب قصير المدى يمكنك استخدامه للتسجيل في المواقع، استلام رموز التحقق، أو الحفاظ على صندوق بريدك الحقيقي آمنًا من الرسائل المزعجة.",
-  "home.section.faq.social.q11.label": "هل يمكنني استخدام البريد المؤقت لوسائل التواصل والتطبيقات؟",
-  "home.section.faq.social.a11.label": "نعم، TempMail4U يعمل لإنشاء وتوثيق الحسابات على إنستغرام، فيسبوك، سناب شات، تويتر X، ديسكورد، ريديت، تيك توك، تيليجرام، وKick. كما يدعم خدمات البث مثل نتفليكس وأمازون برايم، ومنصات الألعاب مثل Steam وEpic Games وRockstar. يمكنك استلام OTP ورموز التحقق فورًا مع الحفاظ على خصوصية بريدك الشخصي.",
-  "home.section.faq.a6.label": "لا. هذه الصناديق مخصصة للاستقبال فقط. تم تصميمها للتسجيلات، التحقق، والاستخدام السريع لمرة واحدة، وليست للإرسال أو التواصل طويل الأمد.",
-  "home.section.faq.a9.label": "نعم. نوفر {$START_TAG_STRONG}بريد مؤقت 10 دقائق{$CLOSE_TAG_STRONG} بالإضافة إلى نسخ 20 دقيقة و30 دقيقة للاستخدام السريع والمؤقت. وهي مثالية للتسجيلات القصيرة أو رموز التحقق لمرة واحدة.",
-  "privacy.lastUpdated": "آخر تحديث: سبتمبر 2025",
-  "home.section.faq.equivalence.q.label": "هل البريد الوهمي هو نفسه البريد المؤقت؟",
-"home.section.faq.equivalence.a.label": "في معظم الحالات نعم. يستخدم الناس مصطلح <strong>البريد الوهمي</strong> للإشارة إلى <strong>البريد المؤقت أو القابل للتخلص</strong> الذي يستقبل الرسائل ورموز التحقق دون كشف بريدهم الحقيقي."
-,
- "faq10Question": "هل يمكنني استخدام بريد مؤقت لمدة 10 دقائق للأعمال؟",
-  "faq10Answer": "نعم، يمكنك استخدام <strong>بريد أعمال مؤقت لمدة 10 دقائق</strong> للتسجيلات السريعة، الاشتراكات التجريبية، أو عمليات التحقق لمرة واحدة. ومع ذلك، لا يُنصح باستخدامه للتواصل طويل المدى أو البيانات الحساسة لأنه يُحذف بعد 10 دقائق."
-,
-"breadcrumb.home": "الصفحة الرئيسية",
-"breadcrumb.services": "الخدمات",
-"breadcrumb.contact": "اتصل بنا",
-"breadcrumb.about": "معلومات عنا",
-"breadcrumb.10min": "بريد مؤقت لمدة 10 دقائق",
-"nav.howItWorks": "كيف يعمل",
-"services.hero.cta": "ابدأ الآن",
-"about.hero.cta": "جرّب تمب ميل الآن",
-"mainTempMail.copyToastMessage": "تم نسخ البريد الإلكتروني إلى الحافظة",
-"quickEmail.resetTimer": "إعادة التعيين",
-"quickEmail.timerExpired": "انتهى الوقت",
-"quickEmail.emailExpiredMessage": "أنشئ بريدًا جديدًا للمتابعة",
-"seo.howItWorks.title": "كيف يعمل تمب ميل - دليل خطوة بخطوة",
-"seo.howItWorks.description": "تعرف على كيفية استخدام تمب ميل في خمس خطوات بسيطة مع لقطات شاشة توضح كيفية إنشاء ونسخ وإدارة صناديق البريد المؤقتة.",
-"seo.howItWorks.keywords": "كيف يعمل تمب ميل، شرح البريد المؤقت، دليل تمب ميل، خطوات البريد المؤقت"
-
-
+    "seo.home.keywords": "بريد مؤقت، temp mail، بريد يمكن التخلص منه، بريد حارق، بريد مجهول، بريد وهمي، حماية من البريد العشوائي، التحقق من البريد، بريد خصوصية، صندوق بريد مؤقت",
+    "seo.breadcrumbs.home": "الصفحة الرئيسية",
+    "seo.email10min.titleShort": "بريد مؤقت لمدة 10 دقائق",
+    "seo.email20min.titleShort": "بريد مؤقت لمدة 20 دقيقة",
+    "seo.email30min.titleShort": "بريد مؤقت لمدة 30 دقيقة",
+    "seo.home.faq.q1": "ما هو البريد المؤقت؟",
+    "seo.home.faq.a1": "البريد المؤقت (صندوق بريد مؤقت/عنوان مؤقت) صندوق قصير المدة للاشتراك واستلام الأكواد وحماية بريدك من الرسائل المزعجة.",
+    "seo.home.faq.q2": "كيف أنشئ بريداً مؤقتاً؟",
+    "seo.home.faq.a2": "لا حاجة للتسجيل. افتح هذه الصفحة وسينشأ صندوقك المجهول فوراً. يمكنك التحديث لإنشاء صندوق جديد أو اختيار اسم مستخدم قبل رمز @.",
+    "seo.home.faq.q3": "ما مدة الصندوق المؤقت؟",
+    "seo.home.faq.a3": "افتراضياً تبقى الرسائل 24 ساعة في المتصفح. إذا حفظت الجلسة يبقى الصندوق 7 أيام. كما نوفر 10/20/30 دقيقة.",
+    "seo.home.faq.q4": "هل استخدامه آمن؟",
+    "seo.home.faq.a4": "نعم. يتم تخزين البيانات محلياً في المتصفح. لا نتتبع أو نسجل استخدامك.",
+    "seo.home.faq.q5": "فيما يُستخدم البريد الوهمي؟",
+    "seo.home.faq.a5": "مثالي للتسجيلات الجديدة، اختبار التطبيقات، التسوق والتحميلات، وأي مكان لا تريد مشاركة بريدك الحقيقي فيه.",
+    "seo.home.faq.q6": "هل أستطيع إرسال رسائل؟",
+    "seo.home.faq.a6": "لا. الاستلام فقط. مخصص للتسجيلات والتحقق والاستخدام المؤقت.",
+    "seo.home.faq.q7": "ما الفرق عن البريد العادي؟",
+    "seo.home.faq.a7": "البريد العادي دائم ويتطلب معلومات شخصية. البريد المؤقت مجهول، بلا تسجيل، وينتهي تلقائياً.",
+    "seo.home.faq.q8": "هل أستطيع تمديد المدة؟",
+    "seo.home.faq.a8": "نعم، بحفظ الجلسة أو رابط الوصول الفريد يمكنك العودة خلال 7 أيام.",
+    "seo.home.faq.q9": "هل توجد مدة 10 دقائق؟",
+    "seo.home.faq.a9": "نعم. نوفر 10 و20 و30 دقيقة للاستخدام السريع والمؤقت.",
+    "seo.home.faq.q10": "لماذا أستخدم بريداً خاصاً؟",
+    "seo.home.faq.a10": "لحماية الخصوصية وتجنب الرسائل المزعجة والحفاظ على نظافة بريدك وتقليل تسرب البيانات.",
+    "seo.email20min.faq.q1": "ما هو بريد 20 دقيقة؟",
+    "seo.email20min.faq.a1": "عنوان مؤقت يبقى نشطاً لمدة 20 دقيقة لاستلام الرسائل دون استخدام بريدك الشخصي.",
+    "seo.email20min.faq.q2": "هل هو مجاني؟",
+    "seo.email20min.faq.a2": "نعم، مجاني 100% وبدون تسجيل.",
+    "seo.email20min.faq.q3": "OTP والتحقق؟",
+    "seo.email20min.faq.a3": "نعم، تستلم كلمات المرور لمرة واحدة وروابط التفعيل بأمان.",
+    "seo.email20min.faq.q4": "هل يُحذف تلقائياً؟",
+    "seo.email20min.faq.a4": "نعم، تُحذف الرسائل والصندوق بعد 20 دقيقة.",
+    "seo.email20min.faq.q5": "هل هويتي محمية؟",
+    "seo.email20min.faq.a5": "بالتأكيد. لا نتتبع أو نخزن بيانات شخصية.",
+    "seo.email30min.faq.q1": "ما هو بريد 30 دقيقة؟",
+    "seo.email30min.faq.a1": "صندوق مؤقت ممتد لمدة 30 دقيقة.",
+    "seo.email30min.faq.q2": "هل هو مجاني؟",
+    "seo.email30min.faq.a2": "نعم، مجاني تماماً بدون تسجيل.",
+    "seo.email30min.faq.q3": "استلام OTP والتحقق؟",
+    "seo.email30min.faq.a3": "نعم، تستلم OTP وروابط التفعيل بأمان.",
+    "seo.email30min.faq.q4": "ماذا يحدث بعد 30 دقيقة؟",
+    "seo.email30min.faq.a4": "يُحذف العنوان وجميع الرسائل نهائياً.",
+    "seo.email30min.faq.q5": "هل أستطيع تمديد المؤقت؟",
+    "seo.email30min.faq.a5": "نعم، انقر إعادة الضبط للحصول على 30 دقيقة إضافية.",
+    "seo.email30min.faq.q6": "هل خصوصيتي محفوظة؟",
+    "seo.email30min.faq.a6": "نعم، لا تتبع ولا تخزين للبيانات الشخصية.",
+    "seo.email30min.faq.q7": "كم رسالة أستطيع استقبالها؟",
+    "seo.email30min.faq.a7": "لا يوجد حد أثناء فترة 30 دقيقة.",
+    "breadcrumbs.home": "الصفحة الرئيسية",
+    "privacyPolicy.title": "سياسة الخصوصية",
+    "home.section.what.title.label": "ما هو البريد الإلكتروني المؤقت؟ (بريد لمرة واحدة)",
+    "home.section.what.para1.label": "يعد {$START_TAG_STRONG}البريد الإلكتروني المؤقت{$CLOSE_TAG_STRONG} (المعروف أيضًا بـ {$START_EMPHASISED_TEXT}البريد الإلكتروني القابل للاستخدام لمرة واحدة، أو البريد الوهمي، أو البريد المؤقت{$CLOSE_EMPHASISED_TEXT}) صندوق بريد قصير المدى يمكنك استخدامه للأنشطة عبر الإنترنت. بدلاً من مشاركة بريدك الشخصي مثل Gmail أو Outlook أو Yahoo، تحصل على صندوق بريد مجهول يتم حذفه تلقائيًا بعد فترة محددة.",
+    "home.section.what.para2.label": "هو مثالي لـ {$START_TAG_STRONG}التسجيل في المواقع، تحميل الملفات، استلام رموز التحقق، أو تجربة تطبيقات جديدة{$CLOSE_TAG_STRONG}. بمجرد الانتهاء، يختفي العنوان ويحافظ على بريدك الشخصي آمنًا وخاليًا من الرسائل المزعجة.",
+    "home.section.when.intro.label": "البريد الإلكتروني المؤقت ليس مناسبًا لكل شيء، بل هو الأفضل للمهام السريعة، منخفضة المخاطر، والمؤقتة. يعتمد عليه الكثير للتسجيل في {$START_TAG_STRONG}وسائل التواصل الاجتماعي{$CLOSE_TAG_STRONG} مثل إنستغرام، ديسكورد، ريديت، تيك توك، تيليجرام، أو فيسبوك. كما أنه مفيد لتجربة التطبيقات، تحميل الموارد، أو الحفاظ على الخصوصية أثناء التصفح.",
+    "home.section.when.card1.label": "تسجيلات المواقع لمرة واحدة",
+    "home.section.when.card7.label": "إنشاء حسابات على إنستغرام، فيسبوك، سناب شات، وتويتر X",
+    "home.section.when.card8.label": "الانضمام بأمان إلى ديسكورد، ريديت، وتيليجرام",
+    "home.section.when.card9.label": "التسجيل في تيك توك أو Kick مع استلام OTP فورًا",
+    "home.section.when.card10.label": "توثيق حسابات الألعاب على Steam وEpic Games وRockstar",
+    "home.section.when.card11.label": "الوصول إلى منصات البث مثل نتفليكس، أمازون برايم، وHulu",
+    "home.section.who.intro.label": "البريد المؤقت مفيد للعديد من الفئات. {$START_TAG_STRONG}إليك أبرز المستخدمين وكيف يستفيدون منه:{$CLOSE_TAG_STRONG}",
+    "home.section.who.li1.label": "{$START_TAG_STRONG}الطلاب{$CLOSE_TAG_STRONG} – التسجيل في أدوات الدراسة، الدورات عبر الإنترنت، وبوابات الجامعات دون ازدحام بريدك الأساسي.",
+    "home.section.who.li2.label": "{$START_TAG_STRONG}المطورون والمختبرون{$CLOSE_TAG_STRONG} – إنشاء حسابات اختبار للتطبيقات، أدوات SaaS، والنسخ التجريبية بسرعة.",
+    "home.section.who.li3.label": "{$START_TAG_STRONG}المتسوقون{$CLOSE_TAG_STRONG} – الحصول على العروض، القسائم، والفترات التجريبية المجانية على مواقع التجارة الإلكترونية وتجنب الرسائل المزعجة.",
+    "home.section.who.li4.label": "{$START_TAG_STRONG}المسوقون{$CLOSE_TAG_STRONG} – تجربة الحملات والنشرات البريدية دون التأثير على سمعة البريد الأساسي.",
+    "home.section.who.li5.label": "{$START_TAG_STRONG}المستخدمون اليوميون{$CLOSE_TAG_STRONG} – الحفاظ على حسابات Gmail وOutlook وYahoo نظيفة ومخصصة للاستخدام الشخصي.",
+    "home.section.who.li6.label": "{$START_TAG_STRONG}اللاعبون{$CLOSE_TAG_STRONG} – توثيق الحسابات على Steam وEpic Games وRockstar دون مشاركة بريدهم الخاص.",
+    "home.section.who.li7.label": "{$START_TAG_STRONG}مستخدمي وسائل التواصل{$CLOSE_TAG_STRONG} – إنشاء حسابات آمنة على إنستغرام، ديسكورد، ريديت، تيك توك، أو تيليجرام.",
+    "home.section.who.li8.label": "{$START_TAG_STRONG}المستقلون{$CLOSE_TAG_STRONG} – إدارة تسجيلات العملاء، التجارب، والأدوات باستخدام صناديق بريد مؤقتة.",
+    "home.section.who.li9.label": "{$START_TAG_STRONG}المهتمون بالخصوصية{$CLOSE_TAG_STRONG} – البقاء مجهولين، حماية البيانات، والاستمتاع باتصال خالٍ من الرسائل المزعجة.",
+    "home.section.who.outro.label": "استنادًا إلى أكثر من 500,000 مستخدم لـ TempMail4U حول العالم · آخر تحديث سبتمبر 2025",
+    "home.section.variants.li1.label": "{$START_TAG_STRONG}بريد مؤقت 10 دقائق{$CLOSE_TAG_STRONG} – مثالي للحصول على رموز سريعة لمرة واحدة",
+    "home.section.faq.a1.label": "البريد المؤقت (المعروف أيضًا بصندوق بريد لمرة واحدة أو البريد القابل للتصرف أو البريد الوهمي) هو حساب قصير المدى يمكنك استخدامه للتسجيل في المواقع، استلام رموز التحقق، أو الحفاظ على صندوق بريدك الحقيقي آمنًا من الرسائل المزعجة.",
+    "home.section.faq.social.q11.label": "هل يمكنني استخدام البريد المؤقت لوسائل التواصل والتطبيقات؟",
+    "home.section.faq.social.a11.label": "نعم، TempMail4U يعمل لإنشاء وتوثيق الحسابات على إنستغرام، فيسبوك، سناب شات، تويتر X، ديسكورد، ريديت، تيك توك، تيليجرام، وKick. كما يدعم خدمات البث مثل نتفليكس وأمازون برايم، ومنصات الألعاب مثل Steam وEpic Games وRockstar. يمكنك استلام OTP ورموز التحقق فورًا مع الحفاظ على خصوصية بريدك الشخصي.",
+    "home.section.faq.a6.label": "لا. هذه الصناديق مخصصة للاستقبال فقط. تم تصميمها للتسجيلات، التحقق، والاستخدام السريع لمرة واحدة، وليست للإرسال أو التواصل طويل الأمد.",
+    "home.section.faq.a9.label": "نعم. نوفر {$START_TAG_STRONG}بريد مؤقت 10 دقائق{$CLOSE_TAG_STRONG} بالإضافة إلى نسخ 20 دقيقة و30 دقيقة للاستخدام السريع والمؤقت. وهي مثالية للتسجيلات القصيرة أو رموز التحقق لمرة واحدة.",
+    "privacy.lastUpdated": "آخر تحديث: سبتمبر 2025",
+    "home.section.faq.equivalence.q.label": "هل البريد الوهمي هو نفسه البريد المؤقت؟",
+    "home.section.faq.equivalence.a.label": "في معظم الحالات نعم. يستخدم الناس مصطلح <strong>البريد الوهمي</strong> للإشارة إلى <strong>البريد المؤقت أو القابل للتخلص</strong> الذي يستقبل الرسائل ورموز التحقق دون كشف بريدهم الحقيقي.",
+    "faq10Question": "هل يمكنني استخدام بريد مؤقت لمدة 10 دقائق للأعمال؟",
+    "faq10Answer": "نعم، يمكنك استخدام <strong>بريد أعمال مؤقت لمدة 10 دقائق</strong> للتسجيلات السريعة، الاشتراكات التجريبية، أو عمليات التحقق لمرة واحدة. ومع ذلك، لا يُنصح باستخدامه للتواصل طويل المدى أو البيانات الحساسة لأنه يُحذف بعد 10 دقائق.",
+    "breadcrumb.home": "الصفحة الرئيسية",
+    "breadcrumb.services": "الخدمات",
+    "breadcrumb.contact": "اتصل بنا",
+    "breadcrumb.about": "معلومات عنا",
+    "breadcrumb.10min": "بريد مؤقت لمدة 10 دقائق",
+    "nav.howItWorks": "كيف يعمل",
+    "services.hero.cta": "Get Started Free",
+    "about.hero.cta": "جرّب تمب ميل الآن",
+    "mainTempMail.copyToastMessage": "تم نسخ البريد الإلكتروني إلى الحافظة",
+    "quickEmail.resetTimer": "إعادة التعيين",
+    "quickEmail.timerExpired": "انتهى الوقت",
+    "quickEmail.emailExpiredMessage": "أنشئ بريدًا جديدًا للمتابعة",
+    "seo.howItWorks.title": "كيف يعمل تمب ميل - دليل خطوة بخطوة",
+    "seo.howItWorks.description": "تعرف على كيفية استخدام تمب ميل في خمس خطوات بسيطة مع لقطات شاشة توضح كيفية إنشاء ونسخ وإدارة صناديق البريد المؤقتة.",
+    "seo.howItWorks.keywords": "كيف يعمل تمب ميل، شرح البريد المؤقت، دليل تمب ميل، خطوات البريد المؤقت",
+    "services.list.subtitle": "Select the perfect disposable email duration for your specific needs",
+    "services.card.10.badge": "Quick",
+    "services.card.10.ideal": "Ideal for: Quick signups & OTPs",
+    "services.card.20.badge": "Standard",
+    "services.card.20.ideal": "Ideal for: Website registrations",
+    "services.card.30.badge": "Extended",
+    "services.card.30.ideal": "Ideal for: App testing & trials",
+    "services.card.7.badge": "Most Flexible",
+    "services.card.7.ideal": "Ideal for: Projects & extended trials",
+    "services.useCases.title": "Where to Use Temp Mail",
+    "services.useCases.subtitle": "Our temporary emails work seamlessly across various platforms and services",
+    "services.useCases.social": "Social Media",
+    "services.useCases.apps": "App Testing",
+    "services.useCases.shopping": "Online Shopping",
+    "services.useCases.gaming": "Gaming Platforms",
+    "services.useCases.downloads": "File Downloads",
+    "services.useCases.forums": "Forums & Groups",
+    "services.features.subtitle": "Experience the best temporary email service with privacy-focused features",
+    "services.features.instant.title": "Instant Access",
+    "services.features.instant.desc": "Get your temporary email immediately with no signup or registration required",
+    "services.features.privacy.title": "Complete Privacy",
+    "services.features.privacy.desc": "No tracking, no spam, no ads. Your privacy is our priority",
+    "services.features.mobile.title": "Mobile Optimized",
+    "services.features.mobile.desc": "Clean, fast interface that works perfectly on all devices",
+    "services.features.free.title": "100% Free",
+    "services.features.free.desc": "All features available for free with no hidden costs or limitations",
+    "services.cta.note": "No registration required • Instant access • Privacy first"
   }
 }

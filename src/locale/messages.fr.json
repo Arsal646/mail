@@ -159,32 +159,23 @@
     "faq9Question": "Mieux que d’utiliser un faux e-mail ?",
     "faq9Answer": " Oui ! Contrairement aux faux e-mails, vous disposez d’une vraie boîte fonctionnelle.",
     "seo.email10min.faq.q1": "Qu’est-ce qu’un email de 10 minutes ?",
-"seo.email10min.faq.a1": "Une adresse email temporaire qui expire après 10 minutes, idéale pour recevoir des messages uniques ou des liens de vérification. Vous pouvez aussi essayer notre email temporaire gratuit de 20 ou 30 minutes si vous avez besoin de plus de temps.",
-
-"seo.email10min.faq.q2": "Est-ce gratuit à utiliser ?",
-"seo.email10min.faq.a2": "Oui, c’est entièrement gratuit. Aucun enregistrement requis, pas de publicités et aucun frais premium.",
-
-"seo.email10min.faq.q3": "Puis-je recevoir des OTP et des emails de confirmation ?",
-"seo.email10min.faq.a3": "Oui, la boîte temporaire prend en charge tous les types d’emails courants, y compris les OTP et les liens de confirmation.",
-
-"seo.email10min.faq.q4": "Puis-je prolonger la durée de mon email temporaire ?",
-"seo.email10min.faq.a4": "Oui, il suffit de cliquer sur le bouton « Réinitialiser » pour relancer le compte à rebours de 10 minutes.",
-
-"seo.email10min.faq.q5": "Cette adresse email est-elle vraiment anonyme ?",
-"seo.email10min.faq.a5": "Absolument. Nous ne collectons ni ne suivons aucune donnée personnelle ; chaque boîte est temporaire et privée.",
-
-"seo.email10min.faq.q6": "Combien d’emails temporaires puis-je créer ?",
-"seo.email10min.faq.a6": "Illimités. Créez autant de boîtes temporaires que vous le souhaitez, chacune avec sa propre limite de temps.",
-
-"seo.email10min.faq.q7": "Est-ce que cela fonctionne sur mobile ?",
-"seo.email10min.faq.a7": "Oui, le service est entièrement responsive et fonctionne parfaitement sur tous les appareils.",
-
-"seo.email10min.faq.q8": "Est-ce sûr pour les messages importants ?",
-"seo.email10min.faq.a8": "C’est adapté pour une utilisation à court terme comme les OTP et les emails de confirmation. Évitez de l’utiliser pour des informations personnelles sensibles.",
-
-"seo.email10min.faq.q9": "Est-ce mieux que d’utiliser un faux email ?",
-"seo.email10min.faq.a9": "Oui ! Contrairement aux faux emails, ce service fournit une vraie boîte de réception fonctionnelle pour recevoir des messages légitimes."
-,
+    "seo.email10min.faq.a1": "Une adresse email temporaire qui expire après 10 minutes, idéale pour recevoir des messages uniques ou des liens de vérification. Vous pouvez aussi essayer notre email temporaire gratuit de 20 ou 30 minutes si vous avez besoin de plus de temps.",
+    "seo.email10min.faq.q2": "Est-ce gratuit à utiliser ?",
+    "seo.email10min.faq.a2": "Oui, c’est entièrement gratuit. Aucun enregistrement requis, pas de publicités et aucun frais premium.",
+    "seo.email10min.faq.q3": "Puis-je recevoir des OTP et des emails de confirmation ?",
+    "seo.email10min.faq.a3": "Oui, la boîte temporaire prend en charge tous les types d’emails courants, y compris les OTP et les liens de confirmation.",
+    "seo.email10min.faq.q4": "Puis-je prolonger la durée de mon email temporaire ?",
+    "seo.email10min.faq.a4": "Oui, il suffit de cliquer sur le bouton « Réinitialiser » pour relancer le compte à rebours de 10 minutes.",
+    "seo.email10min.faq.q5": "Cette adresse email est-elle vraiment anonyme ?",
+    "seo.email10min.faq.a5": "Absolument. Nous ne collectons ni ne suivons aucune donnée personnelle ; chaque boîte est temporaire et privée.",
+    "seo.email10min.faq.q6": "Combien d’emails temporaires puis-je créer ?",
+    "seo.email10min.faq.a6": "Illimités. Créez autant de boîtes temporaires que vous le souhaitez, chacune avec sa propre limite de temps.",
+    "seo.email10min.faq.q7": "Est-ce que cela fonctionne sur mobile ?",
+    "seo.email10min.faq.a7": "Oui, le service est entièrement responsive et fonctionne parfaitement sur tous les appareils.",
+    "seo.email10min.faq.q8": "Est-ce sûr pour les messages importants ?",
+    "seo.email10min.faq.a8": "C’est adapté pour une utilisation à court terme comme les OTP et les emails de confirmation. Évitez de l’utiliser pour des informations personnelles sensibles.",
+    "seo.email10min.faq.q9": "Est-ce mieux que d’utiliser un faux email ?",
+    "seo.email10min.faq.a9": "Oui ! Contrairement aux faux emails, ce service fournit une vraie boîte de réception fonctionnelle pour recevoir des messages légitimes.",
     "seo.email10min.title": "Email temporaire 10 minutes - Boîte mail jetable gratuite | TempMail4u",
     "seo.email10min.description": "Obtenez un email jetable de 10 minutes pour des vérifications instantanées. Sans inscription. Protégez votre vie privée.",
     "seo.email10min.keywords": "email 10 minutes, mail jetable, boîte temporaire, burner email, vérification e-mail, OTP, protection vie privée, anti-spam, mail anonyme, e-mail rapide",
@@ -270,7 +261,6 @@
     "home.section.how.step3.title.label": " 3. Sauvegardez-la ou laissez expirer ",
     "home.section.how.step3.desc.label": " Par défaut, les emails restent 24 h. Vous pouvez enregistrer le lien de votre boîte et la garder active jusqu’à 7 jours. ",
     "home.section.when.title.label": " Quand utiliser un temp mail ? ",
-   
     "home.section.when.card2.label": "Tests d’apps, betas ou outils SaaS",
     "home.section.when.card3.label": "Réductions & coupons shopping",
     "home.section.when.card4.label": "Téléchargements d’e-books/ressources",
@@ -433,26 +423,26 @@
     "savedEmail.daysRemaining": "Il reste {$INTERPOLATION} jours",
     "savedEmail.error.title": "Lien d’accès invalide",
     "savedEmail.error.generateNew": " Générer un nouvel email ",
-    "services.title": " Nos services d’email temporaire ",
-    "services.subtitle": " Protégez votre vie privée avec une solution {$START_TAG_STRONG}temp mail{$CLOSE_TAG_STRONG} gratuite. Besoin d’un {$START_TAG_STRONG}mail à usage unique{$CLOSE_TAG_STRONG} rapide ou d’une {$START_TAG_STRONG}boîte temporaire{$CLOSE_TAG_STRONG} plus longue ? TempMail4U vous couvre. ",
-    "services.list.title": " Choisissez votre boîte jetable ",
-    "services.card.10.title": " Mail 10 minutes ",
-    "services.card.10.desc": " {$START_TAG_STRONG}Mail à usage unique{$CLOSE_TAG_STRONG} de courte durée pour vérifications instantanées. ",
-    "services.card.20.title": " Mail 20 minutes ",
-    "services.card.20.desc": " Plus de temps pour inscriptions multi-étapes et codes différés. ",
-    "services.card.30.title": " Mail 30 minutes ",
-    "services.card.30.desc": " {$START_TAG_STRONG}Boîte temporaire{$CLOSE_TAG_STRONG} plus longue pour apps et essais gratuits. ",
-    "services.card.7.title": " Boîte sauvegardée 7 jours ",
-    "services.card.7.desc": " Gardez votre {$START_TAG_STRONG}email temporaire{$CLOSE_TAG_STRONG} actif jusqu’à une semaine , idéal pour projets et suivis. ",
-    "services.card.7.note": " Enregistrez votre lien unique pour revenir à tout moment sous 7 jours. ",
-    "services.features.title": " Pourquoi choisir TempMail4U ? ",
+    "services.title": "Services de messagerie temporaire",
+    "services.subtitle": "Choisissez parmi notre gamme de solutions d'email temporaire gratuites. Protégez votre vie privée avec des boîtes jetables pour chaque besoin.",
+    "services.list.title": "Choisissez votre boîte temporaire",
+    "services.card.10.title": "Email de 10 minutes",
+    "services.card.10.desc": "Parfait pour les OTP instantanés et les vérifications rapides. Recevez votre email jetable immédiatement.",
+    "services.card.20.title": "Email de 20 minutes",
+    "services.card.20.desc": "Plus de temps pour les inscriptions en plusieurs étapes, les confirmations retardées et les processus d'onboarding.",
+    "services.card.30.title": "Email de 30 minutes",
+    "services.card.30.desc": "Boîte temporaire prolongée pour les tests d'applications, les essais gratuits et les téléchargements.",
+    "services.card.7.title": "Boîte de 7 jours",
+    "services.card.7.desc": "Gardez votre email temporaire actif pendant une semaine. Parfait pour les projets, essais et collaborations en cours.",
+    "services.card.7.note": "Enregistrez votre lien unique pour y revenir à tout moment pendant 7 jours.",
+    "services.features.title": "Pourquoi choisir TempMail4U",
     "services.features.li1": " Adresse {$START_TAG_STRONG}temp mail{$CLOSE_TAG_STRONG} instantanée , sans inscription ",
     "services.features.li2": " Confidentialité d’abord : pas de suivi, pas de spam, pas de pub ",
     "services.features.li3": " Interface claire, rapide et mobile-friendly ",
     "services.features.li4": " Durées flexibles : 10 min, 20 min, 30 min et boîte 7 jours ",
-    "services.cta.title": " Commencez avec votre boîte jetable gratuite ",
-    "services.cta.desc": " Créez un {$START_TAG_STRONG}email temporaire{$CLOSE_TAG_STRONG} instantanément et gardez votre boîte personnelle à l’abri du spam. ",
-    "services.cta.button": " Générer un temp mail maintenant ",
+    "services.cta.title": "Prêt à commencer ?",
+    "services.cta.desc": "Rejoignez des milliers d'utilisateurs qui protègent leur vie privée avec TempMail4U. Créez votre email temporaire en quelques secondes.",
+    "services.cta.button": "Générer un email temporaire",
     "seo.services.title": "Services d’e-mails temporaires - Boîtes jetables, alias personnalisés, OTP",
     "seo.services.description": "Utilisez TempMail4u pour inscriptions rapides, tests d’applications et vérifications OTP. Créez des boîtes jetables instantanément et protégez votre e-mail réel.",
     "seo.services.keywords": "services e-mail temporaire, boîte jetable, burner mail, email OTP, e-mail de test, anti-spam",
@@ -477,112 +467,130 @@
     "terms.contact.para": " Pour toute question sur ces Conditions, contactez-nous via la page {$START_LINK}Contact{$CLOSE_LINK}. ",
     "seo.terms.title": "Conditions générales – TempMail4U | Email temporaire & temp mail",
     "seo.terms.description": "Lisez les Conditions générales d’utilisation des services TempMail4U, notamment mail à usage unique, email temporaire, temp mail et boîtes jetables.",
-    "seo.terms.keywords": "conditions générales, CGU temp mail, politique email temporaire, règles mail à usage unique, conditions boîte jetable"
-  
-  , "seo.breadcrumbs.home": "Accueil"
-  , "seo.email10min.titleShort": "Générateur d'e-mail temporaire 10 minutes"
-  , "seo.email20min.titleShort": "E-mail temporaire 20 minutes - Boîte jetable"
-  , "seo.email30min.titleShort": "E-mail temporaire 30 minutes - Boîte jetable"
-  , "seo.home.faq.q1": "Qu'est-ce qu'un e-mail temporaire ?"
-  , "seo.home.faq.a1": "Un e-mail temporaire (aussi appelé boîte jetable, adresse jetable ou burner) est une boîte de courte durée pour s'inscrire, recevoir des codes et protéger votre boîte principale du spam."
-  , "seo.home.faq.q2": "Comment créer un e-mail jetable ?"
-  , "seo.home.faq.a2": "Aucune inscription. Ouvrez simplement cette page et votre boîte anonyme est créée instantanément. Vous pouvez rafraîchir pour en générer une nouvelle ou choisir un nom d'utilisateur avant le symbole @."
-  , "seo.home.faq.q3": "Combien de temps dure une boîte temporaire ?"
-  , "seo.home.faq.a3": "Par défaut, les e-mails restent 24 h dans votre navigateur. Si vous enregistrez, la boîte reste active 7 jours. Nous proposons aussi 10, 20 et 30 minutes."
-  , "seo.home.faq.q4": "Est-ce sûr d'utiliser une boîte jetable ?"
-  , "seo.home.faq.a4": "Oui. Toutes les données sont stockées localement dans votre navigateur. Nous ne suivons ni ne traçons votre usage."
-  , "seo.home.faq.q5": "À quoi sert un faux e-mail ?"
-  , "seo.home.faq.a5": "Idéal pour nouvelles inscriptions, tests d'apps, achats en ligne, téléchargements, ou partout où vous ne voulez pas partager votre e-mail personnel."
-  , "seo.home.faq.q6": "Puis-je envoyer des e-mails ?"
-  , "seo.home.faq.a6": "Non. Réception uniquement. Conçu pour inscriptions, vérifications et usage ponctuel."
-  , "seo.home.faq.q7": "Quelle différence avec un e-mail classique ?"
-  , "seo.home.faq.a7": "Les e-mails classiques demandent des infos personnelles et restent permanents. Les boîtes temporaires sont anonymes, sans inscription et expirent automatiquement."
-  , "seo.home.faq.q8": "Puis-je prolonger la durée ?"
-  , "seo.home.faq.a8": "Oui. En enregistrant la session ou le lien d'accès unique, vous pouvez revenir pendant 7 jours."
-  , "seo.home.faq.q9": "Existe-t-il l'option 10 minutes ?"
-  , "seo.home.faq.a9": "Oui. Nous proposons des boîtes 10, 20 et 30 minutes pour un usage rapide et jetable."
-  , "seo.home.faq.q10": "Pourquoi utiliser une boîte privée ?"
-  , "seo.home.faq.a10": "Pour protéger votre vie privée, éviter le spam, garder votre boîte principale propre et réduire les risques de fuite de données."
-  , "seo.email20min.faq.q1": "Qu'est-ce qu'un e-mail 20 minutes ?"
-  , "seo.email20min.faq.a1": "Une adresse jetable active pendant 20 minutes. Recevez des messages sans utiliser votre boîte personnelle."
-  , "seo.email20min.faq.q2": "Est-ce vraiment gratuit ?"
-  , "seo.email20min.faq.a2": "Oui, 100% gratuit, sans inscription ni paiement."
-  , "seo.email20min.faq.q3": "OTP et vérifications ?"
-  , "seo.email20min.faq.a3": "Oui. Recevez OTP, liens d'activation et autres e-mails de vérification."
-  , "seo.email20min.faq.q4": "Suppression automatique ?"
-  , "seo.email20min.faq.a4": "Oui. La boîte et les e-mails sont supprimés après 20 minutes."
-  , "seo.email20min.faq.q5": "Mon identité est-elle protégée ?"
-  , "seo.email20min.faq.a5": "Absolument. Aucune donnée personnelle suivie ou stockée. Votre confidentialité est prioritaire."
-  , "seo.email30min.faq.q1": "Qu'est-ce qu'un e-mail 30 minutes ?"
-  , "seo.email30min.faq.a1": "Une boîte jetable étendue active pendant 30 minutes."
-  , "seo.email30min.faq.q2": "Est-ce gratuit ?"
-  , "seo.email30min.faq.a2": "Oui, totalement gratuit sans inscription."
-  , "seo.email30min.faq.q3": "Recevoir OTP et vérifications ?"
-  , "seo.email30min.faq.a3": "Oui, recevez OTP, liens d'activation et autres e-mails de vérification en toute sécurité."
-  , "seo.email30min.faq.q4": "Que se passe-t-il après 30 minutes ?"
-  , "seo.email30min.faq.a4": "Adresse et messages supprimés définitivement. Aucune donnée conservée."
-  , "seo.email30min.faq.q5": "Prolonger le minuteur ?"
-  , "seo.email30min.faq.a5": "Oui, cliquez sur Réinitialiser pour 30 minutes supplémentaires."
-  , "seo.email30min.faq.q6": "Ma confidentialité est-elle protégée ?"
-  , "seo.email30min.faq.a6": "Oui. Aucun suivi, stockage ou journalisation de données personnelles."
-  , "seo.email30min.faq.q7": "Combien d'e-mails puis-je recevoir ?"
-  , "seo.email30min.faq.a7": "Aucune limite pendant la fenêtre de 30 minutes."
-  , "breadcrumbs.home": "Accueil"
-  , "privacyPolicy.title": "Politique de confidentialité",
-
-
-
-  
-  "home.section.what.title.label": "Qu’est-ce qu’un email temporaire ? (Boîte à usage unique)",
-  "home.section.what.para1.label": "Un {$START_TAG_STRONG}email temporaire{$CLOSE_TAG_STRONG} (aussi appelé {$START_EMPHASISED_TEXT}email jetable, boîte mail à usage unique, adresse fictive, ou temp mail{$CLOSE_EMPHASISED_TEXT}) est une boîte à durée limitée que vous pouvez utiliser pour vos activités en ligne. Au lieu de donner votre adresse Gmail, Outlook ou Yahoo personnelle, vous obtenez une boîte anonyme qui s’efface automatiquement après un certain temps.",
-  "home.section.what.para2.label": "C’est parfait pour {$START_TAG_STRONG}les inscriptions sur des sites, le téléchargement de fichiers, la réception de codes de vérification ou le test de nouvelles applications{$CLOSE_TAG_STRONG}. Une fois terminé, l’adresse disparaît et votre boîte principale reste protégée et sans spam.",
-  "home.section.when.intro.label": "Un email temporaire ne sert pas à tout. Il est surtout utile pour des tâches rapides, à faible risque et jetables. Beaucoup l’utilisent pour {$START_TAG_STRONG}les inscriptions sur les réseaux sociaux{$CLOSE_TAG_STRONG} comme Instagram, Discord, Reddit, TikTok, Telegram ou Facebook. Il est aussi pratique pour tester des applications, télécharger des ressources ou rester anonyme en ligne.",
-  "home.section.when.card1.label": "Inscriptions ponctuelles sur des sites",
-  "home.section.when.card7.label": "Créer des comptes sur Instagram, Facebook, Snapchat et Twitter X",
-  "home.section.when.card8.label": "Rejoindre Discord, Reddit et Telegram en toute sécurité",
-  "home.section.when.card9.label": "S’inscrire sur TikTok ou Kick avec réception immédiate d’OTP",
-  "home.section.when.card10.label": "Vérifier des comptes de jeux sur Steam, Epic Games et Rockstar",
-  "home.section.when.card11.label": "Accéder à des plateformes de streaming comme Netflix, Amazon Prime et Hulu",
-  "home.section.who.intro.label": "Les emails temporaires sont utiles à de nombreux groupes. {$START_TAG_STRONG}Voici les plus courants et leurs avantages :{$CLOSE_TAG_STRONG}",
-  "home.section.who.li1.label": "{$START_TAG_STRONG}Étudiants{$CLOSE_TAG_STRONG} – s’inscrire à des outils d’étude, cours en ligne et portails universitaires sans saturer leur boîte principale.",
-  "home.section.who.li2.label": "{$START_TAG_STRONG}Développeurs et testeurs{$CLOSE_TAG_STRONG} – créer rapidement des comptes de test pour des applications, outils SaaS et versions bêta.",
-  "home.section.who.li3.label": "{$START_TAG_STRONG}Acheteurs{$CLOSE_TAG_STRONG} – profiter d’offres, coupons et essais gratuits sur des sites e-commerce tout en évitant le spam.",
-  "home.section.who.li4.label": "{$START_TAG_STRONG}Marketeurs{$CLOSE_TAG_STRONG} – tester des campagnes et newsletters sans risquer la réputation de leur boîte principale.",
-  "home.section.who.li5.label": "{$START_TAG_STRONG}Utilisateurs quotidiens{$CLOSE_TAG_STRONG} – garder Gmail, Outlook ou Yahoo propres et centrés sur un usage personnel.",
-  "home.section.who.li6.label": "{$START_TAG_STRONG}Gamers{$CLOSE_TAG_STRONG} – vérifier des comptes sur Steam, Epic Games et Rockstar sans exposer leur adresse privée.",
-  "home.section.who.li7.label": "{$START_TAG_STRONG}Utilisateurs de réseaux sociaux{$CLOSE_TAG_STRONG} – créer des comptes sécurisés sur Facebook, Instagram, Discord, Reddit, TikTok ou Telegram.",
-  "home.section.who.li8.label": "{$START_TAG_STRONG}Freelances{$CLOSE_TAG_STRONG} – gérer les inscriptions clients, essais de projets et outils avec des boîtes temporaires.",
-  "home.section.who.li9.label": "{$START_TAG_STRONG}Personnes axées sur la confidentialité{$CLOSE_TAG_STRONG} – rester anonymes, protéger leurs données et profiter d’une communication sans spam.",
-  "home.section.who.outro.label": "Basé sur plus de 500 000 utilisateurs de TempMail4U dans le monde · Mis à jour en septembre 2025",
-  "home.section.variants.li1.label": "{$START_TAG_STRONG}Mail 10 minutes{$CLOSE_TAG_STRONG} – idéal pour des codes rapides à usage unique",
-  "home.section.faq.a1.label": "Un email temporaire (aussi appelé boîte à usage unique, boîte jetable ou adresse fictive) est un compte de courte durée que vous pouvez utiliser pour vous inscrire sur des sites, recevoir des codes de vérification ou garder votre boîte réelle protégée contre le spam.",
-  "home.section.faq.social.q11.label": "Puis-je utiliser un email temporaire pour les réseaux sociaux et applications ?",
-  "home.section.faq.social.a11.label": "Oui, TempMail4U permet de créer et vérifier des comptes sur Instagram, Facebook, Snapchat, Twitter X, Discord, Reddit, TikTok, Telegram et Kick. Il fonctionne aussi avec des services de streaming comme Netflix et Amazon Prime, et des plateformes de jeux comme Steam, Epic Games et Rockstar. Vous pouvez recevoir des OTP et codes de vérification instantanément tout en protégeant votre adresse personnelle.",
-  "home.section.faq.a6.label": "Non. Ces boîtes sont uniquement destinées à la réception. Elles sont conçues pour des inscriptions, vérifications et utilisations rapides à usage unique, pas pour l’envoi ou la communication à long terme.",
-  "home.section.faq.a9.label": "Oui. Nous proposons {$START_TAG_STRONG}un email temporaire de 10 minutes{$CLOSE_TAG_STRONG} ainsi que des variantes de 20 et 30 minutes pour un usage rapide et jetable. Idéal pour des inscriptions courtes ou des codes de vérification ponctuels.",
-  "privacy.lastUpdated": "Dernière mise à jour : septembre 2025",
-  "home.section.faq.equivalence.q.label": "Le faux email est-il le même qu'un email temporaire ?",
-"home.section.faq.equivalence.a.label": "Dans la plupart des cas oui. Les gens utilisent le terme <strong>faux email</strong> pour désigner un <strong>email temporaire ou jetable</strong> qui reçoit des messages et des OTP sans exposer leur boîte de réception réelle."
-,
-  "faq10Question": "Puis-je utiliser un e-mail de 10 minutes pour les affaires ?",
-  "faq10Answer": "Oui, vous pouvez utiliser un <strong>e-mail professionnel de 10 minutes</strong> pour les inscriptions rapides, les essais gratuits ou les vérifications ponctuelles. Cependant, il n’est pas recommandé pour une communication à long terme ou des données sensibles, car la boîte expire après 10 minutes."
-,
-"breadcrumb.home": "Accueil",
-"breadcrumb.services": "Services",
-"breadcrumb.contact": "Contact",
-"breadcrumb.about": "À propos",
-"breadcrumb.10min": "E-mail de 10 minutes",
-"nav.howItWorks": "Comment ça marche",
-"services.hero.cta": "Commencer maintenant",
-"about.hero.cta": "Essayer TempMail",
-"mainTempMail.copyToastMessage": "E-mail copié dans le presse-papiers",
-"quickEmail.resetTimer": "Réinitialiser",
-"quickEmail.timerExpired": "Expiré",
-"quickEmail.emailExpiredMessage": "Générez un nouvel e-mail pour continuer",
-"seo.howItWorks.title": "Comment fonctionne TempMail - Guide étape par étape",
-"seo.howItWorks.description": "Découvrez comment utiliser TempMail en cinq étapes rapides avec des captures d’écran montrant comment générer, copier et gérer vos boîtes mail temporaires.",
-"seo.howItWorks.keywords": "comment fonctionne temp mail, guide tempmail, email temporaire, étapes boîte jetable"
-
-
+    "seo.terms.keywords": "conditions générales, CGU temp mail, politique email temporaire, règles mail à usage unique, conditions boîte jetable",
+    "seo.breadcrumbs.home": "Accueil",
+    "seo.email10min.titleShort": "Générateur d'e-mail temporaire 10 minutes",
+    "seo.email20min.titleShort": "E-mail temporaire 20 minutes - Boîte jetable",
+    "seo.email30min.titleShort": "E-mail temporaire 30 minutes - Boîte jetable",
+    "seo.home.faq.q1": "Qu'est-ce qu'un e-mail temporaire ?",
+    "seo.home.faq.a1": "Un e-mail temporaire (aussi appelé boîte jetable, adresse jetable ou burner) est une boîte de courte durée pour s'inscrire, recevoir des codes et protéger votre boîte principale du spam.",
+    "seo.home.faq.q2": "Comment créer un e-mail jetable ?",
+    "seo.home.faq.a2": "Aucune inscription. Ouvrez simplement cette page et votre boîte anonyme est créée instantanément. Vous pouvez rafraîchir pour en générer une nouvelle ou choisir un nom d'utilisateur avant le symbole @.",
+    "seo.home.faq.q3": "Combien de temps dure une boîte temporaire ?",
+    "seo.home.faq.a3": "Par défaut, les e-mails restent 24 h dans votre navigateur. Si vous enregistrez, la boîte reste active 7 jours. Nous proposons aussi 10, 20 et 30 minutes.",
+    "seo.home.faq.q4": "Est-ce sûr d'utiliser une boîte jetable ?",
+    "seo.home.faq.a4": "Oui. Toutes les données sont stockées localement dans votre navigateur. Nous ne suivons ni ne traçons votre usage.",
+    "seo.home.faq.q5": "À quoi sert un faux e-mail ?",
+    "seo.home.faq.a5": "Idéal pour nouvelles inscriptions, tests d'apps, achats en ligne, téléchargements, ou partout où vous ne voulez pas partager votre e-mail personnel.",
+    "seo.home.faq.q6": "Puis-je envoyer des e-mails ?",
+    "seo.home.faq.a6": "Non. Réception uniquement. Conçu pour inscriptions, vérifications et usage ponctuel.",
+    "seo.home.faq.q7": "Quelle différence avec un e-mail classique ?",
+    "seo.home.faq.a7": "Les e-mails classiques demandent des infos personnelles et restent permanents. Les boîtes temporaires sont anonymes, sans inscription et expirent automatiquement.",
+    "seo.home.faq.q8": "Puis-je prolonger la durée ?",
+    "seo.home.faq.a8": "Oui. En enregistrant la session ou le lien d'accès unique, vous pouvez revenir pendant 7 jours.",
+    "seo.home.faq.q9": "Existe-t-il l'option 10 minutes ?",
+    "seo.home.faq.a9": "Oui. Nous proposons des boîtes 10, 20 et 30 minutes pour un usage rapide et jetable.",
+    "seo.home.faq.q10": "Pourquoi utiliser une boîte privée ?",
+    "seo.home.faq.a10": "Pour protéger votre vie privée, éviter le spam, garder votre boîte principale propre et réduire les risques de fuite de données.",
+    "seo.email20min.faq.q1": "Qu'est-ce qu'un e-mail 20 minutes ?",
+    "seo.email20min.faq.a1": "Une adresse jetable active pendant 20 minutes. Recevez des messages sans utiliser votre boîte personnelle.",
+    "seo.email20min.faq.q2": "Est-ce vraiment gratuit ?",
+    "seo.email20min.faq.a2": "Oui, 100% gratuit, sans inscription ni paiement.",
+    "seo.email20min.faq.q3": "OTP et vérifications ?",
+    "seo.email20min.faq.a3": "Oui. Recevez OTP, liens d'activation et autres e-mails de vérification.",
+    "seo.email20min.faq.q4": "Suppression automatique ?",
+    "seo.email20min.faq.a4": "Oui. La boîte et les e-mails sont supprimés après 20 minutes.",
+    "seo.email20min.faq.q5": "Mon identité est-elle protégée ?",
+    "seo.email20min.faq.a5": "Absolument. Aucune donnée personnelle suivie ou stockée. Votre confidentialité est prioritaire.",
+    "seo.email30min.faq.q1": "Qu'est-ce qu'un e-mail 30 minutes ?",
+    "seo.email30min.faq.a1": "Une boîte jetable étendue active pendant 30 minutes.",
+    "seo.email30min.faq.q2": "Est-ce gratuit ?",
+    "seo.email30min.faq.a2": "Oui, totalement gratuit sans inscription.",
+    "seo.email30min.faq.q3": "Recevoir OTP et vérifications ?",
+    "seo.email30min.faq.a3": "Oui, recevez OTP, liens d'activation et autres e-mails de vérification en toute sécurité.",
+    "seo.email30min.faq.q4": "Que se passe-t-il après 30 minutes ?",
+    "seo.email30min.faq.a4": "Adresse et messages supprimés définitivement. Aucune donnée conservée.",
+    "seo.email30min.faq.q5": "Prolonger le minuteur ?",
+    "seo.email30min.faq.a5": "Oui, cliquez sur Réinitialiser pour 30 minutes supplémentaires.",
+    "seo.email30min.faq.q6": "Ma confidentialité est-elle protégée ?",
+    "seo.email30min.faq.a6": "Oui. Aucun suivi, stockage ou journalisation de données personnelles.",
+    "seo.email30min.faq.q7": "Combien d'e-mails puis-je recevoir ?",
+    "seo.email30min.faq.a7": "Aucune limite pendant la fenêtre de 30 minutes.",
+    "breadcrumbs.home": "Accueil",
+    "privacyPolicy.title": "Politique de confidentialité",
+    "home.section.what.title.label": "Qu’est-ce qu’un email temporaire ? (Boîte à usage unique)",
+    "home.section.what.para1.label": "Un {$START_TAG_STRONG}email temporaire{$CLOSE_TAG_STRONG} (aussi appelé {$START_EMPHASISED_TEXT}email jetable, boîte mail à usage unique, adresse fictive, ou temp mail{$CLOSE_EMPHASISED_TEXT}) est une boîte à durée limitée que vous pouvez utiliser pour vos activités en ligne. Au lieu de donner votre adresse Gmail, Outlook ou Yahoo personnelle, vous obtenez une boîte anonyme qui s’efface automatiquement après un certain temps.",
+    "home.section.what.para2.label": "C’est parfait pour {$START_TAG_STRONG}les inscriptions sur des sites, le téléchargement de fichiers, la réception de codes de vérification ou le test de nouvelles applications{$CLOSE_TAG_STRONG}. Une fois terminé, l’adresse disparaît et votre boîte principale reste protégée et sans spam.",
+    "home.section.when.intro.label": "Un email temporaire ne sert pas à tout. Il est surtout utile pour des tâches rapides, à faible risque et jetables. Beaucoup l’utilisent pour {$START_TAG_STRONG}les inscriptions sur les réseaux sociaux{$CLOSE_TAG_STRONG} comme Instagram, Discord, Reddit, TikTok, Telegram ou Facebook. Il est aussi pratique pour tester des applications, télécharger des ressources ou rester anonyme en ligne.",
+    "home.section.when.card1.label": "Inscriptions ponctuelles sur des sites",
+    "home.section.when.card7.label": "Créer des comptes sur Instagram, Facebook, Snapchat et Twitter X",
+    "home.section.when.card8.label": "Rejoindre Discord, Reddit et Telegram en toute sécurité",
+    "home.section.when.card9.label": "S’inscrire sur TikTok ou Kick avec réception immédiate d’OTP",
+    "home.section.when.card10.label": "Vérifier des comptes de jeux sur Steam, Epic Games et Rockstar",
+    "home.section.when.card11.label": "Accéder à des plateformes de streaming comme Netflix, Amazon Prime et Hulu",
+    "home.section.who.intro.label": "Les emails temporaires sont utiles à de nombreux groupes. {$START_TAG_STRONG}Voici les plus courants et leurs avantages :{$CLOSE_TAG_STRONG}",
+    "home.section.who.li1.label": "{$START_TAG_STRONG}Étudiants{$CLOSE_TAG_STRONG} – s’inscrire à des outils d’étude, cours en ligne et portails universitaires sans saturer leur boîte principale.",
+    "home.section.who.li2.label": "{$START_TAG_STRONG}Développeurs et testeurs{$CLOSE_TAG_STRONG} – créer rapidement des comptes de test pour des applications, outils SaaS et versions bêta.",
+    "home.section.who.li3.label": "{$START_TAG_STRONG}Acheteurs{$CLOSE_TAG_STRONG} – profiter d’offres, coupons et essais gratuits sur des sites e-commerce tout en évitant le spam.",
+    "home.section.who.li4.label": "{$START_TAG_STRONG}Marketeurs{$CLOSE_TAG_STRONG} – tester des campagnes et newsletters sans risquer la réputation de leur boîte principale.",
+    "home.section.who.li5.label": "{$START_TAG_STRONG}Utilisateurs quotidiens{$CLOSE_TAG_STRONG} – garder Gmail, Outlook ou Yahoo propres et centrés sur un usage personnel.",
+    "home.section.who.li6.label": "{$START_TAG_STRONG}Gamers{$CLOSE_TAG_STRONG} – vérifier des comptes sur Steam, Epic Games et Rockstar sans exposer leur adresse privée.",
+    "home.section.who.li7.label": "{$START_TAG_STRONG}Utilisateurs de réseaux sociaux{$CLOSE_TAG_STRONG} – créer des comptes sécurisés sur Facebook, Instagram, Discord, Reddit, TikTok ou Telegram.",
+    "home.section.who.li8.label": "{$START_TAG_STRONG}Freelances{$CLOSE_TAG_STRONG} – gérer les inscriptions clients, essais de projets et outils avec des boîtes temporaires.",
+    "home.section.who.li9.label": "{$START_TAG_STRONG}Personnes axées sur la confidentialité{$CLOSE_TAG_STRONG} – rester anonymes, protéger leurs données et profiter d’une communication sans spam.",
+    "home.section.who.outro.label": "Basé sur plus de 500 000 utilisateurs de TempMail4U dans le monde · Mis à jour en septembre 2025",
+    "home.section.variants.li1.label": "{$START_TAG_STRONG}Mail 10 minutes{$CLOSE_TAG_STRONG} – idéal pour des codes rapides à usage unique",
+    "home.section.faq.a1.label": "Un email temporaire (aussi appelé boîte à usage unique, boîte jetable ou adresse fictive) est un compte de courte durée que vous pouvez utiliser pour vous inscrire sur des sites, recevoir des codes de vérification ou garder votre boîte réelle protégée contre le spam.",
+    "home.section.faq.social.q11.label": "Puis-je utiliser un email temporaire pour les réseaux sociaux et applications ?",
+    "home.section.faq.social.a11.label": "Oui, TempMail4U permet de créer et vérifier des comptes sur Instagram, Facebook, Snapchat, Twitter X, Discord, Reddit, TikTok, Telegram et Kick. Il fonctionne aussi avec des services de streaming comme Netflix et Amazon Prime, et des plateformes de jeux comme Steam, Epic Games et Rockstar. Vous pouvez recevoir des OTP et codes de vérification instantanément tout en protégeant votre adresse personnelle.",
+    "home.section.faq.a6.label": "Non. Ces boîtes sont uniquement destinées à la réception. Elles sont conçues pour des inscriptions, vérifications et utilisations rapides à usage unique, pas pour l’envoi ou la communication à long terme.",
+    "home.section.faq.a9.label": "Oui. Nous proposons {$START_TAG_STRONG}un email temporaire de 10 minutes{$CLOSE_TAG_STRONG} ainsi que des variantes de 20 et 30 minutes pour un usage rapide et jetable. Idéal pour des inscriptions courtes ou des codes de vérification ponctuels.",
+    "privacy.lastUpdated": "Dernière mise à jour : septembre 2025",
+    "home.section.faq.equivalence.q.label": "Le faux email est-il le même qu'un email temporaire ?",
+    "home.section.faq.equivalence.a.label": "Dans la plupart des cas oui. Les gens utilisent le terme <strong>faux email</strong> pour désigner un <strong>email temporaire ou jetable</strong> qui reçoit des messages et des OTP sans exposer leur boîte de réception réelle.",
+    "faq10Question": "Puis-je utiliser un e-mail de 10 minutes pour les affaires ?",
+    "faq10Answer": "Oui, vous pouvez utiliser un <strong>e-mail professionnel de 10 minutes</strong> pour les inscriptions rapides, les essais gratuits ou les vérifications ponctuelles. Cependant, il n’est pas recommandé pour une communication à long terme ou des données sensibles, car la boîte expire après 10 minutes.",
+    "breadcrumb.home": "Accueil",
+    "breadcrumb.services": "Services",
+    "breadcrumb.contact": "Contact",
+    "breadcrumb.about": "À propos",
+    "breadcrumb.10min": "E-mail de 10 minutes",
+    "nav.howItWorks": "Comment ça marche",
+    "services.hero.cta": "Commencer gratuitement",
+    "about.hero.cta": "Essayer TempMail",
+    "mainTempMail.copyToastMessage": "E-mail copié dans le presse-papiers",
+    "quickEmail.resetTimer": "Réinitialiser",
+    "quickEmail.timerExpired": "Expiré",
+    "quickEmail.emailExpiredMessage": "Générez un nouvel e-mail pour continuer",
+    "seo.howItWorks.title": "Comment fonctionne TempMail - Guide étape par étape",
+    "seo.howItWorks.description": "Découvrez comment utiliser TempMail en cinq étapes rapides avec des captures d’écran montrant comment générer, copier et gérer vos boîtes mail temporaires.",
+    "seo.howItWorks.keywords": "comment fonctionne temp mail, guide tempmail, email temporaire, étapes boîte jetable",
+    "services.list.subtitle": "Sélectionnez la durée d'email jetable qui correspond à vos besoins",
+    "services.card.10.badge": "Rapide",
+    "services.card.10.ideal": "Idéal pour : inscriptions rapides & OTP",
+    "services.card.20.badge": "Standard",
+    "services.card.20.ideal": "Idéal pour : inscriptions sur des sites web",
+    "services.card.30.badge": "Étendu",
+    "services.card.30.ideal": "Idéal pour : tests d'apps & essais",
+    "services.card.7.badge": "Très flexible",
+    "services.card.7.ideal": "Idéal pour : projets & essais prolongés",
+    "services.useCases.title": "Où utiliser Temp Mail",
+    "services.useCases.subtitle": "Nos emails temporaires fonctionnent partout, sans effort",
+    "services.useCases.social": "Réseaux sociaux",
+    "services.useCases.apps": "Tests d'applications",
+    "services.useCases.shopping": "Achats en ligne",
+    "services.useCases.gaming": "Plateformes de jeux",
+    "services.useCases.downloads": "Téléchargements",
+    "services.useCases.forums": "Forums & groupes",
+    "services.features.subtitle": "Profitez du meilleur service d'email temporaire centré sur la confidentialité",
+    "services.features.instant.title": "Accès instantané",
+    "services.features.instant.desc": "Recevez votre email temporaire immédiatement sans inscription ni formulaire.",
+    "services.features.privacy.title": "Confidentialité totale",
+    "services.features.privacy.desc": "Aucun suivi, aucun spam, aucune publicité. Votre confidentialité est notre priorité.",
+    "services.features.mobile.title": "Optimisé mobile",
+    "services.features.mobile.desc": "Interface propre et rapide qui fonctionne parfaitement sur tous les appareils.",
+    "services.features.free.title": "100 % gratuit",
+    "services.features.free.desc": "Toutes les fonctionnalités sont gratuites, sans frais cachés ni limitations.",
+    "services.cta.note": "Aucune inscription • Accès instantané • Confidentialité avant tout"
   }
 }

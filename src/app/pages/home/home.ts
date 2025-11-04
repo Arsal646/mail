@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { MainTempMail } from '../../compoents/main-temp-mail/main-temp-mail';
 import { SeoService } from '../../services/seo.service';
 import { RouteTranslationService } from '../../services/route-translation.service';
+import { BlogService } from '../../services/blog.service';
+import { map } from 'rxjs/operators';
 
 // Import the localized strings (these will be replaced by Angular i18n at build time)
 declare const $localize: any;
@@ -20,12 +22,16 @@ export class Home implements OnInit {
   private seoService = inject(SeoService);
   private locale = inject(LOCALE_ID);
   private routeTranslation = inject(RouteTranslationService);
+  private blogService = inject(BlogService);
   currentMonth = '';
   currentYear = 2025;
 
   // Expose a simple flag for English-only UI elements
   public isEnglish: boolean = String(this.locale || '').toLowerCase().startsWith('en');
   public fakeEmailPath = '/fake-email';
+  public latestBlogPosts$ = this.blogService.getAllPosts().pipe(
+    map(posts => posts.slice(0, 3))
+  );
 
 
   get routes() {

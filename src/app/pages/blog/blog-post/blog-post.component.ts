@@ -183,7 +183,7 @@ export class BlogPostComponent implements OnInit {
     const description = post.meta_description || post.excerpt || '';
 
     this.seoService.updateSeoTags({
-      title: `${post.meta_title} | TempMail4U Blog`,
+      title: `${post.meta_title}`,
       description,
       keywords,
       ogUrl: canonicalUrl,

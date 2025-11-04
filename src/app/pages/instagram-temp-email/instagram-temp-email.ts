@@ -8,7 +8,7 @@ import { SeoService } from '../../services/seo.service';
 @Component({
   selector: 'app-instagram-temp-email',
   standalone: true,
-  imports: [MainTempMail, RouterModule, NgFor, CommonModule],
+  imports: [MainTempMail, RouterModule, CommonModule],
   templateUrl: './instagram-temp-email.html'
 })
 export class InstagramTempEmail {

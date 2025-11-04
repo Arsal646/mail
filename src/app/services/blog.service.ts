@@ -754,8 +754,8 @@ export class BlogService {
         <p>Ready to create your private Instagram account? Get your temporary email now and take control of your social media privacy.</p>
       `,
           "author": "TempMail4U Team",
-          publishedAt: new Date('2025-11-02'),
-          updatedAt: new Date('2025-11-02'),
+          publishedAt: new Date('2025-11-04'),
+          updatedAt: new Date('2025-11-04'),
           "tags": ["Instagram", "temporary email", "social media privacy", "finsta", "multiple Instagram accounts", "disposable email"],
           "readingTime": 14,
           "featured": false,

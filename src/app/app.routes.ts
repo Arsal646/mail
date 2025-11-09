@@ -16,18 +16,45 @@ export const routes: Routes = [
   },
   {
     path: '10-minutes-temporary-email',
+    canMatch: [() => {
+      const locale = (inject(LOCALE_ID) ?? '').toString().toLowerCase();
+      if (locale.startsWith('en')) {
+        return true;
+      }
+
+      inject(Router).navigateByUrl('/');
+      return false;
+    }],
     loadComponent: () =>
       import('./pages/email-10min/email-10min.component').then(m => m.Email10MinComponent),
     pathMatch: 'full'
   },
   {
     path: '20-minutes-temporary-email',
+    canMatch: [() => {
+      const locale = (inject(LOCALE_ID) ?? '').toString().toLowerCase();
+      if (locale.startsWith('en')) {
+        return true;
+      }
+
+      inject(Router).navigateByUrl('/');
+      return false;
+    }],
     loadComponent: () =>
       import('./pages/email-20min/email-20min.component').then(m => m.Email20MinComponent),
     pathMatch: 'full'
   },
   {
     path: '30-minutes-temporary-email',
+    canMatch: [() => {
+      const locale = (inject(LOCALE_ID) ?? '').toString().toLowerCase();
+      if (locale.startsWith('en')) {
+        return true;
+      }
+
+      inject(Router).navigateByUrl('/');
+      return false;
+    }],
     loadComponent: () =>
       import('./pages/email-30min/email-30min.component').then(m => m.Email30MinComponent),
     pathMatch: 'full'

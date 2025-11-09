@@ -3,3 +3,58 @@ command = "ng build --localize"
 functions = "netlify/functions"
 publish = "dist/temp-mail/browser"
 
+# Force locale-specific minute pages to use the English versions
+[[redirects]]
+  from = "/ar/10-minutes-temporary-email"
+  to = "10-minutes-temporary-email"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr/10-minutes-temporary-email"
+  to = "10-minutes-temporary-email"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ru/10-minutes-temporary-email"
+  to = "10-minutes-temporary-email"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/20-minutes-temporary-email"
+  to = "20-minutes-temporary-email"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr/20-minutes-temporary-email"
+  to = "20-minutes-temporary-email"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ru/20-minutes-temporary-email"
+  to = "20-minutes-temporary-email"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ar/30-minutes-temporary-email"
+  to = "30-minutes-temporary-email"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/fr/30-minutes-temporary-email"
+  to = "30-minutes-temporary-email"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ru/30-minutes-temporary-email"
+  to = "30-minutes-temporary-email"
+  status = 301
+  force = true
+

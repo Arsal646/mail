@@ -58,3 +58,14 @@ publish = "dist/temp-mail/browser"
   status = 301
   force = true
 
+[[redirects]]
+  from = "/fake-email"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/temporary-business-email"
+  to = "/"
+  status = 301
+  force = true

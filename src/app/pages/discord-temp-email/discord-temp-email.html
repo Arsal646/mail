@@ -1,108 +1,290 @@
-<div class="min-h-screen font-sans bg-white">
-  <div class="font-sans bg-white">
-    <!-- HERO + WIDGET -->
-    <section class="bg-white border-b border-gray-200">
-      <div class="container mx-auto px-4 pt-10 pb-12 text-center max-w-4xl">
-        <h1 class="text-3xl md:text-4xl mb-3 font-bold text-gray-900">
-          Temporary Email for Discord
-        </h1>
-        <p class="mb-8 text-gray-700 max-w-2xl mx-auto text-sm md:text-base">
-          Use a disposable email to create Discord accounts for servers, gaming communities, and testing bots. 
-          Keep server invites, notification emails, and security alerts away from your main inbox, 
-          while you experiment with different roles and communities.
-        </p>
+<!-- Discord Temporary Email Tool Page -->
 
-        <div class="rounded-lg bg-gray-50 shadow-sm border border-gray-300 mb-6">
-          <app-main-temp-mail title="discord verification"></app-main-temp-mail>
-        </div>
+<!-- Hero Section -->
+<section class="page-hero page-hero--about py-16 px-4">
+  <div class="container mx-auto max-w-4xl text-center mb-3">
+    <h1 class="text-3xl md:text-4xl font-bold mb-2">Temporary Email for Discord</h1>
+    <p>Join servers and communities without exposing your personal email to admins.</p>
+  </div>
+</section>
 
-        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-left">
-          <div class="flex items-center gap-3 bg-gray-50 p-3 rounded-lg border border-gray-300">
-            <span class="h-6 w-6 rounded-full bg-gray-900 text-white text-xs flex items-center justify-center font-semibold">1</span>
-            <span class="text-sm text-gray-800">Copy the temp email</span>
-          </div>
-          <div class="flex items-center gap-3 bg-gray-50 p-3 rounded-lg border border-gray-300">
-            <span class="h-6 w-6 rounded-full bg-gray-900 text-white text-xs flex items-center justify-center font-semibold">2</span>
-            <span class="text-sm text-gray-800">Use it on the Discord sign up form</span>
-          </div>
-          <div class="flex items-center gap-3 bg-gray-50 p-3 rounded-lg border border-gray-300">
-            <span class="h-6 w-6 rounded-full bg-gray-900 text-white text-xs flex items-center justify-center font-semibold">3</span>
-            <span class="text-sm text-gray-800">Get the email here and confirm</span>
-          </div>
-          <div class="flex items-center gap-3 bg-gray-50 p-3 rounded-lg border border-gray-300">
-            <span class="h-6 w-6 rounded-full bg-gray-900 text-white text-xs flex items-center justify-center font-semibold">4</span>
-            <span class="text-sm text-gray-800">Join servers and start chatting</span>
-          </div>
+<!-- Email Widget -->
+<section class="container mx-auto max-w-5xl px-4 -mt-8 mb-12 relative z-10">
+  <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-8">
+    <app-main-temp-mail title="discord verification"></app-main-temp-mail>
+  </div>
+</section>
+
+<!-- Platform Context Section -->
+<section class="container mx-auto max-w-5xl px-4 mb-12">
+  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8 md:p-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Discord Users Need Temporary Email</h2>
+    
+    <div class="prose prose-lg max-w-none text-gray-700">
+      <p class="mb-4">Discord has evolved from a gaming communication platform into a broad community hub hosting everything from study groups to creative collaborations. With this growth comes privacy considerations many users don't initially realize. Server owners and administrators can see your email address if they have certain permissions, and joining unknown servers exposes your contact information to strangers.</p>
+      
+      <p class="mb-4">The platform has over 560 million registered users and hosts millions of active servers. While Discord's security has improved, servers vary wildly in their trustworthiness. Some are well-managed communities with clear rules, while others exist for questionable purposes or are outright scams designed to harvest user information.</p>
+      
+      <p class="mb-4">Server administrators with proper permissions can export user lists including email addresses. This creates risk when joining communities run by unknown moderators. Your email might be collected and sold to marketing databases, used for spam campaigns, or worse. Even legitimate servers sometimes experience data breaches where user information gets exposed.</p>
+      
+      <p class="mb-4">Bot developers and server integrations often request extensive permissions. Some bots need legitimate access to function, but others request more data than necessary. When you join servers with poorly configured bots or grant permissions to third-party integrations, you're trusting those developers with access to your account information.</p>
+      
+      <p>Voice chat adds another privacy layer. While Discord encrypts voice communications, participating in voice channels reveals your speaking patterns, activity times, and social connections. Combined with email information, this builds detailed profiles. For gaming communities, casual chat, or professional collaborations you trust, this might be fine. For unknown servers or temporary participation, a disposable email reduces your exposure.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Use Cases Section -->
+<section class="container mx-auto max-w-5xl px-4 mb-12">
+  <div class="bg-gray-50 rounded-lg shadow-sm border border-gray-200 p-8 md:p-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8">When to Use Temp Email for Discord</h2>
+    
+    <div class="space-y-6">
+      <div class=" bg-white py-2 px-1 pl-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Joining Unknown or Risky Servers</h3>
+        <p class="text-gray-700">When exploring new communities, participating in one-time events, or joining servers shared through public links, a temporary email protects your real address from potentially untrustworthy administrators.</p>
+      </div>
+      
+      <div class=" bg-white py-2 px-1 pl-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Bot Testing and Development</h3>
+        <p class="text-gray-700">Developers creating Discord bots need testing accounts to verify functionality without risking their main profiles. Disposable email addresses make it simple to create and manage multiple testing accounts for different projects.</p>
+      </div>
+      
+      <div class=" bg-white py-2 px-1 pl-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Gaming Community Privacy</h3>
+        <p class="text-gray-700">Keep your gaming identity separate from your personal life. Create Discord accounts dedicated to specific games or communities using temporary addresses, maintaining anonymity while you participate in voice chat and text discussions.</p>
+      </div>
+      
+      <div class=" bg-white py-2 px-1 pl-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Separating Personal from Professional</h3>
+        <p class="text-gray-700">Maintain distinct accounts for professional collaborations versus casual gaming or social communities. Use disposable emails for less formal servers while keeping your main account for work-related communications.</p>
+      </div>
+      
+      <div class=" bg-white py-2 px-1 pl-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Temporary Project Collaboration</h3>
+        <p class="text-gray-700">Join servers for short-term projects, competitions, or events without committing your permanent contact information. Once the project ends, you can abandon the account without worrying about ongoing notifications or data retention.</p>
+      </div>
+      
+      <div class=" bg-white py-2 px-1 pl-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Protecting Main Account from Bans</h3>
+        <p class="text-gray-700">When joining communities with strict or unclear rules, using a separate account with a temporary email protects your main profile. If you get banned from a server due to misunderstandings or rule violations, your primary Discord presence remains unaffected.</p>
+      </div>
+      
+      <div class=" bg-white py-2 px-1 pl-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-2">Exploring Content Creation</h3>
+        <p class="text-gray-700">Content creators building communities might want testing accounts to experience their server as regular members. Temporary emails let you create alt accounts for monitoring community health and understanding the user experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="container mx-auto max-w-5xl px-4 mb-12">
+  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8 md:p-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8">How It Works</h2>
+    
+    <div class="space-y-6">
+      <div class="flex items-start gap-4">
+        <div class="flex-shrink-0 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold">1</div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Generate Your Disposable Address</h3>
+          <p class="text-gray-700">Use the widget above to create an instant temporary email. Your inbox activates immediately and remains accessible for several hours, providing ample time for Discord registration and verification.</p>
         </div>
       </div>
-    </section>
-
-    <main class="container mx-auto px-4 max-w-4xl">
-      <!-- CONTEXT -->
-      <section class="mt-10 bg-white p-6 rounded-lg border border-gray-200">
-        <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-          Why Discord Users Use Temporary Email
-        </h2>
-        <p class="text-sm md:text-base text-gray-700 mb-3">
-          Discord is home to thousands of servers for games, study groups, work teams, and public communities. 
-          Some servers are safe and well moderated, others are more experimental. 
-          You might not want every invite and notification to land in your real inbox.
-        </p>
-        <p class="text-sm md:text-base text-gray-700">
-          With temporary email, you can create accounts for testing bots, joining new servers, 
-          or separating work communities from personal ones. It also reduces your risk if a server owner or bot 
-          is not careful with stored email data.
-        </p>
-      </section>
-
-      <!-- USE CASES -->
-      <section class="mt-8 bg-gray-50 p-6 rounded-lg border border-gray-300">
-        <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-          When to Use TempMail4U for Discord
-        </h2>
-        <ul class="space-y-2 text-sm md:text-base text-gray-700">
-          <li>• Joining many public servers without linking them to your main email.</li>
-          <li>• Testing bots and integrations as a developer.</li>
-          <li>• Running separate accounts for work, gaming, and communities.</li>
-          <li>• Joining servers that you want to try before you trust them fully.</li>
-        </ul>
-      </section>
-
-      <!-- HOW TO USE -->
-      <section class="mt-8 bg-white p-6 rounded-lg border border-gray-200">
-        <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-          How to Use Temporary Email for Discord
-        </h2>
-        <ol class="space-y-3 text-sm md:text-base text-gray-700">
-          <li><strong>1. Copy the email address above.</strong></li>
-          <li>
-            <strong>2. Go to Discord.</strong> Visit 
-            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">
-              discord.com
-            </a> or open the app and start the registration process.
-          </li>
-          <li><strong>3. Paste the temporary email.</strong> Finish the sign up steps until Discord sends a confirmation email.</li>
-          <li><strong>4. Open the email here.</strong> Confirm your account, then join or create servers.</li>
-        </ol>
-        <p class="mt-4 text-sm md:text-base text-gray-700">
-          For more details about Discord privacy, server security, and bot testing, 
-          see the full guide on 
-          <a href="/blog/discord-privacy-guide-using-temporary-email-for-servers" class="text-blue-600 hover:underline">
-            using temporary email on Discord
-          </a>.
-        </p>
-      </section>
-
-      <!-- CTA -->
-      <section class="mt-8 mb-12 bg-gray-50 p-6 rounded-lg border border-gray-300">
-        <h2 class="text-lg md:text-xl font-bold text-gray-900 mb-2">
-          Join Discord Servers with Extra Privacy
-        </h2>
-        <p class="text-sm md:text-base text-gray-700">
-          Use the temporary inbox above to create a new Discord account, 
-          then explore servers, voice chats, and communities without sharing your main email with every server owner.
-        </p>
-      </section>
-    </main>
+      
+      <div class="flex items-start gap-4">
+        <div class="flex-shrink-0 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold">2</div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Visit Discord and Register</h3>
+          <p class="text-gray-700">Go to Discord's website or open the desktop/mobile app. Click the Register button and paste your temporary email address. You'll also need to choose a username, which will be your display name across servers.</p>
+        </div>
+      </div>
+      
+      <div class="flex items-start gap-4">
+        <div class="flex-shrink-0 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold">3</div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Complete Profile Setup</h3>
+          <p class="text-gray-700">Enter your birthdate and create a strong password. Discord requires email verification before you can join servers or send messages. The platform will display a message indicating a verification email has been sent to your address.</p>
+        </div>
+      </div>
+      
+      <div class="flex items-start gap-4">
+        <div class="flex-shrink-0 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold">4</div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Check Your Temporary Inbox</h3>
+          <p class="text-gray-700">Return to this page to access your inbox. Discord sends verification emails almost instantly. You'll receive a message with a "Verify Email" button or link. These verification links remain valid for 24 hours.</p>
+        </div>
+      </div>
+      
+      <div class="flex items-start gap-4">
+        <div class="flex-shrink-0 w-10 h-10 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold">5</div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Verify and Join Communities</h3>
+          <p class="text-gray-700">Click the verification link in the email. Discord will confirm your account is verified, unlocking full functionality. You can now join servers, participate in discussions, use voice chat, and send direct messages without connecting these activities to your personal email.</p>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
+<!-- Platform Challenges Section -->
+<section class="container mx-auto max-w-5xl px-4 mb-12">
+  <div class="bg-gray-50 rounded-lg shadow-sm border border-gray-200 p-8 md:p-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Discord Verification Challenges and How Temp Email Helps</h2>
+    
+    <div class="prose prose-lg max-w-none text-gray-700">
+      <p class="mb-4">Discord requires email verification for all new accounts before granting access to core features. You can create an account without verifying, but you won't be able to join servers or send messages until you confirm your email address. This makes having access to your temporary inbox essential during the setup process.</p>
+      
+      <p class="mb-4">Phone verification sometimes appears as an additional security measure, particularly for accounts that join many servers quickly or exhibit patterns Discord considers suspicious. A temporary email doesn't prevent phone verification requests, as these are triggered by behavior and network factors rather than email type.</p>
+      
+      <p class="mb-4">Some servers require additional verification beyond Discord's basic email confirmation. Server-specific verification might include reacting to messages, completing CAPTCHA challenges, or waiting through timed intervals. These server-level measures apply to all members regardless of which email they used during registration.</p>
+      
+      <p class="mb-4">New accounts face rate limiting on certain actions. Discord restricts how quickly you can join servers, send friend requests, or post messages to prevent spam. These limitations affect all new accounts equally and gradually lift as your account ages and establishes normal activity patterns.</p>
+      
+      <p>If you're creating multiple Discord accounts for different purposes, space them out over time and use each account naturally. Discord monitors for coordinated behavior and bot-like activity. Creating accounts gradually from residential IP addresses and using them for genuine participation reduces the chance of triggering security flags.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Feature Benefits Section -->
+<section class="container mx-auto max-w-5xl px-4 mb-12">
+  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8 md:p-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8">Why Users Choose TempMail4U for Discord</h2>
+    
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="border border-gray-200 rounded-lg p-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Protect From Server Admins</h3>
+        <p class="text-gray-700">Keep your real email private from server owners and administrators. Join communities without exposing contact information to potentially untrustworthy moderators.</p>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg p-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Safe Bot Testing</h3>
+        <p class="text-gray-700">Developers can create testing accounts for Discord bot development without affecting their main profiles. Generate fresh temporary addresses for each testing scenario.</p>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg p-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Instant Verification</h3>
+        <p class="text-gray-700">Receive Discord verification emails immediately. Our system displays messages within seconds, letting you complete account setup without delays.</p>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg p-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">No Sign-Up Required</h3>
+        <p class="text-gray-700">Create temporary email addresses instantly without providing any personal information. Generate as many addresses as you need completely anonymously.</p>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg p-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Gaming Privacy</h3>
+        <p class="text-gray-700">Keep your gaming Discord accounts separate from personal or professional communications. Use distinct disposable addresses for different gaming communities.</p>
+      </div>
+      
+      <div class="border border-gray-200 rounded-lg p-6">
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Desktop and Mobile Ready</h3>
+        <p class="text-gray-700">Access your temporary inbox from any device. Check verification emails on desktop, mobile, or tablet while setting up Discord accounts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="container mx-auto max-w-5xl px-4 mb-12">
+  <div class="bg-gray-50 rounded-lg shadow-sm border border-gray-200 p-8 md:p-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
+    
+    <div class="space-y-6">
+      <div class="bg-white border border-gray-200 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">Can server admins see my email address on Discord?</h3>
+        <p class="text-gray-700">Server administrators with specific permissions can access member email addresses through Discord's API or administrative tools. This is one reason many users choose temporary email addresses when joining servers run by unknown moderators or for communities they don't fully trust.</p>
+      </div>
+      
+      <div class="bg-white border border-gray-200 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">Will Discord ban accounts created with disposable emails?</h3>
+        <p class="text-gray-700">Discord doesn't ban accounts simply for using temporary email addresses. The platform cares more about behavior, compliance with community guidelines, and terms of service. As long as you use accounts legitimately and don't engage in spam or abuse, the email type doesn't matter.</p>
+      </div>
+      
+      <div class="bg-white border border-gray-200 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">Can I use Discord fully with a temporary email account?</h3>
+        <p class="text-gray-700">Yes, once verified, your account has the same functionality as one created with a permanent email. You can join servers, participate in voice and text chat, send direct messages, and use all Discord features. The only limitation appears if you need to recover your password after the temporary email expires.</p>
+      </div>
+      
+      <div class="bg-white border border-gray-200 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">How many Discord accounts can I create for different purposes?</h3>
+        <p class="text-gray-700">You can generate a new temporary email for each Discord account you want. Many users maintain separate accounts for gaming, professional communities, and personal interests. Discord's terms don't prohibit multiple accounts, though using them to evade bans or manipulate communities violates their policies.</p>
+      </div>
+      
+      <div class="bg-white border border-gray-200 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">What happens if I lose access to my Discord account?</h3>
+        <p class="text-gray-700">Once your temporary email expires, you can't use email-based password recovery. For accounts you plan to use long-term, remember your password carefully or enable two-factor authentication using an authenticator app. For temporary accounts used for specific servers or projects, limited recovery options may be acceptable.</p>
+      </div>
+      
+      <div class="bg-white border border-gray-200 rounded-lg p-6">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">Will using a burner email affect my Discord server permissions?</h3>
+        <p class="text-gray-700">No, server permissions and roles are assigned based on your Discord account, not your email address. Server administrators configure roles and permissions through Discord's interface, which operates independently of how you registered your account.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog CTA Section -->
+<section class="container mx-auto max-w-5xl px-4 mb-12">
+  <div class="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-lg shadow-lg p-8 md:p-12">
+    <h2 class="text-3xl font-bold mb-4">Master Discord Privacy and Server Safety</h2>
+    <p class="text-xl text-gray-200 mb-6">Explore detailed strategies for protecting your identity across servers, understanding admin permissions, managing bot security, separating gaming from personal accounts, and knowing when temporary emails make sense for your Discord usage.</p>
+    <a href="/blog/discord-privacy-guide-using-temporary-email-for-servers" class="inline-block bg-white text-gray-900 font-semibold px-8 py-3 rounded-lg hover:bg-gray-100 transition">Read the Complete Discord Privacy Guide</a>
+  </div>
+</section>
+
+<!-- Conclusion Section -->
+<section class="container mx-auto max-w-5xl px-4 mb-12">
+  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8 md:p-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">Join Discord Communities with Confidence</h2>
+    
+    <div class="prose prose-lg max-w-none text-gray-700">
+      <p class="mb-4">Discord has become essential infrastructure for gaming communities, creative collaborations, study groups, and professional teams. Its flexibility and features make it powerful for building communities, but this same openness creates privacy considerations worth understanding.</p>
+      
+      <p class="mb-4">Server administrators can access your email address, bots request extensive permissions, and joining unknown communities exposes your information to strangers. For trusted servers where you participate regularly, these concerns may not matter. For temporary communities, risky servers, or testing purposes, a disposable email provides valuable protection.</p>
+      
+      <p class="mb-4">The key is matching your privacy approach to each situation. Your main Discord account for close friends and trusted communities can use your real email. Secondary accounts for gaming, exploration, or bot testing work well with temporary addresses. This compartmentalization lets you enjoy Discord's full functionality while managing your exposure.</p>
+      
+      <p>Use the widget above to generate your temporary email and create your Discord account with better privacy protection. Whether you're joining a new gaming community, testing bots, or exploring servers before committing, start with a disposable address that keeps your personal information separate.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Related Platforms Section -->
+<section class="container mx-auto max-w-5xl px-4 mb-16">
+  <div class="bg-gray-50 rounded-lg shadow-sm border border-gray-200 p-8 md:p-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Use Temporary Email for Other Platforms</h2>
+    
+    <div class="grid md:grid-cols-3 gap-4">
+      <!-- <a href="/temporary-email-for-reddit" class="block border border-gray-300 rounded-lg p-4 hover:border-gray-900 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">Reddit</h3>
+        <p class="text-sm text-gray-600">Create throwaway accounts safely</p>
+      </a> -->
+      
+      <a href="/temporary-email-for-twitter" class="block border border-gray-300 rounded-lg p-4 hover:border-gray-900 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">Twitter/X</h3>
+        <p class="text-sm text-gray-600">Build anonymous alt profiles</p>
+      </a>
+      
+      <a href="/temporary-email-for-instagram" class="block border border-gray-300 rounded-lg p-4 hover:border-gray-900 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">Instagram</h3>
+        <p class="text-sm text-gray-600">Manage finsta accounts</p>
+      </a>
+      
+      <a href="/temporary-email-for-tiktok" class="block border border-gray-300 rounded-lg p-4 hover:border-gray-900 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">TikTok</h3>
+        <p class="text-sm text-gray-600">Reduce data collection</p>
+      </a>
+      
+      <a href="/temporary-email-for-snapchat" class="block border border-gray-300 rounded-lg p-4 hover:border-gray-900 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">Snapchat</h3>
+        <p class="text-sm text-gray-600">Protect location privacy</p>
+      </a>
+      
+      <a href="/temporary-email-for-facebook" class="block border border-gray-300 rounded-lg p-4 hover:border-gray-900 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">Facebook</h3>
+        <p class="text-sm text-gray-600">Separate marketplace activity</p>
+      </a>
+    </div>
+  </div>
+</section>

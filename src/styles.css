@@ -222,3 +222,20 @@ html {
   background-color: var(--primary-200);
   color: var(--primary-800);
 }
+
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 80%, var(--primary-100) 0%, transparent 50%), radial-gradient(circle at 80% 20%, var(--primary-100) 0%, transparent 50%);
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.page-hero--about {
+    background: linear-gradient(135deg, var(--primary-50) 0%, var(--neutral-50) 50%, var(--success-50) 100%);
+}

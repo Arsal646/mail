@@ -1,301 +1,180 @@
-  <main class="container mx-auto px-4  md:py-5 max-w-5xl">
+<main class="container mx-auto px-4 md:py-5 max-w-5xl">
 
+  <!-- Page Header -->
+  <header class="text-center mb-6 md:mb-0">
+    <div class="bg-white p-5 pb-0 md:p-7">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">
+        Fast 10 Minute Temp Mail Service
+      </h1>
+      <p class="mx-auto max-w-3xl text-sm md:text-base text-gray-600">
+        Get instant access to a disposable email address that self-destructs in 10 minutes. Perfect for quick sign-ups, OTP verification, and protecting your real inbox from spam. No registration required, completely anonymous, and ready in seconds.
+      </p>
+    </div>
+  </header>
 
-    <!-- Page Header (card-like hero) -->
-<header class="text-center mb-6 md:mb-0">
-  <div class="bg-white p-5 pb-0 md:p-7 ">
-    <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3" i18n="@@email10minTitle">
-      10 Minute mail
-    </h1>
-    <p class="mx-auto max-w-3xl text-sm md:text-base text-gray-600" i18n="@@email10minSubtitle">
-      Create a free <strong>10 minute mail</strong> for quick verifications, OTPs, and sign-ups without using your personal inbox.
+  <!-- App Component Placeholder -->
+  <section class="mb-6">
+    <div class="rounded-2xl bg-white shadow-xl ring-1 ring-gray-200">
+      <!-- [Generate Button: Create My Temporary Email] -->
+      <app-quick-email [pageTimeCount]="10"></app-quick-email>
+    </div>
+
+  </section>
+
+  <!-- What You Get -->
+  <section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-6">
+    <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+      What You Get With 10 Minute Email
+    </h2>
+    <p class="text-sm md:text-base text-gray-700 mb-4">
+      A 10 minute temporary email gives you a real, working inbox that automatically expires after 10 minutes. Use it for quick online registrations, downloading files, or receiving verification codes without exposing your personal email address.
     </p>
-  </div>
-</header>
+    <p class="text-sm md:text-base text-gray-700">
+      The service is completely free and requires zero personal information. Simply load the page and your disposable inbox is ready to use.
+    </p>
+  </section>
 
+  <!-- Key Features -->
+  <section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-6">
+    <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+      Key Features
+    </h2>
 
-    <!-- App Component Placeholder -->
-    <section class="mb-6">
-      <div class="rounded-2xl bg-white shadow-xl ring-1 ring-gray-200 ">
-        <app-quick-email [pageTimeCount]="10"></app-quick-email>
-      </div>
-    </section>
+    <h3 class="font-semibold text-gray-900 mt-3">Instant Activation</h3>
+    <p class="text-sm md:text-base text-gray-700">Email ready the moment you visit. No waiting, no setup process.</p>
 
-    <!-- About Section -->
-    <section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-6">
-      <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" i18n="@@whatIs10minEmail">What is a 10 Minutes Mail?</h2>
-      <div class="text-sm md:text-base text-gray-700 space-y-4 leading-relaxed">
-        <p i18n="@@10minEmailDesc1">
-          A <strong>10 minutes mail</strong> is a disposable, anonymous inbox that lasts only 10 minutes. It's ideal for one-time registrations, email confirmations, downloading files, and avoiding spam.
-        </p>
-        <p i18n="@@10minEmailDesc2">
-          No sign-up or personal data is required, making it the safest way to stay anonymous online. Use it as a throwaway email whenever you need a quick, secure inbox.
-        </p>
-        <ul class="list-disc pl-5 space-y-2">
-          <li i18n="@@feature1">Automatically expires after 10 minutes</li>
-          <li i18n="@@feature2">Completely anonymous and untraceable</li>
-          <li i18n="@@feature3">Receive OTPs, confirmations, and attachments securely</li>
-        </ul>
-      </div>
-    </section>
+    <h3 class="font-semibold text-gray-900 mt-3">Auto-Delete Protection</h3>
+    <p class="text-sm md:text-base text-gray-700">Everything vanishes after 10 minutes. Messages, inbox, all traces gone.</p>
 
-    <!-- Features -->
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-      <div class="rounded-xl ring-1 ring-inset ring-gray-200 bg-gray-50 p-4">
-        <div class="flex items-center gap-2 mb-1.5">
-          <lucide-icon name="clock" [size]="16" class="text-blue-500"></lucide-icon>
-          <h3 class="font-semibold text-gray-900 text-sm" i18n="@@featureTitle1">Self-Destructing Inboxes</h3>
-        </div>
-        <p class="text-xs md:text-sm text-gray-600" i18n="@@featureDesc1">All messages are automatically deleted after 10 minutes to protect your privacy.</p>
-      </div>
+    <h3 class="font-semibold text-gray-900 mt-3">Real Inbox Functionality</h3>
+    <p class="text-sm md:text-base text-gray-700">Receives OTPs, links, and attachments just like your regular email.</p>
 
-      <div class="rounded-xl ring-1 ring-inset ring-gray-200 bg-gray-50 p-4">
-        <div class="flex items-center gap-2 mb-1.5">
-          <lucide-icon name="user" [size]="16" class="text-green-500"></lucide-icon>
-          <h3 class="font-semibold text-gray-900 text-sm" i18n="@@featureTitle2">No Sign-Up Required</h3>
-        </div>
-        <p class="text-xs md:text-sm text-gray-600" i18n="@@featureDesc2">Simply visit the page to start — no login, no password, no hassle.</p>
-      </div>
+    <h3 class="font-semibold text-gray-900 mt-3">Zero Tracking</h3>
+    <p class="text-sm md:text-base text-gray-700">We don't log your activity or store data. Complete anonymity guaranteed.</p>
 
-      <div class="rounded-xl ring-1 ring-inset ring-gray-200 bg-gray-50 p-4">
-        <div class="flex items-center gap-2 mb-1.5">
-          <lucide-icon name="shield" [size]="16" class="text-purple-500"></lucide-icon>
-          <h3 class="font-semibold text-gray-900 text-sm" i18n="@@featureTitle3">Anonymous & Secure</h3>
-        </div>
-        <p class="text-xs md:text-sm text-gray-600" i18n="@@featureDesc3">We don't store or log any user data; all inboxes are wiped clean after use.</p>
-      </div>
-    </section>
+    <h3 class="font-semibold text-gray-900 mt-3">Unlimited Use</h3>
+    <p class="text-sm md:text-base text-gray-700">Create as many temporary emails as needed. No limits, no restrictions.</p>
+  </section>
 
-    <!-- How It Works -->
-    <section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-8">
-      <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4" i18n="@@howToUseTitle">How to Use a 10 Minutes Temporary Email</h2>
-      <ol class="space-y-2 text-sm md:text-base text-gray-700 md:pl-8">
-        <li class="flex items-start" i18n="@@step1">
-          <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
-          <span>Visit our site to instantly receive a free temporary inbox.</span>
-        </li>
-        <li class="flex items-start" i18n="@@step2">
-          <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
-          <span>Copy your 10 minutes temporary email address and use it for registrations or verifications.</span>
-        </li>
-        <li class="flex items-start" i18n="@@step3">
-          <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
-          <span>Receive OTPs or confirmation emails instantly — inbox refreshes every 10 seconds.</span>
-        </li>
-        <li class="flex items-start" i18n="@@step4">
-          <lucide-icon name="circle" [size]="14" class="text-gray-400 mt-1 mr-2 flex-shrink-0"></lucide-icon>
-          <span>All data is permanently deleted after 10 minutes for maximum privacy.</span>
-        </li>
-      </ol>
-    </section>
+  <!-- When to Use -->
+  <section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-6">
+    <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+      When to Use a 10 Minute Disposable Email
+    </h2>
+    
+    <h3 class="font-semibold text-gray-900 mt-3">Perfect for:</h3>
+    <ul class="list-disc pl-5 space-y-1 text-sm md:text-base text-gray-700">
+      <li>One-time account verifications</li>
+      <li>Testing website registrations</li>
+      <li>Receiving download links or coupons</li>
+      <li>Avoiding newsletter subscriptions</li>
+      <li>Quick form submissions that require email</li>
+    </ul>
 
+    <h3 class="font-semibold text-gray-900 mt-4">Not recommended for:</h3>
+    <ul class="list-disc pl-5 space-y-1 text-sm md:text-base text-gray-700">
+      <li>Important personal correspondence</li>
+      <li>Financial account recovery</li>
+      <li>Anything requiring follow-up beyond 10 minutes</li>
+    </ul>
 
+    <p class="text-sm md:text-base text-gray-700 mt-4">
+      If you need more time, try our <a href="https://tempmail4u.com/20-minutes-temporary-email" class="text-blue-600 hover:underline">20-minute temporary email</a> for extended processes.
+    </p>
+  </section>
 
-    <!-- FAQ Section -->
-  
-   <!-- FAQ Section (homepage-style accordion) -->
-<section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-4" id="faq">
-  <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4 flex items-center" i18n="@@faqTitle">
-    Frequently Asked Questions
+  <!-- How It Works -->
+  <section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-6">
+    <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+      How It Works
+    </h2>
+    <ol class="list-decimal pl-5 space-y-2 text-sm md:text-base text-gray-700">
+      <li><strong>Visit</strong> – Your temporary inbox generates automatically</li>
+      <li><strong>Copy</strong> – Use the email address anywhere online</li>
+      <li><strong>Receive</strong> – Messages appear instantly in your inbox</li>
+      <li><strong>Expire</strong> – Everything deletes after 10 minutes</li>
+    </ol>
+    <p class="mt-4 text-sm md:text-base text-gray-700">
+      The inbox refreshes every few seconds, so you'll see incoming messages immediately. Need to extend your session? Simply click reset to start a fresh 10 minute countdown.
+    </p>
+  </section>
+
+<!-- Privacy and Security -->
+<section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-6">
+  <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+    Privacy and Security
   </h2>
-
-  <div class="divide-y divide-gray-200">
-
-    <!-- Q1 -->
-    <div class="py-3">
-      <details class="group">
-        <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
-          <span i18n="@@faq1Question">What is a 10 minutes email?</span>
-          <svg xmlns="http://www.w3.org/2000/svg"
-               class="h-4 w-4 transition-transform group-open:rotate-180"
-               viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-          </svg>
-        </summary>
-        <p class="mt-2 text-sm md:text-base text-gray-700" i18n="@@faq1Answer">
-          A temporary email address that expires after 10 minutes, perfect for receiving one-time messages or verification links.
-          Need more time? Try our free
-          <a [routerLink]="routes.email20min" class="text-blue-600 hover:underline">20-minute temporary email</a> or
-          <a [routerLink]="routes.email30min" class="text-blue-600 hover:underline">30-minute temporary email</a> instead.
-        </p>
-      </details>
-    </div>
-
-    <!-- Q2 -->
-    <div class="py-3">
-      <details class="group">
-        <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
-          <span i18n="@@faq2Question">Is it free to use?</span>
-          <svg xmlns="http://www.w3.org/2000/svg"
-               class="h-4 w-4 transition-transform group-open:rotate-180"
-               viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-          </svg>
-        </summary>
-        <p class="mt-2 text-sm md:text-base text-gray-700" i18n="@@faq2Answer">
-          Yes, it's completely free. No sign-up needed, no ads, and no premium charges.
-        </p>
-      </details>
-    </div>
-
-    <!-- Q3 -->
-    <div class="py-3">
-      <details class="group">
-        <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
-          <span i18n="@@faq3Question">Can I receive OTPs and confirmation emails?</span>
-          <svg xmlns="http://www.w3.org/2000/svg"
-               class="h-4 w-4 transition-transform group-open:rotate-180"
-               viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-          </svg>
-        </summary>
-        <p class="mt-2 text-sm md:text-base text-gray-700" i18n="@@faq3Answer">
-          Yes, the temporary inbox supports all common email types including OTPs and confirmation links.
-        </p>
-      </details>
-    </div>
-
-    <!-- Q4 -->
-    <div class="py-3">
-      <details class="group">
-        <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
-          <span i18n="@@faq4Question">Can I extend the timer for my temporary email?</span>
-          <svg xmlns="http://www.w3.org/2000/svg"
-               class="h-4 w-4 transition-transform group-open:rotate-180"
-               viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-          </svg>
-        </summary>
-        <p class="mt-2 text-sm md:text-base text-gray-700" i18n="@@faq4Answer">
-          Yes, simply click the "Reset" button to restart the 10-minute countdown.
-        </p>
-      </details>
-    </div>
-
-    <!-- Q5 -->
-    <div class="py-3">
-      <details class="group">
-        <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
-          <span i18n="@@faq5Question">Is this email address truly anonymous?</span>
-          <svg xmlns="http://www.w3.org/2000/svg"
-               class="h-4 w-4 transition-transform group-open:rotate-180"
-               viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-          </svg>
-        </summary>
-        <p class="mt-2 text-sm md:text-base text-gray-700" i18n="@@faq5Answer">
-          Absolutely. We do not collect or track any personal data; every inbox is temporary and private.
-        </p>
-      </details>
-    </div>
-
-    <!-- Q6 -->
-    <div class="py-3">
-      <details class="group">
-        <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
-          <span i18n="@@faq6Question">How many temporary emails can I create?</span>
-          <svg xmlns="http://www.w3.org/2000/svg"
-               class="h-4 w-4 transition-transform group-open:rotate-180"
-               viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-          </svg>
-        </summary>
-        <p class="mt-2 text-sm md:text-base text-gray-700" i18n="@@faq6Answer">
-          Unlimited. Create as many temporary inboxes as you want, each with its own time limit.
-        </p>
-      </details>
-    </div>
-
-    <!-- Q7 -->
-    <div class="py-3">
-      <details class="group">
-        <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
-          <span i18n="@@faq7Question">Does it work on mobile?</span>
-          <svg xmlns="http://www.w3.org/2000/svg"
-               class="h-4 w-4 transition-transform group-open:rotate-180"
-               viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-          </svg>
-        </summary>
-        <p class="mt-2 text-sm md:text-base text-gray-700" i18n="@@faq7Answer">
-          Yes, the service is fully responsive and works seamlessly on all devices.
-        </p>
-      </details>
-    </div>
-
-    <!-- Q8 -->
-    <div class="py-3">
-      <details class="group">
-        <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
-          <span i18n="@@faq8Question">Is it safe for important messages?</span>
-          <svg xmlns="http://www.w3.org/2000/svg"
-               class="h-4 w-4 transition-transform group-open:rotate-180"
-               viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-          </svg>
-        </summary>
-        <p class="mt-2 text-sm md:text-base text-gray-700" i18n="@@faq8Answer">
-          It's suitable for short-term use like OTPs and confirmation emails. Avoid using it for sensitive personal information.
-        </p>
-      </details>
-    </div>
-
-    <!-- Q9 -->
-    <div class="py-3">
-      <details class="group">
-        <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
-          <span i18n="@@faq9Question">Is it better than using a fake email?</span>
-          <svg xmlns="http://www.w3.org/2000/svg"
-               class="h-4 w-4 transition-transform group-open:rotate-180"
-               viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd"
-                  d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-          </svg>
-        </summary>
-        <p class="mt-2 text-sm md:text-base text-gray-700" i18n="@@faq9Answer">
-          Yes! Unlike fake emails, this service provides a real, functioning inbox for legitimate message receipt.
-        </p>
-      </details>
-
-      <!-- Q10 -->
-<div class="py-3">
-  <details class="group">
-    <summary class="flex cursor-pointer items-center justify-between text-left font-medium text-gray-900">
-      <span i18n="@@faq10Question">Can I use a 10 minute email for business purposes?</span>
-      <svg xmlns="http://www.w3.org/2000/svg"
-           class="h-4 w-4 transition-transform group-open:rotate-180"
-           viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path fill-rule="evenodd"
-              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
-              clip-rule="evenodd" />
-      </svg>
-    </summary>
-    <p class="mt-2 text-sm md:text-base text-gray-700" i18n="@@faq10Answer">
-      Yes, you can use a <strong>10 minute business email</strong> for quick registrations, trial sign-ups, or one-time verifications. 
-      However, it is not recommended for long-term communication or sensitive work data since the inbox expires after 10 minutes.
-    </p>
-  </details>
-</div>
-
-    </div>
-
-  </div>
+  <p class="text-sm md:text-base text-gray-700 mb-4">
+    Your temporary email address is completely anonymous. We never ask for your personal information, and your inbox is automatically deleted after expiration.
+  </p>
+  <p class="text-sm md:text-base text-gray-700">
+    All messages and email data are short-lived and removed after the timer ends, ensuring your privacy is always protected.
+  </p>
 </section>
+
+
+  <!-- FAQ -->
+  <section class="bg-white rounded-2xl ring-1 ring-gray-200 p-5 md:p-7 shadow-sm mb-6" id="faq">
+    <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-3">Common Questions</h2>
+
+    <details class="group py-3 border-b border-gray-200">
+      <summary class="cursor-pointer flex items-center justify-between text-gray-900 font-medium">
+        <span>Do I need to sign up to use this email?</span>
+        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </summary>
+      <p class="mt-2 text-sm md:text-base text-gray-700">
+        No account is needed. Just open the page, your 10 minute email is created automatically, and you can start using it right away.
+      </p>
+    </details>
+
+    <details class="group py-3 border-b border-gray-200">
+      <summary class="cursor-pointer flex items-center justify-between text-gray-900 font-medium">
+        <span>Can I use this for my main accounts like banking or social media?</span>
+        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </summary>
+      <p class="mt-2 text-sm md:text-base text-gray-700">
+        It is better to use this email only for quick sign ups, trials, and OTPs. For banking, social media, or anything you may need to recover later, always use your real and permanent email address.
+      </p>
+    </details>
+
+    <details class="group py-3">
+      <summary class="cursor-pointer flex items-center justify-between text-gray-900 font-medium">
+        <span>What happens if I need more time?</span>
+        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </summary>
+      <p class="mt-2 text-sm md:text-base text-gray-700">
+        Click the reset button before the timer expires to restart your 10 minute session. For longer tasks, consider using our <a href="https://tempmail4u.com/30-minutes-temporary-email" class="text-blue-600 hover:underline">30-minute temporary email</a> instead.
+      </p>
+    </details>
+  </section>
+
+
+  <!-- CTA -->
+<section
+  class=" rounded-2xl border border-gray-400 p-6 md:p-8  mb-6 text-center"
+>
+  <h2 class="text-xl md:text-2xl font-bold mb-3">
+    Ready to Create Your Temporary Email?
+  </h2>
+  <p class="text-sm md:text-base  mb-5 max-w-2xl mx-auto">
+    Protect your privacy and keep spam out of your main inbox. Get your secure,
+    10-minute disposable email in seconds, no sign-up needed.
+  </p>
+
+  <button
+    (click)="scrollToTop()"
+    class="mt-2 inline-flex items-center gap-2 px-7 py-3 bg-gray-800 hover:bg-gray-700 text-white text-sm md:text-base font-semibold rounded-full shadow-md transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600"
+  >
+    🚀 Start My 10-Minute Inbox
+  </button>
+</section>
+
+
+
 </main>

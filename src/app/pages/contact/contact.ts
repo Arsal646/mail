@@ -1,4 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Component, inject, LOCALE_ID, PLATFORM_ID } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -8,7 +8,7 @@ import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-contact',
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './contact.html',
   styleUrl: './contact.css'
 })
@@ -18,12 +18,31 @@ private locale = inject(LOCALE_ID);
 private routeTranslation = inject(RouteTranslationService);
 private scrollService = inject(ScrollService);
 private platformId = inject(PLATFORM_ID);
+protected showSuccessMessage = false;
+protected readonly supportEmail = 'hi@tempmail4u.com';
 
 ngOnInit() {
   if (isPlatformBrowser(this.platformId)) {
     this.scrollService.scrollToTopInstant();
   }
   this.setSeoTags();
+}
+
+protected handleSubmit(event: Event): void {
+  event.preventDefault();
+  const form = event.target as HTMLFormElement | null;
+  if (!form) {
+    return;
+  }
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    this.showSuccessMessage = false;
+    return;
+  }
+
+  this.showSuccessMessage = true;
+  form.reset();
 }
 
 private setSeoTags(): void {

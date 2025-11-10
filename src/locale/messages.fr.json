@@ -591,6 +591,8 @@
     "services.features.mobile.desc": "Interface propre et rapide qui fonctionne parfaitement sur tous les appareils.",
     "services.features.free.title": "100 % gratuit",
     "services.features.free.desc": "Toutes les fonctionnalités sont gratuites, sans frais cachés ni limitations.",
-    "services.cta.note": "Aucune inscription • Accès instantané • Confidentialité avant tout"
+    "services.cta.note": "Aucune inscription • Accès instantané • Confidentialité avant tout",
+    "contact.supportEmail": "Vous préférez l’email ? Contactez directement notre équipe d’assistance à {$START_LINK}{$INTERPOLATION}{$CLOSE_LINK}.",
+"contact.form.success": "Merci ! Nous avons bien reçu votre message et nous vous répondrons bientôt depuis {$INTERPOLATION}."
   }
 }

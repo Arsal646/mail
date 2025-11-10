@@ -29,31 +29,59 @@
         Send Us a Message
       </h2>
       <div class="page-section__content">
-        <form class="space-y-6">
+        <form class="space-y-6" (submit)="handleSubmit($event)">
           <div>
             <label class="block text-sm font-medium text-neutral-700 mb-2" for="name"
                    i18n="@@contact.form.name">Your Name</label>
-            <input id="name" type="text" class="form-input w-full"/>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              class="form-input w-full"
+              required
+              minlength="2"
+              autocomplete="name"
+            />
           </div>
 
           <div>
             <label class="block text-sm font-medium text-neutral-700 mb-2" for="email"
                    i18n="@@contact.form.email">Your Email</label>
-            <input id="email" type="email" class="form-input w-full"/>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="form-input w-full"
+              required
+              autocomplete="email"
+            />
           </div>
 
           <div>
             <label class="block text-sm font-medium text-neutral-700 mb-2" for="message"
                    i18n="@@contact.form.message">Message</label>
-            <textarea id="message" rows="5" class="form-input w-full resize-vertical"></textarea>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              class="form-input w-full resize-vertical"
+              required
+              minlength="10"
+            ></textarea>
           </div>
 
           <button type="submit" class="btn-primary" i18n="@@contact.form.submit">
             Send Message
           </button>
         </form>
+        <div *ngIf="showSuccessMessage" class="mt-6 rounded-lg border border-green-200 bg-green-50 p-4 text-green-900 text-sm" i18n="@@contact.form.success">
+          Thanks! We received your message and will reply from {{'hi@tempmail4u.com'}} soon.
+        </div>
         <p class="text-sm text-neutral-500 mt-4" i18n="@@contact.form.disclaimer">
           *This form is for general inquiries only. For inbox issues, please refresh or generate a new <strong>one time email</strong>.
+        </p>
+        <p class="text-sm text-neutral-600 mt-2" i18n="@@contact.supportEmail">
+          Prefer email? Reach our support team directly at <a class="text-neutral-900 underline" href="mailto:hi@tempmail4u.com">{{'hi@tempmail4u.com'}}</a>.
         </p>
       </div>
     </section>

@@ -595,6 +595,8 @@
     "services.features.mobile.desc": "Clean, fast interface that works perfectly on all devices",
     "services.features.free.title": "100% Free",
     "services.features.free.desc": "All features available for free with no hidden costs or limitations",
-    "services.cta.note": "No registration required • Instant access • Privacy first"
+    "services.cta.note": "No registration required • Instant access • Privacy first",
+    "contact.supportEmail": "تفضل البريد الإلكتروني؟ تواصل مع فريق الدعم مباشرة على {$START_LINK}{$INTERPOLATION}{$CLOSE_LINK}.",
+"contact.form.success": "شكرًا لك! لقد استلمنا رسالتك وسنرد عليك قريبًا من {$INTERPOLATION}."
   }
 }

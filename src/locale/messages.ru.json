@@ -644,6 +644,9 @@
     "services.features.mobile.desc": "Clean, fast interface that works perfectly on all devices",
     "services.features.free.title": "100% Free",
     "services.features.free.desc": "All features available for free with no hidden costs or limitations",
-    "services.cta.note": "No registration required • Instant access • Privacy first"
+    "services.cta.note": "No registration required • Instant access • Privacy first",
+    "contact.supportEmail": "Предпочитаете электронную почту? Свяжитесь с нашей службой поддержки по адресу {$START_LINK}{$INTERPOLATION}{$CLOSE_LINK}.",
+"contact.form.success": "Спасибо! Мы получили ваше сообщение и скоро ответим с {$INTERPOLATION}."
+
   }
 }

@@ -1614,8 +1614,8 @@ export class BlogService {
         <p>Ready to take back your TikTok privacy? Start with a temporary email today.</p>
       `,
       "author": "TempMail4U Team",
-      publishedAt: new Date('2025-11-02'),
-      updatedAt: new Date('2025-11-02'),
+      publishedAt: new Date('2025-11-16'),
+      updatedAt: new Date('2025-11-16'),
       "tags": ["TikTok", "temporary email", "privacy", "data collection", "disposable email", "social media security"],
       "readingTime": 14,
       "featured": false,

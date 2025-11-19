@@ -7,14 +7,14 @@ import { delay, map, mergeMap, scan, startWith, take } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class EmailService {
-  domain =  '@nanoware.store';
+  domain =  '@nubix.store';
   availableDomains = [
+    '@nubix.store',
     '@tempmails.online',
     '@nanoware.store',
     '@vimto.store',
   ]
-  apiUrl = 'https://mailboxhub.fun/api'
-  //apiUrl = 'http://127.0.0.1:8000/api'
+  apiUrl = this.domain === '@nubix.store' ? 'http://51.79.254.189/api' : 'https://mailboxhub.fun/api'
 
 
   constructor(private http: HttpClient) { }

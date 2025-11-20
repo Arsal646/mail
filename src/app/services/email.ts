@@ -14,7 +14,7 @@ export class EmailService {
     '@nanoware.store',
     '@vimto.store',
   ]
-  apiUrl = this.domain === '@nubix.store' ? 'https://51.79.254.189/api' : 'https://mailboxhub.fun/api'
+  apiUrl = this.domain === '@nubix.store' ? 'https://api.tempmail4u.com/api' : 'https://mailboxhub.fun/api'
 
 
   constructor(private http: HttpClient) { }

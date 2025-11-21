@@ -2,7 +2,6 @@ import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
-import { log } from 'console';
 import { EmailService } from '../../services/email';
 
 @Component({
@@ -51,6 +50,7 @@ export class SavedEmailComponent implements OnInit {
   emailData: any = null;
   error = '';
   isBrowser = false;
+  apiSource: 'temp' | 'mailbox' = 'mailbox';
 
   constructor(
     private route: ActivatedRoute,
@@ -67,16 +67,18 @@ export class SavedEmailComponent implements OnInit {
     if (!this.isBrowser) return;
 
     const token = this.route.snapshot.paramMap.get('token');
+    const refParam = this.route.snapshot.queryParamMap.get('ref');
+    this.apiSource = refParam === 'api' ? 'temp' : 'mailbox';
     if (token) {
-      this.verifyToken(token);
+      this.verifyToken(token, this.apiSource);
     } else {
       this.error = 'Invalid access link format';
       this.loading = false;
     }
   }
 
-  verifyToken(token: string): void {
-    this.emailService.getSavedEmail(token).subscribe({
+  verifyToken(token: string, source: 'temp' | 'mailbox'): void {
+    this.emailService.getSavedEmail(token, { source }).subscribe({
       next: (response) => {
         console.log(response);
         if (response.success) {

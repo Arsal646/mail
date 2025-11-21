@@ -7,14 +7,33 @@ import { delay, map, mergeMap, scan, startWith, take } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class EmailService {
-  domain =  '@nubix.store';
+  domain = '@nubix.store';
   availableDomains = [
     '@nubix.store',
     '@tempmails.online',
     '@nanoware.store',
     '@vimto.store',
   ]
-  apiUrl = this.domain === '@nubix.store' ? 'https://api.tempmail4u.com/api' : 'https://mailboxhub.fun/api'
+
+  private readonly tempMailApiBase = 'https://api.tempmail4u.com/api';
+  private readonly mailboxApiBase = 'https://mailboxhub.fun/api';
+
+  private extractDomain(value?: string): string {
+    const rawValue = (value ?? this.domain).toLowerCase();
+    const atIndex = rawValue.lastIndexOf('@');
+    if (atIndex >= 0 && atIndex < rawValue.length - 1) {
+      return rawValue.substring(atIndex + 1);
+    }
+    return rawValue.replace(/^@/, '');
+  }
+
+  private prefersTempMailApi(value?: string): boolean {
+    return this.extractDomain(value).endsWith('nubix.store');
+  }
+
+  private getApiBase(value?: string): string {
+    return this.prefersTempMailApi(value) ? this.tempMailApiBase : this.mailboxApiBase;
+  }
 
 
   constructor(private http: HttpClient) { }
@@ -31,8 +50,9 @@ export class EmailService {
   // }
 
   fetchEmails(emailAddress: string) {
+    const apiUrl = this.getApiBase(emailAddress);
     return this.http.get<any[]>(
-      `${this.apiUrl}/fakeemails/?email=${emailAddress}`
+      `${apiUrl}/fakeemails/?email=${emailAddress}`
     ).pipe(
       map(emails => emails.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()))
     );
@@ -66,15 +86,20 @@ export class EmailService {
 
 
   saveEmailToBackend(email: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/save-email`, { email });
+    const apiUrl = this.getApiBase(email);
+    return this.http.post(`${apiUrl}/save-email`, { email });
   }
 
-  getSavedEmail(token: string): Observable<any> {
-    return this.http.get(`${this.apiUrl}/saved/${token}`);
+  getSavedEmail(token: string, options?: { source?: 'temp' | 'mailbox' }): Observable<any> {
+    const apiUrl = options?.source
+      ? (options.source === 'temp' ? this.tempMailApiBase : this.mailboxApiBase)
+      : this.getApiBase(this.domain);
+    return this.http.get(`${apiUrl}/saved/${token}`);
   }
 
   checkIfSaved(email: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/check-saved`, { email });
+    const apiUrl = this.getApiBase(email);
+    return this.http.post(`${apiUrl}/check-saved`, { email });
   }
 
 }

@@ -13,44 +13,44 @@ import { SeoService } from '../../services/seo.service';
   styleUrl: './service.css'
 })
 export class Service {
-private seoService = inject(SeoService);
-private locale = inject(LOCALE_ID);
-private routeTranslation = inject(RouteTranslationService);
-private scrollService = inject(ScrollService);
-private platformId = inject(PLATFORM_ID);
+  private seoService = inject(SeoService);
+  private locale = inject(LOCALE_ID);
+  private routeTranslation = inject(RouteTranslationService);
+  private scrollService = inject(ScrollService);
+  private platformId = inject(PLATFORM_ID);
 
-ngOnInit() {
-  if (isPlatformBrowser(this.platformId)) {
-    this.scrollService.scrollToTopInstant();
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.scrollService.scrollToTopInstant();
+    }
+    this.setSeoTags();
   }
-  this.setSeoTags();
-}
 
-private setSeoTags(): void {
-  const seo = this.getLocalizedSeoContent();
-  const baseUrl = this.seoService.getBaseUrl(this.locale);
-  const translatedRoute = this.routeTranslation.getRoute('/services') || '/services';
+  private setSeoTags(): void {
+    const seo = this.getLocalizedSeoContent();
+    const baseUrl = this.seoService.getBaseUrl(this.locale);
+    const translatedRoute = this.routeTranslation.getRoute('/services') || '/services';
 
-  this.seoService.updateSeoTags({
-    title: seo.title,
-    description: seo.description,
-    keywords: seo.keywords,
-    ogUrl: baseUrl + translatedRoute,
-    ogImage: 'https://tempmail4u.com/assets/images/og/services.jpg',
-    ogSiteName: 'TempMail4u',
-    twitterSite: '@tempmails',
-    breadcrumbs: [
-      { name: $localize`:@@breadcrumbs.home:Home`, url: baseUrl + '/' },
-      { name: $localize`:@@seo.services.title:Temporary Email Services - Disposable Inboxes, Custom Aliases, OTP Support`, url: baseUrl + translatedRoute }
-    ]
-  });
-}
+    this.seoService.updateSeoTags({
+      title: seo.title,
+      description: seo.description,
+      keywords: seo.keywords,
+      ogUrl: baseUrl + translatedRoute,
+      ogImage: 'https://tempmail4u.com/assets/images/og/services.jpg',
+      ogSiteName: 'TempMail4u',
+      twitterSite: '@tempmails',
+      breadcrumbs: [
+        { name: $localize`:@@breadcrumbs.home:Home`, url: baseUrl + '/' },
+        { name: $localize`:@@seo.services.title:Temporary Email Services - Disposable Inboxes, Custom Aliases, OTP Support`, url: baseUrl + translatedRoute }
+      ]
+    });
+  }
 
-private getLocalizedSeoContent() {
-  return {
-    title: $localize`:@@seo.services.title:Temporary Email Services - Disposable Inboxes, Custom Aliases, OTP Support`,
-    description: $localize`:@@seo.services.description:Use TempMail4u for quick signups, app testing, and OTP verifications. Create disposable inboxes instantly and keep your real email safe.`,
-    keywords: $localize`:@@seo.services.keywords:temporary email services, disposable inbox, burner email, otp email, test email, spam protection`
-  };
-}
+  private getLocalizedSeoContent() {
+    return {
+      title: $localize`:@@seo.services.title:Temporary Email Services - Disposable Inboxes, Custom Aliases, OTP Support`,
+      description: $localize`:@@seo.services.description:Use TempMail4u for quick signups, app testing, and OTP verifications. Create disposable inboxes instantly and keep your real email safe.`,
+      keywords: $localize`:@@seo.services.keywords:temporary email services, disposable inbox, burner email, otp email, test email, spam protection`
+    };
+  }
 }

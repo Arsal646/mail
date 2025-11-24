@@ -158,7 +158,7 @@ export class BlogPostComponent implements OnInit {
       toc.push({
         id: slug,
         text,
-        level: heading.tagName.toLowerCase() === 'h2' ? 2:2
+        level: heading.tagName.toLowerCase() === 'h2' ? 2 : 2
       });
     });
 

@@ -18,7 +18,7 @@ export class PrivacyPolicyComponent implements OnInit {
     @Inject(PLATFORM_ID) private platformId: Object,
     private scrollService: ScrollService,
     private metaService: MetaService
-  ) {}
+  ) { }
 
   private seoService = inject(SeoService);
   private locale = inject(LOCALE_ID);

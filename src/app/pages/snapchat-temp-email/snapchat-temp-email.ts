@@ -18,7 +18,7 @@ export class SnapchatTempEmail {
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private scrollService: ScrollService
-  ) {}
+  ) { }
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {

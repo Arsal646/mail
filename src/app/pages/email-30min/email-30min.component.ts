@@ -102,7 +102,7 @@ export class Email30MinComponent implements OnInit {
   }
 
   scrollToTop(): void {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
 }

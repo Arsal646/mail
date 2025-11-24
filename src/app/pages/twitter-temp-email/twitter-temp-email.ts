@@ -18,7 +18,7 @@ export class TwitterTempEmail {
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private scrollService: ScrollService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {

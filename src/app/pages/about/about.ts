@@ -13,44 +13,44 @@ import { ScrollService } from '../../services/scroll.service';
   styleUrl: './about.css'
 })
 export class About {
-    private seoService = inject(SeoService);
+  private seoService = inject(SeoService);
   private locale = inject(LOCALE_ID);
   private routeTranslation = inject(RouteTranslationService);
   private scrollService = inject(ScrollService);
   private platformId = inject(PLATFORM_ID);
 
   ngOnInit() {
-  if (isPlatformBrowser(this.platformId)) {
-    this.scrollService.scrollToTopInstant();
+    if (isPlatformBrowser(this.platformId)) {
+      this.scrollService.scrollToTopInstant();
+    }
+    this.setSeoTags();
   }
-  this.setSeoTags();
-}
 
-private setSeoTags(): void {
-  const seo = this.getLocalizedSeoContent();
-  const baseUrl = this.seoService.getBaseUrl(this.locale);
-  const translatedRoute = this.routeTranslation.getRoute('/about') || '/about';
+  private setSeoTags(): void {
+    const seo = this.getLocalizedSeoContent();
+    const baseUrl = this.seoService.getBaseUrl(this.locale);
+    const translatedRoute = this.routeTranslation.getRoute('/about') || '/about';
 
-  this.seoService.updateSeoTags({
-    title: seo.title,
-    description: seo.description,
-    keywords: seo.keywords,
-    ogUrl: baseUrl + translatedRoute,
-    ogImage: 'https://tempmail4u.com/assets/images/og/about-us.jpg',
-    ogSiteName: 'TempMail4u',
-    twitterSite: '@tempmails',
-    breadcrumbs: [
-      { name: $localize`:@@breadcrumbs.home:Home`, url: baseUrl + '/' },
-      { name: $localize`:@@seo.about.title:About TempMail4u - Privacy First Temporary Email Service`, url: baseUrl + translatedRoute }
-    ]
-  });
-}
+    this.seoService.updateSeoTags({
+      title: seo.title,
+      description: seo.description,
+      keywords: seo.keywords,
+      ogUrl: baseUrl + translatedRoute,
+      ogImage: 'https://tempmail4u.com/assets/images/og/about-us.jpg',
+      ogSiteName: 'TempMail4u',
+      twitterSite: '@tempmails',
+      breadcrumbs: [
+        { name: $localize`:@@breadcrumbs.home:Home`, url: baseUrl + '/' },
+        { name: $localize`:@@seo.about.title:About TempMail4u - Privacy First Temporary Email Service`, url: baseUrl + translatedRoute }
+      ]
+    });
+  }
 
-private getLocalizedSeoContent() {
-  return {
-    title: $localize`:@@seo.about.title:About TempMail4u - Privacy First Temporary Email Service`,
-    description: $localize`:@@seo.about.description:Learn how TempMail4u helps you stay private online with disposable inboxes, instant setup, and spam control.`,
-    keywords: $localize`:@@seo.about.keywords:about tempmail, temp mail info, disposable email service, privacy email, spam control`
-  };
-}
+  private getLocalizedSeoContent() {
+    return {
+      title: $localize`:@@seo.about.title:About TempMail4u - Privacy First Temporary Email Service`,
+      description: $localize`:@@seo.about.description:Learn how TempMail4u helps you stay private online with disposable inboxes, instant setup, and spam control.`,
+      keywords: $localize`:@@seo.about.keywords:about tempmail, temp mail info, disposable email service, privacy email, spam control`
+    };
+  }
 }

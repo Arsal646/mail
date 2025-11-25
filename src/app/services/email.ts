@@ -7,7 +7,7 @@ import { delay, map, mergeMap, scan, startWith, take } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class EmailService {
-  domain = '@vimto.store';
+  domain = '@nubix.store';
   availableDomains = [
     '@nubix.store',
     '@tempmails.online',

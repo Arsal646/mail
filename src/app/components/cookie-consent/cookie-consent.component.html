@@ -1,0 +1,21 @@
+<div *ngIf="showBanner"
+    class="fixed bottom-0 left-0 right-0 bg-gray-900/95 backdrop-blur-sm text-white p-3 shadow-lg z-50 animate-fade-in-up border-t border-gray-700">
+    <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4">
+        <div class="text-xs sm:text-sm text-gray-300 text-center sm:text-left leading-tight">
+            <p>
+                We use cookies for analytics to improve our service.
+                <a routerLink="/privacy-policy" class="text-white underline hover:text-gray-200 whitespace-nowrap ml-1">Privacy Policy</a>
+            </p>
+        </div>
+        <div class="flex gap-2 shrink-0">
+            <button (click)="acceptCookies()"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-1.5 rounded text-xs font-medium transition-colors">
+                Accept
+            </button>
+            <button (click)="rejectCookies()"
+                class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-1.5 rounded text-xs font-medium transition-colors">
+                Decline
+            </button>
+        </div>
+    </div>
+</div>

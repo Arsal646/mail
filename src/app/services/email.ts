@@ -10,9 +10,7 @@ export class EmailService {
   domain = '@nubix.store';
   availableDomains = [
     '@nubix.store',
-    '@tempmails.online',
     '@nanoware.store',
-    '@vimto.store',
   ]
 
   private readonly tempMailApiBase = 'https://api.tempmail4u.com/api';

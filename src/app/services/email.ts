@@ -9,11 +9,14 @@ import { delay, map, mergeMap, scan, startWith, take } from 'rxjs/operators';
 export class EmailService {
   domain = '@nubix.store';
   availableDomains = [
-    '@nubix.store'
+    '@nubix.store',
+    '@tempmails.online',
+    '@nanoware.store',
+    '@vimto.store',
   ]
 
   private readonly tempMailApiBase = 'https://api.tempmail4u.com/api';
-  private readonly mailboxApiBase = 'https://mailboxhub.fun/api';
+  private readonly mailboxApiBase = 'https://api.tempmail4u.com/api';
 
   private extractDomain(value?: string): string {
     const rawValue = (value ?? this.domain).toLowerCase();

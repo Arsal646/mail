@@ -11,6 +11,7 @@ export class EmailService {
   availableDomains = [
     '@nubix.store',
     '@nanoware.store',
+    '@vimto.store',
   ]
 
   private readonly tempMailApiBase = 'https://api.tempmail4u.com/api';
